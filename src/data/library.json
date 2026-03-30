@@ -6,12 +6,21 @@
       "author": "Michael Bazzell",
       "description": "The definitive guide to OSINT investigation techniques. Covers search engines, social networks, documents, images, and more.",
       "category": "osint",
-      "tags": ["osint", "investigation", "privacy"],
+      "tags": [
+        "osint",
+        "investigation",
+        "privacy"
+      ],
       "imageTag": "OT",
       "year": 2024,
       "editions": [
-        { "format": "Book", "url": "https://amzn.to/3NXqbt7" }
-      ]
+        {
+          "format": "Book",
+          "url": "https://amzn.to/3NXqbt7"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798345969250-L.jpg",
+      "isbn": "9798345969250"
     },
     {
       "slug": "extreme-privacy",
@@ -19,12 +28,21 @@
       "author": "Michael Bazzell",
       "description": "Comprehensive guide to digital privacy and disappearing from online databases. Practical steps for protecting your identity.",
       "category": "osint",
-      "tags": ["privacy", "disappearing", "identity"],
+      "tags": [
+        "privacy",
+        "disappearing",
+        "identity"
+      ],
       "imageTag": "EP",
       "year": 2024,
       "editions": [
-        { "format": "Book", "url": "https://amzn.to/4m6jGRE" }
-      ]
+        {
+          "format": "Book",
+          "url": "https://amzn.to/4m6jGRE"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798335024334-L.jpg",
+      "isbn": "9798335024334"
     },
     {
       "slug": "hacking-art-of-exploitation",
@@ -32,13 +50,25 @@
       "author": "Jon Erickson",
       "description": "Foundational text covering programming, networking, shellcode, cryptology, and exploitation from the ground up. Second edition.",
       "category": "exploitation",
-      "tags": ["exploitation", "programming", "shellcode"],
+      "tags": [
+        "exploitation",
+        "programming",
+        "shellcode"
+      ],
       "imageTag": "HK",
       "year": 2008,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4s5h9Z9" },
-        { "format": "Kindle", "url": "https://amzn.to/4bG3CSZ" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4s5h9Z9"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4bG3CSZ"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781593271442-L.jpg",
+      "isbn": "9781593271442"
     },
     {
       "slug": "rtfm-book-1",
@@ -46,12 +76,21 @@
       "author": "Ben Clark",
       "description": "Quick-reference guide for red team operators. Covers Linux, Windows, networking, and common attack commands.",
       "category": "red-team",
-      "tags": ["red-team", "reference", "commands"],
+      "tags": [
+        "red-team",
+        "reference",
+        "commands"
+      ],
       "imageTag": "R1",
       "year": 2014,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4bHzbvD" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4bHzbvD"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781787399051-L.jpg",
+      "isbn": "9781787399051"
     },
     {
       "slug": "rtfm-book-2",
@@ -59,14 +98,29 @@
       "author": "Ben Clark & Nick Downer",
       "description": "Updated and expanded red team reference. New techniques, commands, and procedures for modern red team operations.",
       "category": "red-team",
-      "tags": ["red-team", "reference", "commands"],
+      "tags": [
+        "red-team",
+        "reference",
+        "commands"
+      ],
       "imageTag": "R2",
       "year": 2022,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/3O6Fekm" },
-        { "format": "Hardcover", "url": "https://amzn.to/4v1eW3F" },
-        { "format": "Kindle", "url": "https://amzn.to/482UXaQ" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3O6Fekm"
+        },
+        {
+          "format": "Hardcover",
+          "url": "https://amzn.to/4v1eW3F"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/482UXaQ"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781075091834-L.jpg",
+      "isbn": "9781075091834"
     },
     {
       "slug": "btfm-book-1",
@@ -74,13 +128,25 @@
       "author": "Ben Clark & Alan J. White",
       "description": "Quick-reference guide for defensive security. Incident response, forensics, and network defense commands.",
       "category": "blue-team",
-      "tags": ["blue-team", "defense", "incident-response"],
+      "tags": [
+        "blue-team",
+        "defense",
+        "incident-response"
+      ],
       "imageTag": "B1",
       "year": 2017,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4uUSGZ7" },
-        { "format": "Kindle", "url": "https://amzn.to/4lXwBoK" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4uUSGZ7"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4lXwBoK"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781541016361-L.jpg",
+      "isbn": "9781541016361"
     },
     {
       "slug": "ftfm-book-2",
@@ -88,12 +154,21 @@
       "author": "Alan J. White & Ben Clark",
       "description": "Field manual for digital forensics teams. Quick-reference commands and procedures for forensic investigations.",
       "category": "forensics",
-      "tags": ["forensics", "field-manual", "incident-response"],
+      "tags": [
+        "forensics",
+        "field-manual",
+        "incident-response"
+      ],
       "imageTag": "FT",
       "year": 2025,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4cfnqg5" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4cfnqg5"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798314490181-L.jpg",
+      "isbn": "9798314490181"
     },
     {
       "slug": "web-app-hackers-handbook-1e",
@@ -101,12 +176,21 @@
       "author": "Marcus Pinto & Dafydd Stuttard",
       "description": "The original guide to finding and exploiting web application security flaws. Written by the creator of Burp Suite.",
       "category": "web-security",
-      "tags": ["web-security", "burp-suite", "testing"],
+      "tags": [
+        "web-security",
+        "burp-suite",
+        "testing"
+      ],
       "imageTag": "W1",
       "year": 2007,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/3Oc5pGi" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3Oc5pGi"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9780470170779-L.jpg",
+      "isbn": "9780470170779"
     },
     {
       "slug": "web-app-hackers-handbook-2e",
@@ -114,13 +198,25 @@
       "author": "Dafydd Stuttard & Marcus Pinto",
       "description": "Comprehensive updated guide to discovering and exploiting security flaws in web applications. By the creator of Burp Suite.",
       "category": "web-security",
-      "tags": ["web-security", "burp-suite", "testing"],
+      "tags": [
+        "web-security",
+        "burp-suite",
+        "testing"
+      ],
       "imageTag": "W2",
       "year": 2011,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4sRWpoX" },
-        { "format": "Kindle", "url": "https://amzn.to/3Obhuvt" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4sRWpoX"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/3Obhuvt"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781118026472-L.jpg",
+      "isbn": "9781118026472"
     },
     {
       "slug": "penetration-testing",
@@ -128,13 +224,25 @@
       "author": "Georgia Weidman",
       "description": "Hands-on introduction to pentesting covering Kali Linux, Metasploit, social engineering, and reporting.",
       "category": "pentesting",
-      "tags": ["pentesting", "metasploit", "kali"],
+      "tags": [
+        "pentesting",
+        "metasploit",
+        "kali"
+      ],
       "imageTag": "PT",
       "year": 2014,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4bHC27P" },
-        { "format": "Kindle", "url": "https://amzn.to/4s8bMbR" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4bHC27P"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4s8bMbR"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781593275648-L.jpg",
+      "isbn": "9781593275648"
     },
     {
       "slug": "network-security-assessment",
@@ -142,13 +250,25 @@
       "author": "Chris McNab",
       "description": "Practical guide to identifying and assessing network security risks using real-world attack techniques. Third edition.",
       "category": "network",
-      "tags": ["network", "assessment", "scanning"],
+      "tags": [
+        "network",
+        "assessment",
+        "scanning"
+      ],
       "imageTag": "NS",
       "year": 2017,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/3PCcy3e" },
-        { "format": "Kindle", "url": "https://amzn.to/4dkuuZV" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3PCcy3e"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4dkuuZV"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781491910955-L.jpg",
+      "isbn": "9781491910955"
     },
     {
       "slug": "practical-malware-analysis",
@@ -156,13 +276,25 @@
       "author": "Michael Sikorski & Andrew Honig",
       "description": "The hands-on guide to dissecting malware. Covers static analysis, dynamic analysis, and reverse engineering.",
       "category": "malware",
-      "tags": ["malware", "reverse-engineering", "analysis"],
+      "tags": [
+        "malware",
+        "reverse-engineering",
+        "analysis"
+      ],
       "imageTag": "PM",
       "year": 2012,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/47w6kIc" },
-        { "format": "Kindle", "url": "https://amzn.to/4t9HAh6" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/47w6kIc"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4t9HAh6"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781593272906-L.jpg",
+      "isbn": "9781593272906"
     },
     {
       "slug": "art-of-deception",
@@ -170,14 +302,29 @@
       "author": "Kevin D. Mitnick & William L. Simon",
       "description": "Mitnick reveals how social engineering is the greatest threat to security. Real-world stories and defenses against manipulation.",
       "category": "social-engineering",
-      "tags": ["social-engineering", "deception", "security"],
+      "tags": [
+        "social-engineering",
+        "deception",
+        "security"
+      ],
       "imageTag": "AD",
       "year": 2002,
       "editions": [
-        { "format": "Hardcover", "url": "https://amzn.to/4m66ufC" },
-        { "format": "Paperback", "url": "https://amzn.to/4s8eAFV" },
-        { "format": "Kindle", "url": "https://amzn.to/4sJuE1S" }
-      ]
+        {
+          "format": "Hardcover",
+          "url": "https://amzn.to/4m66ufC"
+        },
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4s8eAFV"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4sJuE1S"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9780764542800-L.jpg",
+      "isbn": "9780764542800"
     },
     {
       "slug": "art-of-intrusion",
@@ -185,14 +332,29 @@
       "author": "Kevin D. Mitnick & William L. Simon",
       "description": "Real-world stories of hackers at work. Each chapter covers a different attack vector with lessons learned.",
       "category": "social-engineering",
-      "tags": ["social-engineering", "stories", "attacks"],
+      "tags": [
+        "social-engineering",
+        "stories",
+        "attacks"
+      ],
       "imageTag": "AI",
       "year": 2005,
       "editions": [
-        { "format": "Hardcover", "url": "https://amzn.to/4cdWWf0" },
-        { "format": "Paperback", "url": "https://amzn.to/4dSqKio" },
-        { "format": "Kindle", "url": "https://amzn.to/4tiwKFO" }
-      ]
+        {
+          "format": "Hardcover",
+          "url": "https://amzn.to/4cdWWf0"
+        },
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4dSqKio"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4tiwKFO"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9780764569593-L.jpg",
+      "isbn": "9780764569593"
     },
     {
       "slug": "art-of-invisibility",
@@ -200,14 +362,29 @@
       "author": "Kevin D. Mitnick & Mikko Hypponen",
       "description": "Mitnick's guide to online privacy and anonymity. Practical techniques for protecting yourself from surveillance and data collection.",
       "category": "privacy",
-      "tags": ["privacy", "anonymity", "surveillance"],
+      "tags": [
+        "privacy",
+        "anonymity",
+        "surveillance"
+      ],
       "imageTag": "AV",
       "year": 2017,
       "editions": [
-        { "format": "Hardcover", "url": "https://amzn.to/3NXyHs5" },
-        { "format": "Paperback", "url": "https://amzn.to/4mki4nv" },
-        { "format": "Kindle", "url": "https://amzn.to/4v6Iayi" }
-      ]
+        {
+          "format": "Hardcover",
+          "url": "https://amzn.to/3NXyHs5"
+        },
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4mki4nv"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4v6Iayi"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9780316380508-L.jpg",
+      "isbn": "9780316380508"
     },
     {
       "slug": "mastering-blockchain-1e",
@@ -215,13 +392,25 @@
       "author": "Imran Bashir",
       "description": "Deeper insights into decentralization, cryptography, Bitcoin, and popular blockchain frameworks.",
       "category": "blockchain",
-      "tags": ["blockchain", "crypto", "bitcoin"],
+      "tags": [
+        "blockchain",
+        "crypto",
+        "bitcoin"
+      ],
       "imageTag": "M1",
       "year": 2017,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4ddKSLM" },
-        { "format": "Kindle", "url": "https://amzn.to/47wEzPR" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4ddKSLM"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/47wEzPR"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781787125445-L.jpg",
+      "isbn": "9781787125445"
     },
     {
       "slug": "mastering-blockchain-2e",
@@ -229,13 +418,25 @@
       "author": "Imran Bashir",
       "description": "Distributed ledger technology, decentralization, and smart contracts explained.",
       "category": "blockchain",
-      "tags": ["blockchain", "smart-contracts", "dlt"],
+      "tags": [
+        "blockchain",
+        "smart-contracts",
+        "dlt"
+      ],
       "imageTag": "M2",
       "year": 2018,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4sDzf5v" },
-        { "format": "Kindle", "url": "https://amzn.to/4sG7skR" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4sDzf5v"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4sG7skR"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781788839044-L.jpg",
+      "isbn": "9781788839044"
     },
     {
       "slug": "mastering-blockchain-3e",
@@ -243,13 +444,26 @@
       "author": "Imran Bashir",
       "description": "Deep dive into distributed ledgers, consensus protocols, smart contracts, DApps, cryptocurrencies, Ethereum, and more.",
       "category": "blockchain",
-      "tags": ["blockchain", "ethereum", "dapps", "consensus"],
+      "tags": [
+        "blockchain",
+        "ethereum",
+        "dapps",
+        "consensus"
+      ],
       "imageTag": "M3",
       "year": 2020,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4de1lzz" },
-        { "format": "Kindle", "url": "https://amzn.to/414t5iN" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4de1lzz"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/414t5iN"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781839213199-L.jpg",
+      "isbn": "9781839213199"
     },
     {
       "slug": "mastering-blockchain-4e",
@@ -257,13 +471,26 @@
       "author": "Imran Bashir",
       "description": "Inner workings of blockchain, from cryptography and decentralized identities, to DeFi, NFTs and Web3.",
       "category": "blockchain",
-      "tags": ["blockchain", "defi", "nfts", "web3"],
+      "tags": [
+        "blockchain",
+        "defi",
+        "nfts",
+        "web3"
+      ],
       "imageTag": "M4",
       "year": 2023,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4tkhWXf" },
-        { "format": "Kindle", "url": "https://amzn.to/4tiyoqY" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4tkhWXf"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4tiyoqY"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781803241067-L.jpg",
+      "isbn": "9781803241067"
     },
     {
       "slug": "investigating-cryptocurrencies",
@@ -271,13 +498,26 @@
       "author": "Nick Furneaux",
       "description": "Law enforcement and forensic guide to tracing cryptocurrency transactions and identifying wallet owners.",
       "category": "crypto-forensics",
-      "tags": ["crypto", "forensics", "investigation", "tracing"],
+      "tags": [
+        "crypto",
+        "forensics",
+        "investigation",
+        "tracing"
+      ],
       "imageTag": "CI",
       "year": 2018,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/3NTUalG" },
-        { "format": "Kindle", "url": "https://amzn.to/4sG79GK" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3NTUalG"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4sG79GK"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781119480587-L.jpg",
+      "isbn": "9781119480587"
     },
     {
       "slug": "black-hat-python-1e",
@@ -285,12 +525,21 @@
       "author": "Justin Seitz",
       "description": "Python programming for hackers and pentesters. Network sniffing, web attacks, and trojan development.",
       "category": "programming",
-      "tags": ["python", "scripting", "tools"],
+      "tags": [
+        "python",
+        "scripting",
+        "tools"
+      ],
       "imageTag": "B1",
       "year": 2014,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/3ObqGQv" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3ObqGQv"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781593275907-L.jpg",
+      "isbn": "9781593275907"
     },
     {
       "slug": "black-hat-python-2e",
@@ -298,13 +547,26 @@
       "author": "Justin Seitz & Tom Arnold",
       "description": "Updated Python programming for hackers and pentesters. Modern techniques with Python 3.",
       "category": "programming",
-      "tags": ["python", "scripting", "tools", "python3"],
+      "tags": [
+        "python",
+        "scripting",
+        "tools",
+        "python3"
+      ],
       "imageTag": "B2",
       "year": 2021,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4tkjuR3" },
-        { "format": "Kindle", "url": "https://amzn.to/487MHGD" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4tkjuR3"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/487MHGD"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781718501126-L.jpg",
+      "isbn": "9781718501126"
     },
     {
       "slug": "gray-hat-python",
@@ -312,13 +574,25 @@
       "author": "Justin Seitz",
       "description": "Python for reverse engineering and security research. Debuggers, fuzzers, code injection, and more.",
       "category": "programming",
-      "tags": ["python", "reverse-engineering", "debugging"],
+      "tags": [
+        "python",
+        "reverse-engineering",
+        "debugging"
+      ],
       "imageTag": "GP",
       "year": 2009,
       "editions": [
-        { "format": "Paperback", "url": "https://amzn.to/4bJrN32" },
-        { "format": "Kindle", "url": "https://amzn.to/47ybZO5" }
-      ]
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4bJrN32"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/47ybZO5"
+        }
+      ],
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781593271923-L.jpg",
+      "isbn": "9781593271923"
     }
   ],
   "hardware": [
@@ -328,7 +602,12 @@
       "manufacturer": "Great Scott Gadgets",
       "description": "Open-source software-defined radio platform. Transmit and receive 1 MHz to 6 GHz. Essential for RF security research.",
       "category": "rf",
-      "tags": ["sdr", "radio", "rf", "wireless"],
+      "tags": [
+        "sdr",
+        "radio",
+        "rf",
+        "wireless"
+      ],
       "amazonUrl": "",
       "imageTag": "HR",
       "relatedTool": "hackrf"
@@ -339,7 +618,12 @@
       "manufacturer": "Flipper Devices",
       "description": "Multi-tool for pentesters and hardware hackers. RFID, NFC, infrared, sub-GHz radio, GPIO, and BadUSB in one device.",
       "category": "multi-tool",
-      "tags": ["rfid", "nfc", "infrared", "badusb"],
+      "tags": [
+        "rfid",
+        "nfc",
+        "infrared",
+        "badusb"
+      ],
       "amazonUrl": "",
       "imageTag": "FZ",
       "relatedTool": "flipperzero-firmware"
@@ -350,7 +634,12 @@
       "manufacturer": "Alfa Network",
       "description": "Dual-band AC1200 USB WiFi adapter with monitor mode and packet injection support. The go-to for wireless auditing.",
       "category": "wireless",
-      "tags": ["wifi", "monitor-mode", "injection", "wireless"],
+      "tags": [
+        "wifi",
+        "monitor-mode",
+        "injection",
+        "wireless"
+      ],
       "amazonUrl": "",
       "imageTag": "AL",
       "relatedTool": "aircrack-ng"
@@ -361,7 +650,11 @@
       "manufacturer": "Hak5",
       "description": "Keystroke injection tool disguised as a USB flash drive. Automates attacks with DuckyScript payloads.",
       "category": "hid",
-      "tags": ["hid", "keystroke-injection", "duckyscript"],
+      "tags": [
+        "hid",
+        "keystroke-injection",
+        "duckyscript"
+      ],
       "amazonUrl": "",
       "imageTag": "RD",
       "relatedTool": "badusb"
@@ -372,7 +665,12 @@
       "manufacturer": "Hak5",
       "description": "Wireless auditing platform for man-in-the-middle attacks, rogue access points, and WiFi reconnaissance.",
       "category": "wireless",
-      "tags": ["wifi", "mitm", "rogue-ap", "auditing"],
+      "tags": [
+        "wifi",
+        "mitm",
+        "rogue-ap",
+        "auditing"
+      ],
       "amazonUrl": "",
       "imageTag": "WP"
     },
@@ -382,7 +680,12 @@
       "manufacturer": "RFID Research Group",
       "description": "Advanced RFID/NFC research tool. Read, write, clone, and emulate HF and LF proximity cards.",
       "category": "rfid",
-      "tags": ["rfid", "nfc", "clone", "emulate"],
+      "tags": [
+        "rfid",
+        "nfc",
+        "clone",
+        "emulate"
+      ],
       "amazonUrl": "",
       "imageTag": "PX"
     },
@@ -392,7 +695,12 @@
       "manufacturer": "Hak5",
       "description": "Covert USB Ethernet adapter for remote access, network reconnaissance, and man-in-the-middle attacks.",
       "category": "network",
-      "tags": ["network", "remote-access", "mitm", "covert"],
+      "tags": [
+        "network",
+        "remote-access",
+        "mitm",
+        "covert"
+      ],
       "amazonUrl": "",
       "imageTag": "LT"
     },
@@ -402,7 +710,12 @@
       "manufacturer": "RTL-SDR Blog",
       "description": "Budget software-defined radio receiver kit. 500 kHz to 1.75 GHz coverage. Includes dipole antenna kit.",
       "category": "rf",
-      "tags": ["sdr", "radio", "receiver", "antenna"],
+      "tags": [
+        "sdr",
+        "radio",
+        "receiver",
+        "antenna"
+      ],
       "amazonUrl": "",
       "imageTag": "RS",
       "relatedTool": "rtl-sdr"

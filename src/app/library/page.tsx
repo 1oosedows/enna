@@ -24,6 +24,7 @@ interface Book {
   imageTag: string;
   year: number;
   editions: BookEdition[];
+  coverImage?: string;
 }
 
 interface HardwareItem {
@@ -47,54 +48,58 @@ const formatIcons: Record<string, string> = {
 
 function BookCard({ book }: { book: Book }) {
   return (
-    <div className="glass glass-hover card-glow rounded-xl p-6 h-full flex flex-col">
-      <div className="flex items-start gap-4 mb-4">
-        <div className="w-12 h-16 rounded-lg brand-gradient opacity-60 flex items-center justify-center flex-shrink-0">
-          <span className="text-white font-mono text-xs font-bold">
-            {book.imageTag}
-          </span>
+    <Link href={`/library/${book.slug}`} className="block h-full">
+      <div className="glass glass-hover card-glow rounded-xl p-6 h-full flex flex-col">
+        <div className="flex items-start gap-4 mb-4">
+          {book.coverImage ? (
+            <img
+              src={book.coverImage}
+              alt=""
+              className="w-12 h-16 rounded-lg object-cover flex-shrink-0"
+            />
+          ) : (
+            <div className="w-12 h-16 rounded-lg brand-gradient opacity-60 flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-mono text-xs font-bold">
+                {book.imageTag}
+              </span>
+            </div>
+          )}
+          <div className="flex-1 min-w-0">
+            <h3 className="font-mono font-semibold text-text-primary text-sm leading-tight mb-1">
+              {book.title}
+            </h3>
+            <p className="text-xs font-mono text-text-muted">{book.author}</p>
+            <p className="text-xs font-mono text-text-muted mt-0.5">{book.year}</p>
+          </div>
         </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-mono font-semibold text-text-primary text-sm leading-tight mb-1">
-            {book.title}
-          </h3>
-          <p className="text-xs font-mono text-text-muted">{book.author}</p>
-          <p className="text-xs font-mono text-text-muted mt-0.5">{book.year}</p>
-        </div>
-      </div>
 
-      <p className="text-sm text-text-secondary leading-relaxed mb-4 flex-1">
-        {book.description}
-      </p>
-
-      <div className="flex flex-wrap gap-1.5 mb-4">
-        {book.tags.map((tag) => (
-          <span key={tag} className="tag-pill">
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <div className="pt-3 border-t border-border">
-        <p className="text-[10px] font-mono text-text-muted uppercase tracking-wider mb-2">
-          Available formats
+        <p className="text-sm text-text-secondary leading-relaxed mb-4 flex-1">
+          {book.description}
         </p>
-        <div className="flex flex-wrap gap-2">
-          {book.editions.map((edition) => (
-            <a
-              key={edition.format}
-              href={edition.url}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-secondary border border-border hover:border-emerald-500/30 hover:bg-emerald-500/5 text-xs font-mono text-text-secondary hover:text-emerald-400 transition-all"
-            >
-              <span>{formatIcons[edition.format] || "📖"}</span>
-              <span>{edition.format}</span>
-            </a>
+
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {book.tags.map((tag) => (
+            <span key={tag} className="tag-pill">
+              {tag}
+            </span>
           ))}
         </div>
+
+        <div className="pt-3 border-t border-border flex items-center justify-between">
+          <div className="flex gap-1.5">
+            {book.editions.map((edition) => (
+              <span
+                key={edition.format}
+                className="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-secondary text-[10px] font-mono text-text-muted"
+              >
+                {formatIcons[edition.format] || "📖"} {edition.format}
+              </span>
+            ))}
+          </div>
+          <span className="text-xs font-mono text-brand-400">View →</span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
