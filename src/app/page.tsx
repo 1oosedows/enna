@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ToolGrid from "@/components/ToolGrid";
+import AdSlot from "@/components/AdSlot";
 import Footer from "@/components/Footer";
 import { categories } from "@/data/categories";
 import { enrichTools } from "@/lib/github";
@@ -17,7 +18,9 @@ export default async function Home() {
       <Header />
       <main>
         <HeroSection />
+        <AdSlot provider="custom" placement="hero" />
         <ToolGrid tools={tools} categories={categories} />
+        <AdSlot provider="custom" placement="footer" />
       </main>
       <Footer />
     </>

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AdSlot from "@/components/AdSlot";
 import { categories } from "@/data/categories";
 import { enrichTool, formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
@@ -740,6 +741,9 @@ export default async function ToolPage({
                   </a>
                 </div>
               </div>
+
+              {/* Ad slot */}
+              <AdSlot provider="custom" placement="sidebar" />
             </div>
           </div>
 
