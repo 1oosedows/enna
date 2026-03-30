@@ -1,0 +1,211 @@
+{
+  "books": [
+    {
+      "slug": "osint-techniques",
+      "title": "Open Source Intelligence Techniques",
+      "author": "Michael Bazzell",
+      "description": "The definitive guide to OSINT investigation techniques. Covers search engines, social networks, documents, images, and more.",
+      "category": "osint",
+      "tags": ["osint", "investigation", "privacy"],
+      "amazonUrl": "",
+      "imageTag": "OT"
+    },
+    {
+      "slug": "hacking-art-of-exploitation",
+      "title": "Hacking: The Art of Exploitation",
+      "author": "Jon Erickson",
+      "description": "Foundational text covering programming, networking, shellcode, cryptology, and exploitation from the ground up.",
+      "category": "exploitation",
+      "tags": ["exploitation", "programming", "shellcode"],
+      "amazonUrl": "",
+      "imageTag": "HK"
+    },
+    {
+      "slug": "red-team-field-manual",
+      "title": "RTFM: Red Team Field Manual",
+      "author": "Ben Clark",
+      "description": "Quick-reference guide for red team operators. Covers Linux, Windows, networking, and common attack commands.",
+      "category": "red-team",
+      "tags": ["red-team", "reference", "commands"],
+      "amazonUrl": "",
+      "imageTag": "RT"
+    },
+    {
+      "slug": "web-application-hackers-handbook",
+      "title": "The Web Application Hacker's Handbook",
+      "author": "Dafydd Stuttard & Marcus Pinto",
+      "description": "Comprehensive guide to finding and exploiting security flaws in web applications. Written by the creator of Burp Suite.",
+      "category": "web-security",
+      "tags": ["web-security", "burp-suite", "testing"],
+      "amazonUrl": "",
+      "imageTag": "WH"
+    },
+    {
+      "slug": "penetration-testing",
+      "title": "Penetration Testing",
+      "author": "Georgia Weidman",
+      "description": "Hands-on introduction to pentesting covering Kali Linux, Metasploit, social engineering, and reporting.",
+      "category": "pentesting",
+      "tags": ["pentesting", "metasploit", "kali"],
+      "amazonUrl": "",
+      "imageTag": "PT"
+    },
+    {
+      "slug": "network-security-assessment",
+      "title": "Network Security Assessment",
+      "author": "Chris McNab",
+      "description": "Practical guide to identifying and assessing network security risks using real-world attack techniques.",
+      "category": "network",
+      "tags": ["network", "assessment", "scanning"],
+      "amazonUrl": "",
+      "imageTag": "NS"
+    },
+    {
+      "slug": "practical-malware-analysis",
+      "title": "Practical Malware Analysis",
+      "author": "Michael Sikorski & Andrew Honig",
+      "description": "The hands-on guide to dissecting malware. Covers static analysis, dynamic analysis, and reverse engineering.",
+      "category": "malware",
+      "tags": ["malware", "reverse-engineering", "analysis"],
+      "amazonUrl": "",
+      "imageTag": "PM"
+    },
+    {
+      "slug": "art-of-intrusion",
+      "title": "The Art of Intrusion",
+      "author": "Kevin Mitnick",
+      "description": "Real-world stories of hackers at work. Each chapter covers a different attack vector with lessons learned.",
+      "category": "social-engineering",
+      "tags": ["social-engineering", "stories", "attacks"],
+      "amazonUrl": "",
+      "imageTag": "AI"
+    },
+    {
+      "slug": "blue-team-field-manual",
+      "title": "BTFM: Blue Team Field Manual",
+      "author": "Alan White & Ben Clark",
+      "description": "Quick-reference guide for defensive security. Incident response, forensics, and network defense commands.",
+      "category": "blue-team",
+      "tags": ["blue-team", "defense", "incident-response"],
+      "amazonUrl": "",
+      "imageTag": "BT"
+    },
+    {
+      "slug": "mastering-blockchain",
+      "title": "Mastering Blockchain",
+      "author": "Imran Bashir",
+      "description": "Deep dive into blockchain technology, cryptography, consensus mechanisms, and smart contract security.",
+      "category": "blockchain",
+      "tags": ["blockchain", "crypto", "smart-contracts"],
+      "amazonUrl": "",
+      "imageTag": "MB"
+    },
+    {
+      "slug": "cryptocurrency-investigation",
+      "title": "Investigating Cryptocurrencies",
+      "author": "Nick Furneaux",
+      "description": "Law enforcement and forensic guide to tracing cryptocurrency transactions and identifying wallet owners.",
+      "category": "crypto-forensics",
+      "tags": ["crypto", "forensics", "investigation", "tracing"],
+      "amazonUrl": "",
+      "imageTag": "CI"
+    },
+    {
+      "slug": "black-hat-python",
+      "title": "Black Hat Python",
+      "author": "Justin Seitz & Tim Arnold",
+      "description": "Python programming for pentesters and hackers. Network sniffing, web attacks, and trojan development.",
+      "category": "programming",
+      "tags": ["python", "scripting", "tools"],
+      "amazonUrl": "",
+      "imageTag": "BP"
+    }
+  ],
+  "hardware": [
+    {
+      "slug": "hackrf-one",
+      "title": "HackRF One",
+      "manufacturer": "Great Scott Gadgets",
+      "description": "Open-source software-defined radio platform. Transmit and receive 1 MHz to 6 GHz. Essential for RF security research.",
+      "category": "rf",
+      "tags": ["sdr", "radio", "rf", "wireless"],
+      "amazonUrl": "",
+      "imageTag": "HR",
+      "relatedTool": "hackrf"
+    },
+    {
+      "slug": "flipper-zero",
+      "title": "Flipper Zero",
+      "manufacturer": "Flipper Devices",
+      "description": "Multi-tool for pentesters and hardware hackers. RFID, NFC, infrared, sub-GHz radio, GPIO, and BadUSB in one device.",
+      "category": "multi-tool",
+      "tags": ["rfid", "nfc", "infrared", "badusb"],
+      "amazonUrl": "",
+      "imageTag": "FZ",
+      "relatedTool": "flipperzero-firmware"
+    },
+    {
+      "slug": "alfa-awus036ach",
+      "title": "Alfa AWUS036ACH",
+      "manufacturer": "Alfa Network",
+      "description": "Dual-band AC1200 USB WiFi adapter with monitor mode and packet injection support. The go-to for wireless auditing.",
+      "category": "wireless",
+      "tags": ["wifi", "monitor-mode", "injection", "wireless"],
+      "amazonUrl": "",
+      "imageTag": "AL",
+      "relatedTool": "aircrack-ng"
+    },
+    {
+      "slug": "usb-rubber-ducky",
+      "title": "USB Rubber Ducky",
+      "manufacturer": "Hak5",
+      "description": "Keystroke injection tool disguised as a USB flash drive. Automates attacks with DuckyScript payloads.",
+      "category": "hid",
+      "tags": ["hid", "keystroke-injection", "duckyscript"],
+      "amazonUrl": "",
+      "imageTag": "RD",
+      "relatedTool": "badusb"
+    },
+    {
+      "slug": "wifi-pineapple",
+      "title": "WiFi Pineapple",
+      "manufacturer": "Hak5",
+      "description": "Wireless auditing platform for man-in-the-middle attacks, rogue access points, and WiFi reconnaissance.",
+      "category": "wireless",
+      "tags": ["wifi", "mitm", "rogue-ap", "auditing"],
+      "amazonUrl": "",
+      "imageTag": "WP"
+    },
+    {
+      "slug": "proxmark3",
+      "title": "Proxmark3 RDV4",
+      "manufacturer": "RFID Research Group",
+      "description": "Advanced RFID/NFC research tool. Read, write, clone, and emulate HF and LF proximity cards.",
+      "category": "rfid",
+      "tags": ["rfid", "nfc", "clone", "emulate"],
+      "amazonUrl": "",
+      "imageTag": "PX"
+    },
+    {
+      "slug": "lan-turtle",
+      "title": "LAN Turtle",
+      "manufacturer": "Hak5",
+      "description": "Covert USB Ethernet adapter for remote access, network reconnaissance, and man-in-the-middle attacks.",
+      "category": "network",
+      "tags": ["network", "remote-access", "mitm", "covert"],
+      "amazonUrl": "",
+      "imageTag": "LT"
+    },
+    {
+      "slug": "rtl-sdr-kit",
+      "title": "RTL-SDR V4 Kit",
+      "manufacturer": "RTL-SDR Blog",
+      "description": "Budget software-defined radio receiver kit. 500 kHz to 1.75 GHz coverage. Includes dipole antenna kit.",
+      "category": "rf",
+      "tags": ["sdr", "radio", "receiver", "antenna"],
+      "amazonUrl": "",
+      "imageTag": "RS",
+      "relatedTool": "rtl-sdr"
+    }
+  ]
+}

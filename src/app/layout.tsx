@@ -48,14 +48,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  other: {
-    "google-adsense-account": "ca-pub-9655416932369069",
-  },
-  verification: {
-    other: {
-      "google-adsense-account": ["ca-pub-9655416932369069"],
-    },
-  },
 };
 
 export default function RootLayout({
@@ -69,12 +61,6 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
-        />
-        <meta name="google-adsense-account" content="ca-pub-9655416932369069" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9655416932369069"
-          crossOrigin="anonymous"
         />
       </head>
       <body className="min-h-screen bg-surface-base text-text-primary font-sans antialiased">

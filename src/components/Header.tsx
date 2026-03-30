@@ -31,8 +31,14 @@ export default function Header() {
           >
             Categories
           </Link>
+          <Link
+            href="/library"
+            className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
+          >
+            Library
+          </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/1oosedows/enna"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"

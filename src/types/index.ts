@@ -17,6 +17,8 @@ export interface Tool {
   featured?: boolean;
   useCases?: string[];
   alternatives?: string[];
+  affiliateUrl?: string;
+  affiliateLabel?: string;
   // GitHub enrichment (populated at build time)
   stars?: number;
   forks?: number;

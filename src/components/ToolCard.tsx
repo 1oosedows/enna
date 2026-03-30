@@ -119,6 +119,11 @@ export default function ToolCard({ tool, index }: Props) {
                 {categoryLabel}
               </span>
             )}
+            {tool.affiliateUrl && (
+              <span className="px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-emerald-500/20 border border-emerald-500/30 text-emerald-400">
+                Pro
+              </span>
+            )}
             {tool.featured && (
               <span
                 className={`px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider ${
