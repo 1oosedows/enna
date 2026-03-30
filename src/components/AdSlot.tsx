@@ -58,26 +58,30 @@ export default function AdSlot({
     footer: "max-w-lg mx-auto mt-8 mb-4",
   };
 
-  // AdSense format per placement
-  const adsenseFormat: Record<string, string> = {
-    hero: "horizontal",
-    sidebar: "vertical",
-    inline: "rectangle",
-    footer: "horizontal",
-  };
+  // Fluid ad (hero, footer, inline)
+  const isFluid = placement === "hero" || placement === "footer" || placement === "inline";
 
   return (
     <div
       ref={adRef}
       className={`${placementStyles[placement]} ${className}`}
     >
-      {provider === "adsense" && (
+      {provider === "adsense" && isFluid && (
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
+          data-ad-format="fluid"
+          data-ad-layout-key="-fn-2n+ez-8x-u9"
           data-ad-client="ca-pub-9655416932369069"
-          data-ad-format={adsenseFormat[placement]}
-          data-full-width-responsive="true"
+          data-ad-slot="1359808615"
+        />
+      )}
+      {provider === "adsense" && !isFluid && (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "inline-block", width: 300, height: 800 }}
+          data-ad-client="ca-pub-9655416932369069"
+          data-ad-slot="5698074107"
         />
       )}
       {provider === "carbon" && (
@@ -114,12 +118,10 @@ export default function AdSlot({
       )}
 
       <style jsx global>{`
-        /* AdSense dark theme override */
         .adsbygoogle {
           background: transparent !important;
         }
 
-        /* Carbon Ads styling */
         #carbonads {
           font-family: "JetBrains Mono", monospace;
           display: flex;
@@ -164,7 +166,6 @@ export default function AdSlot({
           display: block;
         }
 
-        /* EthicalAds styling */
         .ea-content {
           font-family: "JetBrains Mono", monospace !important;
           background: rgba(28, 32, 48, 0.6) !important;
