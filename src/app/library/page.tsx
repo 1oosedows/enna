@@ -9,10 +9,44 @@ export const metadata = {
     "Curated books and hardware for OSINT, pentesting, and security research. Essential reading and tools for professionals.",
 };
 
-function BookCard({ book }: { book: (typeof libraryData.books)[0] }) {
-  const hasLink = !!book.amazonUrl;
+interface BookEdition {
+  format: string;
+  url: string;
+}
 
-  const content = (
+interface Book {
+  slug: string;
+  title: string;
+  author: string;
+  description: string;
+  category: string;
+  tags: string[];
+  imageTag: string;
+  year: number;
+  editions: BookEdition[];
+}
+
+interface HardwareItem {
+  slug: string;
+  title: string;
+  manufacturer: string;
+  description: string;
+  category: string;
+  tags: string[];
+  amazonUrl: string;
+  imageTag: string;
+  relatedTool?: string;
+}
+
+const formatIcons: Record<string, string> = {
+  Book: "📖",
+  Paperback: "📖",
+  Hardcover: "📕",
+  Kindle: "📱",
+};
+
+function BookCard({ book }: { book: Book }) {
+  return (
     <div className="glass glass-hover card-glow rounded-xl p-6 h-full flex flex-col">
       <div className="flex items-start gap-4 mb-4">
         <div className="w-12 h-16 rounded-lg brand-gradient opacity-60 flex items-center justify-center flex-shrink-0">
@@ -25,6 +59,7 @@ function BookCard({ book }: { book: (typeof libraryData.books)[0] }) {
             {book.title}
           </h3>
           <p className="text-xs font-mono text-text-muted">{book.author}</p>
+          <p className="text-xs font-mono text-text-muted mt-0.5">{book.year}</p>
         </div>
       </div>
 
@@ -40,57 +75,30 @@ function BookCard({ book }: { book: (typeof libraryData.books)[0] }) {
         ))}
       </div>
 
-      {hasLink ? (
-        <div className="pt-3 border-t border-border">
-          <span className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <div className="pt-3 border-t border-border">
+        <p className="text-[10px] font-mono text-text-muted uppercase tracking-wider mb-2">
+          Available formats
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {book.editions.map((edition) => (
+            <a
+              key={edition.format}
+              href={edition.url}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-secondary border border-border hover:border-emerald-500/30 hover:bg-emerald-500/5 text-xs font-mono text-text-secondary hover:text-emerald-400 transition-all"
             >
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 01-8 0" />
-            </svg>
-            Buy on Amazon
-          </span>
+              <span>{formatIcons[edition.format] || "📖"}</span>
+              <span>{edition.format}</span>
+            </a>
+          ))}
         </div>
-      ) : (
-        <div className="pt-3 border-t border-border">
-          <span className="text-xs font-mono text-text-muted">
-            Link coming soon
-          </span>
-        </div>
-      )}
+      </div>
     </div>
   );
-
-  if (hasLink) {
-    return (
-      <a
-        href={book.amazonUrl}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className="block"
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return content;
 }
 
-function HardwareCard({
-  item,
-}: {
-  item: (typeof libraryData.hardware)[0];
-}) {
+function HardwareCard({ item }: { item: HardwareItem }) {
   const hasLink = !!item.amazonUrl;
 
   const content = (
@@ -125,7 +133,12 @@ function HardwareCard({
 
       <div className="flex items-center gap-3 pt-3 border-t border-border">
         {hasLink ? (
-          <span className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400">
+          <a
+            href={item.amazonUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-secondary border border-border hover:border-emerald-500/30 hover:bg-emerald-500/5 text-xs font-mono text-text-secondary hover:text-emerald-400 transition-all"
+          >
             <svg
               width="14"
               height="14"
@@ -141,7 +154,7 @@ function HardwareCard({
               <path d="M16 10a4 4 0 01-8 0" />
             </svg>
             Buy on Amazon
-          </span>
+          </a>
         ) : (
           <span className="text-xs font-mono text-text-muted">
             Link coming soon
@@ -159,23 +172,13 @@ function HardwareCard({
     </div>
   );
 
-  if (hasLink) {
-    return (
-      <a
-        href={item.amazonUrl}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className="block"
-      >
-        {content}
-      </a>
-    );
-  }
-
   return content;
 }
 
 export default function LibraryPage() {
+  const books = libraryData.books as Book[];
+  const hardware = libraryData.hardware as HardwareItem[];
+
   return (
     <>
       <Header />
@@ -193,10 +196,18 @@ export default function LibraryPage() {
             Essential books and hardware for security professionals. Hand-picked
             resources to complement your toolkit.
           </p>
+          <div className="flex items-center justify-center gap-6 mt-6">
+            <div className="flex items-center gap-2 text-sm font-mono text-text-muted">
+              <span className="text-brand-400">{books.length}</span> books
+            </div>
+            <div className="flex items-center gap-2 text-sm font-mono text-text-muted">
+              <span className="text-accent-400">{hardware.length}</span> hardware
+            </div>
+          </div>
         </div>
 
         {/* Books Section */}
-        <section className="mb-16">
+        <section id="books" className="mb-16 scroll-mt-24">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 rounded-lg brand-gradient opacity-60 flex items-center justify-center">
               <svg
@@ -218,13 +229,13 @@ export default function LibraryPage() {
                 Books
               </h2>
               <p className="text-sm text-text-muted font-mono">
-                {libraryData.books.length} titles
+                {books.length} titles across security, OSINT, and blockchain
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {libraryData.books.map((book, i) => (
+            {books.map((book, i) => (
               <div
                 key={book.slug}
                 className="animate-slide-up"
@@ -240,7 +251,7 @@ export default function LibraryPage() {
         </section>
 
         {/* Hardware Section */}
-        <section>
+        <section id="hardware" className="scroll-mt-24">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 rounded-lg bg-accent-500/20 border border-accent-500/30 flex items-center justify-center">
               <svg
@@ -270,13 +281,13 @@ export default function LibraryPage() {
                 Hardware
               </h2>
               <p className="text-sm text-text-muted font-mono">
-                {libraryData.hardware.length} devices
+                {hardware.length} devices for hands-on security research
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {libraryData.hardware.map((item, i) => (
+            {hardware.map((item, i) => (
               <div
                 key={item.slug}
                 className="animate-slide-up"

@@ -2,123 +2,323 @@
   "books": [
     {
       "slug": "osint-techniques",
-      "title": "Open Source Intelligence Techniques",
+      "title": "OSINT Techniques: Resources for Uncovering Online Information",
       "author": "Michael Bazzell",
       "description": "The definitive guide to OSINT investigation techniques. Covers search engines, social networks, documents, images, and more.",
       "category": "osint",
       "tags": ["osint", "investigation", "privacy"],
-      "amazonUrl": "",
-      "imageTag": "OT"
+      "imageTag": "OT",
+      "year": 2024,
+      "editions": [
+        { "format": "Book", "url": "https://amzn.to/3NXqbt7" }
+      ]
+    },
+    {
+      "slug": "extreme-privacy",
+      "title": "Extreme Privacy: What It Takes to Disappear",
+      "author": "Michael Bazzell",
+      "description": "Comprehensive guide to digital privacy and disappearing from online databases. Practical steps for protecting your identity.",
+      "category": "osint",
+      "tags": ["privacy", "disappearing", "identity"],
+      "imageTag": "EP",
+      "year": 2024,
+      "editions": [
+        { "format": "Book", "url": "https://amzn.to/4m6jGRE" }
+      ]
     },
     {
       "slug": "hacking-art-of-exploitation",
       "title": "Hacking: The Art of Exploitation",
       "author": "Jon Erickson",
-      "description": "Foundational text covering programming, networking, shellcode, cryptology, and exploitation from the ground up.",
+      "description": "Foundational text covering programming, networking, shellcode, cryptology, and exploitation from the ground up. Second edition.",
       "category": "exploitation",
       "tags": ["exploitation", "programming", "shellcode"],
-      "amazonUrl": "",
-      "imageTag": "HK"
+      "imageTag": "HK",
+      "year": 2008,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4s5h9Z9" },
+        { "format": "Kindle", "url": "https://amzn.to/4bG3CSZ" }
+      ]
     },
     {
-      "slug": "red-team-field-manual",
-      "title": "RTFM: Red Team Field Manual",
+      "slug": "rtfm-book-1",
+      "title": "RTFM: Red Team Field Manual Book 1",
       "author": "Ben Clark",
       "description": "Quick-reference guide for red team operators. Covers Linux, Windows, networking, and common attack commands.",
       "category": "red-team",
       "tags": ["red-team", "reference", "commands"],
-      "amazonUrl": "",
-      "imageTag": "RT"
+      "imageTag": "R1",
+      "year": 2014,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4bHzbvD" }
+      ]
     },
     {
-      "slug": "web-application-hackers-handbook",
-      "title": "The Web Application Hacker's Handbook",
-      "author": "Dafydd Stuttard & Marcus Pinto",
-      "description": "Comprehensive guide to finding and exploiting security flaws in web applications. Written by the creator of Burp Suite.",
+      "slug": "rtfm-book-2",
+      "title": "RTFM: Red Team Field Manual Book 2",
+      "author": "Ben Clark & Nick Downer",
+      "description": "Updated and expanded red team reference. New techniques, commands, and procedures for modern red team operations.",
+      "category": "red-team",
+      "tags": ["red-team", "reference", "commands"],
+      "imageTag": "R2",
+      "year": 2022,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/3O6Fekm" },
+        { "format": "Hardcover", "url": "https://amzn.to/4v1eW3F" },
+        { "format": "Kindle", "url": "https://amzn.to/482UXaQ" }
+      ]
+    },
+    {
+      "slug": "btfm-book-1",
+      "title": "BTFM: Blue Team Field Manual Book 1",
+      "author": "Ben Clark & Alan J. White",
+      "description": "Quick-reference guide for defensive security. Incident response, forensics, and network defense commands.",
+      "category": "blue-team",
+      "tags": ["blue-team", "defense", "incident-response"],
+      "imageTag": "B1",
+      "year": 2017,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4uUSGZ7" },
+        { "format": "Kindle", "url": "https://amzn.to/4lXwBoK" }
+      ]
+    },
+    {
+      "slug": "ftfm-book-2",
+      "title": "FTFM: Forensic Team Field Manual Book 2",
+      "author": "Alan J. White & Ben Clark",
+      "description": "Field manual for digital forensics teams. Quick-reference commands and procedures for forensic investigations.",
+      "category": "forensics",
+      "tags": ["forensics", "field-manual", "incident-response"],
+      "imageTag": "FT",
+      "year": 2025,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4cfnqg5" }
+      ]
+    },
+    {
+      "slug": "web-app-hackers-handbook-1e",
+      "title": "The Web Application Hacker's Handbook: First Edition",
+      "author": "Marcus Pinto & Dafydd Stuttard",
+      "description": "The original guide to finding and exploiting web application security flaws. Written by the creator of Burp Suite.",
       "category": "web-security",
       "tags": ["web-security", "burp-suite", "testing"],
-      "amazonUrl": "",
-      "imageTag": "WH"
+      "imageTag": "W1",
+      "year": 2007,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/3Oc5pGi" }
+      ]
+    },
+    {
+      "slug": "web-app-hackers-handbook-2e",
+      "title": "The Web Application Hacker's Handbook: Second Edition",
+      "author": "Dafydd Stuttard & Marcus Pinto",
+      "description": "Comprehensive updated guide to discovering and exploiting security flaws in web applications. By the creator of Burp Suite.",
+      "category": "web-security",
+      "tags": ["web-security", "burp-suite", "testing"],
+      "imageTag": "W2",
+      "year": 2011,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4sRWpoX" },
+        { "format": "Kindle", "url": "https://amzn.to/3Obhuvt" }
+      ]
     },
     {
       "slug": "penetration-testing",
-      "title": "Penetration Testing",
+      "title": "Penetration Testing: A Hands-On Introduction to Hacking",
       "author": "Georgia Weidman",
       "description": "Hands-on introduction to pentesting covering Kali Linux, Metasploit, social engineering, and reporting.",
       "category": "pentesting",
       "tags": ["pentesting", "metasploit", "kali"],
-      "amazonUrl": "",
-      "imageTag": "PT"
+      "imageTag": "PT",
+      "year": 2014,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4bHC27P" },
+        { "format": "Kindle", "url": "https://amzn.to/4s8bMbR" }
+      ]
     },
     {
       "slug": "network-security-assessment",
-      "title": "Network Security Assessment",
+      "title": "Network Security Assessment: Know Your Network",
       "author": "Chris McNab",
-      "description": "Practical guide to identifying and assessing network security risks using real-world attack techniques.",
+      "description": "Practical guide to identifying and assessing network security risks using real-world attack techniques. Third edition.",
       "category": "network",
       "tags": ["network", "assessment", "scanning"],
-      "amazonUrl": "",
-      "imageTag": "NS"
+      "imageTag": "NS",
+      "year": 2017,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/3PCcy3e" },
+        { "format": "Kindle", "url": "https://amzn.to/4dkuuZV" }
+      ]
     },
     {
       "slug": "practical-malware-analysis",
-      "title": "Practical Malware Analysis",
+      "title": "Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software",
       "author": "Michael Sikorski & Andrew Honig",
       "description": "The hands-on guide to dissecting malware. Covers static analysis, dynamic analysis, and reverse engineering.",
       "category": "malware",
       "tags": ["malware", "reverse-engineering", "analysis"],
-      "amazonUrl": "",
-      "imageTag": "PM"
+      "imageTag": "PM",
+      "year": 2012,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/47w6kIc" },
+        { "format": "Kindle", "url": "https://amzn.to/4t9HAh6" }
+      ]
+    },
+    {
+      "slug": "art-of-deception",
+      "title": "The Art of Deception: Controlling the Human Element of Security",
+      "author": "Kevin D. Mitnick & William L. Simon",
+      "description": "Mitnick reveals how social engineering is the greatest threat to security. Real-world stories and defenses against manipulation.",
+      "category": "social-engineering",
+      "tags": ["social-engineering", "deception", "security"],
+      "imageTag": "AD",
+      "year": 2002,
+      "editions": [
+        { "format": "Hardcover", "url": "https://amzn.to/4m66ufC" },
+        { "format": "Paperback", "url": "https://amzn.to/4s8eAFV" },
+        { "format": "Kindle", "url": "https://amzn.to/4sJuE1S" }
+      ]
     },
     {
       "slug": "art-of-intrusion",
-      "title": "The Art of Intrusion",
-      "author": "Kevin Mitnick",
+      "title": "The Art of Intrusion: The Real Stories Behind the Exploits of Hackers, Intruders and Deceivers",
+      "author": "Kevin D. Mitnick & William L. Simon",
       "description": "Real-world stories of hackers at work. Each chapter covers a different attack vector with lessons learned.",
       "category": "social-engineering",
       "tags": ["social-engineering", "stories", "attacks"],
-      "amazonUrl": "",
-      "imageTag": "AI"
+      "imageTag": "AI",
+      "year": 2005,
+      "editions": [
+        { "format": "Hardcover", "url": "https://amzn.to/4cdWWf0" },
+        { "format": "Paperback", "url": "https://amzn.to/4dSqKio" },
+        { "format": "Kindle", "url": "https://amzn.to/4tiwKFO" }
+      ]
     },
     {
-      "slug": "blue-team-field-manual",
-      "title": "BTFM: Blue Team Field Manual",
-      "author": "Alan White & Ben Clark",
-      "description": "Quick-reference guide for defensive security. Incident response, forensics, and network defense commands.",
-      "category": "blue-team",
-      "tags": ["blue-team", "defense", "incident-response"],
-      "amazonUrl": "",
-      "imageTag": "BT"
+      "slug": "art-of-invisibility",
+      "title": "The Art of Invisibility: The World's Most Famous Hacker Teaches You How to Be Safe in the Age of Big Brother and Big Data",
+      "author": "Kevin D. Mitnick & Mikko Hypponen",
+      "description": "Mitnick's guide to online privacy and anonymity. Practical techniques for protecting yourself from surveillance and data collection.",
+      "category": "privacy",
+      "tags": ["privacy", "anonymity", "surveillance"],
+      "imageTag": "AV",
+      "year": 2017,
+      "editions": [
+        { "format": "Hardcover", "url": "https://amzn.to/3NXyHs5" },
+        { "format": "Paperback", "url": "https://amzn.to/4mki4nv" },
+        { "format": "Kindle", "url": "https://amzn.to/4v6Iayi" }
+      ]
     },
     {
-      "slug": "mastering-blockchain",
-      "title": "Mastering Blockchain",
+      "slug": "mastering-blockchain-1e",
+      "title": "Mastering Blockchain: First Edition",
       "author": "Imran Bashir",
-      "description": "Deep dive into blockchain technology, cryptography, consensus mechanisms, and smart contract security.",
+      "description": "Deeper insights into decentralization, cryptography, Bitcoin, and popular blockchain frameworks.",
       "category": "blockchain",
-      "tags": ["blockchain", "crypto", "smart-contracts"],
-      "amazonUrl": "",
-      "imageTag": "MB"
+      "tags": ["blockchain", "crypto", "bitcoin"],
+      "imageTag": "M1",
+      "year": 2017,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4ddKSLM" },
+        { "format": "Kindle", "url": "https://amzn.to/47wEzPR" }
+      ]
     },
     {
-      "slug": "cryptocurrency-investigation",
-      "title": "Investigating Cryptocurrencies",
+      "slug": "mastering-blockchain-2e",
+      "title": "Mastering Blockchain: Second Edition",
+      "author": "Imran Bashir",
+      "description": "Distributed ledger technology, decentralization, and smart contracts explained.",
+      "category": "blockchain",
+      "tags": ["blockchain", "smart-contracts", "dlt"],
+      "imageTag": "M2",
+      "year": 2018,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4sDzf5v" },
+        { "format": "Kindle", "url": "https://amzn.to/4sG7skR" }
+      ]
+    },
+    {
+      "slug": "mastering-blockchain-3e",
+      "title": "Mastering Blockchain: Third Edition",
+      "author": "Imran Bashir",
+      "description": "Deep dive into distributed ledgers, consensus protocols, smart contracts, DApps, cryptocurrencies, Ethereum, and more.",
+      "category": "blockchain",
+      "tags": ["blockchain", "ethereum", "dapps", "consensus"],
+      "imageTag": "M3",
+      "year": 2020,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4de1lzz" },
+        { "format": "Kindle", "url": "https://amzn.to/414t5iN" }
+      ]
+    },
+    {
+      "slug": "mastering-blockchain-4e",
+      "title": "Mastering Blockchain: Fourth Edition",
+      "author": "Imran Bashir",
+      "description": "Inner workings of blockchain, from cryptography and decentralized identities, to DeFi, NFTs and Web3.",
+      "category": "blockchain",
+      "tags": ["blockchain", "defi", "nfts", "web3"],
+      "imageTag": "M4",
+      "year": 2023,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4tkhWXf" },
+        { "format": "Kindle", "url": "https://amzn.to/4tiyoqY" }
+      ]
+    },
+    {
+      "slug": "investigating-cryptocurrencies",
+      "title": "Investigating Cryptocurrencies: Understanding, Extracting, and Analyzing Blockchain Evidence",
       "author": "Nick Furneaux",
       "description": "Law enforcement and forensic guide to tracing cryptocurrency transactions and identifying wallet owners.",
       "category": "crypto-forensics",
       "tags": ["crypto", "forensics", "investigation", "tracing"],
-      "amazonUrl": "",
-      "imageTag": "CI"
+      "imageTag": "CI",
+      "year": 2018,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/3NTUalG" },
+        { "format": "Kindle", "url": "https://amzn.to/4sG79GK" }
+      ]
     },
     {
-      "slug": "black-hat-python",
-      "title": "Black Hat Python",
-      "author": "Justin Seitz & Tim Arnold",
-      "description": "Python programming for pentesters and hackers. Network sniffing, web attacks, and trojan development.",
+      "slug": "black-hat-python-1e",
+      "title": "Black Hat Python: First Edition",
+      "author": "Justin Seitz",
+      "description": "Python programming for hackers and pentesters. Network sniffing, web attacks, and trojan development.",
       "category": "programming",
       "tags": ["python", "scripting", "tools"],
-      "amazonUrl": "",
-      "imageTag": "BP"
+      "imageTag": "B1",
+      "year": 2014,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/3ObqGQv" }
+      ]
+    },
+    {
+      "slug": "black-hat-python-2e",
+      "title": "Black Hat Python: Second Edition",
+      "author": "Justin Seitz & Tom Arnold",
+      "description": "Updated Python programming for hackers and pentesters. Modern techniques with Python 3.",
+      "category": "programming",
+      "tags": ["python", "scripting", "tools", "python3"],
+      "imageTag": "B2",
+      "year": 2021,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4tkjuR3" },
+        { "format": "Kindle", "url": "https://amzn.to/487MHGD" }
+      ]
+    },
+    {
+      "slug": "gray-hat-python",
+      "title": "Gray Hat Python: Python Programming for Hackers and Reverse Engineers",
+      "author": "Justin Seitz",
+      "description": "Python for reverse engineering and security research. Debuggers, fuzzers, code injection, and more.",
+      "category": "programming",
+      "tags": ["python", "reverse-engineering", "debugging"],
+      "imageTag": "GP",
+      "year": 2009,
+      "editions": [
+        { "format": "Paperback", "url": "https://amzn.to/4bJrN32" },
+        { "format": "Kindle", "url": "https://amzn.to/47ybZO5" }
+      ]
     }
   ],
   "hardware": [
