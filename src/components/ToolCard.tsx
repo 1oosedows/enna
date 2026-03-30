@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Tool } from "@/types";
 import { formatStars, timeAgo } from "@/lib/github";
+import { getCategoryColorScheme } from "@/lib/category-colors";
 
 interface Props {
   tool: Tool;
@@ -10,17 +11,61 @@ interface Props {
 }
 
 export default function ToolCard({ tool, index }: Props) {
+  const scheme = getCategoryColorScheme(tool.category);
+
   const langColors: Record<string, string> = {
     Python: "#3572A5",
     Go: "#00ADD8",
     Rust: "#DEA584",
     "C/C++": "#555555",
     C: "#555555",
+    "C++": "#f34b7d",
+    "C#": "#178600",
     Ruby: "#CC342D",
     Java: "#B07219",
     Perl: "#0298C3",
     JavaScript: "#F7DF1E",
+    TypeScript: "#3178C6",
+    Elixir: "#6E4A7E",
+    Shell: "#89e051",
+    PowerShell: "#012456",
+    DuckyScript: "#ff6600",
   };
+
+  const glassHover =
+    scheme === "caution"
+      ? "glass-hover-caution"
+      : scheme === "danger"
+        ? "glass-hover-danger"
+        : "glass-hover";
+
+  const cardGlow =
+    scheme === "caution"
+      ? "card-glow card-glow-caution"
+      : scheme === "danger"
+        ? "card-glow card-glow-danger"
+        : "card-glow";
+
+  const tagClass =
+    scheme === "caution"
+      ? "tag-pill-caution"
+      : scheme === "danger"
+        ? "tag-pill-danger"
+        : "tag-pill";
+
+  const gradientClass =
+    scheme === "caution"
+      ? "caution-gradient"
+      : scheme === "danger"
+        ? "danger-gradient"
+        : "brand-gradient";
+
+  const categoryLabel =
+    scheme === "caution"
+      ? "Dual Use"
+      : scheme === "danger"
+        ? "Offensive"
+        : null;
 
   return (
     <Link
@@ -28,7 +73,9 @@ export default function ToolCard({ tool, index }: Props) {
       className="block animate-slide-up"
       style={{ animationDelay: `${index * 50}ms`, animationFillMode: "both" }}
     >
-      <div className="glass glass-hover card-glow rounded-xl p-6 h-full flex flex-col">
+      <div
+        className={`glass ${glassHover} ${cardGlow} rounded-xl p-6 h-full flex flex-col`}
+      >
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -39,14 +86,16 @@ export default function ToolCard({ tool, index }: Props) {
                 className="w-10 h-10 rounded-lg opacity-80"
               />
             ) : (
-              <div className="w-10 h-10 rounded-lg brand-gradient opacity-60 flex items-center justify-center">
+              <div
+                className={`w-10 h-10 rounded-lg ${gradientClass} opacity-60 flex items-center justify-center`}
+              >
                 <span className="text-white font-mono text-xs font-bold">
                   {tool.name.slice(0, 2).toUpperCase()}
                 </span>
               </div>
             )}
             <div>
-              <h3 className="font-mono font-semibold text-text-primary group-hover:text-brand-400 transition-colors">
+              <h3 className="font-mono font-semibold text-text-primary transition-colors">
                 {tool.name}
               </h3>
               <div className="flex items-center gap-2 mt-0.5">
@@ -62,11 +111,26 @@ export default function ToolCard({ tool, index }: Props) {
               </div>
             </div>
           </div>
-          {tool.featured && (
-            <span className="px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider brand-gradient text-white">
-              Featured
-            </span>
-          )}
+          <div className="flex items-center gap-1.5">
+            {categoryLabel && (
+              <span
+                className={`px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider ${gradientClass} text-white`}
+              >
+                {categoryLabel}
+              </span>
+            )}
+            {tool.featured && (
+              <span
+                className={`px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider ${
+                  categoryLabel
+                    ? "bg-surface-secondary border border-border text-text-muted"
+                    : `${gradientClass} text-white`
+                }`}
+              >
+                Featured
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Description */}
@@ -77,7 +141,7 @@ export default function ToolCard({ tool, index }: Props) {
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
           {tool.tags.slice(0, 4).map((tag) => (
-            <span key={tag} className="tag-pill">
+            <span key={tag} className={tagClass}>
               {tag}
             </span>
           ))}

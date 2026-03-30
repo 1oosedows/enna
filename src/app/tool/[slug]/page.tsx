@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { categories } from "@/data/categories";
 import { enrichTool, formatStars, timeAgo } from "@/lib/github";
+import { getCategoryColorScheme } from "@/lib/category-colors";
 import toolsData from "@/data/tools.json";
 import { Tool } from "@/types";
 
@@ -59,6 +60,32 @@ export default async function ToolPage({
     ? (toolsData as Tool[]).filter((t) => tool.alternatives?.includes(t.slug))
     : [];
 
+  const scheme = getCategoryColorScheme(tool.category);
+  const gradientClass =
+    scheme === "caution"
+      ? "caution-gradient"
+      : scheme === "danger"
+        ? "danger-gradient"
+        : "brand-gradient";
+  const scanLineClass =
+    scheme === "caution"
+      ? "scan-line-caution"
+      : scheme === "danger"
+        ? "scan-line-danger"
+        : "scan-line";
+  const tagClass =
+    scheme === "caution"
+      ? "tag-pill-caution"
+      : scheme === "danger"
+        ? "tag-pill-danger"
+        : "tag-pill";
+  const accentColor =
+    scheme === "caution"
+      ? "text-caution-400"
+      : scheme === "danger"
+        ? "text-danger-400"
+        : "text-brand-400";
+
   return (
     <>
       <Header />
@@ -89,7 +116,7 @@ export default async function ToolPage({
 
           {/* Hero section */}
           <div className="glass rounded-2xl p-8 md:p-10 mb-8 relative overflow-hidden">
-            <div className="scan-line" />
+            <div className={scanLineClass} />
 
             {/* Top: Avatar + Name + Badges */}
             <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
@@ -100,7 +127,7 @@ export default async function ToolPage({
                   className="w-20 h-20 rounded-xl border border-border"
                 />
               ) : (
-                <div className="w-20 h-20 rounded-xl brand-gradient flex items-center justify-center flex-shrink-0">
+                <div className={`w-20 h-20 rounded-xl ${gradientClass} flex items-center justify-center flex-shrink-0`}>
                   <span className="text-white font-mono font-bold text-2xl">
                     {tool.name.slice(0, 2).toUpperCase()}
                   </span>
@@ -112,7 +139,7 @@ export default async function ToolPage({
                     {tool.name}
                   </h1>
                   {tool.featured && (
-                    <span className="px-2.5 py-1 rounded text-xs font-mono uppercase tracking-wider brand-gradient text-white">
+                    <span className={`px-2.5 py-1 rounded text-xs font-mono uppercase tracking-wider ${gradientClass} text-white`}>
                       Featured
                     </span>
                   )}
@@ -229,7 +256,7 @@ export default async function ToolPage({
                 href={`https://github.com/${tool.github}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-lg brand-gradient text-white font-mono text-sm font-medium hover:opacity-90 transition-opacity inline-flex items-center gap-2"
+                className={`px-6 py-3 rounded-lg ${gradientClass} text-white font-mono text-sm font-medium hover:opacity-90 transition-opacity inline-flex items-center gap-2`}
               >
                 <svg
                   width="18"
@@ -335,7 +362,7 @@ export default async function ToolPage({
                               {method}
                             </p>
                             <div className="bg-surface-base rounded-lg p-4 border border-border group relative">
-                              <code className="text-sm font-mono text-brand-400 break-all">
+                              <code className={`text-sm font-mono ${accentColor} break-all`}>
                                 $ {cmd}
                               </code>
                             </div>
@@ -345,7 +372,7 @@ export default async function ToolPage({
                     </div>
                   ) : (
                     <div className="bg-surface-base rounded-lg p-4 border border-border">
-                      <code className="text-sm font-mono text-brand-400 break-all">
+                      <code className={`text-sm font-mono ${accentColor} break-all`}>
                         $ {tool.installCommand}
                       </code>
                     </div>
@@ -362,7 +389,7 @@ export default async function ToolPage({
                   <ul className="space-y-3">
                     {tool.useCases.map((useCase, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 flex-shrink-0" />
+                        <span className={`w-1.5 h-1.5 rounded-full ${scheme === "caution" ? "bg-caution-500" : scheme === "danger" ? "bg-danger-500" : "bg-brand-500"} mt-2 flex-shrink-0`} />
                         <span className="text-sm text-text-secondary leading-relaxed">
                           {useCase}
                         </span>
@@ -379,7 +406,7 @@ export default async function ToolPage({
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {tool.tags.map((tag) => (
-                    <span key={tag} className="tag-pill text-sm">
+                    <span key={tag} className={`${tagClass} text-sm`}>
                       {tag}
                     </span>
                   ))}
@@ -420,7 +447,7 @@ export default async function ToolPage({
                         href={`https://github.com/${tool.github}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-mono text-brand-400 hover:text-brand-500 transition-colors"
+                        className={`text-sm font-mono ${accentColor} hover:opacity-80 transition-colors`}
                       >
                         {tool.github}
                       </a>

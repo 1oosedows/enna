@@ -60,12 +60,46 @@
     box-shadow: 0 0 30px rgba(230, 57, 80, 0.08);
   }
 
+  .glass-hover-caution:hover {
+    background: rgba(35, 40, 56, 0.8);
+    border-color: rgba(245, 158, 11, 0.3);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+  }
+
+  .glass-hover-danger:hover {
+    background: rgba(35, 40, 56, 0.8);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.08);
+  }
+
   .brand-gradient {
     background: linear-gradient(135deg, #e63950, #a855a0);
   }
 
+  .caution-gradient {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+  }
+
+  .danger-gradient {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  }
+
   .brand-gradient-text {
     background: linear-gradient(135deg, #f25c6e, #c084b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .caution-gradient-text {
+    background: linear-gradient(135deg, #fbbf24, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .danger-gradient-text {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -89,6 +123,40 @@
       transparent,
       rgba(230, 57, 80, 0.6),
       rgba(168, 85, 160, 0.4),
+      transparent
+    );
+    animation: scan 8s linear infinite;
+    pointer-events: none;
+  }
+
+  .scan-line-caution {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(245, 158, 11, 0.6),
+      rgba(180, 83, 9, 0.4),
+      transparent
+    );
+    animation: scan 8s linear infinite;
+    pointer-events: none;
+  }
+
+  .scan-line-danger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(139, 92, 246, 0.6),
+      rgba(109, 40, 217, 0.4),
       transparent
     );
     animation: scan 8s linear infinite;
@@ -121,6 +189,24 @@
     left: 100%;
   }
 
+  .card-glow-caution::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(245, 158, 11, 0.05),
+      transparent
+    );
+  }
+
+  .card-glow-danger::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(139, 92, 246, 0.05),
+      transparent
+    );
+  }
+
   .radar-ring {
     border: 1px solid rgba(230, 57, 80, 0.15);
     border-radius: 50%;
@@ -138,6 +224,32 @@
   .tag-pill:hover {
     background: rgba(230, 57, 80, 0.2);
     border-color: rgba(230, 57, 80, 0.4);
+  }
+
+  .tag-pill-caution {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono;
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .tag-pill-caution:hover {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+
+  .tag-pill-danger {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono;
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .tag-pill-danger:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.4);
   }
 
   .stat-chip {

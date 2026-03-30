@@ -22,6 +22,18 @@ const config: Config = {
           500: "#a855a0",
           600: "#8b3d85",
         },
+        caution: {
+          400: "#fbbf24",
+          500: "#f59e0b",
+          600: "#d97706",
+          700: "#b45309",
+        },
+        danger: {
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+        },
         text: {
           primary: "#e8eaed",
           secondary: "#9ca3af",

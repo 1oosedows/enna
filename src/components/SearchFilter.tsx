@@ -1,6 +1,7 @@
 "use client";
 
 import { Category, CategoryInfo } from "@/types";
+import { getCategoryColorScheme } from "@/lib/category-colors";
 
 interface Props {
   query: string;
@@ -61,21 +62,32 @@ export default function SearchFilter({
         >
           All
         </button>
-        {categories.map((cat) => (
-          <button
-            key={cat.id}
-            onClick={() =>
-              onCategoryChange(cat.id === activeCategory ? null : cat.id)
-            }
-            className={`category-badge ${cat.id === activeCategory ? "active" : ""}`}
-          >
-            <span>{cat.icon}</span>
-            <span>{cat.name}</span>
-            {cat.count !== undefined && (
-              <span className="text-text-muted ml-1">({cat.count})</span>
-            )}
-          </button>
-        ))}
+        {categories.map((cat) => {
+          const scheme = getCategoryColorScheme(cat.id);
+          const isActive = cat.id === activeCategory;
+          const activeStyle =
+            scheme === "caution" && isActive
+              ? { borderColor: "rgba(245, 158, 11, 0.4)", background: "rgba(245, 158, 11, 0.1)", color: "#fbbf24" }
+              : scheme === "danger" && isActive
+                ? { borderColor: "rgba(139, 92, 246, 0.4)", background: "rgba(139, 92, 246, 0.1)", color: "#a78bfa" }
+                : undefined;
+          return (
+            <button
+              key={cat.id}
+              onClick={() =>
+                onCategoryChange(cat.id === activeCategory ? null : cat.id)
+              }
+              className={`category-badge ${isActive && !activeStyle ? "active" : ""}`}
+              style={isActive ? activeStyle : undefined}
+            >
+              <span>{cat.icon}</span>
+              <span>{cat.name}</span>
+              {cat.count !== undefined && (
+                <span className="text-text-muted ml-1">({cat.count})</span>
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
