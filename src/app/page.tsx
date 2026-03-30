@@ -18,9 +18,9 @@ export default async function Home() {
       <Header />
       <main>
         <HeroSection />
-        <AdSlot provider="custom" placement="hero" />
+        <AdSlot provider="adsense" placement="hero" />
         <ToolGrid tools={tools} categories={categories} />
-        <AdSlot provider="custom" placement="footer" />
+        <AdSlot provider="adsense" placement="footer" />
       </main>
       <Footer />
     </>

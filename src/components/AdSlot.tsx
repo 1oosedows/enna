@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-type AdProvider = "carbon" | "ethicalads" | "custom";
+type AdProvider = "adsense" | "carbon" | "ethicalads" | "custom";
 
 interface Props {
   provider?: AdProvider;
@@ -10,8 +10,14 @@ interface Props {
   className?: string;
 }
 
+declare global {
+  interface Window {
+    adsbygoogle: Record<string, unknown>[];
+  }
+}
+
 export default function AdSlot({
-  provider = "carbon",
+  provider = "adsense",
   placement = "inline",
   className = "",
 }: Props) {
@@ -20,8 +26,15 @@ export default function AdSlot({
   useEffect(() => {
     if (!adRef.current) return;
 
+    if (provider === "adsense") {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch {
+        // AdSense not loaded yet or ad blocker active
+      }
+    }
+
     if (provider === "carbon") {
-      // Carbon Ads — replace PLACEMENT_ID with your actual ID from carbonads.net
       const script = document.createElement("script");
       script.src =
         "//cdn.carbonads.com/carbon.js?serve=PLACEMENT_ID&placement=en-nacom";
@@ -31,7 +44,6 @@ export default function AdSlot({
     }
 
     if (provider === "ethicalads") {
-      // EthicalAds — replace PUBLISHER_ID after signup at ethicalads.io
       const script = document.createElement("script");
       script.src = "https://media.ethicalads.io/media/client/ethicalads.min.js";
       script.async = true;
@@ -46,11 +58,28 @@ export default function AdSlot({
     footer: "max-w-lg mx-auto mt-8 mb-4",
   };
 
+  // AdSense format per placement
+  const adsenseFormat: Record<string, string> = {
+    hero: "horizontal",
+    sidebar: "vertical",
+    inline: "rectangle",
+    footer: "horizontal",
+  };
+
   return (
     <div
       ref={adRef}
       className={`${placementStyles[placement]} ${className}`}
     >
+      {provider === "adsense" && (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-9655416932369069"
+          data-ad-format={adsenseFormat[placement]}
+          data-full-width-responsive="true"
+        />
+      )}
       {provider === "carbon" && (
         <div id="carbonads" />
       )}
@@ -84,8 +113,13 @@ export default function AdSlot({
         </div>
       )}
 
-      {/* Carbon Ads styling override */}
       <style jsx global>{`
+        /* AdSense dark theme override */
+        .adsbygoogle {
+          background: transparent !important;
+        }
+
+        /* Carbon Ads styling */
         #carbonads {
           font-family: "JetBrains Mono", monospace;
           display: flex;

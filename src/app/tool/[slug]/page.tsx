@@ -757,7 +757,7 @@ export default async function ToolPage({
               </div>
 
               {/* Ad slot */}
-              <AdSlot provider="custom" placement="sidebar" />
+              <AdSlot provider="adsense" placement="sidebar" />
             </div>
           </div>
 
