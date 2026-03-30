@@ -48,6 +48,14 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
+  other: {
+    "google-adsense-account": "ca-pub-9655416932369069",
+  },
+  verification: {
+    other: {
+      "google-adsense-account": ["ca-pub-9655416932369069"],
+    },
+  },
 };
 
 export default function RootLayout({
