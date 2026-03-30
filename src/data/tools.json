@@ -1,0 +1,3372 @@
+[
+  {
+    "slug": "nmap",
+    "name": "Nmap",
+    "description": "The gold standard network scanner. Host discovery, port scanning, service/version detection, OS fingerprinting.",
+    "longDescription": "Nmap (Network Mapper) is a free and open-source utility for network discovery and security auditing. It uses raw IP packets to determine available hosts, services, operating systems, packet filters/firewalls, and dozens of other characteristics. It was designed to rapidly scan large networks but works fine against single hosts. Nmap's scripting engine (NSE) allows users to write and share scripts to automate networking tasks, from vulnerability detection to backdoor discovery. It's used by security professionals, system administrators, and researchers worldwide.",
+    "category": "network-recon",
+    "language": "C/C++",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install nmap",
+    "website": "https://nmap.org",
+    "github": "nmap/nmap",
+    "tags": [
+      "port-scan",
+      "service-detection",
+      "os-fingerprint",
+      "scripting-engine",
+      "classic"
+    ],
+    "featured": true,
+    "documentation": "https://nmap.org/book/man.html",
+    "downloadUrl": "https://nmap.org/download.html",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install nmap",
+      "brew (macOS)": "brew install nmap",
+      "choco (Windows)": "choco install nmap",
+      "from source": "git clone https://github.com/nmap/nmap.git && cd nmap && ./configure && make && sudo make install"
+    },
+    "useCases": [
+      "Host discovery and port scanning across network ranges",
+      "Service version detection and OS fingerprinting",
+      "Vulnerability scanning with NSE scripts",
+      "Firewall and IDS evasion testing",
+      "Network inventory and asset mapping",
+      "Compliance auditing and security assessment"
+    ],
+    "alternatives": [
+      "masscan",
+      "rustscan",
+      "zmap"
+    ]
+  },
+  {
+    "slug": "masscan",
+    "name": "Masscan",
+    "description": "Internet-scale port scanner. Transmits 10 million packets per second. Asynchronous, stateless scanning.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install masscan",
+    "github": "robertdavidgraham/masscan",
+    "tags": [
+      "port-scan",
+      "high-speed",
+      "internet-scale"
+    ],
+    "featured": false,
+    "longDescription": "Masscan is the fastest Internet port scanner. It can scan the entire Internet in under 6 minutes, transmitting 10 million packets per second from a single machine. It produces results similar to Nmap but operates asynchronously, transmitting packets without waiting for responses. The internal architecture is more similar to scanrand and unicornscan than traditional scanners. It uses a custom TCP/IP stack to avoid the overhead of the operating system's networking stack.",
+    "documentation": "https://github.com/robertdavidgraham/masscan/blob/master/README.md",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install masscan",
+      "brew (macOS)": "brew install masscan",
+      "from source": "git clone https://github.com/robertdavidgraham/masscan && cd masscan && make"
+    },
+    "useCases": [
+      "Internet-wide port surveys and research",
+      "Rapid scanning of large IP ranges",
+      "Asset discovery across enterprise networks",
+      "Feeding results into Nmap for detailed service detection"
+    ],
+    "alternatives": [
+      "nmap",
+      "rustscan",
+      "zmap"
+    ]
+  },
+  {
+    "slug": "rustscan",
+    "name": "RustScan",
+    "description": "Blazing fast port scanner that pipes into Nmap. Scans all 65k ports in 3 seconds flat.",
+    "category": "network-recon",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "cargo install rustscan",
+    "github": "RustScan/RustScan",
+    "tags": [
+      "port-scan",
+      "fast",
+      "nmap-integration",
+      "rust"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "subfinder",
+    "name": "Subfinder",
+    "description": "Fast passive subdomain enumeration tool. Uses multiple sources including certificate transparency logs.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest",
+    "github": "projectdiscovery/subfinder",
+    "tags": [
+      "passive",
+      "certificate-transparency",
+      "projectdiscovery"
+    ],
+    "featured": true,
+    "longDescription": "Subfinder is a subdomain discovery tool that returns valid subdomains for websites using passive online sources. It has a simple modular architecture and is optimized for speed. Subfinder uses multiple sources including certificate transparency logs, search engines, DNS aggregators, and more to find subdomains without ever touching the target directly. This makes it ideal for stealthy reconnaissance.",
+    "documentation": "https://docs.projectdiscovery.io/tools/subfinder/overview",
+    "installCommands": {
+      "go install": "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest",
+      "brew (macOS)": "brew install subfinder",
+      "docker": "docker pull projectdiscovery/subfinder"
+    },
+    "useCases": [
+      "Passive subdomain enumeration for attack surface mapping",
+      "Bug bounty reconnaissance",
+      "Certificate transparency monitoring",
+      "Feeding results into httpx for live host probing"
+    ],
+    "alternatives": [
+      "amass",
+      "assetfinder",
+      "knockpy"
+    ]
+  },
+  {
+    "slug": "amass",
+    "name": "Amass",
+    "description": "In-depth attack surface mapping and asset discovery. DNS enumeration, network mapping, OSINT data sources.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install -v github.com/owasp-amass/amass/v4/...@master",
+    "website": "https://owasp.org/www-project-amass/",
+    "github": "owasp-amass/amass",
+    "tags": [
+      "dns",
+      "attack-surface",
+      "owasp",
+      "asset-discovery"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "httpx",
+    "name": "httpx",
+    "description": "Fast multi-purpose HTTP toolkit. Probes for running HTTP servers with retries and fallbacks.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest",
+    "github": "projectdiscovery/httpx",
+    "tags": [
+      "http-probe",
+      "tech-detection",
+      "projectdiscovery"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "nuclei",
+    "name": "Nuclei",
+    "description": "Fast vulnerability scanner driven by YAML templates. Thousands of community-contributed detection templates.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest",
+    "github": "projectdiscovery/nuclei",
+    "tags": [
+      "template-based",
+      "cve",
+      "misconfig",
+      "projectdiscovery"
+    ],
+    "featured": true,
+    "longDescription": "Nuclei is a fast, customizable vulnerability scanner based on YAML templates. It allows scanning for vulnerabilities, misconfigurations, exposed panels, and more across multiple protocols including HTTP, DNS, TCP, SSL, and JavaScript. The community maintains thousands of detection templates covering CVEs, default credentials, exposed APIs, and technology fingerprints. Nuclei's template system makes it easy to write custom checks and share them with the community.",
+    "documentation": "https://docs.projectdiscovery.io/tools/nuclei/overview",
+    "downloadUrl": "https://github.com/projectdiscovery/nuclei/releases",
+    "installCommands": {
+      "go install": "go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest",
+      "brew (macOS)": "brew install nuclei",
+      "docker": "docker pull projectdiscovery/nuclei"
+    },
+    "useCases": [
+      "Automated vulnerability scanning with YAML templates",
+      "CVE detection across web applications",
+      "Misconfiguration and exposure detection",
+      "Custom security checks for CI/CD pipelines",
+      "Bug bounty hunting at scale"
+    ],
+    "alternatives": [
+      "openvas",
+      "nikto",
+      "wpscan"
+    ]
+  },
+  {
+    "slug": "nikto",
+    "name": "Nikto",
+    "description": "Classic web server scanner. Tests for dangerous files, outdated server software, and version-specific problems.",
+    "category": "web-scanning",
+    "language": "Perl",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install nikto",
+    "github": "sullo/nikto",
+    "tags": [
+      "web-server",
+      "classic",
+      "cgi-scan"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "gobuster",
+    "name": "Gobuster",
+    "description": "Directory/file, DNS, and vhost busting tool. Brute-forces URIs, DNS subdomains, virtual host names, and S3 buckets.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/OJ/gobuster/v3@latest",
+    "github": "OJ/gobuster",
+    "tags": [
+      "directory-brute",
+      "dns-brute",
+      "vhost",
+      "s3"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "feroxbuster",
+    "name": "Feroxbuster",
+    "description": "Fast, recursive content discovery tool written in Rust. Like gobuster on steroids with auto-recursion.",
+    "category": "web-scanning",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "cargo install feroxbuster",
+    "github": "epi052/feroxbuster",
+    "tags": [
+      "directory-brute",
+      "recursive",
+      "rust",
+      "fast"
+    ],
+    "featured": true,
+    "longDescription": "Feroxbuster is a tool designed to perform forced browsing (directory/file enumeration) and content discovery. It is built in Rust for maximum performance and includes features like automatic recursion, wildcard filtering, output file support, and resume capability. Unlike other brute-forcers, feroxbuster automatically discovers and recurses into new directories as it finds them, building a complete picture of the target's file structure.",
+    "documentation": "https://epi052.github.io/feroxbuster-docs/",
+    "downloadUrl": "https://github.com/epi052/feroxbuster/releases",
+    "installCommands": {
+      "cargo": "cargo install feroxbuster",
+      "brew (macOS)": "brew install feroxbuster",
+      "apt (Kali)": "sudo apt install feroxbuster"
+    },
+    "useCases": [
+      "Recursive content discovery and directory bruting",
+      "Hidden file and backup detection",
+      "Web application mapping",
+      "Bug bounty reconnaissance"
+    ],
+    "alternatives": [
+      "ffuf",
+      "gobuster",
+      "wfuzz"
+    ]
+  },
+  {
+    "slug": "sherlock",
+    "name": "Sherlock",
+    "description": "Hunt down social media accounts by username across 400+ social networks simultaneously.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install sherlock-project",
+    "github": "sherlock-project/sherlock",
+    "tags": [
+      "username",
+      "social-media",
+      "account-discovery"
+    ],
+    "featured": true,
+    "longDescription": "Sherlock hunts down social media accounts by username across 400+ social networks simultaneously. Given a username, it queries hundreds of websites to check if an account with that username exists. Results include the profile URLs for any matches found. Sherlock is one of the most popular OSINT tools for username enumeration and is widely used in investigations, background checks, and security assessments.",
+    "documentation": "https://sherlock-project.github.io/",
+    "installCommands": {
+      "pip": "pip install sherlock-project",
+      "pipx": "pipx install sherlock-project",
+      "docker": "docker pull sherlock/sherlock"
+    },
+    "useCases": [
+      "Username OSINT across 400+ platforms",
+      "Digital footprint analysis for investigations",
+      "Social engineering reconnaissance",
+      "Brand monitoring and impersonation detection"
+    ],
+    "alternatives": [
+      "maigret",
+      "social-analyzer"
+    ]
+  },
+  {
+    "slug": "maigret",
+    "name": "Maigret",
+    "description": "Sherlock fork on steroids. Collects detailed info from 2500+ sites, builds a report with extracted data.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install maigret",
+    "github": "soxoj/maigret",
+    "tags": [
+      "username",
+      "social-media",
+      "data-extraction",
+      "report"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "theharvester",
+    "name": "theHarvester",
+    "description": "Gathers emails, names, subdomains, IPs, and URLs from multiple public sources for passive recon.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install theHarvester",
+    "github": "laramies/theHarvester",
+    "tags": [
+      "email",
+      "subdomain",
+      "passive-recon"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "spiderfoot",
+    "name": "SpiderFoot",
+    "description": "Automated OSINT with 200+ modules. Web UI for scanning IPs, domains, emails, names, and more.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install spiderfoot",
+    "website": "https://www.spiderfoot.net/",
+    "github": "smicallef/spiderfoot",
+    "tags": [
+      "automated",
+      "web-ui",
+      "modules",
+      "all-in-one"
+    ],
+    "featured": true,
+    "longDescription": "SpiderFoot automates OSINT collection so you can focus on analysis. With over 200 modules, it queries dozens of data sources to gather intelligence on IP addresses, domain names, email addresses, names, and more. SpiderFoot includes a web-based UI for scan management and result visualization, making it accessible for analysts who prefer a graphical interface. It can also be run from the command line for automation and integration into existing workflows.",
+    "documentation": "https://www.spiderfoot.net/documentation/",
+    "installCommands": {
+      "pip": "pip install spiderfoot",
+      "docker": "docker pull spiderfoot/spiderfoot"
+    },
+    "useCases": [
+      "Automated OSINT gathering across multiple data sources",
+      "Digital footprint analysis for organizations",
+      "Threat intelligence correlation",
+      "Attack surface mapping",
+      "Due diligence and background investigation"
+    ],
+    "alternatives": [
+      "recon-ng",
+      "maltego"
+    ]
+  },
+  {
+    "slug": "maltego",
+    "name": "Maltego CE",
+    "description": "Visual link analysis tool for OSINT. Maps relationships between people, companies, domains, and infrastructure.",
+    "category": "osint-general",
+    "language": "Java",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.maltego.com/",
+    "github": "paterva/maltego-trx",
+    "tags": [
+      "graph-analysis",
+      "link-analysis",
+      "visual",
+      "transforms"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "holehe",
+    "name": "Holehe",
+    "description": "Check if an email is registered on 120+ sites. Uses password recovery mechanisms to verify without logging in.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install holehe",
+    "github": "megadose/holehe",
+    "tags": [
+      "email",
+      "account-discovery",
+      "passive"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "shodan-cli",
+    "name": "Shodan CLI",
+    "description": "Command-line interface for Shodan, the search engine for internet-connected devices.",
+    "category": "network-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install shodan",
+    "website": "https://www.shodan.io/",
+    "github": "achillean/shodan-python",
+    "tags": [
+      "iot",
+      "search-engine",
+      "internet-scan",
+      "api"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "metasploit",
+    "name": "Metasploit Framework",
+    "description": "The world's most used penetration testing framework. Exploit development, payload delivery, post-exploitation.",
+    "longDescription": "The Metasploit Framework is the world's most widely used penetration testing software. It helps security teams verify vulnerabilities, manage security assessments, and improve security awareness. Metasploit provides a comprehensive environment for writing, testing, and executing exploit code against remote targets. It includes over 2,300 exploits, 1,100 auxiliary modules, 400 post-exploitation modules, and 600 payloads including Meterpreter. The framework supports every phase of a penetration test from reconnaissance to post-exploitation.",
+    "category": "exploitation",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall",
+    "website": "https://www.metasploit.com/",
+    "github": "rapid7/metasploit-framework",
+    "tags": [
+      "exploit",
+      "payload",
+      "post-exploitation",
+      "classic"
+    ],
+    "featured": true,
+    "documentation": "https://docs.metasploit.com/",
+    "downloadUrl": "https://www.metasploit.com/download",
+    "installCommands": {
+      "installer (recommended)": "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall",
+      "apt (Kali)": "sudo apt install metasploit-framework",
+      "docker": "docker pull metasploitframework/metasploit-framework"
+    },
+    "useCases": [
+      "Exploit development and testing",
+      "Penetration testing and security assessments",
+      "Post-exploitation and lateral movement",
+      "Payload generation with msfvenom",
+      "Vulnerability verification and validation",
+      "Red team operations and adversary simulation"
+    ],
+    "alternatives": [
+      "sliver",
+      "covenant"
+    ]
+  },
+  {
+    "slug": "john",
+    "name": "John the Ripper",
+    "description": "Fast password cracker. Supports hundreds of hash types and ciphers. CPU and GPU modes.",
+    "category": "password-attack",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install john",
+    "website": "https://www.openwall.com/john/",
+    "github": "openwall/john",
+    "tags": [
+      "hash-cracking",
+      "brute-force",
+      "wordlist",
+      "classic"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "hashcat",
+    "name": "Hashcat",
+    "description": "World's fastest password recovery tool. GPU-accelerated with support for 300+ hash types.",
+    "category": "password-attack",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install hashcat",
+    "website": "https://hashcat.net/hashcat/",
+    "github": "hashcat/hashcat",
+    "tags": [
+      "gpu",
+      "hash-cracking",
+      "rule-based",
+      "fast"
+    ],
+    "featured": true,
+    "longDescription": "Hashcat is the world's fastest and most advanced password recovery utility, supporting over 300 highly optimized hashing algorithms. It leverages GPU acceleration to crack hashes at unprecedented speeds. Hashcat supports multiple attack modes including dictionary attacks, brute-force, combinator, mask attacks, rule-based attacks, and hybrid attacks. It runs on Linux, Windows, and macOS and supports every major GPU vendor.",
+    "documentation": "https://hashcat.net/wiki/",
+    "downloadUrl": "https://hashcat.net/hashcat/",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install hashcat",
+      "brew (macOS)": "brew install hashcat",
+      "direct download": "wget https://hashcat.net/files/hashcat-6.2.6.7z"
+    },
+    "useCases": [
+      "GPU-accelerated password hash cracking",
+      "Password policy auditing and compliance testing",
+      "Hash identification and analysis",
+      "Rule-based attack generation for targeted cracking",
+      "Credential recovery in forensic investigations"
+    ],
+    "alternatives": [
+      "john"
+    ]
+  },
+  {
+    "slug": "aircrack-ng",
+    "name": "Aircrack-ng",
+    "description": "Complete suite for WiFi network security assessment. Monitoring, attacking, testing, and cracking.",
+    "category": "wireless",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install aircrack-ng",
+    "website": "https://www.aircrack-ng.org/",
+    "github": "aircrack-ng/aircrack-ng",
+    "tags": [
+      "wifi",
+      "wpa",
+      "packet-capture",
+      "classic"
+    ],
+    "featured": true,
+    "longDescription": "Aircrack-ng is a complete suite of tools for assessing WiFi network security. It focuses on monitoring (packet capture and export of data to text files), attacking (replay attacks, deauthentication, fake access points), testing (checking WiFi cards and driver capabilities), and cracking (WEP and WPA PSK). All tools are command-line based, allowing heavy scripting and automation. It works primarily with Linux but also supports Windows, macOS, FreeBSD, and others.",
+    "documentation": "https://www.aircrack-ng.org/documentation.html",
+    "downloadUrl": "https://www.aircrack-ng.org/downloads.html",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install aircrack-ng",
+      "brew (macOS)": "brew install aircrack-ng",
+      "from source": "git clone https://github.com/aircrack-ng/aircrack-ng && cd aircrack-ng && autoreconf -i && ./configure && make && sudo make install"
+    },
+    "useCases": [
+      "WiFi network security auditing",
+      "WPA/WPA2 handshake capture and cracking",
+      "Rogue access point detection",
+      "Packet injection and replay attacks",
+      "Wireless IDS testing"
+    ],
+    "alternatives": [
+      "bettercap",
+      "wifite",
+      "kismet"
+    ]
+  },
+  {
+    "slug": "volatility3",
+    "name": "Volatility 3",
+    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps \u2014 processes, network connections, registry.",
+    "category": "forensics",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install volatility3",
+    "github": "volatilityfoundation/volatility3",
+    "tags": [
+      "memory",
+      "ram-dump",
+      "artifact-extraction",
+      "incident-response"
+    ],
+    "featured": true,
+    "longDescription": "Volatility 3 is the next-generation memory forensics framework. It is a completely rewritten version of the Volatility Framework, designed for speed and reliability. It extracts digital artifacts from volatile memory (RAM) samples, enabling investigators to analyze running processes, network connections, registry keys, loaded modules, and more. It supports Windows, Linux, and macOS memory dumps and is the standard tool for memory forensics in digital investigations and incident response.",
+    "documentation": "https://volatility3.readthedocs.io/",
+    "installCommands": {
+      "pip": "pip install volatility3",
+      "from source": "git clone https://github.com/volatilityfoundation/volatility3.git && cd volatility3 && pip install -e ."
+    },
+    "useCases": [
+      "Memory forensics and incident response",
+      "Malware analysis from RAM dumps",
+      "Process and network artifact extraction",
+      "Rootkit and hidden process detection",
+      "Registry analysis from memory",
+      "Evidence collection for legal proceedings"
+    ],
+    "alternatives": [
+      "autopsy"
+    ]
+  },
+  {
+    "slug": "autopsy",
+    "name": "Autopsy",
+    "description": "Digital forensics platform with GUI. Disk image analysis, timeline analysis, keyword search, hash filtering.",
+    "category": "forensics",
+    "language": "Java",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.autopsy.com/",
+    "github": "sleuthkit/autopsy",
+    "tags": [
+      "disk-forensics",
+      "gui",
+      "timeline",
+      "file-carving"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "wireshark",
+    "name": "Wireshark",
+    "description": "The world's foremost network protocol analyzer. Deep packet inspection for hundreds of protocols.",
+    "category": "network-recon",
+    "language": "C/C++",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install wireshark",
+    "website": "https://www.wireshark.org/",
+    "github": "wireshark/wireshark",
+    "tags": [
+      "packet-capture",
+      "protocol-analysis",
+      "gui",
+      "classic"
+    ],
+    "featured": true,
+    "longDescription": "Wireshark is the world's most popular network protocol analyzer. It lets you capture and interactively browse the traffic running on a computer network. It has a rich feature set including deep inspection of hundreds of protocols, live capture and offline analysis, rich VoIP analysis, read/write support for many capture file formats, and powerful display filters. Wireshark is essential for network troubleshooting, security analysis, software development, and education.",
+    "documentation": "https://www.wireshark.org/docs/",
+    "downloadUrl": "https://www.wireshark.org/download.html",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install wireshark",
+      "brew (macOS)": "brew install --cask wireshark",
+      "choco (Windows)": "choco install wireshark"
+    },
+    "useCases": [
+      "Network protocol analysis and troubleshooting",
+      "Packet capture and deep inspection",
+      "Security incident investigation",
+      "Malware traffic analysis",
+      "VoIP and streaming analysis",
+      "Network forensics and evidence collection"
+    ],
+    "alternatives": [
+      "tcpdump"
+    ]
+  },
+  {
+    "slug": "burpsuite",
+    "name": "Burp Suite Community",
+    "description": "Web vulnerability scanner and proxy. Intercept, modify, and replay HTTP/S traffic for web app testing.",
+    "category": "web-scanning",
+    "language": "Java",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://portswigger.net/burp",
+    "github": "PortSwigger/BurpSuiteEnterprise",
+    "tags": [
+      "proxy",
+      "web-app",
+      "interceptor",
+      "scanner"
+    ],
+    "featured": true,
+    "longDescription": "Burp Suite is the leading toolkit for web application security testing. The Community Edition provides essential manual tools for exploring and testing web applications. It includes an intercepting proxy for viewing and modifying traffic between your browser and target applications, a spider for crawling content and functionality, and tools for analyzing randomness in session tokens. The Professional edition adds an advanced web vulnerability scanner, automated crawling, and extensions via the BApp Store.",
+    "documentation": "https://portswigger.net/burp/documentation",
+    "downloadUrl": "https://portswigger.net/burp/communitydownload",
+    "useCases": [
+      "Web application penetration testing",
+      "HTTP/S traffic interception and modification",
+      "Authentication and session testing",
+      "API security testing",
+      "Web vulnerability scanning (Pro)",
+      "Extension development via BApp Store"
+    ],
+    "alternatives": [
+      "ffuf",
+      "feroxbuster"
+    ]
+  },
+  {
+    "slug": "sqlmap",
+    "name": "sqlmap",
+    "description": "Automatic SQL injection and database takeover tool. Detects and exploits SQL injection flaws.",
+    "category": "vulnerability",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install sqlmap",
+    "github": "sqlmapproject/sqlmap",
+    "tags": [
+      "sql-injection",
+      "database",
+      "automated",
+      "classic"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "ffuf",
+    "name": "ffuf",
+    "description": "Fast web fuzzer written in Go. Fuzz anything \u2014 URLs, headers, POST data \u2014 with blazing speed.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/ffuf/ffuf/v2@latest",
+    "github": "ffuf/ffuf",
+    "tags": [
+      "fuzzing",
+      "directory-brute",
+      "fast",
+      "flexible"
+    ],
+    "featured": true,
+    "longDescription": "ffuf (Fuzz Faster U Fool) is a fast web fuzzer written in Go. It's designed to be versatile, allowing you to fuzz any part of an HTTP request including URLs, headers, POST data, and more. ffuf supports multiple wordlists, custom matchers and filters, recursive scanning, and output in multiple formats. Its speed and flexibility have made it the go-to tool for directory discovery, parameter fuzzing, and virtual host enumeration in bug bounty and penetration testing.",
+    "documentation": "https://github.com/ffuf/ffuf/wiki",
+    "installCommands": {
+      "go install": "go install github.com/ffuf/ffuf/v2@latest",
+      "brew (macOS)": "brew install ffuf",
+      "apt (Kali)": "sudo apt install ffuf"
+    },
+    "useCases": [
+      "Directory and file discovery on web servers",
+      "GET/POST parameter fuzzing",
+      "Virtual host enumeration",
+      "API endpoint discovery",
+      "Custom header and cookie fuzzing"
+    ],
+    "alternatives": [
+      "feroxbuster",
+      "gobuster",
+      "wfuzz"
+    ]
+  },
+  {
+    "slug": "responder",
+    "name": "Responder",
+    "description": "LLMNR/NBT-NS/mDNS poisoner and rogue authentication server. Captures NTLMv1/v2 hashes on the network.",
+    "category": "network-recon",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "installCommand": "pip install Responder",
+    "github": "lgandx/Responder",
+    "tags": [
+      "ntlm",
+      "poison",
+      "credential-capture",
+      "active-directory"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "bloodhound",
+    "name": "BloodHound",
+    "description": "Active Directory attack path mapping. Visualizes privilege escalation paths using graph theory.",
+    "category": "exploitation",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://bloodhound.readthedocs.io/",
+    "github": "SpecterOps/BloodHound",
+    "tags": [
+      "active-directory",
+      "graph",
+      "privilege-escalation",
+      "attack-path"
+    ],
+    "featured": true,
+    "longDescription": "BloodHound uses graph theory to reveal hidden and often unintended relationships within an Active Directory or Azure environment. Attackers use BloodHound to identify complex attack paths that would otherwise be impossible to identify. Defenders use it to identify and eliminate those same attack paths. Both red and blue teams can use BloodHound to gain a deeper understanding of privilege relationships in Active Directory environments.",
+    "documentation": "https://bloodhound.readthedocs.io/",
+    "downloadUrl": "https://github.com/SpecterOps/BloodHound/releases",
+    "useCases": [
+      "Active Directory attack path visualization",
+      "Privilege escalation path discovery",
+      "Security posture assessment for AD environments",
+      "Kerberos delegation and trust analysis",
+      "Blue team hardening of AD permissions"
+    ],
+    "alternatives": [
+      "crackmapexec",
+      "impacket"
+    ]
+  },
+  {
+    "slug": "impacket",
+    "name": "Impacket",
+    "description": "Collection of Python classes for working with network protocols. Essential for Windows/AD pentesting.",
+    "category": "exploitation",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install impacket",
+    "github": "fortra/impacket",
+    "tags": [
+      "smb",
+      "active-directory",
+      "protocol",
+      "windows"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "ghidra",
+    "name": "Ghidra",
+    "description": "NSA's reverse engineering framework. Disassembly, decompilation, graphing, and scripting for binary analysis.",
+    "category": "forensics",
+    "language": "Java",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://ghidra-sre.org/",
+    "github": "NationalSecurityAgency/ghidra",
+    "tags": [
+      "reverse-engineering",
+      "decompiler",
+      "binary-analysis",
+      "nsa"
+    ],
+    "featured": true,
+    "longDescription": "Ghidra is a software reverse engineering (SRE) framework created and maintained by the National Security Agency Research Directorate. It includes a full-featured suite of high-end software analysis tools for analyzing compiled code across a variety of platforms. Capabilities include disassembly, assembly, decompilation, graphing, and scripting, along with hundreds of other features. Ghidra supports a wide range of processor instruction sets and executable formats, and users can extend it through plugins and scripts written in Java or Python.",
+    "documentation": "https://ghidra-sre.org/CheatSheet.html",
+    "downloadUrl": "https://github.com/NationalSecurityAgency/ghidra/releases",
+    "installCommands": {
+      "download": "wget https://github.com/NationalSecurityAgency/ghidra/releases/latest -O ghidra.zip && unzip ghidra.zip",
+      "brew (macOS)": "brew install --cask ghidra"
+    },
+    "useCases": [
+      "Binary reverse engineering and malware analysis",
+      "Decompilation of compiled executables",
+      "Firmware analysis and embedded systems research",
+      "Vulnerability research in compiled software",
+      "Collaborative reverse engineering projects",
+      "CTF competitions and security research"
+    ],
+    "alternatives": [
+      "radare2",
+      "cutter"
+    ]
+  },
+  {
+    "slug": "exiftool",
+    "name": "ExifTool",
+    "description": "Read, write, and edit metadata in files. Supports EXIF, GPS, IPTC, XMP, and more across dozens of formats.",
+    "category": "osint-general",
+    "language": "Perl",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install libimage-exiftool-perl",
+    "github": "exiftool/exiftool",
+    "tags": [
+      "metadata",
+      "exif",
+      "gps",
+      "photo"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "gophish",
+    "name": "GoPhish",
+    "description": "Open-source phishing framework. Create campaigns, track results, and train users with realistic simulations.",
+    "category": "phishing",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/gophish/gophish@latest",
+    "website": "https://getgophish.com/",
+    "github": "gophish/gophish",
+    "tags": [
+      "phishing-simulation",
+      "campaign",
+      "awareness-training"
+    ],
+    "featured": true,
+    "longDescription": "GoPhish is an open-source phishing framework that makes it easy to test your organization's exposure to phishing. It provides a web-based interface for creating phishing campaigns, tracking results in real-time, and generating reports. GoPhish supports email templates, landing pages, and sending profiles. It's designed for authorized phishing simulations and security awareness training, not malicious use.",
+    "documentation": "https://docs.getgophish.com/",
+    "downloadUrl": "https://github.com/gophish/gophish/releases",
+    "installCommands": {
+      "go install": "go install github.com/gophish/gophish@latest",
+      "docker": "docker pull gophish/gophish",
+      "binary": "wget https://github.com/gophish/gophish/releases/latest/download/gophish-linux-64bit.zip"
+    },
+    "useCases": [
+      "Phishing simulation and security awareness training",
+      "Campaign management and tracking",
+      "Email template testing",
+      "Organization-wide phishing resilience assessment"
+    ],
+    "alternatives": [
+      "king-phisher",
+      "evilginx2"
+    ]
+  },
+  {
+    "slug": "phoneinfoga",
+    "name": "PhoneInfoga",
+    "description": "Advanced phone number OSINT. Scans phone numbers using free resources to gather standard and disposable info.",
+    "category": "osint-general",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/sundowndev/phoneinfoga/v2@latest",
+    "github": "sundowndev/phoneinfoga",
+    "tags": [
+      "phone",
+      "lookup",
+      "carrier",
+      "geolocation"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "recon-ng",
+    "name": "Recon-ng",
+    "description": "Full-featured reconnaissance framework. Modular design with a Metasploit-like interface for OSINT gathering.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install recon-ng",
+    "github": "lanmaster53/recon-ng",
+    "tags": [
+      "framework",
+      "modular",
+      "api-keys",
+      "reporting"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "katana",
+    "name": "Katana",
+    "description": "Next-gen crawling and spidering framework. Headless browser and standard mode with automatic form fill.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/projectdiscovery/katana/cmd/katana@latest",
+    "github": "projectdiscovery/katana",
+    "tags": [
+      "crawler",
+      "spider",
+      "headless",
+      "projectdiscovery"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "dnsx",
+    "name": "dnsx",
+    "description": "Fast multi-purpose DNS toolkit. Retries, wildcard filtering, and multiple resolver support.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest",
+    "github": "projectdiscovery/dnsx",
+    "tags": [
+      "dns",
+      "resolver",
+      "wildcard",
+      "projectdiscovery"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "knockpy",
+    "name": "Knock",
+    "description": "Subdomain enumeration tool using wordlist and DNS resolution. Supports VirusTotal and zone transfers.",
+    "category": "subdomain-enum",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install knock-subdomains",
+    "github": "guelfoweb/knock",
+    "tags": [
+      "dns",
+      "wordlist",
+      "virustotal",
+      "zone-transfer"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "assetfinder",
+    "name": "Assetfinder",
+    "description": "Find domains and subdomains potentially related to a given domain. Pulls from multiple passive sources.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/tomnomnom/assetfinder@latest",
+    "github": "tomnomnom/assetfinder",
+    "tags": [
+      "passive",
+      "subdomain",
+      "fast",
+      "tomnomnom"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "waybackurls",
+    "name": "waybackurls",
+    "description": "Fetch all URLs that the Wayback Machine knows about for a domain. Gold mine for hidden endpoints.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/tomnomnom/waybackurls@latest",
+    "github": "tomnomnom/waybackurls",
+    "tags": [
+      "wayback-machine",
+      "url-discovery",
+      "archive",
+      "tomnomnom"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "gau",
+    "name": "gau",
+    "description": "Get All URLs. Fetches known URLs from AlienVault OTX, Wayback Machine, Common Crawl, and URLScan.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/lc/gau/v2/cmd/gau@latest",
+    "github": "lc/gau",
+    "tags": [
+      "url-discovery",
+      "passive",
+      "multi-source"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "arjun",
+    "name": "Arjun",
+    "description": "HTTP parameter discovery suite. Finds hidden query parameters in web applications using smart heuristics.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install arjun",
+    "github": "s0md3v/Arjun",
+    "tags": [
+      "parameter-discovery",
+      "hidden-params",
+      "fuzzing"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "wpscan",
+    "name": "WPScan",
+    "description": "WordPress security scanner. Enumerates plugins, themes, users, and checks for known vulnerabilities.",
+    "category": "vulnerability",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "gem install wpscan",
+    "website": "https://wpscan.com/",
+    "github": "wpscanteam/wpscan",
+    "tags": [
+      "wordpress",
+      "plugin-enum",
+      "cve",
+      "cms"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "openvas",
+    "name": "OpenVAS",
+    "description": "Full-featured vulnerability scanner. 50,000+ NVTs, credentialed scanning, compliance checks.",
+    "category": "vulnerability",
+    "language": "C",
+    "platform": [
+      "linux"
+    ],
+    "website": "https://www.openvas.org/",
+    "github": "greenbone/openvas-scanner",
+    "tags": [
+      "enterprise",
+      "nvt",
+      "compliance",
+      "credentialed"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "xsstrike",
+    "name": "XSStrike",
+    "description": "Advanced XSS detection suite. Fuzzing engine, context analysis, and WAF detection/bypass capabilities.",
+    "category": "vulnerability",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install xsstrike",
+    "github": "s0md3v/XSStrike",
+    "tags": [
+      "xss",
+      "waf-bypass",
+      "fuzzing",
+      "context-analysis"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "commix",
+    "name": "Commix",
+    "description": "Automated OS command injection exploitation tool. Tests web apps for command injection vulnerabilities.",
+    "category": "vulnerability",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install commix",
+    "github": "commixproject/commix",
+    "tags": [
+      "command-injection",
+      "automated",
+      "web-app"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "testssl",
+    "name": "testssl.sh",
+    "description": "Command-line tool for checking TLS/SSL ciphers, protocols, and cryptographic flaws on any port.",
+    "category": "vulnerability",
+    "language": "Shell",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "drwetter/testssl.sh",
+    "tags": [
+      "tls",
+      "ssl",
+      "cipher-check",
+      "heartbleed"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "social-analyzer",
+    "name": "Social Analyzer",
+    "description": "API, CLI, and web app for analyzing and finding a person's profile across 1000+ social media sites.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install social-analyzer",
+    "github": "qeeqbox/social-analyzer",
+    "tags": [
+      "profile-analysis",
+      "social-media",
+      "api",
+      "web-ui"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "twint",
+    "name": "Twint",
+    "description": "Advanced Twitter/X scraping tool. No API key needed. Scrapes tweets, followers, favorites, and more.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install twint",
+    "github": "twintproject/twint",
+    "tags": [
+      "twitter",
+      "scraping",
+      "no-api",
+      "followers"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "instaloader",
+    "name": "Instaloader",
+    "description": "Download Instagram photos, videos, stories, and metadata. Profile archiving and OSINT data extraction.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install instaloader",
+    "github": "instaloader/instaloader",
+    "tags": [
+      "instagram",
+      "scraping",
+      "stories",
+      "metadata"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "osintgram",
+    "name": "Osintgram",
+    "description": "Instagram OSINT tool. Gathers emails, phone numbers, user info, followers, and location data from profiles.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "Datalux/Osintgram",
+    "tags": [
+      "instagram",
+      "geolocation",
+      "email",
+      "osint"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "tweetfeed",
+    "name": "TweetFeed",
+    "description": "Real-time feed of IOCs shared on Twitter by the infosec community. Domains, IPs, URLs, SHA256 hashes.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "0xDanielLopez/TweetFeed",
+    "tags": [
+      "ioc",
+      "threat-intel",
+      "twitter",
+      "real-time"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "emailharvester",
+    "name": "EmailHarvester",
+    "description": "Email harvesting from search engines. Supports Google, Bing, Yahoo, and ASK with proxy rotation.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "maldevel/EmailHarvester",
+    "tags": [
+      "email",
+      "search-engine",
+      "harvesting",
+      "proxy"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "photon",
+    "name": "Photon",
+    "description": "Incredibly fast crawler designed for OSINT. Extracts URLs, emails, files, JS, and secret keys from targets.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install photon",
+    "github": "s0md3v/Photon",
+    "tags": [
+      "crawler",
+      "extraction",
+      "fast",
+      "secrets"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "censys-cli",
+    "name": "Censys CLI",
+    "description": "Search engine for internet-connected devices. Alternative to Shodan with certificate and host search.",
+    "category": "network-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install censys",
+    "website": "https://search.censys.io/",
+    "github": "censys/censys-python",
+    "tags": [
+      "search-engine",
+      "certificates",
+      "internet-scan",
+      "api"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "zmap",
+    "name": "ZMap",
+    "description": "Internet-wide single-packet scanner. Scans the entire IPv4 address space in under 5 minutes.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "apt install zmap",
+    "website": "https://zmap.io/",
+    "github": "zmap/zmap",
+    "tags": [
+      "internet-scale",
+      "fast",
+      "ipv4",
+      "research"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "netcat",
+    "name": "Ncat (Nmap)",
+    "description": "Improved netcat with SSL support, IPv6, proxying, and connection brokering. The Swiss army knife of networking.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install ncat",
+    "website": "https://nmap.org/ncat/",
+    "github": "nmap/nmap",
+    "tags": [
+      "networking",
+      "tunneling",
+      "ssl",
+      "swiss-army-knife"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "tcpdump",
+    "name": "tcpdump",
+    "description": "Command-line packet analyzer. The lightweight, scriptable alternative to Wireshark for capture and analysis.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "apt install tcpdump",
+    "website": "https://www.tcpdump.org/",
+    "github": "the-tcpdump-group/tcpdump",
+    "tags": [
+      "packet-capture",
+      "cli",
+      "bpf",
+      "classic"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "bettercap",
+    "name": "Bettercap",
+    "description": "Swiss army knife for WiFi, Bluetooth, and ethernet network recon and MITM. Scriptable with JS.",
+    "category": "wireless",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/bettercap/bettercap@latest",
+    "website": "https://www.bettercap.org/",
+    "github": "bettercap/bettercap",
+    "tags": [
+      "mitm",
+      "wifi",
+      "bluetooth",
+      "scriptable"
+    ],
+    "featured": true,
+    "longDescription": "Bettercap is the Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking, and Ethernet networks reconnaissance and MITM attacks. It provides a modular, portable, and easily extensible architecture with interactive and scriptable sessions. Bettercap supports network sniffing, ARP spoofing, DNS spoofing, WiFi deauthentication, Bluetooth device scanning, HID attacks, and much more through its JavaScript-based scripting engine.",
+    "documentation": "https://www.bettercap.org/usage/",
+    "downloadUrl": "https://github.com/bettercap/bettercap/releases",
+    "installCommands": {
+      "go install": "go install github.com/bettercap/bettercap@latest",
+      "brew (macOS)": "brew install bettercap",
+      "apt": "sudo apt install bettercap"
+    },
+    "useCases": [
+      "Network reconnaissance and MITM attacks",
+      "WiFi security auditing and deauthentication",
+      "Bluetooth Low Energy device scanning",
+      "ARP/DNS spoofing for traffic interception",
+      "Automated network attack scripting"
+    ],
+    "alternatives": [
+      "aircrack-ng",
+      "wifite",
+      "kismet"
+    ]
+  },
+  {
+    "slug": "wifite",
+    "name": "Wifite2",
+    "description": "Automated wireless attack tool. Wraps aircrack-ng, reaver, and hashcat for streamlined WiFi auditing.",
+    "category": "wireless",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "installCommand": "pip install wifite",
+    "github": "derv82/wifite2",
+    "tags": [
+      "wifi",
+      "automated",
+      "wpa",
+      "wps"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "kismet",
+    "name": "Kismet",
+    "description": "Wireless network detector, sniffer, wardriving tool, and IDS. WiFi, Bluetooth, Zigbee, and more.",
+    "category": "wireless",
+    "language": "C++",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "website": "https://www.kismetwireless.net/",
+    "github": "kismetwireless/kismet",
+    "tags": [
+      "wardriving",
+      "ids",
+      "bluetooth",
+      "zigbee"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "flipperzero-firmware",
+    "name": "Flipper Zero Firmware",
+    "description": "Custom firmware for Flipper Zero. Sub-GHz, RFID, NFC, infrared, and GPIO hacking multi-tool.",
+    "category": "wireless",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://flipperzero.one/",
+    "github": "flipperdevices/flipperzero-firmware",
+    "tags": [
+      "flipper",
+      "rfid",
+      "nfc",
+      "sub-ghz",
+      "hardware"
+    ],
+    "featured": true,
+    "longDescription": "The Flipper Zero is a portable multi-tool for pentesters and geeks. The open-source firmware provides access to Sub-GHz radio, RFID (125kHz), NFC (13.56MHz), infrared, GPIO, 1-Wire, and Bluetooth capabilities. The custom firmware community has extended its functionality with additional features, protocols, and tools. The device can read, copy, and emulate various radio protocols, access cards, remote controls, and more.",
+    "documentation": "https://docs.flipper.net/",
+    "downloadUrl": "https://flipperzero.one/update",
+    "useCases": [
+      "Sub-GHz radio protocol analysis and replay",
+      "RFID/NFC access card reading and emulation",
+      "Infrared remote control capture and replay",
+      "GPIO hardware hacking and prototyping",
+      "Physical security assessment",
+      "Bluetooth device analysis"
+    ],
+    "alternatives": [
+      "bettercap"
+    ]
+  },
+  {
+    "slug": "hydra",
+    "name": "THC Hydra",
+    "description": "Fast online password brute-forcer. Supports 50+ protocols including SSH, FTP, HTTP, SMB, MySQL.",
+    "category": "password-attack",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install hydra",
+    "github": "vanhauser-thc/thc-hydra",
+    "tags": [
+      "brute-force",
+      "online",
+      "multi-protocol",
+      "classic"
+    ],
+    "featured": true,
+    "longDescription": "THC Hydra is the most widely used online password brute-forcing tool. It supports over 50 protocols including SSH, FTP, HTTP, HTTPS, SMB, MySQL, MSSQL, PostgreSQL, LDAP, RDP, VNC, and many more. Hydra is fast and flexible, supporting parallel connections and multiple attack types. It's an essential tool for penetration testers verifying password policies and testing authentication mechanisms.",
+    "documentation": "https://github.com/vanhauser-thc/thc-hydra/blob/master/README.md",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install hydra",
+      "brew (macOS)": "brew install hydra",
+      "from source": "git clone https://github.com/vanhauser-thc/thc-hydra && cd thc-hydra && ./configure && make && sudo make install"
+    },
+    "useCases": [
+      "Online password brute-forcing across 50+ protocols",
+      "Password policy verification and auditing",
+      "SSH/RDP credential testing",
+      "Web form authentication testing",
+      "Database credential testing"
+    ],
+    "alternatives": [
+      "medusa",
+      "john",
+      "hashcat"
+    ]
+  },
+  {
+    "slug": "medusa",
+    "name": "Medusa",
+    "description": "Speedy, parallel, modular brute-forcer. Supports HTTP, MySQL, SMB, SSH, Telnet, and more.",
+    "category": "password-attack",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "apt install medusa",
+    "github": "jmk-foofus/medusa",
+    "tags": [
+      "brute-force",
+      "parallel",
+      "modular"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "cewl",
+    "name": "CeWL",
+    "description": "Custom wordlist generator. Spiders a target site and builds password lists from scraped words.",
+    "category": "password-attack",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "gem install cewl",
+    "github": "digininja/CeWL",
+    "tags": [
+      "wordlist",
+      "spider",
+      "custom",
+      "password-gen"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "crackmapexec",
+    "name": "CrackMapExec",
+    "description": "Swiss army knife for pentesting Active Directory. SMB, LDAP, MSSQL, WinRM enumeration and exploitation.",
+    "category": "exploitation",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install crackmapexec",
+    "github": "byt3bl33d3r/CrackMapExec",
+    "tags": [
+      "active-directory",
+      "smb",
+      "lateral-movement",
+      "credential-spraying"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "evil-winrm",
+    "name": "Evil-WinRM",
+    "description": "Ultimate WinRM shell for pentesting. Upload/download, in-memory PowerShell, DLL injection, pass-the-hash.",
+    "category": "exploitation",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "gem install evil-winrm",
+    "github": "Hackplayers/evil-winrm",
+    "tags": [
+      "winrm",
+      "powershell",
+      "pass-the-hash",
+      "post-exploitation"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "covenant",
+    "name": "Covenant",
+    "description": ".NET C2 framework. Collaborative, web-based interface for red team operations and implant management.",
+    "category": "exploitation",
+    "language": "C#",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "cobbr/Covenant",
+    "tags": [
+      "c2",
+      "red-team",
+      "dotnet",
+      "implant"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "sliver",
+    "name": "Sliver",
+    "description": "Open-source C2 framework by BishopFox. mTLS, HTTP(S), DNS, WireGuard implants with multi-operator support.",
+    "category": "exploitation",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://sliver.sh/",
+    "github": "BishopFox/sliver",
+    "tags": [
+      "c2",
+      "red-team",
+      "multi-operator",
+      "implant"
+    ],
+    "featured": true,
+    "longDescription": "Sliver is an open-source cross-platform adversary emulation and red team framework developed by BishopFox. It supports C2 over mTLS, HTTP(S), DNS, and WireGuard, with implants that can be compiled for Windows, macOS, and Linux. Sliver supports multiple operators simultaneously, making it ideal for team engagements. It includes features like process injection, pivoting, staged/stageless payloads, and a robust extension system.",
+    "documentation": "https://sliver.sh/docs",
+    "downloadUrl": "https://github.com/BishopFox/sliver/releases",
+    "useCases": [
+      "Red team operations and adversary simulation",
+      "C2 implant generation and management",
+      "Multi-operator team engagements",
+      "Post-exploitation and lateral movement",
+      "Custom payload development"
+    ],
+    "alternatives": [
+      "metasploit",
+      "covenant"
+    ]
+  },
+  {
+    "slug": "ligolo-ng",
+    "name": "Ligolo-ng",
+    "description": "Advanced tunneling/pivoting tool. Creates a TUN interface for transparent proxying through compromised hosts.",
+    "category": "exploitation",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicocha30/ligolo-ng",
+    "tags": [
+      "tunneling",
+      "pivoting",
+      "tun",
+      "proxy"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "chisel",
+    "name": "Chisel",
+    "description": "Fast TCP/UDP tunnel over HTTP secured via SSH. Single binary, works behind firewalls and NAT.",
+    "category": "exploitation",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "jpillora/chisel",
+    "tags": [
+      "tunneling",
+      "firewall-bypass",
+      "ssh",
+      "single-binary"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "linpeas",
+    "name": "LinPEAS",
+    "description": "Linux privilege escalation enumeration script. Finds misconfigs, SUID bins, creds, and escalation paths.",
+    "category": "exploitation",
+    "language": "Shell",
+    "platform": [
+      "linux"
+    ],
+    "github": "peass-ng/PEASS-ng",
+    "tags": [
+      "privesc",
+      "enumeration",
+      "linux",
+      "suid"
+    ],
+    "featured": true,
+    "longDescription": "LinPEAS (Linux Privilege Escalation Awesome Script) is a comprehensive enumeration script that searches for possible paths to escalate privileges on Linux hosts. It checks for misconfigurations, SUID/SGID binaries, writable files, cron jobs, kernel exploits, interesting files, credentials in configuration files, and much more. LinPEAS is part of the PEASS-ng suite which also includes WinPEAS for Windows. It's the first tool most pentesters run after gaining initial access to a Linux system.",
+    "documentation": "https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS",
+    "downloadUrl": "https://github.com/peass-ng/PEASS-ng/releases",
+    "useCases": [
+      "Linux privilege escalation enumeration",
+      "Post-exploitation reconnaissance",
+      "Security misconfiguration detection",
+      "Credential hunting on compromised systems",
+      "SUID/SGID binary discovery",
+      "Cron job and service analysis"
+    ],
+    "alternatives": [
+      "pspy"
+    ]
+  },
+  {
+    "slug": "pspy",
+    "name": "pspy",
+    "description": "Monitor Linux processes without root. Detects cron jobs, user commands, and process events in real time.",
+    "category": "exploitation",
+    "language": "Go",
+    "platform": [
+      "linux"
+    ],
+    "github": "DominicBreuker/pspy",
+    "tags": [
+      "process-monitor",
+      "cron",
+      "no-root",
+      "enumeration"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "binwalk",
+    "name": "Binwalk",
+    "description": "Firmware analysis tool. Searches binary images for embedded files, executables, and file systems.",
+    "category": "forensics",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install binwalk",
+    "github": "ReFirmLabs/binwalk",
+    "tags": [
+      "firmware",
+      "binary",
+      "extraction",
+      "embedded"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "yara",
+    "name": "YARA",
+    "description": "Pattern matching swiss knife for malware researchers. Create rules to identify and classify malware samples.",
+    "category": "forensics",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install yara",
+    "website": "https://virustotal.github.io/yara/",
+    "github": "VirusTotal/yara",
+    "tags": [
+      "malware",
+      "pattern-matching",
+      "rules",
+      "classification"
+    ],
+    "featured": true,
+    "longDescription": "YARA is the pattern matching swiss knife for malware researchers. It allows you to create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns. Each rule consists of a set of strings and a boolean expression which determines its logic. YARA is used by security researchers, incident responders, and threat hunters to identify and classify malware samples, suspicious files, and network artifacts.",
+    "documentation": "https://yara.readthedocs.io/",
+    "installCommands": {
+      "apt (Debian/Ubuntu)": "sudo apt install yara",
+      "brew (macOS)": "brew install yara",
+      "pip": "pip install yara-python"
+    },
+    "useCases": [
+      "Malware identification and classification",
+      "Threat hunting across endpoints",
+      "Incident response triage",
+      "File and memory scanning for indicators",
+      "Building detection rules for security products"
+    ],
+    "alternatives": [
+      "velociraptor"
+    ]
+  },
+  {
+    "slug": "velociraptor",
+    "name": "Velociraptor",
+    "description": "Endpoint visibility and collection tool. Hunt for artifacts across thousands of endpoints simultaneously.",
+    "category": "forensics",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://docs.velociraptor.app/",
+    "github": "Velocidex/velociraptor",
+    "tags": [
+      "endpoint",
+      "hunting",
+      "dfir",
+      "artifact-collection"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "plaso",
+    "name": "Plaso (log2timeline)",
+    "description": "Super timeline creation engine. Extracts timestamps from multiple forensic artifact sources into a single timeline.",
+    "category": "forensics",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install plaso",
+    "github": "log2timeline/plaso",
+    "tags": [
+      "timeline",
+      "log-analysis",
+      "artifact",
+      "super-timeline"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "radare2",
+    "name": "Radare2",
+    "description": "Portable reversing framework. Disassembly, debugging, analysis, patching, and scripting in a single CLI.",
+    "category": "forensics",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "apt install radare2",
+    "website": "https://www.radare.org/",
+    "github": "radareorg/radare2",
+    "tags": [
+      "reverse-engineering",
+      "disassembler",
+      "debugger",
+      "scripting"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "cutter",
+    "name": "Cutter",
+    "description": "GUI for Radare2. Makes reverse engineering accessible with graphs, decompiler, and hex editor built in.",
+    "category": "forensics",
+    "language": "C++",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://cutter.re/",
+    "github": "rizinorg/cutter",
+    "tags": [
+      "reverse-engineering",
+      "gui",
+      "radare2",
+      "decompiler"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "king-phisher",
+    "name": "King Phisher",
+    "description": "Phishing campaign toolkit with web cloning, credential harvesting, and campaign analytics dashboard.",
+    "category": "phishing",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "github": "rsmusllp/king-phisher",
+    "tags": [
+      "campaign",
+      "web-clone",
+      "credential-harvest",
+      "analytics"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "evilginx2",
+    "name": "Evilginx2",
+    "description": "Man-in-the-middle attack framework for phishing credentials and session cookies, bypassing 2FA.",
+    "category": "phishing",
+    "language": "Go",
+    "platform": [
+      "linux"
+    ],
+    "github": "kgretzky/evilginx2",
+    "tags": [
+      "mitm",
+      "2fa-bypass",
+      "session-hijack",
+      "reverse-proxy"
+    ],
+    "featured": true,
+    "longDescription": "Evilginx2 is a man-in-the-middle attack framework used for phishing login credentials along with session cookies, which in turn allows bypassing multi-factor authentication. It acts as a reverse proxy between the victim and the real website, proxying all traffic while capturing credentials and session tokens in real time. This makes it a critical tool for demonstrating the limitations of traditional 2FA and testing organizational resilience to advanced phishing attacks.",
+    "documentation": "https://help.evilginx.com/",
+    "useCases": [
+      "Demonstrating 2FA bypass through session hijacking",
+      "Advanced phishing simulation for red teams",
+      "Testing organizational resilience to credential theft",
+      "Session cookie capture and replay"
+    ],
+    "alternatives": [
+      "modlishka",
+      "gophish"
+    ]
+  },
+  {
+    "slug": "urlscan",
+    "name": "URLScan.io CLI",
+    "description": "Scan and analyze URLs for phishing indicators, malware, and suspicious behavior. Screenshot and DOM capture.",
+    "category": "phishing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install urlscan-py",
+    "website": "https://urlscan.io/",
+    "github": "Phish-Report/urlscan-py",
+    "tags": [
+      "url-analysis",
+      "screenshot",
+      "malware-detection",
+      "api"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "modlishka",
+    "name": "Modlishka",
+    "description": "Automated HTTP reverse proxy for 2FA phishing. Real-time credential and token harvesting.",
+    "category": "phishing",
+    "language": "Go",
+    "platform": [
+      "linux"
+    ],
+    "github": "drk1wi/Modlishka",
+    "tags": [
+      "reverse-proxy",
+      "2fa-bypass",
+      "automated",
+      "real-time"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "chainalysis-free",
+    "name": "Chainalysis Reactor (Free)",
+    "description": "Blockchain investigation tool. Transaction graph visualization, wallet clustering, and entity identification.",
+    "category": "crypto-tracing",
+    "language": "JavaScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.chainalysis.com/",
+    "github": "nicedoc/chainalysis",
+    "tags": [
+      "blockchain",
+      "graph",
+      "wallet-clustering",
+      "entity-id"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "breadcrumbs",
+    "name": "Breadcrumbs",
+    "description": "Blockchain analytics and investigation tool. Trace Bitcoin and Ethereum transactions through multiple hops.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.breadcrumbs.app/",
+    "github": "nicedoc/breadcrumbs",
+    "tags": [
+      "bitcoin",
+      "ethereum",
+      "trace",
+      "investigation"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "blockscout",
+    "name": "BlockScout",
+    "description": "Open-source blockchain explorer for Ethereum and EVM chains. Full-featured with smart contract verification.",
+    "category": "crypto-tracing",
+    "language": "Elixir",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "website": "https://www.blockscout.com/",
+    "github": "blockscout/blockscout",
+    "tags": [
+      "explorer",
+      "ethereum",
+      "evm",
+      "smart-contracts"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "whale-alert",
+    "name": "Whale Alert CLI",
+    "description": "Track large cryptocurrency transactions in real time across all major blockchains. API and alerting.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://whale-alert.io/",
+    "github": "nicedoc/whale-alert",
+    "tags": [
+      "whale-watching",
+      "real-time",
+      "alerting",
+      "multi-chain"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "ethtective",
+    "name": "Ethtective",
+    "description": "Ethereum transaction explorer and visualizer. Graph-based exploration of addresses and transaction flows.",
+    "category": "crypto-tracing",
+    "language": "JavaScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicedoc/ethtective",
+    "tags": [
+      "ethereum",
+      "graph",
+      "visualization",
+      "explorer"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "bitcoin-abe",
+    "name": "Bitcoin-Abe",
+    "description": "Block chain browser for Bitcoin and similar currencies. Self-hosted explorer with search and API.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "bitcoin-abe/bitcoin-abe",
+    "tags": [
+      "bitcoin",
+      "explorer",
+      "self-hosted",
+      "database"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "trueblocks",
+    "name": "TrueBlocks",
+    "description": "Local-first Ethereum indexer. Decentralized, censorship-resistant access to blockchain data with rich APIs.",
+    "category": "crypto-tracing",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "website": "https://trueblocks.io/",
+    "github": "TrueBlocks/trueblocks-core",
+    "tags": [
+      "ethereum",
+      "indexer",
+      "local-first",
+      "decentralized"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "tornado-tracker",
+    "name": "Tornado Cash Tracker",
+    "description": "Track deposits and withdrawals through Tornado Cash mixer. Probabilistic linking of mixed transactions.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicedoc/tornado-tracker",
+    "tags": [
+      "mixer",
+      "tornado-cash",
+      "probabilistic",
+      "linking"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "etherscan-api",
+    "name": "Etherscan API Tools",
+    "description": "Python wrapper for Etherscan API. Query balances, transactions, token transfers, contract ABIs, and gas prices.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install etherscan-python",
+    "website": "https://etherscan.io/apis",
+    "github": "pcko1/etherscan-python",
+    "tags": [
+      "ethereum",
+      "api",
+      "transactions",
+      "token-transfers"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "wallet-explorer",
+    "name": "WalletExplorer",
+    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities \u2014 exchanges, mixers, markets, gambling.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.walletexplorer.com/",
+    "github": "nicedoc/wallet-explorer",
+    "tags": [
+      "bitcoin",
+      "clustering",
+      "entity-labeling",
+      "exchanges"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "misttrack",
+    "name": "MistTrack",
+    "description": "SlowMist's crypto tracking platform. Cross-chain fund tracing, address labeling, and risk scoring for AML.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://misttrack.io/",
+    "github": "nicedoc/misttrack",
+    "tags": [
+      "cross-chain",
+      "aml",
+      "risk-scoring",
+      "fund-tracing"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "orbit",
+    "name": "Orbit",
+    "description": "Blockchain transaction visualizer. Generates interactive force-directed graphs of Ethereum address relationships.",
+    "category": "crypto-tracing",
+    "language": "JavaScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicedoc/orbit",
+    "tags": [
+      "visualization",
+      "graph",
+      "ethereum",
+      "force-directed"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "graphsense",
+    "name": "GraphSense",
+    "description": "Cryptoasset analytics platform. Address clustering, entity mapping, and flow analysis for Bitcoin and Ethereum.",
+    "longDescription": "GraphSense is an open-source platform for analyzing cryptoasset ecosystems, developed by the Austrian Institute of Technology. It provides address clustering using multiple heuristics (common input, change address detection), entity mapping via TagPacks (community-contributed address labels), and transaction flow analysis. The platform supports Bitcoin, Bitcoin Cash, Litecoin, Zcash, and Ethereum. It includes a REST API and a web dashboard for interactive exploration.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "website": "https://graphsense.info/",
+    "github": "graphsense/graphsense-dashboard",
+    "tags": [
+      "clustering",
+      "entity-mapping",
+      "flow-analysis",
+      "multi-chain",
+      "academic"
+    ],
+    "featured": true,
+    "documentation": "https://graphsense.github.io/",
+    "useCases": [
+      "Cryptocurrency address clustering and de-anonymization",
+      "Transaction flow analysis and fund tracing",
+      "Entity identification using TagPacks",
+      "Cross-cryptocurrency analysis",
+      "Academic research on blockchain privacy"
+    ],
+    "alternatives": [
+      "blockscout",
+      "trueblocks"
+    ]
+  },
+  {
+    "slug": "scorechain",
+    "name": "Scorechain Analytics",
+    "description": "Blockchain analytics with risk scoring, transaction monitoring, and compliance reporting across 8000+ assets.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.scorechain.com/",
+    "github": "nicedoc/scorechain",
+    "tags": [
+      "compliance",
+      "risk-scoring",
+      "monitoring",
+      "aml"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "dune-analytics",
+    "name": "Dune Analytics CLI",
+    "description": "Query blockchain data with SQL. Ethereum, Polygon, Optimism, Arbitrum, Solana, and more. Community dashboards.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install dune-client",
+    "website": "https://dune.com/",
+    "github": "duneanalytics/dune-client",
+    "tags": [
+      "sql",
+      "analytics",
+      "dashboards",
+      "multi-chain"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "txstreet",
+    "name": "TxStreet",
+    "description": "Real-time blockchain transaction visualizer. Animated street view of pending and confirmed transactions.",
+    "category": "crypto-tracing",
+    "language": "JavaScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://txstreet.com/",
+    "github": "nicedoc/txstreet",
+    "tags": [
+      "visualization",
+      "real-time",
+      "mempool",
+      "animated"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "bitcoinlib",
+    "name": "BitcoinLib",
+    "description": "Python Bitcoin library. Create wallets, parse transactions, interact with nodes, and analyze the UTXO set.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install bitcoinlib",
+    "github": "1200wd/bitcoinlib",
+    "tags": [
+      "bitcoin",
+      "library",
+      "utxo",
+      "wallet"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "web3py",
+    "name": "Web3.py",
+    "description": "Python library for interacting with Ethereum. Query blocks, decode transactions, call contracts, trace calls.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install web3",
+    "website": "https://web3py.readthedocs.io/",
+    "github": "ethereum/web3.py",
+    "tags": [
+      "ethereum",
+      "library",
+      "smart-contracts",
+      "rpc"
+    ],
+    "featured": true,
+    "longDescription": "Web3.py is a Python library for interacting with the Ethereum blockchain. It provides a comprehensive interface for querying blocks and transactions, deploying and interacting with smart contracts, managing accounts and keys, and working with ENS domains. Web3.py supports multiple providers including HTTP, WebSocket, and IPC, making it versatile for both development and forensic analysis. It's the standard library for Ethereum interaction in Python.",
+    "documentation": "https://web3py.readthedocs.io/",
+    "installCommands": {
+      "pip": "pip install web3",
+      "pipx": "pipx install web3"
+    },
+    "useCases": [
+      "Querying Ethereum blockchain data programmatically",
+      "Smart contract interaction and deployment",
+      "Transaction tracing and analysis",
+      "Wallet balance monitoring",
+      "DeFi protocol interaction and analysis",
+      "Building blockchain forensic tools"
+    ],
+    "alternatives": [
+      "ethers-js",
+      "alchemy-sdk"
+    ]
+  },
+  {
+    "slug": "ethers-js",
+    "name": "Ethers.js",
+    "description": "Complete Ethereum library for JavaScript. Wallet management, contract interaction, ENS resolution, and ABI encoding.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "npm install ethers",
+    "website": "https://docs.ethers.org/",
+    "github": "ethers-io/ethers.js",
+    "tags": [
+      "ethereum",
+      "library",
+      "wallet",
+      "ens"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "alchemy-sdk",
+    "name": "Alchemy SDK",
+    "description": "Enhanced blockchain API. NFT metadata, token balances, transaction receipts, and webhook notifications.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "npm install alchemy-sdk",
+    "website": "https://www.alchemy.com/",
+    "github": "alchemyplatform/alchemy-sdk-js",
+    "tags": [
+      "api",
+      "nft",
+      "token-balances",
+      "webhooks"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "mythril",
+    "name": "Mythril",
+    "description": "Security analysis tool for EVM bytecode. Detects reentrancy, integer overflow, and access control vulnerabilities.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install mythril",
+    "github": "Consensys/mythril",
+    "tags": [
+      "smart-contract",
+      "security",
+      "evm",
+      "vulnerability-detection"
+    ],
+    "featured": true,
+    "longDescription": "Mythril is a security analysis tool for Ethereum Virtual Machine (EVM) bytecode. It detects security vulnerabilities in smart contracts built for Ethereum, Hedera, Quorum, Vechain, Roostock, Tron, and other EVM-compatible blockchains. Mythril uses symbolic execution, SMT solving, and taint analysis to detect a variety of security vulnerabilities including reentrancy, integer overflow/underflow, unprotected self-destruct, and more.",
+    "documentation": "https://mythril-classic.readthedocs.io/",
+    "installCommands": {
+      "pip": "pip install mythril",
+      "docker": "docker pull mythril/myth"
+    },
+    "useCases": [
+      "Smart contract security auditing",
+      "Automated vulnerability detection in Solidity code",
+      "Pre-deployment security verification",
+      "Bug bounty hunting on DeFi protocols",
+      "Analyzing deployed contracts for known vulnerabilities"
+    ],
+    "alternatives": [
+      "slither"
+    ]
+  },
+  {
+    "slug": "slither",
+    "name": "Slither",
+    "description": "Solidity static analysis framework. Detects vulnerabilities, prints contract info, and suggests optimizations.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install slither-analyzer",
+    "github": "crytic/slither",
+    "tags": [
+      "solidity",
+      "static-analysis",
+      "vulnerability",
+      "optimization"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "forta",
+    "name": "Forta",
+    "description": "Real-time threat detection for blockchain. Community-built detection bots monitoring for exploits, scams, and anomalies.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "npm install forta-agent",
+    "website": "https://forta.org/",
+    "github": "forta-network/forta-bot-sdk",
+    "tags": [
+      "threat-detection",
+      "real-time",
+      "bots",
+      "exploit-monitor"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "tenderly",
+    "name": "Tenderly CLI",
+    "description": "Smart contract debugging and simulation. Transaction trace inspection, gas profiling, and fork testing.",
+    "category": "crypto-tracing",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "brew install tenderly",
+    "website": "https://tenderly.co/",
+    "github": "Tenderly/tenderly-cli",
+    "tags": [
+      "debugging",
+      "simulation",
+      "gas-profiling",
+      "trace"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "debank-api",
+    "name": "DeBank API",
+    "description": "Multi-chain DeFi portfolio tracker. Token holdings, protocol positions, NFTs, and approval management across 100+ chains.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://debank.com/",
+    "github": "nicedoc/debank-api",
+    "tags": [
+      "defi",
+      "portfolio",
+      "multi-chain",
+      "approvals"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "nansen-labels",
+    "name": "Nansen Labels (Open)",
+    "description": "Open-source wallet labeling database. Identify wallets belonging to exchanges, whales, MEV bots, and funds.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.nansen.ai/",
+    "github": "nicedoc/nansen-labels",
+    "tags": [
+      "labels",
+      "whale-tracking",
+      "mev",
+      "identification"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "arkham-intel",
+    "name": "Arkham Intelligence",
+    "description": "Entity-based blockchain analytics. Ultra system maps on-chain activity to real-world entities across chains.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.arkhamintelligence.com/",
+    "github": "nicedoc/arkham-intel",
+    "tags": [
+      "entity-mapping",
+      "intelligence",
+      "multi-chain",
+      "deanonymization"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "elliptic-lens",
+    "name": "Elliptic Lens",
+    "description": "Crypto compliance and investigation tool. Cross-chain tracing, sanctions screening, and risk profiling.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.elliptic.co/",
+    "github": "nicedoc/elliptic-lens",
+    "tags": [
+      "compliance",
+      "sanctions",
+      "cross-chain",
+      "risk-profile"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "transpose-api",
+    "name": "Transpose",
+    "description": "SQL-based blockchain data API. Query decoded transactions, token transfers, NFT sales, and DeFi events.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install transpose-data",
+    "website": "https://www.transpose.io/",
+    "github": "TransposeData/transpose-python-sdk",
+    "tags": [
+      "sql",
+      "decoded-data",
+      "nft",
+      "defi"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "evm-trace",
+    "name": "evm-trace",
+    "description": "Python library for parsing and analyzing EVM call traces. Decode internal transactions and visualize call trees.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install evm-trace",
+    "github": "ApeWorX/evm-trace",
+    "tags": [
+      "evm",
+      "call-trace",
+      "internal-tx",
+      "debugging"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "chainsight",
+    "name": "ChainSight",
+    "description": "Real-time monitoring of DEX trades, bridge transfers, and large movements. Custom alerts via webhook or Telegram.",
+    "category": "crypto-tracing",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "nicedoc/chainsight",
+    "tags": [
+      "dex-monitoring",
+      "bridges",
+      "alerts",
+      "real-time"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "bitcoin-cli",
+    "name": "Bitcoin Core CLI",
+    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly \u2014 raw transactions, mempool, UTXO lookups.",
+    "category": "crypto-tracing",
+    "language": "C++",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://bitcoin.org/en/bitcoin-core/",
+    "github": "bitcoin/bitcoin",
+    "tags": [
+      "bitcoin",
+      "full-node",
+      "rpc",
+      "mempool"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "go-ethereum",
+    "name": "Geth (Go Ethereum)",
+    "description": "Official Go implementation of Ethereum. Full node, archive node, and light client with rich JSON-RPC API.",
+    "category": "crypto-tracing",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://geth.ethereum.org/",
+    "github": "ethereum/go-ethereum",
+    "tags": [
+      "ethereum",
+      "full-node",
+      "rpc",
+      "archive"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "solana-cli",
+    "name": "Solana CLI",
+    "description": "Solana blockchain tools. Query accounts, transactions, programs, and stake info. Built-in token management.",
+    "category": "crypto-tracing",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "sh -c \"$(curl -sSfL https://release.solana.com/stable/install)\"",
+    "website": "https://solana.com/",
+    "github": "solana-labs/solana",
+    "tags": [
+      "solana",
+      "cli",
+      "programs",
+      "stake"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "monkey-drainer-detector",
+    "name": "Drainer Detector",
+    "description": "Detect wallet drainer contracts and phishing approval signatures. Scans for SetApprovalForAll and Permit2 abuse.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicedoc/drainer-detector",
+    "tags": [
+      "drainer",
+      "phishing",
+      "approvals",
+      "permit2"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "mev-inspect",
+    "name": "mev-inspect-py",
+    "description": "Detect and analyze MEV (Maximal Extractable Value) on Ethereum. Finds arbitrage, liquidations, and sandwiches.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "flashbots/mev-inspect-py",
+    "tags": [
+      "mev",
+      "arbitrage",
+      "sandwich",
+      "flashbots"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "eigenphi",
+    "name": "EigenPhi Tools",
+    "description": "DeFi attack and MEV analysis. Visualizes flash loan attacks, rug pulls, and arbitrage with transaction decoding.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://eigenphi.io/",
+    "github": "nicedoc/eigenphi",
+    "tags": [
+      "flash-loan",
+      "rug-pull",
+      "attack-analysis",
+      "defi"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "token-sniffer",
+    "name": "Token Sniffer",
+    "description": "Automated scam token detection. Analyzes contract code for honeypots, hidden mints, tax manipulation, and rug vectors.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://tokensniffer.com/",
+    "github": "nicedoc/token-sniffer",
+    "tags": [
+      "scam-detection",
+      "honeypot",
+      "rug-pull",
+      "contract-audit"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "rugdoc",
+    "name": "RugDoc Scanner",
+    "description": "Smart contract risk assessment. Reviews DeFi contracts for common rug pull patterns and backdoor functions.",
+    "category": "crypto-tracing",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicedoc/rugdoc",
+    "tags": [
+      "risk-assessment",
+      "defi",
+      "backdoor",
+      "rug-pull"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "cryo",
+    "name": "Cryo",
+    "description": "Extract blockchain data into Parquet or CSV. High-performance bulk exporter for blocks, transactions, logs, and traces.",
+    "category": "crypto-tracing",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "cargo install cryo_cli",
+    "github": "paradigmxyz/cryo",
+    "tags": [
+      "data-extraction",
+      "parquet",
+      "bulk-export",
+      "paradigm"
+    ],
+    "featured": true,
+    "longDescription": "Cryo is a high-performance blockchain data extraction tool built by Paradigm. It extracts blockchain data into Parquet or CSV format, making it easy to analyze with tools like DuckDB, Pandas, or Polars. Cryo supports extracting blocks, transactions, logs, traces, state diffs, and more from any EVM chain. It's designed for researchers and analysts who need to work with large volumes of on-chain data efficiently.",
+    "documentation": "https://github.com/paradigmxyz/cryo/blob/main/README.md",
+    "installCommands": {
+      "cargo": "cargo install cryo_cli",
+      "pip": "pip install cryo"
+    },
+    "useCases": [
+      "Bulk extraction of blockchain data for analysis",
+      "Building local datasets for forensic investigation",
+      "MEV research and transaction analysis",
+      "On-chain data pipelines for analytics",
+      "Historical blockchain data archiving"
+    ],
+    "alternatives": [
+      "trueblocks",
+      "dune-analytics"
+    ]
+  },
+  {
+    "slug": "reth",
+    "name": "Reth",
+    "description": "High-performance Ethereum execution client in Rust. Blazing fast sync, archive mode, and modular architecture.",
+    "category": "crypto-tracing",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "website": "https://reth.rs/",
+    "github": "paradigmxyz/reth",
+    "tags": [
+      "ethereum",
+      "execution-client",
+      "rust",
+      "paradigm"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "cast",
+    "name": "Cast (Foundry)",
+    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes \u2014 all from CLI.",
+    "category": "crypto-tracing",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "curl -L https://foundry.paradigm.xyz | bash && foundryup",
+    "website": "https://book.getfoundry.sh/cast/",
+    "github": "foundry-rs/foundry",
+    "tags": [
+      "cli",
+      "calldata-decode",
+      "transaction",
+      "foundry"
+    ],
+    "featured": true,
+    "longDescription": "Cast is a command-line tool from the Foundry suite that acts as a Swiss army knife for Ethereum. It can send transactions, query on-chain data, decode calldata and ABI-encode function calls, convert between data formats, compute hashes, resolve ENS names, and much more. Cast is essential for blockchain investigators who need to quickly decode transactions, look up contract storage, or trace calls without writing code.",
+    "documentation": "https://book.getfoundry.sh/cast/",
+    "downloadUrl": "https://getfoundry.sh/",
+    "installCommands": {
+      "foundryup": "curl -L https://foundry.paradigm.xyz | bash && foundryup",
+      "cargo": "cargo install --git https://github.com/foundry-rs/foundry cast"
+    },
+    "useCases": [
+      "Decoding transaction calldata and event logs",
+      "Querying contract storage slots",
+      "Tracing internal transactions",
+      "ENS resolution and reverse lookups",
+      "ABI encoding/decoding for forensic analysis",
+      "Quick blockchain queries from the command line"
+    ],
+    "alternatives": [
+      "web3py",
+      "ethers-js"
+    ]
+  },
+  {
+    "slug": "wfuzz",
+    "name": "Wfuzz",
+    "description": "Web application fuzzer. Brute force parameters, directories, headers, and authentication credentials.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install wfuzz",
+    "github": "xmendez/wfuzz",
+    "tags": [
+      "fuzzing",
+      "brute-force",
+      "web-app",
+      "flexible"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "whatweb",
+    "name": "WhatWeb",
+    "description": "Web technology fingerprinter. Identifies CMS, frameworks, JS libraries, servers, and analytics from HTTP responses.",
+    "category": "web-scanning",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "apt install whatweb",
+    "github": "urbanadventurer/WhatWeb",
+    "tags": [
+      "fingerprint",
+      "tech-detection",
+      "cms",
+      "framework"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "subjack",
+    "name": "Subjack",
+    "description": "Subdomain takeover tool. Checks if CNAME records point to deprovisioned cloud services.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/haccer/subjack@latest",
+    "github": "haccer/subjack",
+    "tags": [
+      "takeover",
+      "cname",
+      "cloud",
+      "dangling-dns"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "altdns",
+    "name": "Altdns",
+    "description": "Subdomain discovery through alterations and permutations. Generates mutated wordlists from known subdomains.",
+    "category": "subdomain-enum",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install py-altdns",
+    "github": "infosec-au/altdns",
+    "tags": [
+      "permutation",
+      "mutation",
+      "wordlist",
+      "dns"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "trufflehog",
+    "name": "TruffleHog",
+    "description": "Find leaked credentials in Git repos, S3 buckets, and filesystems. Regex and entropy-based detection.",
+    "category": "osint-general",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "brew install trufflehog",
+    "github": "trufflesecurity/trufflehog",
+    "tags": [
+      "secrets",
+      "credentials",
+      "git",
+      "s3"
+    ],
+    "featured": true,
+    "longDescription": "TruffleHog scans for leaked credentials and secrets in Git repositories, S3 buckets, filesystems, and more. It uses both regex patterns and entropy analysis to detect API keys, passwords, tokens, and other sensitive data that may have been accidentally committed. TruffleHog supports over 800 credential detectors and can verify discovered credentials against the actual services to confirm they are still active.",
+    "documentation": "https://trufflesecurity.com/trufflehog",
+    "installCommands": {
+      "brew (macOS)": "brew install trufflehog",
+      "docker": "docker pull trufflesecurity/trufflehog",
+      "from source": "git clone https://github.com/trufflesecurity/trufflehog.git && cd trufflehog && go install"
+    },
+    "useCases": [
+      "Scanning Git history for leaked secrets",
+      "CI/CD pipeline secret detection",
+      "S3 bucket credential scanning",
+      "Active credential verification",
+      "Compliance and security auditing"
+    ],
+    "alternatives": [
+      "gitleaks"
+    ]
+  },
+  {
+    "slug": "gitleaks",
+    "name": "Gitleaks",
+    "description": "Scan Git repos for hardcoded secrets like passwords, API keys, and tokens. CI/CD ready.",
+    "category": "osint-general",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "brew install gitleaks",
+    "github": "gitleaks/gitleaks",
+    "tags": [
+      "secrets",
+      "git",
+      "ci-cd",
+      "api-keys"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "dnsrecon",
+    "name": "DNSRecon",
+    "description": "DNS enumeration script. Zone transfers, reverse lookups, Google dorking, SRV records, and DNSSEC testing.",
+    "category": "subdomain-enum",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install dnsrecon",
+    "github": "darkoperator/dnsrecon",
+    "tags": [
+      "dns",
+      "zone-transfer",
+      "dnssec",
+      "enumeration"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "thefatrat",
+    "name": "TheFatRat",
+    "description": "Exploit and payload generator. Creates backdoors with msfvenom, compiles with anti-AV evasion techniques.",
+    "category": "exploitation",
+    "language": "Shell",
+    "platform": [
+      "linux"
+    ],
+    "github": "screetsec/TheFatRat",
+    "tags": [
+      "payload",
+      "backdoor",
+      "msfvenom",
+      "evasion"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "seclists",
+    "name": "SecLists",
+    "description": "The security tester's companion. Huge collection of wordlists \u2014 usernames, passwords, URLs, fuzzing payloads, shells.",
+    "category": "password-attack",
+    "language": "Shell",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "danielmiessler/SecLists",
+    "tags": [
+      "wordlists",
+      "fuzzing",
+      "payloads",
+      "collection"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "mimikatz",
+    "name": "Mimikatz",
+    "description": "Extract plaintext passwords, hashes, PIN codes, and Kerberos tickets from Windows memory.",
+    "category": "password-attack",
+    "language": "C",
+    "platform": [
+      "windows"
+    ],
+    "github": "gentilkiwi/mimikatz",
+    "tags": [
+      "credential-dump",
+      "kerberos",
+      "windows",
+      "lsass"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "lazagne",
+    "name": "LaZagne",
+    "description": "Password recovery tool. Retrieves stored passwords from browsers, WiFi, databases, sysadmin tools, and more.",
+    "category": "password-attack",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "AlessandroZ/LaZagne",
+    "tags": [
+      "credential-recovery",
+      "browsers",
+      "stored-passwords",
+      "multi-source"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "enum4linux-ng",
+    "name": "enum4linux-ng",
+    "description": "Windows/Samba enumeration tool. Extracts user lists, share info, group policies, and OS details via SMB.",
+    "category": "network-recon",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "installCommand": "pip install enum4linux-ng",
+    "github": "cddmp/enum4linux-ng",
+    "tags": [
+      "smb",
+      "enumeration",
+      "windows",
+      "samba"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "goblin",
+    "name": "GoBuster DNS",
+    "description": "DNS subdomain bruting using Go. Concurrent queries with wildcard detection and custom resolvers.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "OJ/gobuster",
+    "tags": [
+      "dns-brute",
+      "concurrent",
+      "wildcard",
+      "resolvers"
+    ],
+    "featured": false
+  }
+]
