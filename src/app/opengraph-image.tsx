@@ -16,7 +16,7 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #0a0c14 0%, #0f1117 50%, #131620 100%)",
+          backgroundColor: "#0f1117",
           fontFamily: "monospace",
           position: "relative",
         }}
@@ -27,34 +27,9 @@ export default async function Image() {
             position: "absolute",
             top: 0,
             left: 0,
-            right: 0,
+            width: 1200,
             height: 4,
             background: "linear-gradient(90deg, #e63950, #d42040)",
-          }}
-        />
-
-        {/* Grid overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(42,47,62,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(42,47,62,0.25) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        />
-
-        {/* Glow */}
-        <div
-          style={{
-            position: "absolute",
-            top: 100,
-            left: 200,
-            width: 400,
-            height: 400,
-            borderRadius: "50%",
-            background: "rgba(230,57,80,0.08)",
-            filter: "blur(80px)",
           }}
         />
 
@@ -66,6 +41,7 @@ export default async function Image() {
             color: "#e8eaed",
             letterSpacing: 20,
             marginBottom: 16,
+            display: "flex",
           }}
         >
           ENNA
@@ -76,14 +52,13 @@ export default async function Image() {
           style={{
             fontSize: 24,
             fontWeight: 500,
-            background: "linear-gradient(90deg, #e63950, #d42040)",
-            backgroundClip: "text",
             color: "#e63950",
             letterSpacing: 8,
             marginBottom: 32,
+            display: "flex",
           }}
         >
-          OSINT & RECON TOOL INDEX
+          OSINT &amp; RECON TOOL INDEX
         </div>
 
         {/* Divider */}
@@ -91,7 +66,7 @@ export default async function Image() {
           style={{
             width: 300,
             height: 1,
-            background: "rgba(230,57,80,0.4)",
+            backgroundColor: "rgba(230,57,80,0.4)",
             marginBottom: 32,
           }}
         />
@@ -102,6 +77,7 @@ export default async function Image() {
             fontSize: 18,
             color: "#9ca3af",
             marginBottom: 8,
+            display: "flex",
           }}
         >
           Discover, compare, and deploy open-source security tools.
@@ -111,6 +87,7 @@ export default async function Image() {
             fontSize: 18,
             color: "#9ca3af",
             marginBottom: 40,
+            display: "flex",
           }}
         >
           Curated directory with live GitHub stats.
@@ -124,23 +101,23 @@ export default async function Image() {
             gap: 32,
             padding: "14px 40px",
             borderRadius: 8,
-            background: "rgba(28,32,48,0.8)",
+            backgroundColor: "rgba(28,32,48,0.8)",
             border: "1px solid rgba(42,47,62,0.5)",
           }}
         >
-          <div style={{ fontSize: 16, fontWeight: 600, color: "#e63950" }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: "#e63950", display: "flex" }}>
             176+ Tools
           </div>
           <div
-            style={{ width: 1, height: 24, background: "rgba(42,47,62,0.8)" }}
+            style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}
           />
-          <div style={{ fontSize: 16, fontWeight: 600, color: "#a855a0" }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: "#a855a0", display: "flex" }}>
             14 Categories
           </div>
           <div
-            style={{ width: 1, height: 24, background: "rgba(42,47,62,0.8)" }}
+            style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}
           />
-          <div style={{ fontSize: 16, fontWeight: 600, color: "#9ca3af" }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: "#9ca3af", display: "flex" }}>
             12 Languages
           </div>
         </div>
@@ -153,6 +130,7 @@ export default async function Image() {
             fontSize: 20,
             color: "rgba(230,57,80,0.6)",
             letterSpacing: 4,
+            display: "flex",
           }}
         >
           www.en-na.com
