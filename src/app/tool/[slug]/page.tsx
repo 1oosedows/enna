@@ -21,10 +21,24 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const tool = (toolsData as Tool[]).find((t) => t.slug === params.slug);
-  if (!tool) return { title: "Tool Not Found — ENNA" };
+  if (!tool) return { title: "Tool Not Found" };
+  const category = categories.find((c) => c.id === tool.category);
+  const pageTitle = `${tool.name} — ${category?.name || "Tools"}`;
+  const pageDescription = `${tool.description} — ${tool.language} | ${tool.tags.slice(0, 3).join(", ")}`;
   return {
-    title: `${tool.name} — ENNA`,
-    description: tool.description,
+    title: pageTitle,
+    description: pageDescription,
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      url: `/tool/${tool.slug}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: pageDescription,
+    },
   };
 }
 

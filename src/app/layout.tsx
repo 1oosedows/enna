@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://www.en-na.com";
+const title = "ENNA — OSINT & Recon Tool Index";
+const description =
+  "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats for 176+ tools.";
+
 export const metadata: Metadata = {
-  title: "ENNA — OSINT & Recon Tool Index",
-  description:
-    "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s — ENNA",
+  },
+  description,
   keywords: [
     "OSINT",
     "recon",
@@ -12,7 +20,34 @@ export const metadata: Metadata = {
     "penetration testing",
     "security tools",
     "open source",
+    "crypto tracing",
+    "blockchain forensics",
+    "network scanning",
+    "vulnerability assessment",
   ],
+  authors: [{ name: "ENNA", url: siteUrl }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "ENNA",
+    title,
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
 };
 
 export default function RootLayout({
