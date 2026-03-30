@@ -39,6 +39,8 @@ export type Category =
   | "password-attack"
   | "exploitation"
   | "phishing"
+  | "cloud-recon"
+  | "mobile"
   | "dual-use"
   | "offensive-ops";
 

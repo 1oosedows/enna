@@ -4519,5 +4519,645 @@
       "Continuous cloud security monitoring"
     ],
     "featured": false
+  },
+  {
+    "slug": "unicornscan",
+    "name": "Unicornscan",
+    "description": "Asynchronous UDP/TCP port scanner with advanced stimulus-response analysis and OS fingerprinting.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux"
+    ],
+    "github": "dneufeld/unicornscan",
+    "tags": [
+      "port-scanner",
+      "async",
+      "udp",
+      "tcp",
+      "fingerprinting"
+    ]
+  },
+  {
+    "slug": "netdiscover",
+    "name": "Netdiscover",
+    "description": "Active/passive ARP reconnaissance tool for network discovery without DNS traffic.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux"
+    ],
+    "github": "netdiscover-scanner/netdiscover",
+    "tags": [
+      "arp",
+      "network-discovery",
+      "passive",
+      "active"
+    ]
+  },
+  {
+    "slug": "arpscan",
+    "name": "arp-scan",
+    "description": "Send ARP requests to discover and fingerprint hosts on the local network segment.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "royhills/arp-scan",
+    "tags": [
+      "arp",
+      "host-discovery",
+      "lan",
+      "fingerprinting"
+    ]
+  },
+  {
+    "slug": "fierce",
+    "name": "Fierce",
+    "description": "DNS reconnaissance tool for locating non-contiguous IP space and hostnames against specified domains.",
+    "category": "network-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "mschwager/fierce",
+    "tags": [
+      "dns",
+      "reconnaissance",
+      "domain",
+      "ip-discovery"
+    ]
+  },
+  {
+    "slug": "dnsenum",
+    "name": "DNSenum",
+    "description": "Multithreaded DNS enumeration tool that discovers subdomains via dictionary brute-force, Google scraping, and zone transfers.",
+    "category": "subdomain-enum",
+    "language": "Perl",
+    "platform": [
+      "linux"
+    ],
+    "github": "fwaeytens/dnsenum",
+    "tags": [
+      "dns",
+      "enumeration",
+      "brute-force",
+      "zone-transfer"
+    ]
+  },
+  {
+    "slug": "uncover",
+    "name": "Uncover",
+    "description": "Quickly discover exposed hosts on the internet using multiple search engines like Shodan, Censys, and Fofa.",
+    "category": "network-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "projectdiscovery/uncover",
+    "tags": [
+      "search-engines",
+      "shodan",
+      "censys",
+      "fofa",
+      "discovery"
+    ]
+  },
+  {
+    "slug": "tlsx",
+    "name": "tlsx",
+    "description": "Fast TLS probe tool for grabbing TLS certificates, versions, and cipher information at scale.",
+    "category": "network-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "projectdiscovery/tlsx",
+    "tags": [
+      "tls",
+      "ssl",
+      "certificates",
+      "scanning"
+    ]
+  },
+  {
+    "slug": "cdncheck",
+    "name": "cdncheck",
+    "description": "Detect whether an IP belongs to a CDN, cloud provider, or WAF to identify origin servers.",
+    "category": "network-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "projectdiscovery/cdncheck",
+    "tags": [
+      "cdn",
+      "waf",
+      "cloud",
+      "ip-detection"
+    ]
+  },
+  {
+    "slug": "paramspider",
+    "name": "ParamSpider",
+    "description": "Mine parameters from web archives for any domain to find hidden attack surfaces.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "devanshbatham/ParamSpider",
+    "tags": [
+      "parameters",
+      "web-archive",
+      "attack-surface",
+      "recon"
+    ]
+  },
+  {
+    "slug": "gospider",
+    "name": "GoSpider",
+    "description": "Fast web spider written in Go for crawling and collecting URLs, subdomains, and endpoints.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "jaeles-project/gospider",
+    "tags": [
+      "crawler",
+      "spider",
+      "url-collection",
+      "endpoints"
+    ]
+  },
+  {
+    "slug": "hakrawler",
+    "name": "Hakrawler",
+    "description": "Simple Go web crawler for quick discovery of endpoints and assets within a web application.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "hakluke/hakrawler",
+    "tags": [
+      "crawler",
+      "endpoints",
+      "discovery",
+      "web-app"
+    ]
+  },
+  {
+    "slug": "linkfinder",
+    "name": "LinkFinder",
+    "description": "Python script to discover endpoints and their parameters in JavaScript files.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "GerbenJavado/LinkFinder",
+    "tags": [
+      "javascript",
+      "endpoints",
+      "parameters",
+      "api-discovery"
+    ]
+  },
+  {
+    "slug": "secretfinder",
+    "name": "SecretFinder",
+    "description": "Discover sensitive data like API keys, tokens, and credentials in JavaScript files.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "m4ll0k/SecretFinder",
+    "tags": [
+      "secrets",
+      "api-keys",
+      "javascript",
+      "credentials"
+    ]
+  },
+  {
+    "slug": "jsfscan",
+    "name": "JSFScan",
+    "description": "Automation framework combining multiple JS analysis tools for comprehensive JavaScript recon.",
+    "category": "web-scanning",
+    "language": "Shell",
+    "platform": [
+      "linux"
+    ],
+    "github": "KathanP19/JSFScan.sh",
+    "tags": [
+      "javascript",
+      "automation",
+      "recon",
+      "endpoints"
+    ]
+  },
+  {
+    "slug": "blackbird",
+    "name": "Blackbird",
+    "description": "OSINT tool to search for user accounts across 500+ social networks and websites.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "p1ngul1n0/blackbird",
+    "tags": [
+      "username",
+      "social-networks",
+      "account-search",
+      "osint"
+    ]
+  },
+  {
+    "slug": "whatsmyname",
+    "name": "WhatsMyName",
+    "description": "Username enumeration across hundreds of websites with community-maintained JSON data.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "WebBreacher/WhatsMyName",
+    "tags": [
+      "username",
+      "enumeration",
+      "social-media",
+      "identity"
+    ]
+  },
+  {
+    "slug": "ghunt",
+    "name": "GHunt",
+    "description": "Offensive Google framework to extract information from Google accounts using emails.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "mxrch/GHunt",
+    "tags": [
+      "google",
+      "email",
+      "account-analysis",
+      "osint"
+    ]
+  },
+  {
+    "slug": "fluxion",
+    "name": "Fluxion",
+    "description": "WPA security auditing tool that uses social engineering for handshake capture via evil twin attacks.",
+    "category": "wireless",
+    "language": "Shell",
+    "platform": [
+      "linux"
+    ],
+    "github": "FluxionNetwork/fluxion",
+    "tags": [
+      "wpa",
+      "evil-twin",
+      "social-engineering",
+      "wifi"
+    ]
+  },
+  {
+    "slug": "rtl-sdr",
+    "name": "RTL-SDR",
+    "description": "Software-defined radio tools for RTL2832U-based DVB-T receivers, enabling wide-spectrum RF analysis.",
+    "category": "wireless",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "osmocom/rtl-sdr",
+    "tags": [
+      "sdr",
+      "radio",
+      "rf-analysis",
+      "spectrum"
+    ]
+  },
+  {
+    "slug": "scoutsuite",
+    "name": "ScoutSuite",
+    "description": "Multi-cloud security auditing tool for AWS, Azure, GCP, Alibaba Cloud, and Oracle Cloud.",
+    "category": "cloud-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nccgroup/ScoutSuite",
+    "tags": [
+      "aws",
+      "azure",
+      "gcp",
+      "cloud-audit",
+      "misconfiguration"
+    ]
+  },
+  {
+    "slug": "cloudmapper",
+    "name": "CloudMapper",
+    "description": "Analyze AWS environments to create network diagrams and identify security risks.",
+    "category": "cloud-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "duo-labs/cloudmapper",
+    "tags": [
+      "aws",
+      "network-diagram",
+      "visualization",
+      "security"
+    ]
+  },
+  {
+    "slug": "s3scanner",
+    "name": "S3Scanner",
+    "description": "Scan for misconfigured S3 buckets across AWS regions and dump accessible contents.",
+    "category": "cloud-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "sa7mon/S3Scanner",
+    "tags": [
+      "s3",
+      "aws",
+      "bucket",
+      "misconfiguration"
+    ]
+  },
+  {
+    "slug": "cloudbrute",
+    "name": "CloudBrute",
+    "description": "Cloud infrastructure enumerator to find company assets across multiple cloud providers.",
+    "category": "cloud-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "0xsha/CloudBrute",
+    "tags": [
+      "cloud",
+      "enumeration",
+      "assets",
+      "multi-cloud"
+    ]
+  },
+  {
+    "slug": "microburst",
+    "name": "MicroBurst",
+    "description": "PowerShell toolkit for attacking Azure services including storage, key vaults, and automation.",
+    "category": "cloud-recon",
+    "language": "PowerShell",
+    "platform": [
+      "windows",
+      "linux"
+    ],
+    "github": "NetSPI/MicroBurst",
+    "tags": [
+      "azure",
+      "powershell",
+      "storage",
+      "key-vault"
+    ]
+  },
+  {
+    "slug": "roadtools",
+    "name": "ROADtools",
+    "description": "Framework for Azure AD enumeration and exploitation via the internal ROADrecon and ROADlib modules.",
+    "category": "cloud-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "dirkjanm/ROADtools",
+    "tags": [
+      "azure-ad",
+      "enumeration",
+      "active-directory",
+      "exploitation"
+    ]
+  },
+  {
+    "slug": "crystal-blockchain",
+    "name": "Crystal Blockchain",
+    "description": "Blockchain analytics platform for compliance and investigation with transaction flow visualization.",
+    "category": "crypto-tracing",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "nicedoc/crystal-blockchain-ruby",
+    "tags": [
+      "compliance",
+      "analytics",
+      "transaction-flow",
+      "investigation"
+    ],
+    "website": "https://crystalblockchain.com"
+  },
+  {
+    "slug": "frida",
+    "name": "Frida",
+    "description": "Dynamic instrumentation toolkit for developers and security researchers to inject scripts into native apps.",
+    "category": "mobile",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "frida/frida",
+    "tags": [
+      "instrumentation",
+      "hooking",
+      "dynamic-analysis",
+      "injection"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "objection",
+    "name": "Objection",
+    "description": "Runtime mobile exploration toolkit powered by Frida for iOS and Android security testing without jailbreak.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "sensepost/objection",
+    "tags": [
+      "frida",
+      "ios",
+      "android",
+      "runtime-analysis"
+    ]
+  },
+  {
+    "slug": "apktool",
+    "name": "APKTool",
+    "description": "Reverse engineer Android APK files — decode resources, rebuild, and step-through debug smali code.",
+    "category": "mobile",
+    "language": "Java",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "iBotPeaches/Apktool",
+    "tags": [
+      "android",
+      "apk",
+      "reverse-engineering",
+      "smali"
+    ]
+  },
+  {
+    "slug": "mobsf",
+    "name": "MobSF",
+    "description": "Automated mobile security framework for static and dynamic analysis of Android, iOS, and Windows apps.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "MobSF/Mobile-Security-Framework-MobSF",
+    "tags": [
+      "static-analysis",
+      "dynamic-analysis",
+      "android",
+      "ios"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "drozer",
+    "name": "Drozer",
+    "description": "Android security testing framework for identifying vulnerabilities in apps and devices.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "WithSecureLabs/drozer",
+    "tags": [
+      "android",
+      "vulnerability",
+      "app-security",
+      "testing"
+    ]
+  },
+  {
+    "slug": "jadx",
+    "name": "JADX",
+    "description": "DEX to Java decompiler producing readable Java source from Android APK and DEX files.",
+    "category": "mobile",
+    "language": "Java",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "skylot/jadx",
+    "tags": [
+      "decompiler",
+      "android",
+      "dex",
+      "java",
+      "reverse-engineering"
+    ]
+  },
+  {
+    "slug": "sleuth-kit",
+    "name": "The Sleuth Kit",
+    "description": "Collection of command-line tools for forensic analysis of disk images and file systems.",
+    "category": "forensics",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "sleuthkit/sleuthkit",
+    "tags": [
+      "disk-forensics",
+      "file-system",
+      "analysis",
+      "imaging"
+    ]
+  },
+  {
+    "slug": "cylr",
+    "name": "CyLR",
+    "description": "Live response collection tool for quickly gathering forensic artifacts from hosts during incident response.",
+    "category": "forensics",
+    "language": "C#",
+    "platform": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "github": "orlikoski/CyLR",
+    "tags": [
+      "incident-response",
+      "artifact-collection",
+      "live-response",
+      "triage"
+    ]
   }
 ]

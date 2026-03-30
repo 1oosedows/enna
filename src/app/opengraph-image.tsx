@@ -106,13 +106,13 @@ export default async function Image() {
           }}
         >
           <div style={{ fontSize: 16, fontWeight: 600, color: "#e63950", display: "flex" }}>
-            176+ Tools
+            210+ Tools
           </div>
           <div
             style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}
           />
           <div style={{ fontSize: 16, fontWeight: 600, color: "#a855a0", display: "flex" }}>
-            14 Categories
+            16 Categories
           </div>
           <div
             style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}

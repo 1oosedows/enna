@@ -74,6 +74,18 @@ export const categories: CategoryInfo[] = [
     description: "Phishing kits, URL analysis, email header analysis",
   },
   {
+    id: "cloud-recon",
+    name: "Cloud Recon",
+    icon: "☁️",
+    description: "Cloud security auditing, S3 enumeration, Azure/AWS/GCP assessment",
+  },
+  {
+    id: "mobile",
+    name: "Mobile Security",
+    icon: "📱",
+    description: "Android/iOS analysis, APK reversing, mobile pentesting",
+  },
+  {
     id: "dual-use",
     name: "Dual Use",
     icon: "⚖️",
