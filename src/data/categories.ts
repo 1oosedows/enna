@@ -73,4 +73,16 @@ export const categories: CategoryInfo[] = [
     icon: "🎣",
     description: "Phishing kits, URL analysis, email header analysis",
   },
+  {
+    id: "dual-use",
+    name: "Dual Use",
+    icon: "⚖️",
+    description: "Legitimate tools with well-known offensive applications",
+  },
+  {
+    id: "offensive-ops",
+    name: "Offensive Ops",
+    icon: "🔥",
+    description: "Red team tooling, C2 frameworks, evasion, and edge-case utilities",
+  },
 ];

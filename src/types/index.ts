@@ -38,7 +38,9 @@ export type Category =
   | "crypto-tracing"
   | "password-attack"
   | "exploitation"
-  | "phishing";
+  | "phishing"
+  | "dual-use"
+  | "offensive-ops";
 
 export interface CategoryInfo {
   id: Category;

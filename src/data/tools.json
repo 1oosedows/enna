@@ -634,7 +634,7 @@
   {
     "slug": "volatility3",
     "name": "Volatility 3",
-    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps \u2014 processes, network connections, registry.",
+    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps — processes, network connections, registry.",
     "category": "forensics",
     "language": "Python",
     "platform": [
@@ -791,7 +791,7 @@
   {
     "slug": "ffuf",
     "name": "ffuf",
-    "description": "Fast web fuzzer written in Go. Fuzz anything \u2014 URLs, headers, POST data \u2014 with blazing speed.",
+    "description": "Fast web fuzzer written in Go. Fuzz anything — URLs, headers, POST data — with blazing speed.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -2321,7 +2321,7 @@
   {
     "slug": "wallet-explorer",
     "name": "WalletExplorer",
-    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities \u2014 exchanges, mixers, markets, gambling.",
+    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities — exchanges, mixers, markets, gambling.",
     "category": "crypto-tracing",
     "language": "Python",
     "platform": [
@@ -2833,7 +2833,7 @@
   {
     "slug": "bitcoin-cli",
     "name": "Bitcoin Core CLI",
-    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly \u2014 raw transactions, mempool, UTXO lookups.",
+    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly — raw transactions, mempool, UTXO lookups.",
     "category": "crypto-tracing",
     "language": "C++",
     "platform": [
@@ -3054,7 +3054,7 @@
   {
     "slug": "cast",
     "name": "Cast (Foundry)",
-    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes \u2014 all from CLI.",
+    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes — all from CLI.",
     "category": "crypto-tracing",
     "language": "Rust",
     "platform": [
@@ -3275,7 +3275,7 @@
   {
     "slug": "seclists",
     "name": "SecLists",
-    "description": "The security tester's companion. Huge collection of wordlists \u2014 usernames, passwords, URLs, fuzzing payloads, shells.",
+    "description": "The security tester's companion. Huge collection of wordlists — usernames, passwords, URLs, fuzzing payloads, shells.",
     "category": "password-attack",
     "language": "Shell",
     "platform": [
@@ -3366,6 +3366,1157 @@
       "concurrent",
       "wildcard",
       "resolvers"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "proxychains",
+    "name": "ProxyChains-ng",
+    "description": "Force any TCP connection through SOCKS4/5 or HTTP proxies. Chain multiple proxies for anonymity.",
+    "longDescription": "ProxyChains-ng is a preloader which hooks calls to sockets in dynamically linked programs and redirects them through one or more SOCKS/HTTP proxies. It allows you to use SSH, Telnet, wget, and virtually any TCP application through a proxy chain. It supports SOCKS4, SOCKS5, and HTTP CONNECT proxy servers and allows mixing different proxy types in the same chain. Widely used for pivoting through compromised hosts and anonymous scanning.",
+    "category": "dual-use",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "apt install proxychains4",
+    "github": "rofl0r/proxychains-ng",
+    "tags": [
+      "proxy",
+      "socks",
+      "pivoting",
+      "anonymity",
+      "tunneling"
+    ],
+    "useCases": [
+      "Routing tools through SOCKS proxies for anonymity",
+      "Pivoting through compromised hosts during pentests",
+      "Chaining multiple proxies for operational security",
+      "Forcing non-proxy-aware tools through proxy tunnels"
+    ],
+    "alternatives": [
+      "chisel",
+      "ligolo-ng"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "socat",
+    "name": "Socat",
+    "description": "Multipurpose relay tool. Bidirectional data transfer between two data channels — sockets, files, pipes, devices.",
+    "longDescription": "Socat (SOcket CAT) is a command-line utility that establishes two bidirectional byte streams and transfers data between them. It's like an extended version of netcat with support for SSL, IPv6, SOCKS4 proxying, and dozens of address types. Socat can create virtual serial connections, tunnel traffic through SSL, act as a simple TCP forwarder, and much more. It's a sysadmin essential that doubles as a powerful offensive tool for port forwarding, bind/reverse shells, and encrypted tunnels.",
+    "category": "dual-use",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "apt install socat",
+    "github": "3ndG4me/socat",
+    "tags": [
+      "relay",
+      "socket",
+      "tunneling",
+      "ssl",
+      "networking"
+    ],
+    "useCases": [
+      "Encrypted tunnel creation between hosts",
+      "Port forwarding and traffic relaying",
+      "Bind and reverse shell stabilization",
+      "Virtual serial port connections",
+      "SSL wrapping for unencrypted protocols"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "ngrok",
+    "name": "ngrok",
+    "description": "Expose local servers to the internet via secure tunnels. Instant public URLs for localhost services.",
+    "longDescription": "ngrok creates secure tunnels from a public endpoint to a locally running service. It captures all traffic for inspection, replay, and analysis. While designed for legitimate development and testing workflows, ngrok is commonly used in red team operations to exfiltrate data, establish reverse tunnels to C2 infrastructure, and bypass NAT/firewall restrictions. The free tier provides random subdomains; paid plans offer custom domains and IP restrictions.",
+    "category": "dual-use",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "brew install ngrok",
+    "website": "https://ngrok.com/",
+    "github": "inconshreveable/ngrok",
+    "tags": [
+      "tunneling",
+      "reverse-proxy",
+      "nat-bypass",
+      "webhook",
+      "localhost"
+    ],
+    "useCases": [
+      "Exposing local dev servers for webhook testing",
+      "Bypassing NAT and firewall restrictions",
+      "Creating reverse tunnels for C2 callbacks",
+      "Traffic inspection and replay during development",
+      "Quick file sharing and data exfiltration"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "rclone",
+    "name": "Rclone",
+    "description": "rsync for cloud storage. Sync, copy, and mount 70+ cloud providers. Command-line Swiss army knife for cloud data.",
+    "longDescription": "Rclone is a command-line program to manage files on cloud storage. It supports over 70 cloud storage providers including S3, Google Drive, Dropbox, OneDrive, Azure Blob, and more. While it's a legitimate and extremely useful sysadmin tool, it's frequently observed in ransomware operations and data theft incidents for large-scale exfiltration to attacker-controlled cloud storage. DFIR teams track rclone usage as a key indicator of compromise.",
+    "category": "dual-use",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "brew install rclone",
+    "website": "https://rclone.org/",
+    "documentation": "https://rclone.org/docs/",
+    "github": "rclone/rclone",
+    "tags": [
+      "cloud-storage",
+      "sync",
+      "exfiltration",
+      "s3",
+      "ransomware-adjacent"
+    ],
+    "useCases": [
+      "Cloud storage management and synchronization",
+      "Backup automation to multiple cloud providers",
+      "Data migration between cloud services",
+      "Known exfiltration tool in ransomware operations",
+      "Mounting cloud storage as local filesystem"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "gtfobins",
+    "name": "GTFOBins",
+    "description": "Curated list of Unix binaries that can be used to bypass security restrictions. Living off the land, documented.",
+    "longDescription": "GTFOBins is a curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions on misconfigured systems. It documents how standard system binaries (find, vim, python, bash, etc.) can be abused for privilege escalation, file read/write, shell escape, reverse shell creation, and more. It's the definitive reference for Living Off The Land techniques on Linux/Unix systems. Every pentester and red teamer has this bookmarked.",
+    "category": "dual-use",
+    "language": "Shell",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "website": "https://gtfobins.github.io/",
+    "github": "GTFOBins/GTFOBins.github.io",
+    "tags": [
+      "lolbins",
+      "privesc",
+      "shell-escape",
+      "living-off-the-land",
+      "reference"
+    ],
+    "useCases": [
+      "Linux privilege escalation via standard binaries",
+      "Shell escape from restricted environments",
+      "File read/write through unexpected binaries",
+      "Reverse shell creation using system tools",
+      "Security hardening — knowing what to restrict"
+    ],
+    "alternatives": [
+      "lolbas"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "lolbas",
+    "name": "LOLBAS",
+    "description": "Living Off The Land Binaries, Scripts and Libraries for Windows. Documenting every Windows binary with offensive potential.",
+    "longDescription": "LOLBAS (Living Off The Land Binaries, Scripts and Libraries) is the Windows equivalent of GTFOBins. It documents Windows binaries, scripts, and libraries that can be used for file download, code execution, lateral movement, persistence, credential theft, and more — all using tools already present on the system. This includes certutil, mshta, rundll32, regsvr32, bitsadmin, and dozens more. Understanding LOLBAS is essential for both red teams (evasion) and blue teams (detection).",
+    "category": "dual-use",
+    "language": "Shell",
+    "platform": [
+      "windows"
+    ],
+    "website": "https://lolbas-project.github.io/",
+    "github": "LOLBAS-Project/LOLBAS",
+    "tags": [
+      "lolbins",
+      "windows",
+      "evasion",
+      "living-off-the-land",
+      "reference"
+    ],
+    "useCases": [
+      "Windows post-exploitation using built-in binaries",
+      "AV/EDR evasion through legitimate executables",
+      "File download via certutil, bitsadmin, etc.",
+      "Code execution through mshta, rundll32, regsvr32",
+      "Detection engineering for blue teams"
+    ],
+    "alternatives": [
+      "gtfobins"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "sysinternals",
+    "name": "Sysinternals Suite",
+    "description": "Microsoft's advanced system utilities. PsExec, Process Monitor, Autoruns, TCPView — essential for both ops and offense.",
+    "longDescription": "Sysinternals is a suite of advanced system utilities by Microsoft, used daily by system administrators worldwide. However, tools like PsExec (remote command execution), ProcDump (memory dumping), and Autoruns (persistence detection/creation) are heavily used in offensive operations. PsExec in particular is one of the most common lateral movement tools observed in real-world intrusions. Attackers use legitimate, Microsoft-signed binaries to blend in with normal administrative activity.",
+    "category": "dual-use",
+    "language": "C/C++",
+    "platform": [
+      "windows"
+    ],
+    "website": "https://learn.microsoft.com/en-us/sysinternals/",
+    "downloadUrl": "https://learn.microsoft.com/en-us/sysinternals/downloads/",
+    "github": "MicrosoftDocs/sysinternals",
+    "tags": [
+      "psexec",
+      "lateral-movement",
+      "process-monitor",
+      "windows",
+      "microsoft"
+    ],
+    "useCases": [
+      "Remote command execution via PsExec",
+      "Process memory dumping with ProcDump (credential extraction)",
+      "Persistence discovery and creation via Autoruns",
+      "Network connection monitoring with TCPView",
+      "System administration and troubleshooting"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "powershell-empire",
+    "name": "Empire",
+    "description": "Post-exploitation agent built on PowerShell and Python. Cryptologically-secure communications and flexible architecture.",
+    "longDescription": "Empire is a post-exploitation and adversary emulation framework that uses PowerShell (Windows) and Python (Linux/macOS) agents. It features cryptologically-secure communications, a flexible architecture, and a wide range of post-exploitation modules. Empire was originally developed by BC Security and has been used extensively in both red team operations and real-world attacks. It supports credential harvesting, lateral movement, persistence, privilege escalation, and data exfiltration.",
+    "category": "dual-use",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "documentation": "https://bc-security.gitbook.io/empire-wiki/",
+    "github": "BC-SECURITY/Empire",
+    "tags": [
+      "c2",
+      "post-exploitation",
+      "powershell",
+      "python-agent",
+      "red-team"
+    ],
+    "useCases": [
+      "Post-exploitation framework for red team engagements",
+      "PowerShell-based credential harvesting",
+      "Lateral movement through Windows environments",
+      "Persistence mechanism deployment",
+      "Adversary emulation exercises"
+    ],
+    "alternatives": [
+      "sliver",
+      "metasploit",
+      "mythic"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "tor",
+    "name": "Tor",
+    "description": "Anonymous communication network. Routes traffic through multiple relays to conceal location and usage.",
+    "longDescription": "Tor (The Onion Router) is free software and an open network that helps defend against traffic analysis. It directs Internet traffic through a worldwide overlay network of relays to conceal a user's location and usage from surveillance and traffic analysis. Tor is used by journalists, activists, whistleblowers, and privacy-conscious individuals — but also by threat actors for anonymous operations, C2 infrastructure, and accessing dark web markets. Understanding Tor is essential for both operational security and investigating dark web activity.",
+    "category": "dual-use",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.torproject.org/",
+    "documentation": "https://tb-manual.torproject.org/",
+    "downloadUrl": "https://www.torproject.org/download/",
+    "github": "torproject/tor",
+    "tags": [
+      "anonymity",
+      "onion-routing",
+      "privacy",
+      "dark-web",
+      "censorship-bypass"
+    ],
+    "useCases": [
+      "Anonymous internet browsing and communication",
+      "Accessing .onion hidden services for investigation",
+      "Censorship circumvention",
+      "Operational security for sensitive research",
+      "C2 infrastructure concealment (offensive)",
+      "Dark web OSINT and monitoring"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "openssh",
+    "name": "OpenSSH",
+    "description": "The SSH protocol implementation. Remote access, tunneling, port forwarding, SOCKS proxying — everywhere.",
+    "longDescription": "OpenSSH is the premier connectivity tool for remote login using the SSH protocol. While it's the most fundamental sysadmin tool in existence, its tunneling capabilities make it equally powerful offensively. SSH supports local/remote/dynamic port forwarding, SOCKS proxying, and can create encrypted tunnels that bypass firewall restrictions. Attackers use SSH for pivoting, data exfiltration over encrypted channels, and maintaining persistent access to compromised systems.",
+    "category": "dual-use",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://www.openssh.com/",
+    "documentation": "https://man.openbsd.org/ssh",
+    "github": "openssh/openssh-portable",
+    "tags": [
+      "ssh",
+      "tunneling",
+      "port-forwarding",
+      "socks-proxy",
+      "remote-access"
+    ],
+    "useCases": [
+      "Remote system administration",
+      "Dynamic port forwarding (SOCKS proxy)",
+      "Local and remote port forwarding for pivoting",
+      "Encrypted data exfiltration channels",
+      "Persistent access via SSH keys",
+      "Jump host / bastion host traversal"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "netexec",
+    "name": "NetExec",
+    "description": "Network execution tool — the maintained successor to CrackMapExec. SMB, LDAP, WinRM, SSH, MSSQL, and more.",
+    "longDescription": "NetExec (nxc) is the actively maintained successor to CrackMapExec. It's a network service exploitation tool that supports SMB, LDAP, WinRM, SSH, MSSQL, RDP, and more. NetExec automates credential testing, command execution, and enumeration across network services. It's indispensable for Active Directory pentesting — spray credentials, dump SAM/LSA, execute commands, and enumerate shares across hundreds of hosts in seconds.",
+    "category": "dual-use",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install netexec",
+    "documentation": "https://www.netexec.wiki/",
+    "github": "Pennyw0rth/NetExec",
+    "tags": [
+      "smb",
+      "ldap",
+      "winrm",
+      "credential-spray",
+      "active-directory"
+    ],
+    "useCases": [
+      "Credential spraying across network services",
+      "SMB share enumeration and access testing",
+      "Remote command execution via WinRM/SMB/SSH",
+      "SAM/LSA/NTDS secret dumping",
+      "Active Directory enumeration and exploitation"
+    ],
+    "alternatives": [
+      "crackmapexec",
+      "impacket"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "cobaltstrike-parser",
+    "name": "CobaltStrike Parser",
+    "description": "Parse and extract configs from Cobalt Strike beacons. Identify C2 servers, watermarks, and malleable C2 profiles.",
+    "category": "dual-use",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "Sentinel-One/CobaltStrikeParser",
+    "tags": [
+      "cobalt-strike",
+      "beacon",
+      "c2-detection",
+      "config-extraction",
+      "dfir"
+    ],
+    "useCases": [
+      "Extracting Cobalt Strike beacon configurations",
+      "Identifying C2 server infrastructure",
+      "Analyzing malleable C2 profiles",
+      "Incident response triage for CS infections",
+      "Threat intelligence on CS watermarks"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "powersploit",
+    "name": "PowerSploit",
+    "description": "Collection of PowerShell post-exploitation modules. Credential theft, privilege escalation, persistence, exfiltration.",
+    "longDescription": "PowerSploit is a collection of Microsoft PowerShell modules that aid penetration testers during all phases of an assessment. Modules include PowerView (AD enumeration), Invoke-Mimikatz (in-memory credential extraction), Get-GPPPassword (Group Policy preference passwords), and dozens more. While the project is archived, it remains one of the most referenced PowerShell offensive toolkits and its techniques are still actively used.",
+    "category": "dual-use",
+    "language": "PowerShell",
+    "platform": [
+      "windows"
+    ],
+    "github": "PowerShellMafia/PowerSploit",
+    "tags": [
+      "powershell",
+      "post-exploitation",
+      "active-directory",
+      "credential-theft",
+      "archived"
+    ],
+    "useCases": [
+      "PowerShell-based Active Directory enumeration (PowerView)",
+      "In-memory credential extraction (Invoke-Mimikatz)",
+      "Group Policy preference password extraction",
+      "Token impersonation and manipulation",
+      "DLL injection and reflective loading"
+    ],
+    "alternatives": [
+      "powershell-empire"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "nishang",
+    "name": "Nishang",
+    "description": "PowerShell offensive security framework. Shells, backdoors, information gathering, and privilege escalation.",
+    "category": "dual-use",
+    "language": "PowerShell",
+    "platform": [
+      "windows"
+    ],
+    "github": "samratashok/nishang",
+    "tags": [
+      "powershell",
+      "shells",
+      "backdoor",
+      "privilege-escalation"
+    ],
+    "useCases": [
+      "PowerShell reverse and bind shells",
+      "Keylogging and screen capture",
+      "DNS and ICMP exfiltration",
+      "Brute force attacks via PowerShell"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "dnscat2",
+    "name": "dnscat2",
+    "description": "Create an encrypted C2 channel over DNS. Tunnel data through DNS queries when all other protocols are blocked.",
+    "longDescription": "dnscat2 creates an encrypted command-and-control channel over the DNS protocol. It's designed for situations where all other outbound traffic is blocked but DNS resolution is still permitted — which is almost always. The tool consists of a client that runs on compromised hosts and a server that runs on an authoritative DNS server controlled by the attacker. All communication is encrypted and tunneled through DNS TXT, CNAME, or MX records.",
+    "category": "dual-use",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "iagox86/dnscat2",
+    "tags": [
+      "dns-tunnel",
+      "c2",
+      "exfiltration",
+      "encrypted",
+      "firewall-bypass"
+    ],
+    "useCases": [
+      "C2 communication over DNS when other protocols are blocked",
+      "Data exfiltration through DNS queries",
+      "Bypassing firewall restrictions that allow DNS",
+      "Encrypted tunneling through corporate DNS infrastructure"
+    ],
+    "alternatives": [
+      "chisel",
+      "ligolo-ng"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "mythic",
+    "name": "Mythic",
+    "description": "Collaborative, multi-platform C2 framework. Docker-based with web UI, multiple agent types, and plugin architecture.",
+    "longDescription": "Mythic is a multiplayer, command and control platform for red team operations. It's designed to be collaborative, allowing multiple operators to manage agents simultaneously through a web-based UI. Mythic supports multiple agent types (Apollo for .NET, Poseidon for Go, Medusa for Python, etc.) and uses a plugin architecture for extensibility. All communication is containerized and managed through Docker. It tracks operations, manages credentials, and provides file management — a complete red team platform.",
+    "category": "offensive-ops",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "documentation": "https://docs.mythic-c2.net/",
+    "github": "its-a-feature/Mythic",
+    "tags": [
+      "c2",
+      "red-team",
+      "multi-operator",
+      "docker",
+      "web-ui"
+    ],
+    "useCases": [
+      "Full red team C2 operations with web UI",
+      "Multi-operator collaborative engagements",
+      "Custom agent development via plugin system",
+      "Operation tracking and credential management",
+      "Cross-platform implant deployment"
+    ],
+    "alternatives": [
+      "sliver",
+      "metasploit",
+      "powershell-empire"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "havoc",
+    "name": "Havoc",
+    "description": "Modern C2 framework. Qt-based GUI, BOF support, custom agents, and a Cobalt Strike-inspired workflow.",
+    "longDescription": "Havoc is a modern, malleable post-exploitation command and control framework. It features a cross-platform Qt-based GUI, support for Beacon Object Files (BOFs), custom agent development through its Agent SDK, and encrypted C2 communication. Havoc was designed as an open-source alternative to Cobalt Strike with a similar operator experience. It supports multiple listeners, team servers, and has a growing library of post-exploitation modules.",
+    "category": "offensive-ops",
+    "language": "C/C++",
+    "platform": [
+      "linux",
+      "windows"
+    ],
+    "documentation": "https://havocframework.com/docs/welcome",
+    "github": "HavocFramework/Havoc",
+    "tags": [
+      "c2",
+      "red-team",
+      "gui",
+      "bof",
+      "cobalt-strike-alternative"
+    ],
+    "useCases": [
+      "Red team operations with GUI-based C2",
+      "Beacon Object File (BOF) execution",
+      "Custom agent and listener development",
+      "Encrypted C2 with malleable profiles",
+      "Team server for collaborative ops"
+    ],
+    "alternatives": [
+      "sliver",
+      "mythic",
+      "metasploit"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "rubeus",
+    "name": "Rubeus",
+    "description": "C# toolset for raw Kerberos interaction and abuse. AS-REP roasting, Kerberoasting, ticket manipulation, delegation attacks.",
+    "longDescription": "Rubeus is a C# toolset for raw Kerberos interaction and abuses. It's the go-to tool for Kerberos-based attacks in Active Directory environments. Rubeus supports AS-REP roasting, Kerberoasting, unconstrained/constrained/resource-based constrained delegation abuse, S4U ticket requests, ticket extraction and renewal, and golden/silver ticket creation. It can be loaded reflectively in memory, making it a staple of modern AD attack chains.",
+    "category": "offensive-ops",
+    "language": "C#",
+    "platform": [
+      "windows"
+    ],
+    "github": "GhostPack/Rubeus",
+    "tags": [
+      "kerberos",
+      "active-directory",
+      "roasting",
+      "delegation",
+      "tickets"
+    ],
+    "useCases": [
+      "Kerberoasting to extract service account hashes",
+      "AS-REP roasting against accounts without pre-auth",
+      "Kerberos delegation abuse for privilege escalation",
+      "Golden and silver ticket forging",
+      "Pass-the-ticket and over-pass-the-hash attacks"
+    ],
+    "alternatives": [
+      "impacket"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "certipy",
+    "name": "Certipy",
+    "description": "Active Directory Certificate Services (AD CS) abuse tool. Find and exploit certificate template misconfigurations.",
+    "longDescription": "Certipy is a Python tool for enumerating and abusing Active Directory Certificate Services (AD CS). It can identify vulnerable certificate templates, request certificates for privilege escalation, perform ESC1-ESC8 attacks, extract CA private keys, and forge certificates. AD CS misconfigurations are among the most impactful attack paths in modern Active Directory environments, and Certipy automates the entire attack chain from enumeration to exploitation.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install certipy-ad",
+    "github": "ly4k/Certipy",
+    "tags": [
+      "active-directory",
+      "certificates",
+      "adcs",
+      "privilege-escalation",
+      "esc1-esc8"
+    ],
+    "useCases": [
+      "AD CS misconfiguration enumeration (ESC1-ESC8)",
+      "Certificate-based privilege escalation",
+      "CA private key extraction",
+      "Certificate forging for domain admin",
+      "Shadow credential attacks"
+    ],
+    "alternatives": [
+      "bloodhound",
+      "rubeus"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "coercer",
+    "name": "Coercer",
+    "description": "Automatically find and exploit Windows authentication coercion vulnerabilities. PetitPotam, PrinterBug, and more.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install coercer",
+    "github": "p0dalirius/Coercer",
+    "tags": [
+      "authentication-coercion",
+      "ntlm-relay",
+      "petitpotam",
+      "active-directory"
+    ],
+    "useCases": [
+      "Windows authentication coercion exploitation",
+      "NTLM relay attack setup via forced authentication",
+      "PetitPotam, PrinterBug, and DFSCoerce automation",
+      "Active Directory privilege escalation chains"
+    ],
+    "alternatives": [
+      "responder"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "sharphound",
+    "name": "SharpHound",
+    "description": "Official BloodHound data collector. Enumerates Active Directory objects, sessions, ACLs, and trusts for graph analysis.",
+    "category": "offensive-ops",
+    "language": "C#",
+    "platform": [
+      "windows"
+    ],
+    "github": "BloodHoundAD/SharpHound",
+    "tags": [
+      "active-directory",
+      "enumeration",
+      "bloodhound",
+      "graph-data",
+      "collector"
+    ],
+    "useCases": [
+      "Active Directory data collection for BloodHound",
+      "Session and local admin enumeration",
+      "ACL and GPO relationship mapping",
+      "Trust relationship discovery",
+      "Attack path analysis data gathering"
+    ],
+    "alternatives": [
+      "bloodhound"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "beef",
+    "name": "BeEF",
+    "description": "Browser Exploitation Framework. Hook browsers via XSS, then pivot into the network using browser-based attacks.",
+    "longDescription": "The Browser Exploitation Framework (BeEF) focuses on the web browser as the attack vector. Unlike other security tools, BeEF looks past the hardened network perimeter and examines exploitability within the context of the browser. Once a browser is hooked (typically via XSS), BeEF can use it to launch further attacks including keylogging, clipboard theft, webcam/mic access, port scanning the internal network, and social engineering attacks — all from within the victim's browser context.",
+    "category": "offensive-ops",
+    "language": "Ruby",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "website": "https://beefproject.com/",
+    "documentation": "https://github.com/beefproject/beef/wiki",
+    "github": "beefproject/beef",
+    "tags": [
+      "browser",
+      "xss",
+      "hook",
+      "social-engineering",
+      "pivot"
+    ],
+    "useCases": [
+      "Browser hooking via XSS for post-exploitation",
+      "Internal network scanning through hooked browsers",
+      "Credential harvesting via fake login prompts",
+      "Keylogging and clipboard theft",
+      "Social engineering delivery through the browser"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "set",
+    "name": "Social-Engineer Toolkit",
+    "description": "Open-source social engineering framework. Spear-phishing, web attacks, USB/HID attacks, and credential harvesting.",
+    "longDescription": "The Social-Engineer Toolkit (SET) is an open-source penetration testing framework designed for social engineering attacks. Created by David Kennedy, it integrates with Metasploit and provides attack vectors including spear-phishing (email), website cloning for credential harvesting, infectious media (USB), mass mailers, and HID attacks. SET automates the creation of believable attack scenarios and is a standard tool in social engineering assessments.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "trustedsec/social-engineer-toolkit",
+    "tags": [
+      "social-engineering",
+      "phishing",
+      "credential-harvest",
+      "usb-attack",
+      "hid"
+    ],
+    "useCases": [
+      "Spear-phishing campaign creation and delivery",
+      "Website cloning for credential harvesting",
+      "USB/HID attack payload generation",
+      "QR code and wireless attack vectors",
+      "Social engineering awareness testing"
+    ],
+    "alternatives": [
+      "gophish",
+      "evilginx2"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "quasar-rat",
+    "name": "Quasar RAT",
+    "description": "Open-source remote administration tool for Windows. Full remote desktop, keylogger, file manager, and reverse proxy.",
+    "longDescription": "Quasar is a fast and lightweight remote administration tool coded in C#. It provides a stable and easy-to-use user interface with features including remote desktop, file management, keylogging, remote shell, system information gathering, and more. While marketed as a legitimate remote administration tool, Quasar is widely deployed by threat actors as a remote access trojan. It's frequently observed in APT campaigns and cybercrime operations due to its open-source nature and easy customization.",
+    "category": "offensive-ops",
+    "language": "C#",
+    "platform": [
+      "windows"
+    ],
+    "github": "quasar/Quasar",
+    "tags": [
+      "rat",
+      "remote-access",
+      "keylogger",
+      "remote-desktop",
+      "apt-tool"
+    ],
+    "useCases": [
+      "Remote administration and monitoring",
+      "Red team remote access implant",
+      "Studying RAT behavior for detection development",
+      "Understanding C# implant architecture",
+      "DFIR practice and malware analysis"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "donut",
+    "name": "Donut",
+    "description": "Generates position-independent shellcode from .NET assemblies, PE files, and DLLs. Load anything in memory.",
+    "longDescription": "Donut is a position-independent code generation tool that creates x86 or x64 shellcode payloads from .NET assemblies, PE files, DLLs, and VBS/JS/XSL files. The generated shellcode can load and execute the payload entirely in memory without touching disk, making it extremely useful for AV/EDR evasion. Donut supports encryption (Chaskey cipher), decoy module loading, and CLR bootstrapping for .NET payloads. It's a critical component in modern red team toolchains.",
+    "category": "offensive-ops",
+    "language": "C",
+    "platform": [
+      "linux",
+      "windows"
+    ],
+    "github": "TheWover/donut",
+    "tags": [
+      "shellcode",
+      "in-memory",
+      "evasion",
+      "dotnet",
+      "position-independent"
+    ],
+    "useCases": [
+      "Converting .NET tools to position-independent shellcode",
+      "In-memory payload execution without disk writes",
+      "AV/EDR evasion through shellcode injection",
+      "Custom loader development for red team operations",
+      "Embedding tools in exploit payloads"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "scarecrow",
+    "name": "ScareCrow",
+    "description": "Payload creation framework for EDR bypass. Generates loaders using WinAPI syscalls to evade userland hooks.",
+    "longDescription": "ScareCrow is a payload creation framework designed to generate loaders that bypass Endpoint Detection and Response (EDR) products. It uses direct Windows system calls instead of standard WinAPI calls, avoiding the userland hooks that EDR products use for detection. ScareCrow supports multiple loader types (DLL sideloading, binary, JScript, HTA), code signing with spoofed certificates, and integration with shellcode generators like Donut. It represents the current state of the art in EDR evasion.",
+    "category": "offensive-ops",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "windows"
+    ],
+    "github": "optiv/ScareCrow",
+    "tags": [
+      "edr-bypass",
+      "syscalls",
+      "loader",
+      "evasion",
+      "code-signing"
+    ],
+    "useCases": [
+      "Generating EDR-evading payload loaders",
+      "Direct syscall execution to bypass hooks",
+      "Code signing with spoofed certificates",
+      "DLL sideloading payload delivery",
+      "Testing EDR detection capabilities"
+    ],
+    "alternatives": [
+      "donut"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "sharpcollection",
+    "name": "SharpCollection",
+    "description": "Nightly builds of common C# offensive tools. Pre-compiled Rubeus, Seatbelt, SharpUp, Certify, and 50+ more.",
+    "category": "offensive-ops",
+    "language": "C#",
+    "platform": [
+      "windows"
+    ],
+    "github": "Flangvik/SharpCollection",
+    "tags": [
+      "dotnet",
+      "pre-compiled",
+      "red-team",
+      "collection",
+      "convenience"
+    ],
+    "useCases": [
+      "Quick access to pre-compiled C# offensive tools",
+      "Red team operations without compilation overhead",
+      "Testing and learning GhostPack and other C# tooling"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "seatbelt",
+    "name": "Seatbelt",
+    "description": "C# safety checks for offensive operations. Enumerates host security config, credentials, and interesting data.",
+    "longDescription": "Seatbelt is a C# project that performs a number of security-oriented host-survey 'safety checks' relevant from both offensive and defensive security perspectives. It gathers system data including OS info, installed AV/EDR, PowerShell settings, audit policies, saved credentials, browser data, scheduled tasks, installed software, network shares, and much more. It's typically the first tool run after gaining access to understand the environment and identify opportunities.",
+    "category": "offensive-ops",
+    "language": "C#",
+    "platform": [
+      "windows"
+    ],
+    "github": "GhostPack/Seatbelt",
+    "tags": [
+      "enumeration",
+      "host-survey",
+      "security-checks",
+      "credentials",
+      "ghostpack"
+    ],
+    "useCases": [
+      "Post-exploitation host enumeration",
+      "Credential and sensitive data discovery",
+      "Security product detection (AV/EDR)",
+      "Environment profiling for attack planning",
+      "Audit policy and configuration review"
+    ],
+    "alternatives": [
+      "linpeas"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "hackrf",
+    "name": "HackRF One",
+    "description": "Open-source software-defined radio platform. Transmit and receive 1 MHz to 6 GHz. The hardware hacker's SDR.",
+    "longDescription": "HackRF One is an open-source SDR (Software Defined Radio) platform that can transmit and receive radio signals from 1 MHz to 6 GHz. It enables exploration of radio signals including FM radio, air traffic, cellular, GPS, WiFi, Bluetooth, and hundreds of other protocols. Combined with GNU Radio, it can be used for signal analysis, protocol reverse engineering, replay attacks, and jamming research. It's the most popular SDR platform for security research.",
+    "category": "offensive-ops",
+    "language": "C",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://greatscottgadgets.com/hackrf/",
+    "documentation": "https://hackrf.readthedocs.io/",
+    "downloadUrl": "https://greatscottgadgets.com/hackrf/one/",
+    "github": "greatscottgadgets/hackrf",
+    "tags": [
+      "sdr",
+      "radio",
+      "hardware",
+      "sub-ghz",
+      "signal-analysis"
+    ],
+    "useCases": [
+      "Radio signal capture and analysis (1 MHz - 6 GHz)",
+      "Protocol reverse engineering for wireless systems",
+      "Replay attacks on garage doors, car fobs, etc.",
+      "GPS signal research and analysis",
+      "Cellular and pager signal monitoring",
+      "Custom radio protocol development"
+    ],
+    "alternatives": [
+      "flipperzero-firmware"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "badusb",
+    "name": "USB Rubber Ducky Payloads",
+    "description": "Payload repository for USB Rubber Ducky and BadUSB devices. Keystroke injection scripts for every scenario.",
+    "category": "offensive-ops",
+    "language": "DuckyScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "website": "https://shop.hak5.org/products/usb-rubber-ducky",
+    "github": "hak5/usbrubberducky-payloads",
+    "tags": [
+      "badusb",
+      "hid",
+      "keystroke-injection",
+      "physical-access",
+      "hak5"
+    ],
+    "useCases": [
+      "Keystroke injection attacks via USB devices",
+      "Physical access exploitation in red team ops",
+      "Automated credential harvesting payloads",
+      "Reverse shell deployment via HID attacks",
+      "Security awareness demonstrations"
+    ],
+    "alternatives": [
+      "flipperzero-firmware"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "pwncat",
+    "name": "pwncat",
+    "description": "Post-exploitation platform and target management. Automatic privesc, persistence, file transfer — the smart reverse shell.",
+    "longDescription": "pwncat is a post-exploitation platform that wraps around a standard reverse or bind shell to provide additional functionality. It automatically enumerates the target, uploads tools, manages file transfers, installs persistence mechanisms, and attempts privilege escalation — all through a single shell session. pwncat supports both Linux and Windows targets and provides a module system for extensibility. It turns a dumb shell into a full post-exploitation environment.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install pwncat-cs",
+    "documentation": "https://pwncat.readthedocs.io/",
+    "github": "calebstewart/pwncat",
+    "tags": [
+      "post-exploitation",
+      "reverse-shell",
+      "privesc",
+      "persistence",
+      "automation"
+    ],
+    "useCases": [
+      "Upgrading dumb shells to full post-exploitation platforms",
+      "Automated privilege escalation enumeration",
+      "Persistence mechanism deployment",
+      "File upload/download management",
+      "Target environment enumeration"
+    ],
+    "alternatives": [
+      "linpeas",
+      "metasploit"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "villain",
+    "name": "Villain",
+    "description": "Windows and Linux backdoor generator and handler. Auto-obfuscation, multi-session, and reverse shell management.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "github": "t3l3machus/Villain",
+    "tags": [
+      "backdoor",
+      "reverse-shell",
+      "obfuscation",
+      "multi-session",
+      "handler"
+    ],
+    "useCases": [
+      "Generating obfuscated reverse shell payloads",
+      "Managing multiple reverse shell sessions",
+      "Windows and Linux backdoor deployment",
+      "Quick C2 setup for CTFs and labs"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "creepy",
+    "name": "Creepy",
+    "description": "Geolocation OSINT tool. Aggregates location data from social media, photos, and online services on a map.",
+    "longDescription": "Creepy is a geolocation OSINT tool that gathers location data from social networking platforms and image hosting services, then presents the results on a map. It can extract GPS coordinates from geotagged photos, social media check-ins, and other location-revealing data points. The tool visualizes movement patterns and frequently visited locations over time. While powerful for legitimate investigations, it demonstrates how much location data people inadvertently share online.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "github": "ilektrojohn/creepy",
+    "tags": [
+      "geolocation",
+      "osint",
+      "social-media",
+      "gps",
+      "mapping"
+    ],
+    "useCases": [
+      "Geolocation intelligence gathering from social media",
+      "Tracking movement patterns from public data",
+      "Photo EXIF/GPS data aggregation and mapping",
+      "Physical security assessment reconnaissance"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "pwndrop",
+    "name": "pwndrop",
+    "description": "Self-deployable file hosting for red teams. Upload payloads, host phishing files, serve implants — with HTTPS and Let's Encrypt.",
+    "category": "offensive-ops",
+    "language": "Go",
+    "platform": [
+      "linux"
+    ],
+    "github": "kgretzky/pwndrop",
+    "tags": [
+      "file-hosting",
+      "payload-delivery",
+      "red-team",
+      "https",
+      "self-hosted"
+    ],
+    "useCases": [
+      "Self-hosted payload delivery infrastructure",
+      "Phishing file hosting with HTTPS",
+      "Implant staging for red team operations",
+      "Quick file sharing for engagements"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "stegseek",
+    "name": "Stegseek",
+    "description": "Lightning fast steganography brute-forcer. Cracks steghide passwords at 200+ GB/s using wordlists.",
+    "category": "offensive-ops",
+    "language": "C++",
+    "platform": [
+      "linux"
+    ],
+    "installCommand": "apt install stegseek",
+    "github": "RickdeJager/stegseek",
+    "tags": [
+      "steganography",
+      "brute-force",
+      "steghide",
+      "ctf",
+      "data-hiding"
+    ],
+    "useCases": [
+      "Cracking steganography passwords in images",
+      "CTF challenge solving",
+      "Forensic analysis of suspected stego images",
+      "Detecting hidden data in image files"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "peirates",
+    "name": "Peirates",
+    "description": "Kubernetes penetration testing tool. Exploit misconfigs, steal secrets, move laterally in K8s clusters.",
+    "category": "offensive-ops",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "github": "inguardians/peirates",
+    "tags": [
+      "kubernetes",
+      "cloud",
+      "container-escape",
+      "secrets",
+      "lateral-movement"
+    ],
+    "useCases": [
+      "Kubernetes cluster penetration testing",
+      "Service account token exploitation",
+      "Secret and config map extraction",
+      "Container escape and node access",
+      "Cloud IAM abuse from within pods"
+    ],
+    "featured": false
+  },
+  {
+    "slug": "pacu",
+    "name": "Pacu",
+    "description": "AWS exploitation framework. Enumerate, escalate, and exfiltrate across AWS services. The Metasploit of cloud.",
+    "longDescription": "Pacu is an open-source AWS exploitation framework designed for offensive security testing of cloud environments. It's built by Rhino Security Labs and provides a comprehensive set of modules for AWS reconnaissance, privilege escalation, data exfiltration, and persistence. Pacu automates common attack techniques across IAM, EC2, S3, Lambda, and dozens of other AWS services. It maintains session data, tracks discovered credentials, and maps out AWS environments — essentially the Metasploit for AWS.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install pacu",
+    "documentation": "https://github.com/RhinoSecurityLabs/pacu/wiki",
+    "github": "RhinoSecurityLabs/pacu",
+    "tags": [
+      "aws",
+      "cloud",
+      "privilege-escalation",
+      "iam",
+      "exfiltration"
+    ],
+    "useCases": [
+      "AWS cloud penetration testing",
+      "IAM privilege escalation enumeration and exploitation",
+      "S3 bucket discovery and data exfiltration",
+      "Lambda function backdooring",
+      "EC2 instance compromise and lateral movement"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "prowler",
+    "name": "Prowler",
+    "description": "Cloud security assessment tool. 300+ checks for AWS, Azure, GCP, and Kubernetes against CIS benchmarks.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install prowler",
+    "website": "https://prowler.com/",
+    "documentation": "https://docs.prowler.com/",
+    "github": "prowler-cloud/prowler",
+    "tags": [
+      "cloud-security",
+      "aws",
+      "azure",
+      "gcp",
+      "cis-benchmark"
+    ],
+    "useCases": [
+      "Cloud security posture assessment",
+      "CIS benchmark compliance scanning",
+      "Multi-cloud misconfiguration detection",
+      "Audit trail and evidence collection",
+      "Continuous cloud security monitoring"
     ],
     "featured": false
   }
