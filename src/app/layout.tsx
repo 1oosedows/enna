@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 const siteUrl = "https://www.en-na.com";
 const title = "ENNA — OSINT & Recon Tool Index";
 const description =
-  "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats for 176+ tools.";
+  "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats for 250+ tools across 16 categories.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -64,6 +65,25 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-surface-base text-text-primary font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "ENNA",
+              url: siteUrl,
+              description:
+                "Curated directory of 250+ open-source OSINT and reconnaissance tools with live GitHub stats.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${siteUrl}/?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <Analytics />
         <div className="noise-overlay" />
         {children}
       </body>

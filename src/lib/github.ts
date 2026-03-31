@@ -47,8 +47,20 @@ function applyGitHubData(tool: Tool, data: GitHubRepo): Tool {
 }
 
 export async function enrichTools(tools: Tool[]): Promise<Tool[]> {
-  const results = await Promise.allSettled(tools.map(enrichTool));
-  return results.map((r, i) => (r.status === "fulfilled" ? r.value : tools[i]));
+  const BATCH_SIZE = 20;
+  const enriched: Tool[] = [];
+
+  for (let i = 0; i < tools.length; i += BATCH_SIZE) {
+    const batch = tools.slice(i, i + BATCH_SIZE);
+    const results = await Promise.allSettled(batch.map(enrichTool));
+    enriched.push(
+      ...results.map((r, j) =>
+        r.status === "fulfilled" ? r.value : batch[j]
+      )
+    );
+  }
+
+  return enriched;
 }
 
 export function formatStars(n: number): string {
