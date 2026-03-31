@@ -9,8 +9,9 @@ export default defineConfig({
     locations: ["us-east-1", "eu-west-1"],
     tags: ["enna", "production"],
     runtimeId: "2024.02",
+    checkMatch: "**/__checks__/**/*.check.mjs",
     browserChecks: {
-      testMatch: "**/__checks__/**/*.spec.ts",
+      testMatch: "**/__checks__/**/*.spec.mjs",
     },
   },
   cli: {
