@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdSlot from "@/components/AdSlot";
+import CopyButton from "@/components/CopyButton";
 import { categories } from "@/data/categories";
 import { enrichTool, formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
@@ -66,7 +67,11 @@ export default async function ToolPage({
   const baseTool = (toolsData as Tool[]).find((t) => t.slug === slug);
   if (!baseTool) notFound();
 
-  const tool = await enrichTool(baseTool);
+  const enriched = await enrichTool(baseTool);
+  const tool = {
+    ...enriched,
+    website: enriched.website || enriched.homepageUrl || undefined,
+  };
   const category = categories.find((c) => c.id === tool.category);
 
   const relatedTools = (toolsData as Tool[])
@@ -103,9 +108,34 @@ export default async function ToolPage({
         ? "text-danger-400"
         : "text-brand-400";
 
+  const toolJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: tool.name,
+    description: tool.longDescription || tool.githubDescription || tool.description,
+    applicationCategory: "SecurityApplication",
+    operatingSystem: tool.platform.join(", "),
+    url: `https://www.en-na.com/tool/${tool.slug}`,
+    ...(tool.license && tool.license !== "NOASSERTION" ? { license: tool.license } : {}),
+    ...(tool.stars ? { aggregateRating: { "@type": "AggregateRating", ratingValue: Math.min(5, Math.round((tool.stars / 1000) * 10) / 10 + 3), bestRating: 5, ratingCount: tool.stars } } : {}),
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    downloadUrl: `https://github.com/${tool.github}`,
+  };
+
+  const displayDescription = tool.longDescription || tool.githubDescription || tool.description;
+
+  const allTopics = [
+    ...tool.tags,
+    ...(tool.githubTopics?.filter((t) => !tool.tags.includes(t)) || []),
+  ];
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
+      />
       <main className="pt-24 pb-16 min-h-screen">
         <div className="max-w-5xl mx-auto px-6">
           {/* Breadcrumb */}
@@ -175,7 +205,7 @@ export default async function ToolPage({
             {/* Description */}
             <div className="mb-8">
               <p className="text-lg text-text-primary leading-relaxed">
-                {tool.longDescription || tool.description}
+                {displayDescription}
               </p>
             </div>
 
@@ -406,16 +436,18 @@ export default async function ToolPage({
                               <code className={`text-sm font-mono ${accentColor} break-all`}>
                                 $ {cmd}
                               </code>
+                              <CopyButton text={cmd} />
                             </div>
                           </div>
                         )
                       )}
                     </div>
                   ) : (
-                    <div className="bg-surface-base rounded-lg p-4 border border-border">
+                    <div className="bg-surface-base rounded-lg p-4 border border-border group relative">
                       <code className={`text-sm font-mono ${accentColor} break-all`}>
                         $ {tool.installCommand}
                       </code>
+                      <CopyButton text={tool.installCommand || ""} />
                     </div>
                   )}
                 </div>
@@ -446,7 +478,7 @@ export default async function ToolPage({
                   Tags
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {tool.tags.map((tag) => (
+                  {allTopics.map((tag) => (
                     <span key={tag} className={`${tagClass} text-sm`}>
                       {tag}
                     </span>
@@ -504,19 +536,19 @@ export default async function ToolPage({
                       </dd>
                     </div>
                   )}
+                  {tool.platform && (
+                    <div>
+                      <dt className="text-xs text-text-muted font-mono uppercase tracking-wider mb-1">
+                        Platforms
+                      </dt>
+                      <dd className="flex flex-wrap gap-1.5 mt-1">
+                        {tool.platform.map((p) => (
+                          <PlatformBadge key={p} platform={p} />
+                        ))}
+                      </dd>
+                    </div>
+                  )}
                 </dl>
-              </div>
-
-              {/* Platforms */}
-              <div className="glass rounded-xl p-6">
-                <h2 className="font-mono font-semibold text-sm uppercase tracking-wider text-text-muted mb-4">
-                  Platforms
-                </h2>
-                <div className="flex flex-wrap gap-2">
-                  {tool.platform.map((p) => (
-                    <PlatformBadge key={p} platform={p} />
-                  ))}
-                </div>
               </div>
 
               {/* Links */}

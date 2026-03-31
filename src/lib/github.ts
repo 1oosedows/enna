@@ -43,6 +43,9 @@ function applyGitHubData(tool: Tool, data: GitHubRepo): Tool {
     lastCommit: data.pushed_at,
     license: data.license?.spdx_id ?? undefined,
     avatarUrl: data.owner?.avatar_url,
+    githubDescription: data.description ?? undefined,
+    githubTopics: data.topics?.length ? data.topics : undefined,
+    homepageUrl: data.homepage || undefined,
   };
 }
 

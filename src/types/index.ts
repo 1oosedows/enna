@@ -26,6 +26,9 @@ export interface Tool {
   openIssues?: number;
   license?: string;
   avatarUrl?: string;
+  githubDescription?: string;
+  githubTopics?: string[];
+  homepageUrl?: string;
 }
 
 export type Category =
@@ -61,4 +64,7 @@ export interface GitHubRepo {
   pushed_at: string;
   license: { spdx_id: string } | null;
   owner: { avatar_url: string };
+  description: string | null;
+  topics: string[];
+  homepage: string | null;
 }
