@@ -106,7 +106,7 @@ export default async function Image() {
           }}
         >
           <div style={{ fontSize: 16, fontWeight: 600, color: "#e63950", display: "flex" }}>
-            210+ Tools
+            250+ Tools
           </div>
           <div
             style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}

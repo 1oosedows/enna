@@ -50,7 +50,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-secondary border border-border text-xs font-mono text-text-muted">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span>210 tools indexed</span>
+            <span>250+ tools indexed</span>
           </div>
         </div>
       </div>

@@ -160,7 +160,7 @@ export default function HeroSection() {
         {/* Stats bar */}
         <div className="flex items-center justify-center gap-8 mt-16 font-mono text-sm">
           {[
-            { label: "Tools", value: "210" },
+            { label: "Tools", value: "250+" },
             { label: "Categories", value: "16" },
             { label: "Languages", value: "12" },
           ].map((stat) => (

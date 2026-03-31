@@ -5159,5 +5159,415 @@
       "live-response",
       "triage"
     ]
+  },
+  {
+    "slug": "hping3",
+    "name": "hping3",
+    "description": "Active network security tool for firewall testing, advanced port scanning, and manual TCP/IP packet crafting.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": ["linux", "macos"],
+    "github": "antirez/hping",
+    "tags": ["packet-crafting", "firewall-testing", "traceroute", "tcp-ip"]
+  },
+  {
+    "slug": "fping",
+    "name": "fping",
+    "description": "High-performance parallel ping tool designed for sweeping large network ranges with minimal overhead.",
+    "category": "network-recon",
+    "language": "C",
+    "platform": ["linux", "macos"],
+    "github": "schweikert/fping",
+    "tags": ["ping-sweep", "host-discovery", "network-scanning", "alive-detection"]
+  },
+  {
+    "slug": "naabu",
+    "name": "Naabu",
+    "description": "Fast port scanner written in Go with SYN/CONNECT scan support, designed for integration with other ProjectDiscovery tools.",
+    "category": "network-recon",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "projectdiscovery/naabu",
+    "tags": ["port-scanner", "syn-scan", "host-discovery", "projectdiscovery"]
+  },
+  {
+    "slug": "shuffledns",
+    "name": "shuffleDNS",
+    "description": "Wrapper around massdns for enumerating valid subdomains using active bruteforce and resolving with wildcard filtering.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "projectdiscovery/shuffledns",
+    "tags": ["subdomain-bruteforce", "dns-resolution", "wildcard-filtering", "massdns"]
+  },
+  {
+    "slug": "puredns",
+    "name": "puredns",
+    "description": "Fast domain resolver and subdomain bruteforcing tool that handles wildcard detection and DNS validation.",
+    "category": "subdomain-enum",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "d3mondev/puredns",
+    "tags": ["dns-bruteforce", "wildcard-detection", "resolver", "subdomain-discovery"]
+  },
+  {
+    "slug": "findomain",
+    "name": "Findomain",
+    "description": "Cross-platform subdomain enumerator using certificate transparency logs and multiple APIs for fast passive discovery.",
+    "category": "subdomain-enum",
+    "language": "Rust",
+    "platform": ["linux", "macos", "windows"],
+    "github": "Findomain/Findomain",
+    "tags": ["cert-transparency", "subdomain-enum", "passive-recon", "monitoring"]
+  },
+  {
+    "slug": "dirsearch",
+    "name": "dirsearch",
+    "description": "Mature web path discovery tool with recursive scanning, wordlist-based bruteforcing, and extensive extension support.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "maurosoria/dirsearch",
+    "tags": ["directory-bruteforce", "path-discovery", "web-scanner", "enumeration"]
+  },
+  {
+    "slug": "meg",
+    "name": "meg",
+    "description": "Fetch many paths for many hosts concurrently without overloading servers — ideal for large-scale recon on bug bounties.",
+    "category": "web-scanning",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "tomnomnom/meg",
+    "tags": ["mass-fetch", "bug-bounty", "concurrent", "path-probing"]
+  },
+  {
+    "slug": "caido",
+    "name": "Caido",
+    "description": "Lightweight and modern web security testing toolkit built in Rust, designed as a fast alternative to Burp Suite.",
+    "category": "web-scanning",
+    "language": "Rust",
+    "platform": ["linux", "macos", "windows"],
+    "github": "caido/caido",
+    "tags": ["web-proxy", "interceptor", "security-testing", "burp-alternative"]
+  },
+  {
+    "slug": "trivy",
+    "name": "Trivy",
+    "description": "Comprehensive vulnerability scanner for containers, filesystems, git repos, and Kubernetes with SBOM generation.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "aquasecurity/trivy",
+    "tags": ["container-security", "sbom", "vulnerability-scanner", "iac-scanning"]
+  },
+  {
+    "slug": "grype",
+    "name": "Grype",
+    "description": "Vulnerability scanner for container images and filesystems that matches installed packages against known CVEs.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "anchore/grype",
+    "tags": ["container-security", "cve-scanning", "sbom", "image-scanning"]
+  },
+  {
+    "slug": "semgrep",
+    "name": "Semgrep",
+    "description": "Lightweight static analysis engine for finding bugs and enforcing code standards across 30+ languages with custom rules.",
+    "category": "vulnerability",
+    "language": "OCaml",
+    "platform": ["linux", "macos", "windows"],
+    "github": "semgrep/semgrep",
+    "tags": ["sast", "static-analysis", "code-scanning", "custom-rules"]
+  },
+  {
+    "slug": "dalfox",
+    "name": "DalFox",
+    "description": "Parameter analysis and XSS scanner with automatic payload generation, DOM-based detection, and pipeline support.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "hahwul/dalfox",
+    "tags": ["xss", "parameter-analysis", "dom-xss", "reflected-xss"]
+  },
+  {
+    "slug": "retire-js",
+    "name": "Retire.js",
+    "description": "Scanner for detecting use of JavaScript libraries with known vulnerabilities in web applications.",
+    "category": "vulnerability",
+    "language": "JavaScript",
+    "platform": ["linux", "macos", "windows"],
+    "github": "RetireJS/retire.js",
+    "tags": ["javascript", "dependency-scanning", "cve", "web-security"]
+  },
+  {
+    "slug": "h8mail",
+    "name": "h8mail",
+    "description": "Email OSINT and password breach hunting tool that queries multiple breach databases and paste sites.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "khast3x/h8mail",
+    "tags": ["email-osint", "breach-lookup", "credential-hunting", "password-breach"]
+  },
+  {
+    "slug": "maryam",
+    "name": "Maryam",
+    "description": "Modular open-source OSINT framework with search engine scraping, DNS enum, and social media gathering modules.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "saeeddhqan/Maryam",
+    "tags": ["osint-framework", "search-engine", "modular", "intelligence-gathering"]
+  },
+  {
+    "slug": "sn0int",
+    "name": "sn0int",
+    "description": "Semi-automatic OSINT framework and package manager for gathering intelligence about IPs, emails, domains, and people.",
+    "category": "osint-general",
+    "language": "Rust",
+    "platform": ["linux", "macos"],
+    "github": "kpcyrd/sn0int",
+    "tags": ["osint-framework", "intelligence", "package-manager", "reconnaissance"]
+  },
+  {
+    "slug": "socialscan",
+    "name": "socialscan",
+    "description": "Accurately check email address and username availability across multiple platforms via direct API queries.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "iojw/socialscan",
+    "tags": ["username-check", "email-check", "availability", "social-media"]
+  },
+  {
+    "slug": "zphisher",
+    "name": "Zphisher",
+    "description": "Automated phishing tool with 30+ templates for major platforms, tunneling support, and credential capture.",
+    "category": "phishing",
+    "language": "Shell",
+    "platform": ["linux"],
+    "github": "htr-tech/zphisher",
+    "tags": ["phishing-templates", "credential-capture", "tunneling", "social-engineering"]
+  },
+  {
+    "slug": "socialfish",
+    "name": "SocialFish",
+    "description": "Social media phishing tool with real-time credential interception, geolocation tracking, and a web-based dashboard.",
+    "category": "phishing",
+    "language": "Python",
+    "platform": ["linux"],
+    "github": "UndeadSec/SocialFish",
+    "tags": ["social-media", "credential-harvesting", "geolocation", "dashboard"]
+  },
+  {
+    "slug": "hidden-eye",
+    "name": "HiddenEye",
+    "description": "Modern phishing and social engineering tool with live attack monitoring, keylogger integration, and 40+ templates.",
+    "category": "phishing",
+    "language": "Python",
+    "platform": ["linux"],
+    "github": "Open-Starter/HiddenEye",
+    "tags": ["phishing", "keylogger", "social-engineering", "attack-monitoring"]
+  },
+  {
+    "slug": "cloudfox",
+    "name": "CloudFox",
+    "description": "Find exploitable attack paths in cloud infrastructure by enumerating IAM permissions, secrets, and network exposure.",
+    "category": "cloud-recon",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "BishopFox/cloudfox",
+    "tags": ["cloud-attack-paths", "iam-enumeration", "aws", "azure"]
+  },
+  {
+    "slug": "enumerate-iam",
+    "name": "enumerate-iam",
+    "description": "Enumerate AWS IAM permissions for a given set of credentials by brute-forcing API calls.",
+    "category": "cloud-recon",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "andresriancho/enumerate-iam",
+    "tags": ["aws", "iam", "permission-enum", "credential-testing"]
+  },
+  {
+    "slug": "cloudsploit",
+    "name": "CloudSploit",
+    "description": "Open-source cloud security configuration scanner for AWS, Azure, GCP, and Oracle Cloud Infrastructure.",
+    "category": "cloud-recon",
+    "language": "JavaScript",
+    "platform": ["linux", "macos", "windows"],
+    "github": "aquasecurity/cloudsploit",
+    "tags": ["cloud-security", "misconfiguration", "aws", "azure"]
+  },
+  {
+    "slug": "androguard",
+    "name": "Androguard",
+    "description": "Reverse engineering framework for Android applications with DEX/APK analysis, decompilation, and malware detection.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "androguard/androguard",
+    "tags": ["android", "reverse-engineering", "apk-analysis", "malware-detection"]
+  },
+  {
+    "slug": "qark",
+    "name": "QARK",
+    "description": "Quick Android Review Kit for finding security vulnerabilities in Android apps through static source code analysis.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": ["linux", "macos"],
+    "github": "linkedin/qark",
+    "tags": ["android", "static-analysis", "vulnerability", "code-review"]
+  },
+  {
+    "slug": "rms",
+    "name": "RMS",
+    "description": "Runtime Mobile Security toolkit for manipulating Android and iOS apps at runtime using Frida under the hood.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "nicolo-travaini/RMS-Runtime-Mobile-Security",
+    "tags": ["runtime-analysis", "frida", "android", "ios"]
+  },
+  {
+    "slug": "chainsaw",
+    "name": "Chainsaw",
+    "description": "Rapidly search and hunt through Windows forensic artifacts like event logs, MFT, and Shimcache using Sigma rules.",
+    "category": "forensics",
+    "language": "Rust",
+    "platform": ["linux", "macos", "windows"],
+    "github": "WithSecureLabs/chainsaw",
+    "tags": ["windows-forensics", "event-logs", "sigma-rules", "threat-hunting"]
+  },
+  {
+    "slug": "hayabusa",
+    "name": "Hayabusa",
+    "description": "Windows event log fast forensics timeline generator and threat hunting tool with built-in Sigma rule support.",
+    "category": "forensics",
+    "language": "Rust",
+    "platform": ["linux", "macos", "windows"],
+    "github": "Yamato-Security/hayabusa",
+    "tags": ["windows-events", "timeline", "sigma", "dfir"]
+  },
+  {
+    "slug": "oletools",
+    "name": "oletools",
+    "description": "Python tools for analyzing OLE and MS Office files — detect VBA macros, embedded objects, and malicious content.",
+    "category": "forensics",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "decalage2/oletools",
+    "tags": ["office-analysis", "vba-macros", "ole", "malware-analysis"]
+  },
+  {
+    "slug": "pe-sieve",
+    "name": "PE-sieve",
+    "description": "Scans running processes for suspicious in-memory modifications including hollowing, hooking, and code injection.",
+    "category": "forensics",
+    "language": "C++",
+    "platform": ["windows"],
+    "github": "hasherezade/pe-sieve",
+    "tags": ["process-scanning", "memory-forensics", "code-injection", "malware-detection"]
+  },
+  {
+    "slug": "capa",
+    "name": "capa",
+    "description": "Automatically identify capabilities in executable files — detects techniques like persistence, C2, and anti-analysis.",
+    "category": "forensics",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "mandiant/capa",
+    "tags": ["malware-analysis", "capability-detection", "reverse-engineering", "triage"]
+  },
+  {
+    "slug": "kerbrute",
+    "name": "Kerbrute",
+    "description": "Tool to quickly bruteforce and enumerate valid Active Directory accounts through Kerberos pre-authentication.",
+    "category": "password-attack",
+    "language": "Go",
+    "platform": ["linux", "macos", "windows"],
+    "github": "ropnop/kerbrute",
+    "tags": ["kerberos", "active-directory", "user-enum", "password-spray"]
+  },
+  {
+    "slug": "ophcrack",
+    "name": "Ophcrack",
+    "description": "Windows password cracker based on rainbow tables — cracks LM and NTLM hashes via time-memory tradeoff.",
+    "category": "password-attack",
+    "language": "C",
+    "platform": ["linux", "macos", "windows"],
+    "github": "luisgg/ophcrack",
+    "tags": ["rainbow-tables", "windows-passwords", "ntlm", "lm-hash"]
+  },
+  {
+    "slug": "name-that-hash",
+    "name": "Name-That-Hash",
+    "description": "Instantly identify hash types from unknown hashes — supports 300+ hash formats with confidence ratings.",
+    "category": "password-attack",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "HashPals/Name-That-Hash",
+    "tags": ["hash-identification", "hash-cracking", "reconnaissance", "ctf"]
+  },
+  {
+    "slug": "searchsploit",
+    "name": "SearchSploit",
+    "description": "Command-line tool for searching Exploit-DB — find public exploits and shellcode for known vulnerabilities offline.",
+    "category": "exploitation",
+    "language": "Shell",
+    "platform": ["linux", "macos"],
+    "github": "offensive-security/exploitdb",
+    "tags": ["exploit-database", "cve", "shellcode", "vulnerability-research"]
+  },
+  {
+    "slug": "pwntools",
+    "name": "pwntools",
+    "description": "CTF framework and exploit development library for rapid prototyping of binary exploitation and reverse engineering.",
+    "category": "exploitation",
+    "language": "Python",
+    "platform": ["linux"],
+    "github": "Gallopsled/pwntools",
+    "tags": ["ctf", "binary-exploitation", "rop", "shellcode"]
+  },
+  {
+    "slug": "ropper",
+    "name": "Ropper",
+    "description": "Display and search for ROP/JOP/SOP gadgets in binaries to assist with exploit development and bypass mitigations.",
+    "category": "exploitation",
+    "language": "Python",
+    "platform": ["linux", "macos", "windows"],
+    "github": "sashs/Ropper",
+    "tags": ["rop-gadgets", "exploit-development", "binary-analysis", "mitigation-bypass"]
+  },
+  {
+    "slug": "starkiller",
+    "name": "Starkiller",
+    "description": "Frontend GUI for PowerShell Empire — manage listeners, agents, and modules through a modern Electron interface.",
+    "category": "offensive-ops",
+    "language": "JavaScript",
+    "platform": ["linux", "macos", "windows"],
+    "github": "BC-SECURITY/Starkiller",
+    "tags": ["c2-gui", "empire", "agent-management", "red-team"]
+  },
+  {
+    "slug": "hoaxshell",
+    "name": "hoaxshell",
+    "description": "Unconventional Windows reverse shell using HTTP(S) traffic — fully undetectable by Microsoft Defender.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": ["linux", "windows"],
+    "github": "t3l3machus/hoaxshell",
+    "tags": ["reverse-shell", "evasion", "windows", "http-shell"]
+  },
+  {
+    "slug": "silver-bullet",
+    "name": "SilverBullet",
+    "description": "Multi-purpose automation suite for web testing with configurable request sequences, scraping, and credential testing.",
+    "category": "web-scanning",
+    "language": "C#",
+    "platform": ["windows", "linux"],
+    "github": "openbullet/OpenBullet2",
+    "tags": ["automation", "credential-testing", "web-testing", "config-based"]
   }
 ]

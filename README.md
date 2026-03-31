@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/tools-210+-e63950?style=flat-square&labelColor=0f1117" />
+  <img src="https://img.shields.io/badge/tools-250+-e63950?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/badge/categories-16-a855a0?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/badge/books%20%26%20hardware-28-f25c6e?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/github/last-commit/1oosedows/enna?style=flat-square&color=6b7280&labelColor=0f1117" />
@@ -15,7 +15,7 @@ Discover, compare, and deploy the best open-source security tools. Curated direc
 
 ## What is this
 
-ENNA is a curated, searchable directory of 210+ open-source OSINT, reconnaissance, and security tools across 16 categories. Every tool page includes:
+ENNA is a curated, searchable directory of 250+ open-source OSINT, reconnaissance, and security tools across 16 categories. Every tool page includes:
 
 - Full description and use cases
 - Multi-method install commands (apt, brew, cargo, docker, etc.)
