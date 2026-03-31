@@ -607,7 +607,7 @@
         "rf",
         "wireless"
       ],
-      "amazonUrl": "",
+      "amazonUrl": "https://amzn.to/4dfHrEk",
       "imageTag": "HR",
       "relatedTool": "hackrf"
     },
@@ -623,7 +623,7 @@
         "infrared",
         "badusb"
       ],
-      "amazonUrl": "",
+      "amazonUrl": "https://amzn.to/47wlr4o",
       "imageTag": "FZ",
       "relatedTool": "flipperzero-firmware"
     },
@@ -639,39 +639,9 @@
         "injection",
         "wireless"
       ],
-      "amazonUrl": "",
+      "amazonUrl": "https://amzn.to/4tktrxT",
       "imageTag": "AL",
       "relatedTool": "aircrack-ng"
-    },
-    {
-      "slug": "usb-rubber-ducky",
-      "title": "USB Rubber Ducky",
-      "manufacturer": "Hak5",
-      "description": "Keystroke injection tool disguised as a USB flash drive. Automates attacks with DuckyScript payloads.",
-      "category": "hid",
-      "tags": [
-        "hid",
-        "keystroke-injection",
-        "duckyscript"
-      ],
-      "amazonUrl": "",
-      "imageTag": "RD",
-      "relatedTool": "badusb"
-    },
-    {
-      "slug": "wifi-pineapple",
-      "title": "WiFi Pineapple",
-      "manufacturer": "Hak5",
-      "description": "Wireless auditing platform for man-in-the-middle attacks, rogue access points, and WiFi reconnaissance.",
-      "category": "wireless",
-      "tags": [
-        "wifi",
-        "mitm",
-        "rogue-ap",
-        "auditing"
-      ],
-      "amazonUrl": "",
-      "imageTag": "WP"
     },
     {
       "slug": "proxmark3",
@@ -685,23 +655,8 @@
         "clone",
         "emulate"
       ],
-      "amazonUrl": "",
+      "amazonUrl": "https://amzn.to/4s5DyFJ",
       "imageTag": "PX"
-    },
-    {
-      "slug": "lan-turtle",
-      "title": "LAN Turtle",
-      "manufacturer": "Hak5",
-      "description": "Covert USB Ethernet adapter for remote access, network reconnaissance, and man-in-the-middle attacks.",
-      "category": "network",
-      "tags": [
-        "network",
-        "remote-access",
-        "mitm",
-        "covert"
-      ],
-      "amazonUrl": "",
-      "imageTag": "LT"
     },
     {
       "slug": "rtl-sdr-kit",
@@ -715,7 +670,7 @@
         "receiver",
         "antenna"
       ],
-      "amazonUrl": "",
+      "amazonUrl": "https://amzn.to/483fImM",
       "imageTag": "RS",
       "relatedTool": "rtl-sdr"
     }
