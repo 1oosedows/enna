@@ -18,9 +18,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const tool = (toolsData as Tool[]).find((t) => t.slug === params.slug);
+  const { slug } = await params;
+  const tool = (toolsData as Tool[]).find((t) => t.slug === slug);
   if (!tool) return { title: "Tool Not Found" };
   const category = categories.find((c) => c.id === tool.category);
   const pageTitle = `${tool.name} — ${category?.name || "Tools"}`;
@@ -59,9 +60,10 @@ function PlatformBadge({ platform }: { platform: string }) {
 export default async function ToolPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const baseTool = (toolsData as Tool[]).find((t) => t.slug === params.slug);
+  const { slug } = await params;
+  const baseTool = (toolsData as Tool[]).find((t) => t.slug === slug);
   if (!baseTool) notFound();
 
   const tool = await enrichTool(baseTool);

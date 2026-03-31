@@ -30,8 +30,9 @@ export function generateStaticParams() {
   return libraryData.books.map((book) => ({ slug: book.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const book = (libraryData.books as Book[]).find((b) => b.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const book = (libraryData.books as Book[]).find((b) => b.slug === slug);
   if (!book) return { title: "Book Not Found" };
   return {
     title: `${book.title} — Library`,
@@ -68,8 +69,9 @@ const categoryLabels: Record<string, string> = {
   programming: "Programming",
 };
 
-export default function BookPage({ params }: { params: { slug: string } }) {
-  const book = (libraryData.books as Book[]).find((b) => b.slug === params.slug);
+export default async function BookPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const book = (libraryData.books as Book[]).find((b) => b.slug === slug);
   if (!book) notFound();
 
   // Find related books (same category or author)
