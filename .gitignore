@@ -8,3 +8,6 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# Sentry Config File
+.env.sentry-build-plugin
