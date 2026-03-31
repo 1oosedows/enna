@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Analytics from "@/components/Analytics";
+import { Analytics } from "@vercel/analytics/next";
+import CustomAnalytics from "@/components/Analytics";
 import "./globals.css";
 
 const siteUrl = "https://www.en-na.com";
@@ -83,9 +84,10 @@ export default function RootLayout({
             }),
           }}
         />
-        <Analytics />
+        <CustomAnalytics />
         <div className="noise-overlay" />
         {children}
+        <Analytics />
       </body>
     </html>
   );
