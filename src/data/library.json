@@ -673,6 +673,106 @@
       "amazonUrl": "https://amzn.to/483fImM",
       "imageTag": "RS",
       "relatedTool": "rtl-sdr"
+    },
+    {
+      "slug": "macbook-pro-2019-i9",
+      "title": "Apple MacBook Pro with Touch Bar (Late 2019)",
+      "manufacturer": "Apple",
+      "description": "16\" Intel i9 with 32GB RAM and 2TB SSD. Space Grey. The last Intel-based MacBook Pro — still a powerhouse for virtualization and running multiple VMs.",
+      "category": "laptop",
+      "tags": ["intel-i9", "16-inch", "32gb", "2tb", "macos"],
+      "amazonUrl": "https://amzn.to/3Od8GVV",
+      "imageTag": "MP"
+    },
+    {
+      "slug": "macbook-air-2020-m1",
+      "title": "Apple MacBook Air (Late 2020)",
+      "manufacturer": "Apple",
+      "description": "13.3\" M1 Silicon with 16GB RAM and 2TB SSD. Space Grey. Fanless design with all-day battery — perfect portable OSINT workstation.",
+      "category": "laptop",
+      "tags": ["m1", "13-inch", "16gb", "2tb", "macos"],
+      "amazonUrl": "https://amzn.to/4sa5uIG",
+      "imageTag": "MA"
+    },
+    {
+      "slug": "macbook-pro-2021-m1",
+      "title": "Apple MacBook Pro (Late 2021)",
+      "manufacturer": "Apple",
+      "description": "14.2\" M1 Silicon with 16GB RAM and 1TB SSD. Space Grey. ProMotion display with the first Apple Silicon pro chip.",
+      "category": "laptop",
+      "tags": ["m1", "14-inch", "16gb", "1tb", "macos"],
+      "amazonUrl": "https://amzn.to/4tpMTJH",
+      "imageTag": "MP"
+    },
+    {
+      "slug": "macbook-pro-2022-m2",
+      "title": "Apple MacBook Pro (2022)",
+      "manufacturer": "Apple",
+      "description": "13.3\" M2 Silicon with 24GB RAM and 1TB SSD. Space Grey. Compact form factor with upgraded unified memory for heavy workloads.",
+      "category": "laptop",
+      "tags": ["m2", "13-inch", "24gb", "1tb", "macos"],
+      "amazonUrl": "https://amzn.to/4cgDUEG",
+      "imageTag": "MP"
+    },
+    {
+      "slug": "macbook-air-2024-m3",
+      "title": "Apple MacBook Air (2024)",
+      "manufacturer": "Apple",
+      "description": "13.6\" M3 Silicon with 8GB RAM and 512GB SSD. Midnight. Lightweight everyday machine with the latest Apple Silicon.",
+      "category": "laptop",
+      "tags": ["m3", "13-inch", "8gb", "512gb", "macos"],
+      "amazonUrl": "https://amzn.to/4maLDaY",
+      "imageTag": "MA"
+    },
+    {
+      "slug": "macbook-pro-2026-m5-max",
+      "title": "Apple MacBook Pro (2026)",
+      "manufacturer": "Apple",
+      "description": "16.2\" M5 Max with 48GB RAM and 2TB SSD. Silver. Top-tier performance for running full lab environments, large-scale analysis, and parallel tooling.",
+      "category": "laptop",
+      "tags": ["m5-max", "16-inch", "48gb", "2tb", "macos"],
+      "amazonUrl": "https://amzn.to/4tq6RUJ",
+      "imageTag": "MP"
+    },
+    {
+      "slug": "lg-gram-pro-2025",
+      "title": "LG Gram Pro (2025)",
+      "manufacturer": "LG",
+      "description": "17\" Intel Core Ultra 7 with 32GB RAM and 2TB SSD. Obsidian Black. Ultra-lightweight 17-inch — ideal for extended fieldwork with a large display.",
+      "category": "laptop",
+      "tags": ["intel-ultra-7", "17-inch", "32gb", "2tb", "windows"],
+      "amazonUrl": "https://amzn.to/3NN25kV",
+      "imageTag": "LG"
+    },
+    {
+      "slug": "lg-gram-business-2025",
+      "title": "LG Gram Business with Touchscreen (2025)",
+      "manufacturer": "LG",
+      "description": "17\" Intel Core Ultra 9 with 32GB RAM and 4TB SSD. Black. Touchscreen business-class with massive storage for forensic image handling.",
+      "category": "laptop",
+      "tags": ["intel-ultra-9", "17-inch", "32gb", "4tb", "touchscreen", "windows"],
+      "amazonUrl": "https://amzn.to/4dfA7bQ",
+      "imageTag": "LG"
+    },
+    {
+      "slug": "asus-zenbook-2026",
+      "title": "ASUS Zenbook with Touchscreen (2026)",
+      "manufacturer": "ASUS",
+      "description": "14\" Intel Core Ultra 9 with 32GB RAM and 4TB SSD. Black. Compact touchscreen ultrabook with top-end specs for portable security work.",
+      "category": "laptop",
+      "tags": ["intel-ultra-9", "14-inch", "32gb", "4tb", "touchscreen", "windows"],
+      "amazonUrl": "https://amzn.to/4dVG4uJ",
+      "imageTag": "AZ"
+    },
+    {
+      "slug": "asus-vivobook-2025",
+      "title": "ASUS Vivobook (2025)",
+      "manufacturer": "ASUS",
+      "description": "18\" AMD Ryzen 7 with 32GB RAM and 1TB SSD. Quiet Blue. Large-screen budget workhorse for lab setups and multi-window recon workflows.",
+      "category": "laptop",
+      "tags": ["amd-ryzen-7", "18-inch", "32gb", "1tb", "windows"],
+      "amazonUrl": "https://amzn.to/4s4FNcc",
+      "imageTag": "AV"
     }
   ]
 }

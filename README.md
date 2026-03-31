@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/tools-250+-e63950?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/badge/categories-16-a855a0?style=flat-square&labelColor=0f1117" />
-  <img src="https://img.shields.io/badge/books%20%26%20hardware-28-f25c6e?style=flat-square&labelColor=0f1117" />
+  <img src="https://img.shields.io/badge/books%20%26%20hardware-38-f25c6e?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/github/last-commit/1oosedows/enna?style=flat-square&color=6b7280&labelColor=0f1117" />
 </p>
 
@@ -52,7 +52,7 @@ ENNA also features a **Library** with security books and hardware, with links to
 The [Library](https://www.en-na.com/library) section includes curated security books and hardware with purchase links:
 
 - **23 books** covering OSINT, penetration testing, malware analysis, blockchain forensics, and more
-- **5 hardware tools** including HackRF One, Flipper Zero, Proxmark3 RDV4, and more
+- **15 hardware items** including HackRF One, Flipper Zero, Proxmark3 RDV4, and recommended laptops
 
 ## Stack
 
