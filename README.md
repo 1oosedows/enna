@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/tools-138-e63950?style=flat-square&labelColor=0f1117" />
-  <img src="https://img.shields.io/badge/categories-12-a855a0?style=flat-square&labelColor=0f1117" />
-  <img src="https://img.shields.io/badge/crypto%20tracing-42-f25c6e?style=flat-square&labelColor=0f1117" />
+  <img src="https://img.shields.io/badge/tools-210+-e63950?style=flat-square&labelColor=0f1117" />
+  <img src="https://img.shields.io/badge/categories-16-a855a0?style=flat-square&labelColor=0f1117" />
+  <img src="https://img.shields.io/badge/books%20%26%20hardware-28-f25c6e?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/github/last-commit/1oosedows/enna?style=flat-square&color=6b7280&labelColor=0f1117" />
 </p>
 
@@ -11,11 +11,11 @@
 
 Discover, compare, and deploy the best open-source security tools. Curated directory with live GitHub stats, multi-platform install commands, use cases, and alternatives.
 
-**[en-na.com](https://en-na.com)**
+**[www.en-na.com](https://www.en-na.com)**
 
 ## What is this
 
-ENNA is a curated, searchable directory of 138 open-source OSINT, reconnaissance, and security tools across 12 categories. Every tool page includes:
+ENNA is a curated, searchable directory of 210+ open-source OSINT, reconnaissance, and security tools across 16 categories. Every tool page includes:
 
 - Full description and use cases
 - Multi-method install commands (apt, brew, cargo, docker, etc.)
@@ -24,29 +24,43 @@ ENNA is a curated, searchable directory of 138 open-source OSINT, reconnaissance
 - Alternative tools for comparison
 - Related tools in the same category
 
+ENNA also features a **Library** with security books and hardware, with links to purchase.
+
 ## Categories
 
-| Category | Tools | Examples |
-|----------|-------|---------|
-| Network Recon | 10 | Nmap, Masscan, Wireshark, Shodan |
-| Subdomain Enumeration | 9 | Subfinder, Amass, dnsx, Altdns |
-| Web Scanning | 12 | ffuf, Feroxbuster, Burp Suite, Katana |
-| OSINT (Social) | 7 | Sherlock, Maigret, Instaloader |
-| OSINT (General) | 9 | SpiderFoot, TruffleHog, Recon-ng |
-| Vulnerability Scanning | 7 | Nuclei, OpenVAS, SQLMap, XSStrike |
-| Wireless | 5 | Aircrack-ng, Bettercap, Flipper Zero |
-| Digital Forensics | 9 | Volatility 3, Ghidra, YARA, Velociraptor |
-| Crypto Tracing | 42 | GraphSense, Cast, Cryo, Web3.py, Slither |
-| Password Attacks | 8 | Hashcat, Hydra, Mimikatz, SecLists |
-| Exploitation | 13 | Metasploit, Sliver, BloodHound, LinPEAS |
-| Phishing Analysis | 5 | GoPhish, Evilginx2, Modlishka |
+| Category | Examples |
+|----------|---------|
+| Network Recon | Nmap, Masscan, Wireshark, Shodan |
+| Subdomain Enumeration | Subfinder, Amass, dnsx, Altdns |
+| Web Scanning | ffuf, Feroxbuster, Burp Suite, Katana |
+| OSINT (Social) | Sherlock, Maigret, Instaloader |
+| OSINT (General) | SpiderFoot, TruffleHog, Recon-ng |
+| Vulnerability Scanning | Nuclei, OpenVAS, SQLMap, XSStrike |
+| Wireless | Aircrack-ng, Bettercap, Flipper Zero |
+| Digital Forensics | Volatility 3, Ghidra, YARA, Velociraptor |
+| Crypto Tracing | GraphSense, Cast, Cryo, Web3.py, Slither |
+| Password Attacks | Hashcat, Hydra, Mimikatz, SecLists |
+| Exploitation | Metasploit, Sliver, BloodHound, LinPEAS |
+| Phishing Analysis | GoPhish, Evilginx2, Modlishka |
+| Cloud Recon | ScoutSuite, Prowler, CloudSploit |
+| Mobile Security | MobSF, Frida, Objection |
+| Dual Use | Cobalt Strike, Brute Ratel |
+| Offensive Ops | Covenant, Mythic, Havoc |
+
+## Library
+
+The [Library](https://www.en-na.com/library) section includes curated security books and hardware with purchase links:
+
+- **23 books** covering OSINT, penetration testing, malware analysis, blockchain forensics, and more
+- **5 hardware tools** including HackRF One, Flipper Zero, Proxmark3 RDV4, and more
 
 ## Stack
 
-- **Next.js 14** (App Router, static generation)
+- **Next.js 15** (App Router, static generation)
 - **TypeScript**
 - **Tailwind CSS** with custom dark theme
 - **GitHub API** for live repo enrichment
+- Deployed on **Vercel**
 
 ## Run locally
 
@@ -58,6 +72,10 @@ npm run dev
 ```
 
 Runs on `localhost:3000` by default. Set `GITHUB_TOKEN` env var to avoid API rate limits.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding tools, books, and hardware.
 
 ## Add a tool
 
@@ -93,6 +111,10 @@ Edit `src/data/tools.json` and add an entry:
 ```
 
 Only `slug`, `name`, `description`, `category`, `language`, `platform`, `github`, and `tags` are required. Everything else is optional.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
 
 ## License
 
