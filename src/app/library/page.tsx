@@ -104,9 +104,8 @@ function BookCard({ book }: { book: Book }) {
 }
 
 function HardwareCard({ item }: { item: HardwareItem }) {
-  const hasLink = !!item.amazonUrl;
-
-  const content = (
+  return (
+    <Link href={`/library/${item.slug}`} className="block h-full">
     <div className="glass glass-hover card-glow rounded-xl p-6 h-full flex flex-col">
       <div className="flex items-start gap-4 mb-4">
         <div className="w-12 h-12 rounded-lg bg-accent-500/20 border border-accent-500/30 flex items-center justify-center flex-shrink-0">
@@ -137,47 +136,16 @@ function HardwareCard({ item }: { item: HardwareItem }) {
       </div>
 
       <div className="flex items-center gap-3 pt-3 border-t border-border">
-        {hasLink ? (
-          <a
-            href={item.amazonUrl}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-secondary border border-border hover:border-emerald-500/30 hover:bg-emerald-500/5 text-xs font-mono text-text-secondary hover:text-emerald-400 transition-all"
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 01-8 0" />
-            </svg>
-            Buy on Amazon
-          </a>
-        ) : (
-          <span className="text-xs font-mono text-text-muted">
-            Link coming soon
-          </span>
-        )}
+        <span className="text-xs font-mono text-brand-400">View Details →</span>
         {item.relatedTool && (
-          <Link
-            href={`/tool/${item.relatedTool}`}
-            className="ml-auto text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors"
-          >
-            View Tool →
-          </Link>
+          <span className="ml-auto text-xs font-mono text-accent-400">
+            Related: {item.relatedTool}
+          </span>
         )}
       </div>
     </div>
+    </Link>
   );
-
-  return content;
 }
 
 export default function LibraryPage() {
