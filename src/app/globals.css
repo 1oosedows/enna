@@ -8,47 +8,51 @@
   }
 
   :root {
-    --surface-base: #f8f9fb;
-    --surface-secondary: #eef0f4;
-    --surface-elevated: #e4e7ed;
-    --surface-overlay: #d9dde5;
-    --text-primary: #1a1d27;
+    --surface-base: #ffffff;
+    --surface-secondary: #f3f4f6;
+    --surface-elevated: #e5e7eb;
+    --surface-overlay: #d1d5db;
+    --text-primary: #111827;
     --text-secondary: #4b5563;
-    --text-muted: #6b7280;
-    --border: #d1d5db;
-    --border-bright: #b8bcc6;
-    --brand-400: #d42040;
-    --brand-500: #c4182f;
-    --accent-400: #8b3d85;
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-hover-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(209, 213, 219, 0.6);
-    --glass-hover-border-brand: rgba(230, 57, 80, 0.4);
-    --glass-hover-shadow-brand: rgba(230, 57, 80, 0.1);
-    --glass-hover-border-caution: rgba(245, 158, 11, 0.4);
-    --glass-hover-shadow-caution: rgba(245, 158, 11, 0.1);
-    --glass-hover-border-danger: rgba(139, 92, 246, 0.4);
-    --glass-hover-shadow-danger: rgba(139, 92, 246, 0.1);
-    --tag-brand-bg: rgba(230, 57, 80, 0.08);
-    --tag-brand-color: #c4182f;
-    --tag-brand-border: rgba(230, 57, 80, 0.2);
-    --tag-caution-bg: rgba(245, 158, 11, 0.08);
-    --tag-caution-color: #b45309;
-    --tag-caution-border: rgba(245, 158, 11, 0.2);
-    --tag-danger-bg: rgba(139, 92, 246, 0.08);
-    --tag-danger-color: #6d28d9;
-    --tag-danger-border: rgba(139, 92, 246, 0.2);
-    --input-bg: rgba(238, 240, 244, 0.9);
-    --category-bg: rgba(238, 240, 244, 0.9);
-    --card-glow-brand: rgba(230, 57, 80, 0.06);
-    --card-glow-caution: rgba(245, 158, 11, 0.06);
-    --card-glow-danger: rgba(139, 92, 246, 0.06);
-    --noise-opacity: 0.01;
-    --scrollbar-track: #f8f9fb;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+    --border-bright: #d1d5db;
+    --brand-400: #b91c30;
+    --brand-500: #a01728;
+    --accent-400: #b91c30;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-hover-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(229, 231, 235, 0.8);
+    --glass-hover-border-brand: rgba(185, 28, 48, 0.3);
+    --glass-hover-shadow-brand: rgba(185, 28, 48, 0.08);
+    --glass-hover-border-caution: rgba(217, 119, 6, 0.3);
+    --glass-hover-shadow-caution: rgba(217, 119, 6, 0.08);
+    --glass-hover-border-danger: rgba(109, 40, 217, 0.3);
+    --glass-hover-shadow-danger: rgba(109, 40, 217, 0.08);
+    --tag-brand-bg: rgba(185, 28, 48, 0.06);
+    --tag-brand-color: #a01728;
+    --tag-brand-border: rgba(185, 28, 48, 0.15);
+    --tag-caution-bg: rgba(217, 119, 6, 0.06);
+    --tag-caution-color: #92400e;
+    --tag-caution-border: rgba(217, 119, 6, 0.15);
+    --tag-danger-bg: rgba(109, 40, 217, 0.06);
+    --tag-danger-color: #5b21b6;
+    --tag-danger-border: rgba(109, 40, 217, 0.15);
+    --input-bg: #f9fafb;
+    --category-bg: #f9fafb;
+    --card-glow-brand: rgba(185, 28, 48, 0.04);
+    --card-glow-caution: rgba(217, 119, 6, 0.04);
+    --card-glow-danger: rgba(109, 40, 217, 0.04);
+    --brand-gradient-from: #b91c30;
+    --brand-gradient-to: #8b1a2b;
+    --brand-gradient-btn-from: #c4182f;
+    --brand-gradient-btn-to: #991b2a;
+    --noise-opacity: 0.005;
+    --scrollbar-track: #ffffff;
     --scrollbar-thumb: #d1d5db;
     --scrollbar-thumb-hover: #b8bcc6;
-    --selection-bg: rgba(230, 57, 80, 0.2);
-    --selection-color: #1a1d27;
+    --selection-bg: rgba(185, 28, 48, 0.15);
+    --selection-color: #111827;
   }
 
   .dark {
@@ -91,6 +95,10 @@
     --scrollbar-track: #0f1117;
     --scrollbar-thumb: #2a2f3e;
     --scrollbar-thumb-hover: #3a4055;
+    --brand-gradient-from: #e63950;
+    --brand-gradient-to: #a855a0;
+    --brand-gradient-btn-from: #e63950;
+    --brand-gradient-btn-to: #a855a0;
     --selection-bg: rgba(230, 57, 80, 0.3);
     --selection-color: #fff;
   }
@@ -161,7 +169,7 @@
   }
 
   .brand-gradient {
-    background: linear-gradient(135deg, #e63950, #a855a0);
+    background: linear-gradient(135deg, var(--brand-gradient-btn-from), var(--brand-gradient-btn-to));
   }
 
   .caution-gradient {
@@ -173,7 +181,7 @@
   }
 
   .brand-gradient-text {
-    background: linear-gradient(135deg, var(--brand-400), var(--accent-400));
+    background: linear-gradient(135deg, var(--brand-gradient-from), var(--brand-gradient-to));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
