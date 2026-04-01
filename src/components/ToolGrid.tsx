@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { Tool, Category, CategoryInfo } from "@/types";
 import SearchFilter from "./SearchFilter";
 import ToolCard from "./ToolCard";
@@ -11,8 +12,21 @@ interface Props {
 }
 
 export default function ToolGrid({ tools, categories }: Props) {
-  const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState<Category | null>(null);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const [query, setQuery] = useState(searchParams.get("q") || "");
+  const [activeCategory, setActiveCategory] = useState<Category | null>(
+    (searchParams.get("category") as Category) || null
+  );
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (query.trim()) params.set("q", query.trim());
+    if (activeCategory) params.set("category", activeCategory);
+    const str = params.toString();
+    router.replace(str ? `/?${str}` : "/", { scroll: false });
+  }, [query, activeCategory, router]);
 
   const categoriesWithCount = useMemo(() => {
     return categories.map((c) => ({
