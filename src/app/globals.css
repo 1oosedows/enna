@@ -51,6 +51,7 @@
     --scrollbar-track: #9EC2BD;
     --scrollbar-thumb: rgba(0, 0, 0, 0.15);
     --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
+    --accent-glow-rgb: 59, 127, 130;
     --selection-bg: rgba(26, 172, 184, 0.25);
     --selection-color: #111827;
   }
@@ -99,6 +100,7 @@
     --brand-gradient-to: #a855a0;
     --brand-gradient-btn-from: #e63950;
     --brand-gradient-btn-to: #a855a0;
+    --accent-glow-rgb: 230, 57, 80;
     --selection-bg: rgba(230, 57, 80, 0.3);
     --selection-color: #fff;
   }
@@ -217,8 +219,8 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(230, 57, 80, 0.6),
-      rgba(168, 85, 160, 0.4),
+      rgba(var(--accent-glow-rgb), 0.6),
+      rgba(var(--accent-glow-rgb), 0.3),
       transparent
     );
     animation: scan 8s linear infinite;
@@ -304,7 +306,7 @@
   }
 
   .radar-ring {
-    border: 1px solid rgba(230, 57, 80, 0.15);
+    border: 1px solid rgba(var(--accent-glow-rgb), 0.15);
     border-radius: 50%;
     position: absolute;
   }

@@ -34,6 +34,7 @@ export default function HeroSection() {
     };
 
     const draw = () => {
+      const glowRgb = getComputedStyle(document.documentElement).getPropertyValue('--accent-glow-rgb').trim();
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
 
       // Draw connections
@@ -47,7 +48,7 @@ export default function HeroSection() {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(230, 57, 80, ${alpha})`;
+            ctx.strokeStyle = `rgba(${glowRgb}, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -58,7 +59,7 @@ export default function HeroSection() {
       for (const node of nodes) {
         ctx.beginPath();
         ctx.arc(node.x, node.y, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(230, 57, 80, 0.5)";
+        ctx.fillStyle = `rgba(${glowRgb}, 0.5)`;
         ctx.fill();
 
         // Move
