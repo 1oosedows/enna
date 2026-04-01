@@ -8,10 +8,10 @@
   }
 
   :root {
-    --surface-base: #9EC2BD;
-    --surface-secondary: #7FBCBE;
-    --surface-elevated: #6aada8;
-    --surface-overlay: #5a9e99;
+    --surface-base: #ADB9AA;
+    --surface-secondary: #9BB0A8;
+    --surface-elevated: #8AA59E;
+    --surface-overlay: #7A9A94;
     --text-primary: #111827;
     --text-secondary: #1f2937;
     --text-muted: #374151;
@@ -48,7 +48,7 @@
     --brand-gradient-btn-from: #00b0c5;
     --brand-gradient-btn-to: #18a062;
     --noise-opacity: 0.005;
-    --scrollbar-track: #9EC2BD;
+    --scrollbar-track: #ADB9AA;
     --scrollbar-thumb: rgba(0, 0, 0, 0.15);
     --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
     --accent-glow-rgb: 59, 127, 130;
