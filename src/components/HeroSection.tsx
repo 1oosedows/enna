@@ -98,7 +98,7 @@ export default function HeroSection() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at center, transparent 0%, #0f1117 70%)",
+            "radial-gradient(ellipse at center, transparent 0%, var(--surface-base) 70%)",
         }}
       />
 
