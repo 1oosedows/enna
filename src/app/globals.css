@@ -7,6 +7,94 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --surface-base: #f8f9fb;
+    --surface-secondary: #eef0f4;
+    --surface-elevated: #e4e7ed;
+    --surface-overlay: #d9dde5;
+    --text-primary: #1a1d27;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --border: #d1d5db;
+    --border-bright: #b8bcc6;
+    --brand-400: #d42040;
+    --brand-500: #c4182f;
+    --accent-400: #8b3d85;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-hover-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(209, 213, 219, 0.6);
+    --glass-hover-border-brand: rgba(230, 57, 80, 0.4);
+    --glass-hover-shadow-brand: rgba(230, 57, 80, 0.1);
+    --glass-hover-border-caution: rgba(245, 158, 11, 0.4);
+    --glass-hover-shadow-caution: rgba(245, 158, 11, 0.1);
+    --glass-hover-border-danger: rgba(139, 92, 246, 0.4);
+    --glass-hover-shadow-danger: rgba(139, 92, 246, 0.1);
+    --tag-brand-bg: rgba(230, 57, 80, 0.08);
+    --tag-brand-color: #c4182f;
+    --tag-brand-border: rgba(230, 57, 80, 0.2);
+    --tag-caution-bg: rgba(245, 158, 11, 0.08);
+    --tag-caution-color: #b45309;
+    --tag-caution-border: rgba(245, 158, 11, 0.2);
+    --tag-danger-bg: rgba(139, 92, 246, 0.08);
+    --tag-danger-color: #6d28d9;
+    --tag-danger-border: rgba(139, 92, 246, 0.2);
+    --input-bg: rgba(238, 240, 244, 0.9);
+    --category-bg: rgba(238, 240, 244, 0.9);
+    --card-glow-brand: rgba(230, 57, 80, 0.06);
+    --card-glow-caution: rgba(245, 158, 11, 0.06);
+    --card-glow-danger: rgba(139, 92, 246, 0.06);
+    --noise-opacity: 0.01;
+    --scrollbar-track: #f8f9fb;
+    --scrollbar-thumb: #d1d5db;
+    --scrollbar-thumb-hover: #b8bcc6;
+    --selection-bg: rgba(230, 57, 80, 0.2);
+    --selection-color: #1a1d27;
+  }
+
+  .dark {
+    --surface-base: #0f1117;
+    --surface-secondary: #161924;
+    --surface-elevated: #1c2030;
+    --surface-overlay: #232838;
+    --text-primary: #e8eaed;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --border: #2a2f3e;
+    --border-bright: #3a4055;
+    --brand-400: #f25c6e;
+    --brand-500: #e63950;
+    --accent-400: #c084b8;
+    --glass-bg: rgba(28, 32, 48, 0.6);
+    --glass-hover-bg: rgba(35, 40, 56, 0.8);
+    --glass-border: rgba(42, 47, 62, 0.5);
+    --glass-hover-border-brand: rgba(230, 57, 80, 0.3);
+    --glass-hover-shadow-brand: rgba(230, 57, 80, 0.08);
+    --glass-hover-border-caution: rgba(245, 158, 11, 0.3);
+    --glass-hover-shadow-caution: rgba(245, 158, 11, 0.08);
+    --glass-hover-border-danger: rgba(139, 92, 246, 0.3);
+    --glass-hover-shadow-danger: rgba(139, 92, 246, 0.08);
+    --tag-brand-bg: rgba(230, 57, 80, 0.1);
+    --tag-brand-color: #f25c6e;
+    --tag-brand-border: rgba(230, 57, 80, 0.2);
+    --tag-caution-bg: rgba(245, 158, 11, 0.1);
+    --tag-caution-color: #fbbf24;
+    --tag-caution-border: rgba(245, 158, 11, 0.2);
+    --tag-danger-bg: rgba(139, 92, 246, 0.1);
+    --tag-danger-color: #a78bfa;
+    --tag-danger-border: rgba(139, 92, 246, 0.2);
+    --input-bg: rgba(22, 25, 36, 0.8);
+    --category-bg: rgba(22, 25, 36, 0.8);
+    --card-glow-brand: rgba(230, 57, 80, 0.05);
+    --card-glow-caution: rgba(245, 158, 11, 0.05);
+    --card-glow-danger: rgba(139, 92, 246, 0.05);
+    --noise-opacity: 0.015;
+    --scrollbar-track: #0f1117;
+    --scrollbar-thumb: #2a2f3e;
+    --scrollbar-thumb-hover: #3a4055;
+    --selection-bg: rgba(230, 57, 80, 0.3);
+    --selection-color: #fff;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -14,14 +102,14 @@
   }
 
   body {
-    background: #0f1117;
-    color: #e8eaed;
+    background: var(--surface-base);
+    color: var(--text-primary);
     overflow-x: hidden;
   }
 
   ::selection {
-    background: rgba(230, 57, 80, 0.3);
-    color: #fff;
+    background: var(--selection-bg);
+    color: var(--selection-color);
   }
 
   ::-webkit-scrollbar {
@@ -29,25 +117,25 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0f1117;
+    background: var(--scrollbar-track);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #2a2f3e;
+    background: var(--scrollbar-thumb);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #3a4055;
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
 @layer components {
   .glass {
-    background: rgba(28, 32, 48, 0.6);
+    background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(42, 47, 62, 0.5);
+    border: 1px solid var(--glass-border);
   }
 
   .glass-hover {
@@ -55,21 +143,21 @@
   }
 
   .glass-hover:hover {
-    background: rgba(35, 40, 56, 0.8);
-    border-color: rgba(230, 57, 80, 0.3);
-    box-shadow: 0 0 30px rgba(230, 57, 80, 0.08);
+    background: var(--glass-hover-bg);
+    border-color: var(--glass-hover-border-brand);
+    box-shadow: 0 0 30px var(--glass-hover-shadow-brand);
   }
 
   .glass-hover-caution:hover {
-    background: rgba(35, 40, 56, 0.8);
-    border-color: rgba(245, 158, 11, 0.3);
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+    background: var(--glass-hover-bg);
+    border-color: var(--glass-hover-border-caution);
+    box-shadow: 0 0 30px var(--glass-hover-shadow-caution);
   }
 
   .glass-hover-danger:hover {
-    background: rgba(35, 40, 56, 0.8);
-    border-color: rgba(139, 92, 246, 0.3);
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.08);
+    background: var(--glass-hover-bg);
+    border-color: var(--glass-hover-border-danger);
+    box-shadow: 0 0 30px var(--glass-hover-shadow-danger);
   }
 
   .brand-gradient {
@@ -85,7 +173,7 @@
   }
 
   .brand-gradient-text {
-    background: linear-gradient(135deg, #f25c6e, #c084b8);
+    background: linear-gradient(135deg, var(--brand-400), var(--accent-400));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -107,8 +195,8 @@
 
   .grid-bg {
     background-image:
-      linear-gradient(rgba(42, 47, 62, 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(42, 47, 62, 0.3) 1px, transparent 1px);
+      linear-gradient(var(--glass-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--glass-border) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -178,7 +266,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(230, 57, 80, 0.05),
+      var(--card-glow-brand),
       transparent
     );
     transition: left 0.6s ease;
@@ -193,7 +281,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(245, 158, 11, 0.05),
+      var(--card-glow-caution),
       transparent
     );
   }
@@ -202,7 +290,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(139, 92, 246, 0.05),
+      var(--card-glow-danger),
       transparent
     );
   }
@@ -215,51 +303,57 @@
 
   .tag-pill {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono;
-    background: rgba(230, 57, 80, 0.1);
-    color: #f25c6e;
-    border: 1px solid rgba(230, 57, 80, 0.2);
+    background: var(--tag-brand-bg);
+    color: var(--tag-brand-color);
+    border: 1px solid var(--tag-brand-border);
     transition: all 0.2s ease;
   }
 
   .tag-pill:hover {
-    background: rgba(230, 57, 80, 0.2);
-    border-color: rgba(230, 57, 80, 0.4);
+    background: var(--glass-hover-border-brand);
+    border-color: var(--glass-hover-border-brand);
   }
 
   .tag-pill-caution {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono;
-    background: rgba(245, 158, 11, 0.1);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    background: var(--tag-caution-bg);
+    color: var(--tag-caution-color);
+    border: 1px solid var(--tag-caution-border);
     transition: all 0.2s ease;
   }
 
   .tag-pill-caution:hover {
-    background: rgba(245, 158, 11, 0.2);
-    border-color: rgba(245, 158, 11, 0.4);
+    background: var(--glass-hover-border-caution);
+    border-color: var(--glass-hover-border-caution);
   }
 
   .tag-pill-danger {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono;
-    background: rgba(139, 92, 246, 0.1);
-    color: #a78bfa;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    background: var(--tag-danger-bg);
+    color: var(--tag-danger-color);
+    border: 1px solid var(--tag-danger-border);
     transition: all 0.2s ease;
   }
 
   .tag-pill-danger:hover {
-    background: rgba(139, 92, 246, 0.2);
-    border-color: rgba(139, 92, 246, 0.4);
+    background: var(--glass-hover-border-danger);
+    border-color: var(--glass-hover-border-danger);
   }
 
   .stat-chip {
-    @apply inline-flex items-center gap-1.5 text-xs font-mono text-text-secondary;
+    @apply inline-flex items-center gap-1.5 text-xs font-mono;
+    color: var(--text-secondary);
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-lg font-mono text-sm text-text-primary placeholder-text-muted outline-none transition-all duration-200;
-    background: rgba(22, 25, 36, 0.8);
-    border: 1px solid #2a2f3e;
+    @apply w-full px-4 py-3 rounded-lg font-mono text-sm outline-none transition-all duration-200;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+
+  .input-field::placeholder {
+    color: var(--text-muted);
   }
 
   .input-field:focus {
@@ -275,22 +369,22 @@
     height: 100%;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.015;
+    opacity: var(--noise-opacity);
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 
   .category-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider;
-    background: rgba(22, 25, 36, 0.8);
-    border: 1px solid #2a2f3e;
+    background: var(--category-bg);
+    border: 1px solid var(--border);
     transition: all 0.2s ease;
   }
 
   .category-badge:hover,
   .category-badge.active {
-    border-color: rgba(230, 57, 80, 0.4);
-    background: rgba(230, 57, 80, 0.1);
-    color: #f25c6e;
+    border-color: var(--glass-hover-border-brand);
+    background: var(--tag-brand-bg);
+    color: var(--tag-brand-color);
   }
 }
 

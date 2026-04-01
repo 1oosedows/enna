@@ -1,24 +1,25 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
         surface: {
-          base: "#0f1117",
-          secondary: "#161924",
-          elevated: "#1c2030",
-          overlay: "#232838",
+          base: "var(--surface-base)",
+          secondary: "var(--surface-secondary)",
+          elevated: "var(--surface-elevated)",
+          overlay: "var(--surface-overlay)",
         },
         brand: {
-          400: "#f25c6e",
-          500: "#e63950",
+          400: "var(--brand-400)",
+          500: "var(--brand-500)",
           600: "#d42040",
           700: "#b01830",
         },
         accent: {
-          400: "#c084b8",
+          400: "var(--accent-400)",
           500: "#a855a0",
           600: "#8b3d85",
         },
@@ -35,13 +36,13 @@ const config: Config = {
           700: "#6d28d9",
         },
         text: {
-          primary: "#e8eaed",
-          secondary: "#9ca3af",
-          muted: "#6b7280",
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+          muted: "var(--text-muted)",
         },
         border: {
-          DEFAULT: "#2a2f3e",
-          bright: "#3a4055",
+          DEFAULT: "var(--border)",
+          bright: "var(--border-bright)",
         },
       },
       fontFamily: {

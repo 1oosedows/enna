@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -52,6 +53,7 @@ export default function Header() {
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span>250+ tools indexed</span>
           </div>
+          <ThemeToggle />
         </div>
       </div>
     </header>
