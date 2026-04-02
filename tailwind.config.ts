@@ -47,7 +47,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["system-ui", "-apple-system", "sans-serif"],
-        mono: ["JetBrains Mono", "Fira Code", "monospace"],
+        mono: ["var(--font-mono)", "Fira Code", "monospace"],
       },
       animation: {
         "scan": "scan 8s linear infinite",

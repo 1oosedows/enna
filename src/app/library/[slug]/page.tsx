@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -134,9 +135,11 @@ function BookDetail({ book }: { book: Book }) {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-shrink-0">
               {book.coverImage ? (
-                <img
+                <Image
                   src={book.coverImage}
                   alt={book.title}
+                  width={192}
+                  height={256}
                   className="w-48 h-64 rounded-xl object-cover shadow-lg"
                 />
               ) : (

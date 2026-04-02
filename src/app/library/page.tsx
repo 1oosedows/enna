@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import libraryData from "@/data/library.json";
@@ -52,9 +53,11 @@ function BookCard({ book }: { book: Book }) {
       <div className="glass glass-hover card-glow rounded-xl p-6 h-full flex flex-col">
         <div className="flex items-start gap-4 mb-4">
           {book.coverImage ? (
-            <img
+            <Image
               src={book.coverImage}
-              alt=""
+              alt={book.title}
+              width={48}
+              height={64}
               className="w-12 h-16 rounded-lg object-cover flex-shrink-0"
             />
           ) : (
