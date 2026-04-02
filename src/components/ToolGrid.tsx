@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Tool, Category, CategoryInfo } from "@/types";
 import SearchFilter from "./SearchFilter";
 import ToolCard from "./ToolCard";
+
+const PAGE_SIZE = 30;
 
 interface Props {
   tools: Tool[];
@@ -19,6 +21,7 @@ export default function ToolGrid({ tools, categories }: Props) {
   const [activeCategory, setActiveCategory] = useState<Category | null>(
     (searchParams.get("category") as Category) || null
   );
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -27,6 +30,11 @@ export default function ToolGrid({ tools, categories }: Props) {
     const str = params.toString();
     router.replace(str ? `/?${str}` : "/", { scroll: false });
   }, [query, activeCategory, router]);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisible(PAGE_SIZE);
+  }, [query, activeCategory]);
 
   const categoriesWithCount = useMemo(() => {
     return categories.map((c) => ({
@@ -54,13 +62,19 @@ export default function ToolGrid({ tools, categories }: Props) {
       );
     }
 
-    // Featured first, then alphabetical
     return result.sort((a, b) => {
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
       return a.name.localeCompare(b.name);
     });
   }, [tools, query, activeCategory]);
+
+  const showMore = useCallback(() => {
+    setVisible((v) => Math.min(v + PAGE_SIZE, filtered.length));
+  }, [filtered.length]);
+
+  const displayed = filtered.slice(0, visible);
+  const hasMore = visible < filtered.length;
 
   return (
     <section className="max-w-7xl mx-auto px-6 pb-24">
@@ -83,11 +97,23 @@ export default function ToolGrid({ tools, categories }: Props) {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((tool, i) => (
-            <ToolCard key={tool.slug} tool={tool} index={i} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {displayed.map((tool, i) => (
+              <ToolCard key={tool.slug} tool={tool} index={i} />
+            ))}
+          </div>
+          {hasMore && (
+            <div className="text-center mt-8">
+              <button
+                onClick={showMore}
+                className="px-6 py-3 rounded-lg bg-surface-secondary border border-border hover:border-brand-500/40 text-sm font-mono text-text-secondary hover:text-brand-400 transition-all"
+              >
+                Show more ({filtered.length - visible} remaining)
+              </button>
+            </div>
+          )}
+        </>
       )}
     </section>
   );

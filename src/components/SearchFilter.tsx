@@ -22,6 +22,7 @@ export default function SearchFilter({
 }: Props) {
   return (
     <div id="tools" className="scroll-mt-24">
+      <h2 className="sr-only">Browse Tools</h2>
       {/* Search bar */}
       <div className="relative max-w-2xl mx-auto mb-8">
         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted">
