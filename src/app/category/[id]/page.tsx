@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ToolCard from "@/components/ToolCard";
@@ -43,6 +44,25 @@ const categoryDescriptions: Record<string, string> = {
     "Legitimate security and networking tools with well-known offensive applications. These dual-use tools serve both defensive and offensive purposes — useful for system administration, network diagnostics, and security testing.",
   "offensive-ops":
     "Red team and offensive operations tooling including C2 frameworks, evasion techniques, lateral movement utilities, and specialized attack tools. Built for authorized penetration testing and adversary simulation exercises.",
+};
+
+const relatedCategories: Record<string, string[]> = {
+  "network-recon": ["subdomain-enum", "web-scanning", "vulnerability", "cloud-recon"],
+  "subdomain-enum": ["network-recon", "web-scanning", "osint-general", "cloud-recon"],
+  "web-scanning": ["network-recon", "subdomain-enum", "vulnerability", "exploitation"],
+  "osint-social": ["osint-general", "phishing", "forensics"],
+  "osint-general": ["osint-social", "subdomain-enum", "forensics", "crypto-tracing"],
+  vulnerability: ["web-scanning", "exploitation", "network-recon", "cloud-recon"],
+  wireless: ["network-recon", "password-attack", "exploitation"],
+  forensics: ["osint-general", "crypto-tracing", "mobile"],
+  "crypto-tracing": ["forensics", "osint-general", "dual-use"],
+  "password-attack": ["exploitation", "vulnerability", "wireless", "offensive-ops"],
+  exploitation: ["vulnerability", "password-attack", "offensive-ops", "web-scanning"],
+  phishing: ["osint-social", "osint-general", "web-scanning"],
+  "cloud-recon": ["network-recon", "vulnerability", "subdomain-enum"],
+  mobile: ["web-scanning", "forensics", "exploitation"],
+  "dual-use": ["offensive-ops", "network-recon", "exploitation"],
+  "offensive-ops": ["exploitation", "password-attack", "dual-use", "wireless"],
 };
 
 export async function generateStaticParams() {
@@ -179,6 +199,41 @@ export default async function CategoryPage({
               <ToolCard key={tool.slug} tool={tool} index={i} />
             ))}
           </div>
+
+          {/* Related categories */}
+          {relatedCategories[id] && (
+            <div className="mt-16">
+              <h2 className="font-mono font-semibold text-sm uppercase tracking-wider text-text-muted mb-6">
+                Related Categories
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {relatedCategories[id].map((relId) => {
+                  const rel = categories.find((c) => c.id === relId);
+                  if (!rel) return null;
+                  const relCount = (toolsData as Tool[]).filter(
+                    (t) => t.category === relId
+                  ).length;
+                  return (
+                    <Link
+                      key={relId}
+                      href={`/category/${relId}`}
+                      className="glass glass-hover rounded-xl p-4 block"
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <span>{rel.icon}</span>
+                        <h3 className="font-mono font-semibold text-sm text-text-primary">
+                          {rel.name}
+                        </h3>
+                      </div>
+                      <p className="text-xs text-text-muted font-mono">
+                        {relCount} tools
+                      </p>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </main>
       <Footer />

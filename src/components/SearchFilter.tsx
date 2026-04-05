@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Category, CategoryInfo } from "@/types";
 import { getCategoryColorScheme } from "@/lib/category-colors";
 
@@ -90,6 +91,21 @@ export default function SearchFilter({
           );
         })}
       </div>
+
+      {activeCategory && (
+        <div className="flex justify-center mb-12 -mt-8">
+          <Link
+            href={`/category/${activeCategory}`}
+            className="text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors flex items-center gap-1.5"
+          >
+            View all {categories.find((c) => c.id === activeCategory)?.name} tools
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

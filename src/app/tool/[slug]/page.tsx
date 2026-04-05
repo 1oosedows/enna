@@ -836,25 +836,38 @@ export default async function ToolPage({
                 Alternatives & Comparisons
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {alternativeTools.map((alt) => (
-                  <Link
-                    key={alt.slug}
-                    href={`/tool/${alt.slug}`}
-                    className="glass glass-hover card-glow rounded-xl p-5 block"
-                  >
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-mono font-semibold text-sm">
-                        {alt.name}
-                      </h3>
-                      <span className="text-xs font-mono text-text-muted">
-                        {alt.language}
-                      </span>
+                {alternativeTools.map((alt) => {
+                  const sorted = [tool.slug, alt.slug].sort();
+                  const compareSlug = `${sorted[0]}-vs-${sorted[1]}`;
+                  return (
+                    <div key={alt.slug} className="glass glass-hover card-glow rounded-xl p-5">
+                      <Link href={`/tool/${alt.slug}`} className="block mb-3">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="font-mono font-semibold text-sm">
+                            {alt.name}
+                          </h3>
+                          <span className="text-xs font-mono text-text-muted">
+                            {alt.language}
+                          </span>
+                        </div>
+                        <p className="text-xs text-text-secondary line-clamp-2">
+                          {alt.description}
+                        </p>
+                      </Link>
+                      <Link
+                        href={`/compare/${compareSlug}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors"
+                      >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="18" y1="20" x2="18" y2="10" />
+                          <line x1="12" y1="20" x2="12" y2="4" />
+                          <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                        Compare {tool.name} vs {alt.name}
+                      </Link>
                     </div>
-                    <p className="text-xs text-text-secondary line-clamp-2">
-                      {alt.description}
-                    </p>
-                  </Link>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
