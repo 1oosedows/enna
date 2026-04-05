@@ -24,7 +24,10 @@ export async function enrichTool(tool: Tool): Promise<Tool> {
       next: { revalidate: 3600 },
     });
 
-    if (!res.ok) return tool;
+    if (!res.ok) {
+      console.warn(`[GitHub] ${res.status} for ${tool.github}${res.status === 403 ? ' (rate limited)' : ''}`);
+      return tool;
+    }
 
     const data: GitHubRepo = await res.json();
     cache.set(tool.github, { data, ts: Date.now() });

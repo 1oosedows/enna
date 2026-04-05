@@ -101,7 +101,8 @@
       "nmap-integration",
       "rust"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "RustScan is a lightning-fast port scanner written in Rust, capable of scanning all 65,536 ports in just a few seconds. It leverages Rust's concurrency features to achieve high-speed performance and integrates seamlessly with Nmap for detailed service enumeration and vulnerability detection. RustScan's efficiency makes it ideal for quick reconnaissance activities and large-scale network assessments. Its flexibility and speed set it apart in the realm of network scanning tools."
   },
   {
     "slug": "subfinder",
@@ -161,7 +162,8 @@
       "owasp",
       "asset-discovery"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Amass is a powerful tool for attack surface mapping and asset discovery, specializing in DNS enumeration and network mapping. Written in Go, it uses open-source intelligence (OSINT) data sources to uncover subdomains, IP address ranges, and network infrastructure. Amass's comprehensive approach and support for various data sources make it an essential tool for security researchers and penetration testers to identify potential vulnerabilities in exposed assets."
   },
   {
     "slug": "httpx",
@@ -181,7 +183,8 @@
       "tech-detection",
       "projectdiscovery"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Httpx is a fast and versatile HTTP toolkit designed for probing and analyzing HTTP servers. It efficiently handles retries and fallbacks to ensure comprehensive server detection and supports a wide range of features like URL filtering and request concurrency. Built in Go, Httpx is optimized for performance and is part of the ProjectDiscovery suite, making it a valuable asset for security professionals conducting web reconnaissance and HTTP-based assessments."
   },
   {
     "slug": "nuclei",
@@ -242,7 +245,8 @@
       "classic",
       "cgi-scan"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Nikto is a classic open-source web server scanner that identifies potentially dangerous files, outdated server software, and version-specific security issues. Written in Perl, it performs comprehensive assessments of web server environments, including CGI scanning and SSL support checks. Nikto's ability to detect a wide range of vulnerabilities makes it a staple tool in web security testing, particularly for legacy systems and environments requiring thorough scrutiny."
   },
   {
     "slug": "gobuster",
@@ -263,7 +267,8 @@
       "vhost",
       "s3"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Gobuster is a popular tool for brute-forcing URIs, DNS subdomains, virtual host names, and S3 buckets. Developed in Go, it is designed for speed and efficiency, allowing users to perform directory/file discovery and DNS enumeration. Gobuster's ability to handle various modes of operation makes it versatile for web security assessments, providing security professionals with a robust solution for uncovering hidden resources and configurations."
   },
   {
     "slug": "feroxbuster",
@@ -361,7 +366,8 @@
       "data-extraction",
       "report"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Maigret is a powerful OSINT tool designed to collect detailed information from over 2500 websites, building comprehensive reports with the extracted data. As a feature-rich fork of Sherlock, Maigret enhances social media and public data exploration, making it ideal for detailed reconnaissance and investigation tasks. It automates the process of data gathering and reporting, assisting security researchers and investigative professionals in building profiles and uncovering digital footprints."
   },
   {
     "slug": "theharvester",
@@ -381,7 +387,8 @@
       "subdomain",
       "passive-recon"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "theHarvester is an effective tool for gathering emails, names, subdomains, IPs, and URLs from publicly accessible sources. Written in Python, it is a passive reconnaissance tool that aggregates data from search engines, PGP key servers, and other sources to map and assess potential attack surfaces. Its broad coverage and focus on passive data collection make it a valuable asset for initial reconnaissance phases in penetration testing and security assessments."
   },
   {
     "slug": "spiderfoot",
@@ -441,7 +448,8 @@
       "visual",
       "transforms"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Maltego CE is a visual link analysis tool that enables comprehensive OSINT investigations by mapping relationships between entities like people, companies, domains, and infrastructure. Developed in Java, it provides a graphical interface to visualize complex data sets using transforms and link analysis. Maltego's ability to reveal hidden connections and patterns makes it indispensable for analysts and investigators conducting in-depth research and threat intelligence operations."
   },
   {
     "slug": "holehe",
@@ -461,7 +469,8 @@
       "account-discovery",
       "passive"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Holehe is a Python-based tool that checks if an email address is registered on over 120 websites by leveraging password recovery mechanisms. It performs passive account discovery without requiring login attempts, providing a non-intrusive way to map email usage across various platforms. Holehe is useful for OSINT practitioners seeking to identify potential account associations and data leakage risks associated with specific email addresses."
   },
   {
     "slug": "shodan-cli",
@@ -483,7 +492,8 @@
       "internet-scan",
       "api"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Shodan CLI is the command-line interface for Shodan, the search engine for internet-connected devices. It allows users to query Shodan's vast database of device information and perform complex searches directly from the terminal. Shodan CLI facilitates network reconnaissance and security assessments by providing detailed data on exposed devices, services, and vulnerabilities, making it a critical tool for cybersecurity researchers and IT professionals."
   },
   {
     "slug": "metasploit",
@@ -547,7 +557,8 @@
       "wordlist",
       "classic"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "John the Ripper is a widely used password cracker designed to perform fast and efficient hashing attacks. Supporting hundreds of hash types and ciphers, it runs in both CPU and GPU modes to maximize performance across different platforms. Known for its versatility and speed, John the Ripper is a staple tool for security professionals conducting password audits and cryptographic research, offering comprehensive support for various attack vectors and techniques."
   },
   {
     "slug": "hashcat",
@@ -634,7 +645,7 @@
   {
     "slug": "volatility3",
     "name": "Volatility 3",
-    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps — processes, network connections, registry.",
+    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps \u2014 processes, network connections, registry.",
     "category": "forensics",
     "language": "Python",
     "platform": [
@@ -688,7 +699,8 @@
       "timeline",
       "file-carving"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Autopsy is a digital forensics platform with a user-friendly GUI, designed to facilitate disk image analysis, timeline analysis, keyword searching, and hash filtering. Developed in Java, it integrates with the Sleuth Kit and supports a wide range of forensic investigations, from file recovery to artifact analysis. Autopsy's comprehensive feature set and ease of use make it a valuable tool for forensic examiners and law enforcement agencies conducting digital investigations."
   },
   {
     "slug": "wireshark",
@@ -786,12 +798,13 @@
       "automated",
       "classic"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "sqlmap is an automatic SQL injection and database takeover tool written in Python. It detects and exploits SQL injection vulnerabilities across a variety of database management systems, automating the process of vulnerability identification and exploitation. With its extensive set of features, sqlmap facilitates database fingerprinting, data extraction, and even OS-level command execution, making it a must-have tool for penetration testers and security researchers."
   },
   {
     "slug": "ffuf",
     "name": "ffuf",
-    "description": "Fast web fuzzer written in Go. Fuzz anything — URLs, headers, POST data — with blazing speed.",
+    "description": "Fast web fuzzer written in Go. Fuzz anything \u2014 URLs, headers, POST data \u2014 with blazing speed.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -845,7 +858,8 @@
       "credential-capture",
       "active-directory"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Responder is a network tool designed to poison LLMNR, NBT-NS, and mDNS protocols, capturing NTLMv1/v2 hashes from Windows environments. Written in Python, it acts as a rogue authentication server to intercept and capture credentials on the network. Responder's ability to exploit weaknesses in Windows name resolution protocols makes it a powerful tool for security professionals conducting network assessments and Active Directory penetration testing."
   },
   {
     "slug": "bloodhound",
@@ -901,7 +915,8 @@
       "protocol",
       "windows"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Impacket is a collection of Python classes for working with network protocols, essential for Windows and Active Directory pentesting. It provides low-level programmatic access to protocols like SMB, RDP, and LDAP, enabling the development of custom network tools and exploitation scripts. Impacket's extensive support for protocol manipulation makes it a critical resource for security researchers and penetration testers targeting Windows-based environments."
   },
   {
     "slug": "ghidra",
@@ -962,7 +977,8 @@
       "gps",
       "photo"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "ExifTool is a platform-independent Perl library plus a command-line application for reading, writing, and editing metadata in a wide variety of file types. It supports a comprehensive range of metadata formats including EXIF, GPS, IPTC, and XMP, across multiple file formats such as JPEG, PNG, PDF, and more. ExifTool is notable for its ability to handle batch processing and its extensive range of supported metadata types, making it a versatile tool for digital forensics and media management."
   },
   {
     "slug": "gophish",
@@ -1022,7 +1038,8 @@
       "carrier",
       "geolocation"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "PhoneInfoga is an advanced tool for performing OSINT on phone numbers. It can scan phone numbers using free resources to gather detailed information such as carrier details, geolocation data, and whether the number is disposable. Written in Go, it leverages various online APIs without requiring direct interaction with the phone number, making it a useful tool for security researchers and investigators looking to uncover information with minimal trace."
   },
   {
     "slug": "recon-ng",
@@ -1043,7 +1060,8 @@
       "api-keys",
       "reporting"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Recon-ng is a web reconnaissance framework with a modular design and a Metasploit-like interface. It facilitates the gathering of open-source intelligence (OSINT) by incorporating a wide range of modules that perform tasks like data collection, analysis, and reporting. Recon-ng supports API key management, integrates with various third-party services, and provides a powerful scripting environment for customizing reconnaissance workflows, making it a staple in the toolkit of security professionals."
   },
   {
     "slug": "katana",
@@ -1064,7 +1082,8 @@
       "headless",
       "projectdiscovery"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Katana is a next-generation web crawling and spidering framework designed for efficient data gathering. It operates in both headless browser and standard modes, enabling it to automatically fill forms and navigate complex web structures. Developed in Go, Katana is optimized for performance and flexibility, making it suitable for both simple and advanced web reconnaissance tasks. Its ability to handle dynamic content makes it a valuable asset for penetration testers and researchers."
   },
   {
     "slug": "dnsx",
@@ -1085,7 +1104,8 @@
       "wildcard",
       "projectdiscovery"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "dnsx is a high-performance DNS toolkit designed for various DNS reconnaissance tasks. It supports multiple DNS resolvers and incorporates features like retries and wildcard filtering to enhance accuracy. Written in Go, dnsx is optimized for speed and reliability, making it suitable for large-scale DNS enumeration and analysis. Its versatility and ease of use make it a popular choice among security researchers and network administrators."
   },
   {
     "slug": "knockpy",
@@ -1106,7 +1126,8 @@
       "virustotal",
       "zone-transfer"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Knock is a Python-based subdomain enumeration tool that utilizes wordlists and DNS resolution techniques. It supports integration with VirusTotal for enhanced discovery and can perform zone transfers when possible. Knock's ability to leverage both wordlists and DNS records makes it a robust tool for discovering subdomains, providing valuable insights during penetration testing and security assessments."
   },
   {
     "slug": "assetfinder",
@@ -1127,7 +1148,8 @@
       "fast",
       "tomnomnom"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Assetfinder is a tool designed to discover domains and subdomains that are potentially related to a given root domain. It aggregates data from multiple passive sources, including DNS records and public datasets, to identify subdomains without direct interaction with the target. Written in Go, Assetfinder is known for its speed and efficiency, making it an essential tool for reconnaissance efforts in security testing and research."
   },
   {
     "slug": "waybackurls",
@@ -1148,7 +1170,8 @@
       "archive",
       "tomnomnom"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "waybackurls is a tool that retrieves all known URLs for a domain from the Wayback Machine. It is particularly useful for uncovering hidden or forgotten endpoints, providing insights into the historical structure and content of a website. Written in Go, waybackurls is efficient and easy to use, making it a valuable resource for web application security testing and digital forensics."
   },
   {
     "slug": "gau",
@@ -1168,7 +1191,8 @@
       "passive",
       "multi-source"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "gau (Get All URLs) is a tool designed to fetch known URLs from multiple sources like AlienVault OTX, the Wayback Machine, Common Crawl, and URLScan. It provides a comprehensive view of a domain's URL footprint by aggregating historical and current data from these services. Written in Go, gau is optimized for speed and is a popular choice for security researchers looking to identify potential attack vectors in web applications."
   },
   {
     "slug": "arjun",
@@ -1188,7 +1212,8 @@
       "hidden-params",
       "fuzzing"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Arjun is an HTTP parameter discovery suite that identifies hidden query parameters in web applications using smart heuristics. It automates the process of parameter discovery, helping security researchers uncover potential attack vectors that might otherwise be missed. Written in Python, Arjun is designed for efficiency and accuracy, making it a valuable tool for web application security assessments."
   },
   {
     "slug": "wpscan",
@@ -1209,7 +1234,8 @@
       "cve",
       "cms"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "WPScan is a WordPress security scanner that identifies vulnerabilities by enumerating plugins, themes, and users. It checks for known vulnerabilities in the WordPress core and its components using a regularly updated database. Written in Ruby, WPScan is widely used by security professionals to assess the security posture of WordPress installations and is an essential tool for anyone managing or auditing WordPress sites."
   },
   {
     "slug": "openvas",
@@ -1228,7 +1254,8 @@
       "compliance",
       "credentialed"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "OpenVAS is a comprehensive vulnerability scanner that offers over 50,000 Network Vulnerability Tests (NVTs). It supports credentialed scanning, compliance checks, and is suitable for enterprise-level security assessments. Developed in C, OpenVAS is known for its extensive database of vulnerabilities and its ability to perform in-depth security analysis, making it a critical tool for vulnerability management and risk assessment."
   },
   {
     "slug": "xsstrike",
@@ -1249,7 +1276,8 @@
       "fuzzing",
       "context-analysis"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "XSStrike is an advanced cross-site scripting (XSS) detection suite that includes a powerful fuzzing engine, context analysis, and WAF detection/bypass capabilities. It automates the process of identifying XSS vulnerabilities by analyzing various contexts and injection points. Written in Python, XSStrike is a go-to tool for security testers looking to identify and exploit XSS vulnerabilities in web applications."
   },
   {
     "slug": "commix",
@@ -1269,7 +1297,8 @@
       "automated",
       "web-app"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Commix is an automated tool for testing web applications for command injection vulnerabilities. It exploits OS command injection flaws by injecting and executing arbitrary commands on the target system. Written in Python, Commix provides a comprehensive suite of features for detecting and exploiting command injection, making it a valuable tool for penetration testers and security researchers."
   },
   {
     "slug": "testssl",
@@ -1288,7 +1317,8 @@
       "cipher-check",
       "heartbleed"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "testssl.sh is a command-line tool that evaluates the security of TLS/SSL configurations on any given port. It checks for supported ciphers, protocols, and potential cryptographic flaws, including vulnerabilities like Heartbleed. Written in Shell, testssl.sh is a versatile tool for assessing the security of SSL/TLS implementations, widely used by administrators and security professionals to ensure secure communication channels."
   },
   {
     "slug": "social-analyzer",
@@ -1309,7 +1339,8 @@
       "api",
       "web-ui"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Social Analyzer is a versatile tool for finding and analyzing profiles across over 1000 social media platforms. It functions as an API, command-line interface, and web application, making it accessible for various use cases. Written in Python, it aggregates data to provide insights into a person's online presence without interacting directly with the target platforms. Ideal for OSINT tasks, it aids in gathering comprehensive social media intelligence efficiently."
   },
   {
     "slug": "twint",
@@ -1330,7 +1361,8 @@
       "no-api",
       "followers"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Twint is an advanced Twitter scraping tool that bypasses the need for API keys, enabling users to collect data such as tweets, followers, and favorites. It operates by scraping Twitter's frontend, allowing access to public data without rate limits. Twint is notable for its speed and the breadth of data it can retrieve, making it a powerful resource for researchers and analysts in need of Twitter OSINT capabilities."
   },
   {
     "slug": "instaloader",
@@ -1351,7 +1383,8 @@
       "stories",
       "metadata"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Instaloader is a Python-based tool for downloading Instagram content, including photos, videos, stories, and metadata. It supports archiving entire profiles and extracting OSINT data, facilitating in-depth analysis of Instagram accounts. Instaloader can operate without user interaction, making it suitable for both automated data collection and manual investigations. It is widely used for its comprehensive access to publicly available Instagram content."
   },
   {
     "slug": "osintgram",
@@ -1371,7 +1404,8 @@
       "email",
       "osint"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Osintgram is an OSINT tool designed for collecting data from Instagram profiles. It extracts information such as emails, phone numbers, user details, followers, and geolocation data, facilitating targeted investigations. Built in Python, Osintgram automates the process of gathering rich metadata from Instagram, aiding in detailed and efficient intelligence gathering. Its focus on user data makes it a valuable asset in digital forensics and social media analysis."
   },
   {
     "slug": "tweetfeed",
@@ -1391,7 +1425,8 @@
       "twitter",
       "real-time"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "TweetFeed provides a real-time stream of Indicators of Compromise (IOCs) shared by the infosec community on Twitter. It captures domains, IPs, URLs, and SHA256 hashes, serving as a dynamic threat intelligence source. Built with Python, TweetFeed continuously monitors Twitter for the latest security insights, making it an essential tool for cybersecurity professionals seeking up-to-date threat information."
   },
   {
     "slug": "emailharvester",
@@ -1411,7 +1446,8 @@
       "harvesting",
       "proxy"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "EmailHarvester is a tool for extracting email addresses from search engines, using platforms like Google, Bing, Yahoo, and ASK. It supports proxy rotation to avoid detection and maintain anonymity during searches. Written in Python, it automates the process of email collection, facilitating OSINT investigations and data gathering. Its ability to scrape multiple search engines enhances its effectiveness in compiling comprehensive email lists."
   },
   {
     "slug": "photon",
@@ -1432,7 +1468,8 @@
       "fast",
       "secrets"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Photon is a fast web crawler designed for OSINT tasks, capable of extracting URLs, emails, files, JavaScript, and secret keys from target websites. Optimized for speed, it can efficiently gather a wide array of data for security assessments and reconnaissance. Photon supports modularity and is built in Python, making it adaptable for various investigative needs. Its rapid data extraction capabilities make it a preferred choice for cybersecurity professionals."
   },
   {
     "slug": "censys-cli",
@@ -1454,7 +1491,8 @@
       "internet-scan",
       "api"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Censys CLI is a command-line interface for searching internet-connected devices, offering an alternative to Shodan. It enables users to search for hosts and certificates across the internet, providing insights into the global network landscape. Built in Python, it leverages Censys's extensive database to deliver detailed information about infrastructure and potential vulnerabilities. This tool is essential for network reconnaissance and security research."
   },
   {
     "slug": "zmap",
@@ -1475,7 +1513,8 @@
       "ipv4",
       "research"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "ZMap is a high-speed network scanner designed to perform internet-wide scans using single packets. Capable of scanning the entire IPv4 address space in under five minutes, it is ideal for large-scale network research. Written in C, ZMap is used by researchers and security professionals to uncover open ports and services across vast network segments. Its efficiency and scale make it a vital tool for comprehensive network analysis."
   },
   {
     "slug": "netcat",
@@ -1497,7 +1536,8 @@
       "ssl",
       "swiss-army-knife"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Ncat, part of the Nmap suite, is an enhanced version of the classic Netcat tool, offering SSL support, IPv6, proxying, and connection brokering. It functions as a versatile networking utility, often referred to as the Swiss army knife of networking. Written in C, Ncat facilitates a wide range of network tasks, from debugging to port scanning. Its flexibility and range of features make it indispensable for network administrators and security professionals."
   },
   {
     "slug": "tcpdump",
@@ -1518,7 +1558,8 @@
       "bpf",
       "classic"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Tcpdump is a command-line packet analyzer used for capturing and analyzing network traffic. Known for its lightweight and scriptable nature, it serves as an alternative to Wireshark for users needing a text-based interface. Tcpdump utilizes the Berkeley Packet Filter (BPF) for efficient data capture and is widely respected for its reliability and effectiveness in network diagnostics and security analysis."
   },
   {
     "slug": "bettercap",
@@ -1579,7 +1620,8 @@
       "wpa",
       "wps"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Wifite2 automates the process of auditing wireless networks by wrapping popular tools like aircrack-ng, reaver, and hashcat. It simplifies WiFi security testing, supporting attacks on WPA and WPS protocols. Written in Python, Wifite2 is user-friendly and effective for both penetration testers and security enthusiasts. Its ability to streamline complex wireless attacks makes it a favored tool for comprehensive WiFi auditing."
   },
   {
     "slug": "kismet",
@@ -1599,7 +1641,8 @@
       "bluetooth",
       "zigbee"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Kismet is a wireless network detector, sniffer, and intrusion detection system that supports WiFi, Bluetooth, Zigbee, and other protocols. It is capable of capturing and analyzing wireless traffic, making it suitable for wardriving and security assessments. Written in C++, Kismet is highly extensible and widely used in both hobbyist and professional environments for its comprehensive wireless monitoring capabilities."
   },
   {
     "slug": "flipperzero-firmware",
@@ -1694,7 +1737,8 @@
       "parallel",
       "modular"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Medusa is a highly efficient, parallel brute-forcing tool designed to test multiple protocols such as HTTP, MySQL, SMB, SSH, and Telnet. Its modular architecture allows for the easy addition of new modules, enhancing its versatility. Built in C, Medusa is noted for its speed and ability to handle large-scale password cracking tasks, making it a valuable tool for penetration testers and security researchers."
   },
   {
     "slug": "cewl",
@@ -1714,7 +1758,8 @@
       "custom",
       "password-gen"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "CeWL is a custom wordlist generator that crawls target websites to compile lists of potential passwords from extracted words. Written in Ruby, it helps in generating highly relevant password lists for use in password attacks. CeWL's ability to tailor wordlists to specific targets enhances its effectiveness in cracking attempts, providing a focused approach to password security testing."
   },
   {
     "slug": "crackmapexec",
@@ -1734,7 +1779,8 @@
       "lateral-movement",
       "credential-spraying"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "CrackMapExec is a versatile tool for pentesting Active Directory environments, offering capabilities for SMB, LDAP, MSSQL, and WinRM enumeration and exploitation. It facilitates lateral movement and credential spraying attacks while providing a comprehensive interface for testing domain credentials and configurations. Written in Python, it is favored by security professionals for its integration with offensive security operations, allowing for efficient discovery and exploitation of network vulnerabilities."
   },
   {
     "slug": "evil-winrm",
@@ -1754,7 +1800,8 @@
       "pass-the-hash",
       "post-exploitation"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Evil-WinRM is a powerful WinRM shell designed for penetration testing and post-exploitation activities. It supports file upload/download, in-memory PowerShell execution, DLL injection, and pass-the-hash authentication. Built in Ruby, this tool provides an effective way to interact with Windows systems remotely, enabling testers to execute commands and scripts without leaving traces on disk, making it a preferred choice for stealthy operations."
   },
   {
     "slug": "covenant",
@@ -1774,7 +1821,8 @@
       "dotnet",
       "implant"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Covenant is a .NET-based command and control (C2) framework that offers a collaborative web-based interface for managing red team operations and implants. It facilitates comprehensive C2 tasks, including implant execution and management, through a user-friendly interface. Notable for its use in red team engagements, Covenant allows operators to execute complex attack scenarios with the flexibility of .NET, supporting both real-time and asynchronous communications."
   },
   {
     "slug": "sliver",
@@ -1829,7 +1877,8 @@
       "tun",
       "proxy"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Ligolo-ng is an advanced tunneling and pivoting tool that creates a TUN interface for transparent proxying through compromised hosts. Written in Go, it enhances stealth by allowing attackers to route traffic through a compromised system without being detected. Its ability to create complex network topologies makes it a valuable tool for penetration testers seeking to exploit internal network resources while maintaining anonymity."
   },
   {
     "slug": "chisel",
@@ -1849,7 +1898,8 @@
       "ssh",
       "single-binary"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Chisel is a fast TCP/UDP tunnel over HTTP, secured via SSH, designed for bypassing firewalls and NAT. As a single binary, it facilitates easy deployment and operation, making it ideal for situations requiring quick setup and reliable tunneling. Developed in Go, Chisel is notable for its speed and simplicity, providing a robust solution for secure data transmission through restrictive network environments."
   },
   {
     "slug": "linpeas",
@@ -1899,7 +1949,8 @@
       "no-root",
       "enumeration"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "pspy is a process monitoring tool for Linux that functions without requiring root privileges. It detects and logs cron jobs, user commands, and other process events in real-time, making it a useful tool for security auditing and monitoring. Written in Go, pspy is particularly beneficial for administrators and security professionals who need to keep track of system activities without altering system configurations."
   },
   {
     "slug": "binwalk",
@@ -1919,7 +1970,8 @@
       "extraction",
       "embedded"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Binwalk is a firmware analysis tool that searches binary images for embedded files, executables, and file systems. It is primarily used for reverse engineering firmware and extracting embedded data. Developed in Python, Binwalk is widely used in the cybersecurity industry for its ability to analyze and deconstruct complex binary formats, making it essential for researchers and engineers involved in firmware analysis."
   },
   {
     "slug": "yara",
@@ -1979,7 +2031,8 @@
       "dfir",
       "artifact-collection"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Velociraptor is an endpoint visibility and collection tool designed for digital forensic investigations and incident response (DFIR). It allows security teams to hunt for artifacts across thousands of endpoints simultaneously, providing deep insights into system activities. Written in Go, Velociraptor is notable for its scalability and speed, enabling rapid response and comprehensive analysis in enterprise environments."
   },
   {
     "slug": "plaso",
@@ -2000,7 +2053,8 @@
       "artifact",
       "super-timeline"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Plaso (log2timeline) is a super timeline creation engine that extracts timestamps from multiple forensic artifact sources into a single timeline. It supports a wide range of log and artifact formats, facilitating comprehensive forensic analysis. Written in Python, Plaso is widely used in digital forensics for its ability to correlate events from diverse data sources, providing a unified view of system activities over time."
   },
   {
     "slug": "radare2",
@@ -2022,7 +2076,8 @@
       "debugger",
       "scripting"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Radare2 is a portable reverse engineering framework that integrates disassembly, debugging, analysis, patching, and scripting capabilities in a single command-line interface. Known for its extensibility and modularity, it supports a wide range of binary formats and architectures. Written in C, Radare2 is a preferred tool among security researchers and reverse engineers for its powerful analysis features and cross-platform compatibility."
   },
   {
     "slug": "cutter",
@@ -2043,7 +2098,8 @@
       "radare2",
       "decompiler"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Cutter is a graphical user interface (GUI) for the Radare2 reversing framework, designed to make reverse engineering more accessible. It includes features like graph views, a decompiler, and a hex editor, enhancing the usability of Radare2's capabilities. Developed in C++, Cutter provides a user-friendly interface that simplifies complex analysis tasks, making it popular among both novice and experienced reverse engineers."
   },
   {
     "slug": "king-phisher",
@@ -2061,7 +2117,8 @@
       "credential-harvest",
       "analytics"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "King Phisher is a phishing campaign toolkit that enables users to simulate and manage phishing attacks with features like web cloning, credential harvesting, and comprehensive analytics dashboards. It supports the creation and execution of realistic phishing scenarios, providing insights into user susceptibility. Written in Python, King Phisher is widely used in security training and awareness programs to test and improve organizational defenses against phishing threats."
   },
   {
     "slug": "evilginx2",
@@ -2113,7 +2170,8 @@
       "malware-detection",
       "api"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "URLScan.io CLI is a tool for scanning and analyzing URLs to identify phishing indicators, malware, and suspicious behavior. It provides features such as screenshot and DOM capture, enabling detailed examination of web pages. Written in Python, this tool leverages the URLScan.io API to deliver comprehensive analysis results, making it a valuable asset for incident responders and security analysts focused on web-based threat detection."
   },
   {
     "slug": "modlishka",
@@ -2131,7 +2189,8 @@
       "automated",
       "real-time"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Modlishka is an automated HTTP reverse proxy that facilitates 2FA phishing by performing real-time credential and token harvesting. Written in Go, it allows attackers to seamlessly capture user authentication data while bypassing two-factor authentication mechanisms. Modlishka's automation and real-time capabilities make it a significant tool for adversaries seeking to exploit web authentication flows in phishing campaigns."
   },
   {
     "slug": "chainalysis-free",
@@ -2152,7 +2211,8 @@
       "wallet-clustering",
       "entity-id"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Chainalysis Reactor (Free) is a blockchain investigation tool that offers transaction graph visualization, wallet clustering, and entity identification. It helps analysts track and understand the flow of cryptocurrency transactions across the blockchain. Developed in JavaScript, this tool is used for identifying suspicious activities and entities within blockchain networks, supporting law enforcement and compliance efforts in the cryptocurrency domain."
   },
   {
     "slug": "breadcrumbs",
@@ -2173,7 +2233,8 @@
       "trace",
       "investigation"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Breadcrumbs is a blockchain analytics and investigation tool designed to trace Bitcoin and Ethereum transactions through multiple hops. By analyzing blockchain data, it provides insights into transaction patterns and relationships between addresses. This TypeScript-based tool aids in the detection of suspicious transaction chains and assists in financial investigations. Notable for its ability to visualize complex transaction paths, Breadcrumbs is an essential tool for blockchain analysts."
   },
   {
     "slug": "blockscout",
@@ -2193,7 +2254,8 @@
       "evm",
       "smart-contracts"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "BlockScout is an open-source blockchain explorer designed for Ethereum and EVM-compatible chains. It offers comprehensive features such as smart contract verification and detailed transaction histories. Developed in Elixir, BlockScout supports both developers and end-users by providing an intuitive interface to explore blockchain data. Its open-source nature allows for customization and integration into various blockchain projects."
   },
   {
     "slug": "whale-alert",
@@ -2214,7 +2276,8 @@
       "alerting",
       "multi-chain"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Whale Alert CLI is a tool for tracking large cryptocurrency transactions in real-time across major blockchains. Leveraging a Python-based command line interface, it provides alerts and API access to monitor significant fund movements. It's particularly useful for traders and analysts looking to detect market-moving transactions. The tool's multi-chain compatibility makes it versatile in the rapidly evolving cryptocurrency landscape."
   },
   {
     "slug": "ethtective",
@@ -2234,7 +2297,8 @@
       "visualization",
       "explorer"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Ethtective is an Ethereum transaction explorer and visualizer that utilizes graph-based methods to explore address and transaction flows. Built with JavaScript, it enables users to visually analyze the intricate relationships and activities on the Ethereum blockchain. This tool is particularly valuable for investigators seeking to understand transaction patterns and identify potential fraudulent activities. Its graphical representation simplifies complex blockchain data analysis."
   },
   {
     "slug": "bitcoin-abe",
@@ -2254,7 +2318,8 @@
       "self-hosted",
       "database"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Bitcoin-Abe is a blockchain browser specifically designed for Bitcoin and similar cryptocurrencies. It provides a self-hosted environment where users can explore block, transaction, and address data through a user-friendly interface and API. Written in Python, Bitcoin-Abe allows for detailed searches and data retrieval, making it a valuable resource for developers and analysts interested in blockchain data. Its support for self-hosting ensures privacy and control over data access."
   },
   {
     "slug": "trueblocks",
@@ -2274,7 +2339,8 @@
       "local-first",
       "decentralized"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "TrueBlocks is a local-first Ethereum indexer that provides decentralized and censorship-resistant access to blockchain data. Developed in Go, it offers rich APIs for accessing detailed Ethereum transaction and contract information. By indexing blockchain data locally, TrueBlocks ensures privacy and independence from third-party services. It's particularly notable for enabling comprehensive blockchain analysis without relying on centralized infrastructure."
   },
   {
     "slug": "tornado-tracker",
@@ -2294,7 +2360,8 @@
       "probabilistic",
       "linking"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Tornado Cash Tracker is a specialized tool for monitoring deposits and withdrawals through the Tornado Cash mixer. Using probabilistic linking techniques, it attempts to associate mixed transactions with their original sources. Developed in Python, this tool is particularly useful for investigators seeking to trace funds through privacy-enhancing mixers. It aids in uncovering the flow of assets that might be obscured by mixing services."
   },
   {
     "slug": "etherscan-api",
@@ -2316,12 +2383,13 @@
       "transactions",
       "token-transfers"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Etherscan API Tools is a Python wrapper that facilitates interaction with the Etherscan API. It allows users to query Ethereum blockchain data, including balances, transactions, token transfers, contract ABIs, and gas prices. This tool simplifies the process of integrating Ethereum data into applications and analyses. It's an essential resource for developers and analysts who require programmatic access to Ethereum blockchain insights."
   },
   {
     "slug": "wallet-explorer",
     "name": "WalletExplorer",
-    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities — exchanges, mixers, markets, gambling.",
+    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities \u2014 exchanges, mixers, markets, gambling.",
     "category": "crypto-tracing",
     "language": "Python",
     "platform": [
@@ -2337,7 +2405,8 @@
       "entity-labeling",
       "exchanges"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "WalletExplorer is a Bitcoin wallet clustering and labeling tool that maps addresses to known entities such as exchanges, mixers, and markets. Using Python, it helps investigators and analysts identify patterns and associations within Bitcoin transaction data. This tool is particularly valuable for anti-money laundering (AML) efforts and regulatory compliance by revealing connections between seemingly disparate addresses."
   },
   {
     "slug": "misttrack",
@@ -2358,7 +2427,8 @@
       "risk-scoring",
       "fund-tracing"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "MistTrack is SlowMist's crypto tracking platform offering cross-chain fund tracing, address labeling, and risk scoring for AML purposes. Built with TypeScript, it provides comprehensive tools for monitoring and analyzing cryptocurrency transactions across different blockchains. Its risk scoring and labeling features assist in identifying high-risk transactions and entities, playing a crucial role in compliance and security operations."
   },
   {
     "slug": "orbit",
@@ -2378,7 +2448,8 @@
       "ethereum",
       "force-directed"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Orbit is a blockchain transaction visualizer that generates interactive force-directed graphs of Ethereum address relationships. Developed in JavaScript, it allows users to explore connections and transactions on the Ethereum network visually. This tool is particularly useful for analysts and investigators seeking to uncover hidden relationships and patterns within blockchain data. Its interactive nature enhances the exploration and understanding of complex blockchain networks."
   },
   {
     "slug": "graphsense",
@@ -2432,7 +2503,8 @@
       "monitoring",
       "aml"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Scorechain Analytics offers blockchain analytics with risk scoring, transaction monitoring, and compliance reporting across over 8000 assets. Utilizing Python, it provides comprehensive tools for analyzing blockchain data to support anti-money laundering (AML) and regulatory compliance. Its extensive asset coverage and risk assessment capabilities make it a valuable resource for financial institutions and regulatory bodies aiming to maintain compliance and security."
   },
   {
     "slug": "dune-analytics",
@@ -2454,7 +2526,8 @@
       "dashboards",
       "multi-chain"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Dune Analytics CLI is a command-line tool that allows users to query blockchain data using SQL. It supports multiple blockchains including Ethereum, Polygon, Optimism, Arbitrum, and Solana, offering community-driven dashboards for data visualization. Developed in Python, this tool simplifies the process of extracting and analyzing blockchain data for developers and analysts. Its SQL-based querying makes it accessible to those familiar with database operations."
   },
   {
     "slug": "txstreet",
@@ -2475,7 +2548,8 @@
       "mempool",
       "animated"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "TxStreet is a real-time blockchain transaction visualizer that presents an animated street view of pending and confirmed transactions. Built with JavaScript, it provides an engaging way to observe blockchain activity and transaction flows. This tool is particularly useful for users interested in understanding the dynamics of blockchain networks in a visual and intuitive manner. It highlights mempool activity, offering insights into transaction congestion and priorities."
   },
   {
     "slug": "bitcoinlib",
@@ -2496,7 +2570,8 @@
       "utxo",
       "wallet"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "BitcoinLib is a comprehensive Python library for Bitcoin that allows users to create wallets, parse transactions, interact with nodes, and analyze the UTXO set. It provides the necessary tools for developers to build Bitcoin applications and services. With support for wallet and transaction management, BitcoinLib facilitates the development of custom Bitcoin solutions, making it a versatile resource for blockchain developers."
   },
   {
     "slug": "web3py",
@@ -2558,7 +2633,8 @@
       "wallet",
       "ens"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Ethers.js is a comprehensive Ethereum library designed for JavaScript applications. It provides functionalities for wallet management, contract interaction, ENS resolution, and ABI encoding. Notable for its modular design, Ethers.js helps developers easily integrate Ethereum blockchain operations into their JavaScript projects. Its robust API supports both Node.js and browser environments, making it versatile for various use cases in blockchain development."
   },
   {
     "slug": "alchemy-sdk",
@@ -2580,7 +2656,8 @@
       "token-balances",
       "webhooks"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Alchemy SDK offers an enhanced blockchain API for developers focusing on NFT metadata, token balances, transaction receipts, and webhook notifications. It simplifies integration with blockchain data by providing powerful and easy-to-use endpoints. The SDK is optimized for performance and reliability, supporting a wide range of use cases from decentralized applications to data analysis tools in the crypto ecosystem."
   },
   {
     "slug": "mythril",
@@ -2638,7 +2715,8 @@
       "vulnerability",
       "optimization"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Slither is a static analysis framework tailored for Solidity smart contracts, helping developers detect vulnerabilities and improve code quality. By analyzing the source code, Slither identifies security issues, reports contract details, and provides optimization suggestions. It is widely used in blockchain security audits due to its comprehensive detection capabilities and ease of integration into development workflows."
   },
   {
     "slug": "forta",
@@ -2660,7 +2738,8 @@
       "bots",
       "exploit-monitor"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Forta is a real-time threat detection network for blockchain ecosystems, employing community-built detection bots to monitor for exploits, scams, and other anomalies. It enables rapid identification of risks through decentralized monitoring, enhancing security across blockchain applications. Forta's architecture allows developers to create custom detection logic, making it a flexible tool for proactive blockchain security."
   },
   {
     "slug": "tenderly",
@@ -2682,7 +2761,8 @@
       "gas-profiling",
       "trace"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Tenderly CLI is a tool for debugging and simulating Ethereum smart contracts, enabling transaction trace inspection, gas profiling, and fork testing. It empowers developers to identify and resolve issues efficiently by providing detailed execution insights. Tenderly's capabilities make it an essential tool for optimizing smart contract performance and ensuring reliable deployment in live environments."
   },
   {
     "slug": "debank-api",
@@ -2703,7 +2783,8 @@
       "multi-chain",
       "approvals"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "DeBank API is a multi-chain portfolio tracker for DeFi users, offering insights into token holdings, protocol positions, NFTs, and approval management across more than 100 chains. It enables seamless tracking and management of decentralized finance assets, providing comprehensive data on user investments. Its extensive chain support makes it a valuable resource for users interacting with diverse DeFi ecosystems."
   },
   {
     "slug": "nansen-labels",
@@ -2724,7 +2805,8 @@
       "mev",
       "identification"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Nansen Labels (Open) is an open-source database for wallet labeling, identifying entities such as exchanges, whales, MEV bots, and funds. It offers detailed insights into wallet ownership and activity, aiding in blockchain analysis and intelligence. By providing publicly accessible labels, it enhances transparency and understanding of blockchain interactions at scale."
   },
   {
     "slug": "arkham-intel",
@@ -2745,7 +2827,8 @@
       "multi-chain",
       "deanonymization"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Arkham Intelligence provides entity-based analytics for blockchain data, mapping on-chain activity to real-world entities across multiple chains. Its advanced system enables users to associate blockchain addresses with known entities, facilitating deanonymization and intelligence gathering. This tool is essential for analysts looking to understand complex blockchain networks and the entities operating within them."
   },
   {
     "slug": "elliptic-lens",
@@ -2766,7 +2849,8 @@
       "cross-chain",
       "risk-profile"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Elliptic Lens is a crypto compliance and investigation tool designed for cross-chain tracing, sanctions screening, and risk profiling. It allows users to trace funds across different blockchains and assess potential regulatory risks. Elliptic Lens is a key resource for compliance teams aiming to ensure adherence to global regulations and mitigate financial crime in the crypto space."
   },
   {
     "slug": "transpose-api",
@@ -2788,7 +2872,8 @@
       "nft",
       "defi"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Transpose provides a SQL-based blockchain data API, allowing users to query decoded transactions, token transfers, NFT sales, and DeFi events. It simplifies access to complex blockchain data with SQL queries, making it accessible for developers and analysts. Transpose's approach enables detailed insights and data-driven decision-making in crypto applications."
   },
   {
     "slug": "evm-trace",
@@ -2809,7 +2894,8 @@
       "internal-tx",
       "debugging"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Evm-trace is a Python library for parsing and analyzing Ethereum Virtual Machine (EVM) call traces, enabling users to decode internal transactions and visualize call trees. It is essential for developers and auditors requiring detailed insights into smart contract execution. Evm-trace aids in debugging and optimizing smart contracts by providing a clear view of execution paths and state changes."
   },
   {
     "slug": "chainsight",
@@ -2828,12 +2914,13 @@
       "alerts",
       "real-time"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "ChainSight offers real-time monitoring of DEX trades, bridge transfers, and large crypto movements, with custom alerting via webhook or Telegram. It provides immediate insights into significant blockchain events, aiding in prompt decision-making and risk management. ChainSight's capabilities make it a vital tool for traders and analysts monitoring dynamic crypto markets."
   },
   {
     "slug": "bitcoin-cli",
     "name": "Bitcoin Core CLI",
-    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly — raw transactions, mempool, UTXO lookups.",
+    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly \u2014 raw transactions, mempool, UTXO lookups.",
     "category": "crypto-tracing",
     "language": "C++",
     "platform": [
@@ -2849,7 +2936,8 @@
       "rpc",
       "mempool"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Bitcoin Core CLI is the official command-line interface for interacting with a Bitcoin node, offering a full RPC interface to query blockchain data, including raw transactions, mempool, and UTXO lookups. It provides deep access to Bitcoin's blockchain, supporting various operations for developers and administrators running full nodes. This tool is a cornerstone for those requiring comprehensive blockchain data access in Bitcoin networks."
   },
   {
     "slug": "go-ethereum",
@@ -2870,7 +2958,8 @@
       "rpc",
       "archive"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Geth (Go Ethereum) is the official Go implementation of the Ethereum protocol, capable of running as a full node, archive node, or light client. It offers a rich JSON-RPC API for interacting with the Ethereum blockchain, supporting a wide range of applications and services. As a core component of the Ethereum network, Geth is integral for developers and operators maintaining blockchain infrastructure."
   },
   {
     "slug": "solana-cli",
@@ -2891,7 +2980,8 @@
       "programs",
       "stake"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Solana CLI is a suite of command-line tools for interacting with the Solana blockchain, enabling users to query accounts, transactions, programs, and stake information. It includes built-in functionalities for token management, supporting developers and users in navigating Solana's blockchain. The CLI's comprehensive capabilities make it a fundamental tool for those developing or managing Solana-based applications."
   },
   {
     "slug": "monkey-drainer-detector",
@@ -2911,7 +3001,8 @@
       "approvals",
       "permit2"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Drainer Detector is a Python-based tool designed to identify and flag wallet drainer contracts and phishing approval signatures in the crypto space. It specifically scans for the misuse of SetApprovalForAll and Permit2 functions, which are often exploited in phishing attacks. The tool helps protect users by detecting potential vulnerabilities in smart contracts and alerting them to possible security risks before they approve any transactions."
   },
   {
     "slug": "mev-inspect",
@@ -2930,7 +3021,8 @@
       "sandwich",
       "flashbots"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "mev-inspect-py is a Python tool for detecting and analyzing Maximal Extractable Value (MEV) on the Ethereum blockchain. It identifies and categorizes various MEV opportunities such as arbitrage, liquidations, and sandwich attacks. By analyzing Ethereum transactions, mev-inspect-py provides insights into how these strategies are executed, helping researchers and developers understand the impact of MEV on the network."
   },
   {
     "slug": "eigenphi",
@@ -2951,7 +3043,8 @@
       "attack-analysis",
       "defi"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "EigenPhi Tools offer a comprehensive analysis suite for DeFi attacks and MEV events, with a focus on visualizing complex transactions such as flash loan attacks, rug pulls, and arbitrage opportunities. It decodes blockchain transactions to provide a clear picture of attack vectors and profit extraction methods. This Python-based tool aids in understanding the dynamics of DeFi and the risks associated with various financial operations."
   },
   {
     "slug": "token-sniffer",
@@ -2972,7 +3065,8 @@
       "rug-pull",
       "contract-audit"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Token Sniffer is an automated tool written in TypeScript that detects scam tokens on the blockchain by analyzing smart contract code. It looks for common fraudulent practices such as honeypots, hidden mints, tax manipulation, and rug pull vectors. This tool is essential for investors and developers looking to identify and avoid deceptive tokens before they cause financial loss."
   },
   {
     "slug": "rugdoc",
@@ -2992,7 +3086,8 @@
       "backdoor",
       "rug-pull"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "RugDoc Scanner is a Python-based tool for assessing the risk of smart contracts, particularly in the DeFi space. It reviews code for patterns commonly associated with rug pulls and backdoor functionalities. By analyzing contract code, RugDoc Scanner helps users identify potential security threats and avoid malicious projects that could lead to significant financial losses."
   },
   {
     "slug": "cryo",
@@ -3049,12 +3144,13 @@
       "rust",
       "paradigm"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Reth is a high-performance Ethereum execution client developed in Rust, designed to provide efficient blockchain synchronization and execution. Its modular architecture allows for rapid deployment and customization, while its archive mode supports comprehensive data retrieval. Reth is notable for its speed and reliability, making it a valuable asset for developers and operators of Ethereum nodes."
   },
   {
     "slug": "cast",
     "name": "Cast (Foundry)",
-    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes — all from CLI.",
+    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes \u2014 all from CLI.",
     "category": "crypto-tracing",
     "language": "Rust",
     "platform": [
@@ -3110,7 +3206,8 @@
       "web-app",
       "flexible"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Wfuzz is a Python-based web application fuzzing tool used to brute force web parameters, directories, headers, and authentication credentials. It provides a flexible framework for security testing, allowing users to customize their attack vectors and payloads. Wfuzz is widely used for its ability to handle complex web application testing scenarios with ease and precision."
   },
   {
     "slug": "whatweb",
@@ -3130,7 +3227,8 @@
       "cms",
       "framework"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "WhatWeb is a Ruby-based web technology fingerprinting tool that identifies various components of a website, such as CMS, frameworks, JavaScript libraries, servers, and analytics platforms. By analyzing HTTP responses, WhatWeb provides detailed information on the technologies used by a target website. It is a valuable tool for reconnaissance and vulnerability assessment in web security testing."
   },
   {
     "slug": "subjack",
@@ -3151,7 +3249,8 @@
       "cloud",
       "dangling-dns"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Subjack is a Go-based tool for detecting subdomain takeover vulnerabilities by checking if CNAME records point to deprovisioned cloud services. It identifies potential security risks where attackers could hijack subdomains to serve malicious content. Subjack is an essential tool for organizations looking to secure their DNS infrastructure against such vulnerabilities."
   },
   {
     "slug": "altdns",
@@ -3172,7 +3271,8 @@
       "wordlist",
       "dns"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Altdns is a Python tool that enhances subdomain discovery by generating permutations and mutations of known subdomains to uncover additional DNS entries. It creates comprehensive wordlists that can be used in conjunction with other DNS enumeration tools to expand the scope of domain reconnaissance. Altdns is effective in increasing the coverage of subdomain discovery efforts."
   },
   {
     "slug": "trufflehog",
@@ -3231,7 +3331,8 @@
       "ci-cd",
       "api-keys"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Gitleaks is a Go-based tool for scanning Git repositories to identify hardcoded secrets, such as passwords, API keys, and tokens. It integrates seamlessly into CI/CD pipelines, providing continuous monitoring and alerting for potential security leaks. Gitleaks helps developers maintain secure codebases by preventing the accidental exposure of sensitive information."
   },
   {
     "slug": "dnsrecon",
@@ -3252,7 +3353,8 @@
       "dnssec",
       "enumeration"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "DNSRecon is a Python script designed for DNS enumeration, offering capabilities such as zone transfers, reverse lookups, Google dorking, SRV record discovery, and DNSSEC testing. It provides a comprehensive approach to mapping an organization's DNS infrastructure. DNSRecon is widely used by penetration testers and security researchers for its thoroughness in DNS analysis."
   },
   {
     "slug": "thefatrat",
@@ -3270,12 +3372,13 @@
       "msfvenom",
       "evasion"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "TheFatRat is a shell-based tool for generating exploits and payloads, utilizing msfvenom for creating backdoors with advanced anti-AV evasion techniques. It compiles payloads to bypass common antivirus detections, making it a popular choice for penetration testers seeking to test the robustness of target systems. TheFatRat offers a wide range of payload customization options."
   },
   {
     "slug": "seclists",
     "name": "SecLists",
-    "description": "The security tester's companion. Huge collection of wordlists — usernames, passwords, URLs, fuzzing payloads, shells.",
+    "description": "The security tester's companion. Huge collection of wordlists \u2014 usernames, passwords, URLs, fuzzing payloads, shells.",
     "category": "password-attack",
     "language": "Shell",
     "platform": [
@@ -3290,7 +3393,8 @@
       "payloads",
       "collection"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "SecLists is an extensive collection of wordlists used by security testers for various applications, including usernames, passwords, URLs, fuzzing payloads, and web shells. This shell-based repository is indispensable for penetration testers and security researchers who require comprehensive lists for brute force attacks, vulnerability assessments, and other security testing tasks."
   },
   {
     "slug": "mimikatz",
@@ -3308,7 +3412,8 @@
       "windows",
       "lsass"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Mimikatz is a C-based tool that extracts plaintext passwords, hashes, PIN codes, and Kerberos tickets from Windows memory, particularly from the LSASS process. It is widely used for credential dumping and privilege escalation in Windows environments. Mimikatz is an essential tool for penetration testers and security professionals aiming to assess security vulnerabilities in Windows systems."
   },
   {
     "slug": "lazagne",
@@ -3328,7 +3433,8 @@
       "stored-passwords",
       "multi-source"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "LaZagne is a password recovery tool designed to retrieve stored credentials from various applications. Written in Python, it targets browsers, WiFi networks, databases, and system administration tools, among others. LaZagne operates by accessing application-specific memory spaces and files to extract sensitive data. It is frequently used by penetration testers and security professionals for credential recovery in forensic investigations."
   },
   {
     "slug": "enum4linux-ng",
@@ -3347,7 +3453,8 @@
       "windows",
       "samba"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "enum4linux-ng is a Python-based tool for enumerating information from Windows and Samba systems. It extracts user lists, share information, group policies, and operating system details by leveraging the Server Message Block (SMB) protocol. Designed as an update to the original enum4linux, it offers improved performance and additional features. It is a valuable asset for security researchers conducting network reconnaissance and vulnerability assessments."
   },
   {
     "slug": "goblin",
@@ -3367,7 +3474,8 @@
       "wildcard",
       "resolvers"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "GoBuster DNS is a subdomain brute-forcing tool built in Go, known for its speed and concurrency. It uses wordlists to perform DNS queries, detecting subdomains while incorporating wildcard detection and allowing custom DNS resolvers. Ideal for penetration testers, it supports high-performance, stealthy enumeration of subdomains, providing insights into potential attack surfaces. Its design focuses on efficiency and ease of use in large-scale assessments."
   },
   {
     "slug": "proxychains",
@@ -3404,7 +3512,7 @@
   {
     "slug": "socat",
     "name": "Socat",
-    "description": "Multipurpose relay tool. Bidirectional data transfer between two data channels — sockets, files, pipes, devices.",
+    "description": "Multipurpose relay tool. Bidirectional data transfer between two data channels \u2014 sockets, files, pipes, devices.",
     "longDescription": "Socat (SOcket CAT) is a command-line utility that establishes two bidirectional byte streams and transfers data between them. It's like an extended version of netcat with support for SSL, IPv6, SOCKS4 proxying, and dozens of address types. Socat can create virtual serial connections, tunnel traffic through SSL, act as a simple TCP forwarder, and much more. It's a sysadmin essential that doubles as a powerful offensive tool for port forwarding, bind/reverse shells, and encrypted tunnels.",
     "category": "dual-use",
     "language": "C",
@@ -3518,7 +3626,7 @@
       "Shell escape from restricted environments",
       "File read/write through unexpected binaries",
       "Reverse shell creation using system tools",
-      "Security hardening — knowing what to restrict"
+      "Security hardening \u2014 knowing what to restrict"
     ],
     "alternatives": [
       "lolbas"
@@ -3529,7 +3637,7 @@
     "slug": "lolbas",
     "name": "LOLBAS",
     "description": "Living Off The Land Binaries, Scripts and Libraries for Windows. Documenting every Windows binary with offensive potential.",
-    "longDescription": "LOLBAS (Living Off The Land Binaries, Scripts and Libraries) is the Windows equivalent of GTFOBins. It documents Windows binaries, scripts, and libraries that can be used for file download, code execution, lateral movement, persistence, credential theft, and more — all using tools already present on the system. This includes certutil, mshta, rundll32, regsvr32, bitsadmin, and dozens more. Understanding LOLBAS is essential for both red teams (evasion) and blue teams (detection).",
+    "longDescription": "LOLBAS (Living Off The Land Binaries, Scripts and Libraries) is the Windows equivalent of GTFOBins. It documents Windows binaries, scripts, and libraries that can be used for file download, code execution, lateral movement, persistence, credential theft, and more \u2014 all using tools already present on the system. This includes certutil, mshta, rundll32, regsvr32, bitsadmin, and dozens more. Understanding LOLBAS is essential for both red teams (evasion) and blue teams (detection).",
     "category": "dual-use",
     "language": "Shell",
     "platform": [
@@ -3559,7 +3667,7 @@
   {
     "slug": "sysinternals",
     "name": "Sysinternals Suite",
-    "description": "Microsoft's advanced system utilities. PsExec, Process Monitor, Autoruns, TCPView — essential for both ops and offense.",
+    "description": "Microsoft's advanced system utilities. PsExec, Process Monitor, Autoruns, TCPView \u2014 essential for both ops and offense.",
     "longDescription": "Sysinternals is a suite of advanced system utilities by Microsoft, used daily by system administrators worldwide. However, tools like PsExec (remote command execution), ProcDump (memory dumping), and Autoruns (persistence detection/creation) are heavily used in offensive operations. PsExec in particular is one of the most common lateral movement tools observed in real-world intrusions. Attackers use legitimate, Microsoft-signed binaries to blend in with normal administrative activity.",
     "category": "dual-use",
     "language": "C/C++",
@@ -3624,7 +3732,7 @@
     "slug": "tor",
     "name": "Tor",
     "description": "Anonymous communication network. Routes traffic through multiple relays to conceal location and usage.",
-    "longDescription": "Tor (The Onion Router) is free software and an open network that helps defend against traffic analysis. It directs Internet traffic through a worldwide overlay network of relays to conceal a user's location and usage from surveillance and traffic analysis. Tor is used by journalists, activists, whistleblowers, and privacy-conscious individuals — but also by threat actors for anonymous operations, C2 infrastructure, and accessing dark web markets. Understanding Tor is essential for both operational security and investigating dark web activity.",
+    "longDescription": "Tor (The Onion Router) is free software and an open network that helps defend against traffic analysis. It directs Internet traffic through a worldwide overlay network of relays to conceal a user's location and usage from surveillance and traffic analysis. Tor is used by journalists, activists, whistleblowers, and privacy-conscious individuals \u2014 but also by threat actors for anonymous operations, C2 infrastructure, and accessing dark web markets. Understanding Tor is essential for both operational security and investigating dark web activity.",
     "category": "dual-use",
     "language": "C",
     "platform": [
@@ -3656,7 +3764,7 @@
   {
     "slug": "openssh",
     "name": "OpenSSH",
-    "description": "The SSH protocol implementation. Remote access, tunneling, port forwarding, SOCKS proxying — everywhere.",
+    "description": "The SSH protocol implementation. Remote access, tunneling, port forwarding, SOCKS proxying \u2014 everywhere.",
     "longDescription": "OpenSSH is the premier connectivity tool for remote login using the SSH protocol. While it's the most fundamental sysadmin tool in existence, its tunneling capabilities make it equally powerful offensively. SSH supports local/remote/dynamic port forwarding, SOCKS proxying, and can create encrypted tunnels that bypass firewall restrictions. Attackers use SSH for pivoting, data exfiltration over encrypted channels, and maintaining persistent access to compromised systems.",
     "category": "dual-use",
     "language": "C",
@@ -3688,8 +3796,8 @@
   {
     "slug": "netexec",
     "name": "NetExec",
-    "description": "Network execution tool — the maintained successor to CrackMapExec. SMB, LDAP, WinRM, SSH, MSSQL, and more.",
-    "longDescription": "NetExec (nxc) is the actively maintained successor to CrackMapExec. It's a network service exploitation tool that supports SMB, LDAP, WinRM, SSH, MSSQL, RDP, and more. NetExec automates credential testing, command execution, and enumeration across network services. It's indispensable for Active Directory pentesting — spray credentials, dump SAM/LSA, execute commands, and enumerate shares across hundreds of hosts in seconds.",
+    "description": "Network execution tool \u2014 the maintained successor to CrackMapExec. SMB, LDAP, WinRM, SSH, MSSQL, and more.",
+    "longDescription": "NetExec (nxc) is the actively maintained successor to CrackMapExec. It's a network service exploitation tool that supports SMB, LDAP, WinRM, SSH, MSSQL, RDP, and more. NetExec automates credential testing, command execution, and enumeration across network services. It's indispensable for Active Directory pentesting \u2014 spray credentials, dump SAM/LSA, execute commands, and enumerate shares across hundreds of hosts in seconds.",
     "category": "dual-use",
     "language": "Python",
     "platform": [
@@ -3745,7 +3853,8 @@
       "Incident response triage for CS infections",
       "Threat intelligence on CS watermarks"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "CobaltStrike Parser is a Python tool used to extract configurations from Cobalt Strike beacon payloads. It identifies crucial elements such as command and control (C2) server addresses, watermarks, and malleable C2 profiles. This tool aids analysts and incident responders in dissecting malicious payloads, enabling them to understand threat actor infrastructure and communication patterns. It's essential for digital forensics and incident response (DFIR) operations."
   },
   {
     "slug": "powersploit",
@@ -3799,13 +3908,14 @@
       "DNS and ICMP exfiltration",
       "Brute force attacks via PowerShell"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Nishang is a comprehensive offensive security framework composed of PowerShell scripts. It provides tools for executing shells, creating backdoors, gathering system information, and performing privilege escalation. Nishang is widely utilized in penetration testing and red team engagements due to its versatility and ability to exploit Windows environments. It serves both as an educational resource and a practical toolkit for security professionals."
   },
   {
     "slug": "dnscat2",
     "name": "dnscat2",
     "description": "Create an encrypted C2 channel over DNS. Tunnel data through DNS queries when all other protocols are blocked.",
-    "longDescription": "dnscat2 creates an encrypted command-and-control channel over the DNS protocol. It's designed for situations where all other outbound traffic is blocked but DNS resolution is still permitted — which is almost always. The tool consists of a client that runs on compromised hosts and a server that runs on an authoritative DNS server controlled by the attacker. All communication is encrypted and tunneled through DNS TXT, CNAME, or MX records.",
+    "longDescription": "dnscat2 creates an encrypted command-and-control channel over the DNS protocol. It's designed for situations where all other outbound traffic is blocked but DNS resolution is still permitted \u2014 which is almost always. The tool consists of a client that runs on compromised hosts and a server that runs on an authoritative DNS server controlled by the attacker. All communication is encrypted and tunneled through DNS TXT, CNAME, or MX records.",
     "category": "dual-use",
     "language": "Ruby",
     "platform": [
@@ -3837,7 +3947,7 @@
     "slug": "mythic",
     "name": "Mythic",
     "description": "Collaborative, multi-platform C2 framework. Docker-based with web UI, multiple agent types, and plugin architecture.",
-    "longDescription": "Mythic is a multiplayer, command and control platform for red team operations. It's designed to be collaborative, allowing multiple operators to manage agents simultaneously through a web-based UI. Mythic supports multiple agent types (Apollo for .NET, Poseidon for Go, Medusa for Python, etc.) and uses a plugin architecture for extensibility. All communication is containerized and managed through Docker. It tracks operations, manages credentials, and provides file management — a complete red team platform.",
+    "longDescription": "Mythic is a multiplayer, command and control platform for red team operations. It's designed to be collaborative, allowing multiple operators to manage agents simultaneously through a web-based UI. Mythic supports multiple agent types (Apollo for .NET, Poseidon for Go, Medusa for Python, etc.) and uses a plugin architecture for extensibility. All communication is containerized and managed through Docker. It tracks operations, manages credentials, and provides file management \u2014 a complete red team platform.",
     "category": "offensive-ops",
     "language": "Go",
     "platform": [
@@ -3992,7 +4102,8 @@
     "alternatives": [
       "responder"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Coercer is an automated tool designed to locate and exploit Windows authentication coercion vulnerabilities. It specifically targets vulnerabilities such as PetitPotam and PrinterBug, which can be exploited to relay NTLM authentication requests. By automating the discovery and exploitation process, Coercer assists attackers and security testers in assessing the security posture of Active Directory environments against these types of threats."
   },
   {
     "slug": "sharphound",
@@ -4021,13 +4132,14 @@
     "alternatives": [
       "bloodhound"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "SharpHound is the official data collector for BloodHound, a tool used to visualize Active Directory environments. Written in C#, it enumerates Active Directory objects, sessions, access control lists (ACLs), and trust relationships, providing data for graph-based analysis of potential attack paths. SharpHound is essential for red teams seeking to understand and exploit complex Active Directory structures, enhancing strategic attack planning."
   },
   {
     "slug": "beef",
     "name": "BeEF",
     "description": "Browser Exploitation Framework. Hook browsers via XSS, then pivot into the network using browser-based attacks.",
-    "longDescription": "The Browser Exploitation Framework (BeEF) focuses on the web browser as the attack vector. Unlike other security tools, BeEF looks past the hardened network perimeter and examines exploitability within the context of the browser. Once a browser is hooked (typically via XSS), BeEF can use it to launch further attacks including keylogging, clipboard theft, webcam/mic access, port scanning the internal network, and social engineering attacks — all from within the victim's browser context.",
+    "longDescription": "The Browser Exploitation Framework (BeEF) focuses on the web browser as the attack vector. Unlike other security tools, BeEF looks past the hardened network perimeter and examines exploitability within the context of the browser. Once a browser is hooked (typically via XSS), BeEF can use it to launch further attacks including keylogging, clipboard theft, webcam/mic access, port scanning the internal network, and social engineering attacks \u2014 all from within the victim's browser context.",
     "category": "offensive-ops",
     "language": "Ruby",
     "platform": [
@@ -4193,7 +4305,8 @@
       "Red team operations without compilation overhead",
       "Testing and learning GhostPack and other C# tooling"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "SharpCollection is a repository of pre-compiled C# offensive tools, including popular utilities like Rubeus, Seatbelt, SharpUp, and Certify. This collection offers over 50 well-known tools, providing a comprehensive arsenal for red team operations. By offering nightly builds, it ensures users have access to the latest versions without the need to compile from source, streamlining deployment and execution in security assessments."
   },
   {
     "slug": "seatbelt",
@@ -4291,13 +4404,14 @@
     "alternatives": [
       "flipperzero-firmware"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "USB Rubber Ducky Payloads is a repository containing a wide range of keystroke injection scripts for USB Rubber Ducky and BadUSB devices. These scripts are designed to automate various attack scenarios by simulating keystrokes when the device is connected to a target system. Used extensively in penetration testing and security demonstrations, these payloads exploit the inherent trust in Human Interface Devices (HID) to execute malicious commands."
   },
   {
     "slug": "pwncat",
     "name": "pwncat",
-    "description": "Post-exploitation platform and target management. Automatic privesc, persistence, file transfer — the smart reverse shell.",
-    "longDescription": "pwncat is a post-exploitation platform that wraps around a standard reverse or bind shell to provide additional functionality. It automatically enumerates the target, uploads tools, manages file transfers, installs persistence mechanisms, and attempts privilege escalation — all through a single shell session. pwncat supports both Linux and Windows targets and provides a module system for extensibility. It turns a dumb shell into a full post-exploitation environment.",
+    "description": "Post-exploitation platform and target management. Automatic privesc, persistence, file transfer \u2014 the smart reverse shell.",
+    "longDescription": "pwncat is a post-exploitation platform that wraps around a standard reverse or bind shell to provide additional functionality. It automatically enumerates the target, uploads tools, manages file transfers, installs persistence mechanisms, and attempts privilege escalation \u2014 all through a single shell session. pwncat supports both Linux and Windows targets and provides a module system for extensibility. It turns a dumb shell into a full post-exploitation environment.",
     "category": "offensive-ops",
     "language": "Python",
     "platform": [
@@ -4350,7 +4464,8 @@
       "Windows and Linux backdoor deployment",
       "Quick C2 setup for CTFs and labs"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Villain is a backdoor generator and handler tool for both Windows and Linux environments. It features auto-obfuscation, multi-session management, and reverse shell capabilities, enabling attackers to maintain persistent access to compromised systems. Villain simplifies the process of establishing and managing covert communication channels, making it a valuable asset for red team operators and penetration testers conducting post-exploitation activities."
   },
   {
     "slug": "creepy",
@@ -4383,7 +4498,7 @@
   {
     "slug": "pwndrop",
     "name": "pwndrop",
-    "description": "Self-deployable file hosting for red teams. Upload payloads, host phishing files, serve implants — with HTTPS and Let's Encrypt.",
+    "description": "Self-deployable file hosting for red teams. Upload payloads, host phishing files, serve implants \u2014 with HTTPS and Let's Encrypt.",
     "category": "offensive-ops",
     "language": "Go",
     "platform": [
@@ -4403,7 +4518,8 @@
       "Implant staging for red team operations",
       "Quick file sharing for engagements"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "pwndrop is a self-hosted file hosting solution tailored for red teams to distribute payloads and host phishing files. Built in Go, it supports HTTPS with Let's Encrypt, ensuring secure transmission of hosted content. It provides an easy-to-deploy platform for serving implants and malicious content during engagements, offering a reliable and discreet method for payload delivery in controlled environments."
   },
   {
     "slug": "stegseek",
@@ -4429,7 +4545,8 @@
       "Forensic analysis of suspected stego images",
       "Detecting hidden data in image files"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Stegseek is a highly efficient steganography brute-forcing tool capable of cracking steghide passwords at speeds exceeding 200 GB/s. Utilizing wordlists, it targets steganographic data concealed within files, commonly used in capture-the-flag (CTF) competitions and forensic investigations. Its exceptional speed and performance make it a preferred choice for security enthusiasts and professionals needing rapid steganography analysis."
   },
   {
     "slug": "peirates",
@@ -4456,13 +4573,14 @@
       "Container escape and node access",
       "Cloud IAM abuse from within pods"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Peirates is a penetration testing tool for Kubernetes environments, focusing on exploiting misconfigurations, stealing secrets, and facilitating lateral movement within clusters. Written in Go, it aids attackers in navigating Kubernetes security landscapes and identifying potential weaknesses. Peirates is integral for assessing the security of cloud-native applications and understanding the impact of insecure Kubernetes configurations."
   },
   {
     "slug": "pacu",
     "name": "Pacu",
     "description": "AWS exploitation framework. Enumerate, escalate, and exfiltrate across AWS services. The Metasploit of cloud.",
-    "longDescription": "Pacu is an open-source AWS exploitation framework designed for offensive security testing of cloud environments. It's built by Rhino Security Labs and provides a comprehensive set of modules for AWS reconnaissance, privilege escalation, data exfiltration, and persistence. Pacu automates common attack techniques across IAM, EC2, S3, Lambda, and dozens of other AWS services. It maintains session data, tracks discovered credentials, and maps out AWS environments — essentially the Metasploit for AWS.",
+    "longDescription": "Pacu is an open-source AWS exploitation framework designed for offensive security testing of cloud environments. It's built by Rhino Security Labs and provides a comprehensive set of modules for AWS reconnaissance, privilege escalation, data exfiltration, and persistence. Pacu automates common attack techniques across IAM, EC2, S3, Lambda, and dozens of other AWS services. It maintains session data, tracks discovered credentials, and maps out AWS environments \u2014 essentially the Metasploit for AWS.",
     "category": "offensive-ops",
     "language": "Python",
     "platform": [
@@ -4518,7 +4636,8 @@
       "Audit trail and evidence collection",
       "Continuous cloud security monitoring"
     ],
-    "featured": false
+    "featured": false,
+    "longDescription": "Prowler is a cloud security assessment tool that performs over 300 checks against AWS, Azure, GCP, and Kubernetes infrastructures. Aligning with CIS benchmarks, it evaluates cloud environments for compliance and security vulnerabilities. Prowler is a critical resource for cloud security practitioners and auditors aiming to enhance the security posture of their cloud deployments through comprehensive and automated assessments."
   },
   {
     "slug": "unicornscan",
@@ -4536,7 +4655,8 @@
       "udp",
       "tcp",
       "fingerprinting"
-    ]
+    ],
+    "longDescription": "Unicornscan is an asynchronous port scanner designed to handle large-scale network reconnaissance with advanced stimulus-response analysis and OS fingerprinting capabilities. It supports both UDP and TCP protocols, providing detailed insights into network services and configurations. Unicornscan's asynchronous design enables efficient scanning of large networks, making it a preferred tool for security professionals performing comprehensive network audits."
   },
   {
     "slug": "netdiscover",
@@ -4553,7 +4673,8 @@
       "network-discovery",
       "passive",
       "active"
-    ]
+    ],
+    "longDescription": "Netdiscover is a network reconnaissance tool designed for ARP-based discovery of active hosts on a network. It operates in both active and passive modes, allowing users to detect live devices without generating DNS traffic. Written in C, it efficiently identifies hosts by sending ARP requests and listening for responses, making it ideal for networks without DHCP servers. Its ability to work in passive mode makes it suitable for stealthy operations."
   },
   {
     "slug": "arpscan",
@@ -4571,7 +4692,8 @@
       "host-discovery",
       "lan",
       "fingerprinting"
-    ]
+    ],
+    "longDescription": "arp-scan is a command-line tool that sends ARP requests to identify and fingerprint devices on the local network segment. It uses the Address Resolution Protocol to discover active hosts and gather information about their MAC addresses and vendor details. Developed in C, arp-scan is effective for quickly identifying devices on a LAN, providing details necessary for network management and security assessments."
   },
   {
     "slug": "fierce",
@@ -4590,7 +4712,8 @@
       "reconnaissance",
       "domain",
       "ip-discovery"
-    ]
+    ],
+    "longDescription": "Fierce is a DNS reconnaissance tool used for locating non-contiguous IP space and hostnames associated with specified domains. It performs DNS queries and uses brute-force techniques to identify potential subdomains and IP addresses. Written in Python, Fierce is particularly useful in identifying domains with complex DNS configurations, making it valuable for penetration testers conducting domain-based reconnaissance."
   },
   {
     "slug": "dnsenum",
@@ -4607,7 +4730,8 @@
       "enumeration",
       "brute-force",
       "zone-transfer"
-    ]
+    ],
+    "longDescription": "DNSenum is a Perl-based DNS enumeration tool that discovers subdomains and other DNS records through various methods. It employs dictionary brute-forcing, Google scraping, and supports zone transfers to uncover DNS information. Designed to be multithreaded, DNSenum efficiently handles large datasets, making it suitable for comprehensive DNS analysis and reconnaissance tasks."
   },
   {
     "slug": "uncover",
@@ -4627,7 +4751,8 @@
       "censys",
       "fofa",
       "discovery"
-    ]
+    ],
+    "longDescription": "Uncover is a rapid discovery tool that identifies exposed hosts on the internet using multiple search engines like Shodan, Censys, and Fofa. Implemented in Go, it automates the searching process, aggregating results to provide a comprehensive overview of internet-facing assets. Its ability to integrate with various engines makes it a powerful tool for security researchers conducting large-scale reconnaissance."
   },
   {
     "slug": "tlsx",
@@ -4646,7 +4771,8 @@
       "ssl",
       "certificates",
       "scanning"
-    ]
+    ],
+    "longDescription": "tlsx is a fast TLS probing tool written in Go, designed to collect TLS certificates, versions, and cipher information at scale. It efficiently scans hosts to retrieve TLS-related data, useful for assessing the security posture of web services. tlsx's speed and scalability make it ideal for security analysts and researchers who need to process large datasets quickly."
   },
   {
     "slug": "cdncheck",
@@ -4665,7 +4791,8 @@
       "waf",
       "cloud",
       "ip-detection"
-    ]
+    ],
+    "longDescription": "cdncheck is a Go-based tool used to determine whether an IP address belongs to a CDN, cloud provider, or web application firewall (WAF). By identifying the origin of IP addresses, it helps in pinpointing the true source of web content. This capability is crucial for security professionals aiming to bypass protection layers and directly assess origin servers."
   },
   {
     "slug": "paramspider",
@@ -4684,7 +4811,8 @@
       "web-archive",
       "attack-surface",
       "recon"
-    ]
+    ],
+    "longDescription": "ParamSpider is a Python tool designed to mine parameters from web archives for any given domain, identifying hidden attack surfaces. It automates the process of collecting URL parameters, which can be crucial for web application testing and vulnerability discovery. By leveraging archived web data, ParamSpider provides insights into potential entry points for security assessments."
   },
   {
     "slug": "gospider",
@@ -4703,7 +4831,8 @@
       "spider",
       "url-collection",
       "endpoints"
-    ]
+    ],
+    "longDescription": "GoSpider is a high-performance web spider written in Go, capable of crawling websites to collect URLs, subdomains, and endpoints. It is designed for speed and efficiency, making it suitable for large-scale web reconnaissance tasks. GoSpider's ability to rapidly gather web paths and assets is particularly valuable for security professionals engaged in penetration testing and asset discovery."
   },
   {
     "slug": "hakrawler",
@@ -4722,7 +4851,8 @@
       "endpoints",
       "discovery",
       "web-app"
-    ]
+    ],
+    "longDescription": "Hakrawler is a simple, lightweight web crawler implemented in Go, intended for the quick discovery of endpoints and assets within web applications. It simplifies the process of mapping out web content, making it easier to identify potential vulnerabilities. Ideal for security analysts, Hakrawler provides a straightforward approach to web reconnaissance with a focus on speed and ease of use."
   },
   {
     "slug": "linkfinder",
@@ -4741,7 +4871,8 @@
       "endpoints",
       "parameters",
       "api-discovery"
-    ]
+    ],
+    "longDescription": "LinkFinder is a Python script that scans JavaScript files to discover endpoints and their associated parameters. It parses the JavaScript code to identify potential API calls, aiding in the detection of sensitive information or exploitable paths. LinkFinder is particularly useful for security researchers focusing on API security and web application vulnerability assessments."
   },
   {
     "slug": "secretfinder",
@@ -4760,7 +4891,8 @@
       "api-keys",
       "javascript",
       "credentials"
-    ]
+    ],
+    "longDescription": "SecretFinder is a Python-based tool designed to uncover sensitive data such as API keys, tokens, and credentials within JavaScript files. By scanning JavaScript code, it identifies potentially exposed secrets that could lead to security breaches. Security testers and developers use SecretFinder to ensure that sensitive information is not inadvertently exposed in client-side scripts."
   },
   {
     "slug": "jsfscan",
@@ -4777,7 +4909,8 @@
       "automation",
       "recon",
       "endpoints"
-    ]
+    ],
+    "longDescription": "JSFScan is an automation framework that combines multiple JavaScript analysis tools to perform comprehensive JavaScript reconnaissance. It orchestrates various tools to identify endpoints, secrets, and vulnerabilities within JavaScript files, streamlining the security testing process. Designed for ease of integration, JSFScan is ideal for security professionals aiming to automate JavaScript assessments."
   },
   {
     "slug": "blackbird",
@@ -4796,7 +4929,8 @@
       "social-networks",
       "account-search",
       "osint"
-    ]
+    ],
+    "longDescription": "Blackbird is an OSINT tool designed to search for user accounts across over 500 social networks and websites. It automates the process of username checking, providing a comprehensive view of a user's online presence. Written in Python, Blackbird is valuable for investigators and researchers conducting digital footprint analysis and identity verification."
   },
   {
     "slug": "whatsmyname",
@@ -4815,7 +4949,8 @@
       "enumeration",
       "social-media",
       "identity"
-    ]
+    ],
+    "longDescription": "WhatsMyName is a Python tool that facilitates username enumeration across hundreds of websites using a community-maintained JSON data file. It automates the process of checking for username availability or existence on various platforms, aiding in identity verification and OSINT investigations. Its collaborative nature ensures up-to-date and accurate username checks."
   },
   {
     "slug": "ghunt",
@@ -4834,7 +4969,8 @@
       "email",
       "account-analysis",
       "osint"
-    ]
+    ],
+    "longDescription": "GHunt is an open-source intelligence tool designed to extract information from Google accounts using only email addresses. By leveraging Google's public services and some private APIs, it can uncover data such as public profile details, YouTube channels, Drive files, and more. Notably, GHunt doesn't require any authentication or access to the target's account, ensuring a passive and stealthy reconnaissance approach. It is favored for its ability to gather a wide array of data with minimal input."
   },
   {
     "slug": "fluxion",
@@ -4851,7 +4987,8 @@
       "evil-twin",
       "social-engineering",
       "wifi"
-    ]
+    ],
+    "longDescription": "Fluxion is a network security auditing and penetration testing tool specifically targeting WPA/WPA2 security. It uses social engineering tactics to perform evil twin attacks, tricking users into connecting to a fake access point to capture their WPA handshakes without cracking. The tool automates the process of creating a rogue access point and uses DNS spoofing to present a fake authentication page. Fluxion's effectiveness lies in its ability to bypass encryption without the need for brute force attacks."
   },
   {
     "slug": "rtl-sdr",
@@ -4870,7 +5007,8 @@
       "radio",
       "rf-analysis",
       "spectrum"
-    ]
+    ],
+    "longDescription": "RTL-SDR is a set of software-defined radio tools designed for RTL2832U-based DVB-T USB dongles, enabling RF signal analysis across a wide frequency spectrum. It transforms low-cost TV tuners into broad-range radio scanners, capable of receiving signals from FM, AM, HF, and other bands. The tool is notable for its versatility and affordability, making RF analysis accessible to hobbyists and professionals alike. RTL-SDR supports various operating systems and is compatible with numerous third-party software applications."
   },
   {
     "slug": "scoutsuite",
@@ -4890,7 +5028,8 @@
       "gcp",
       "cloud-audit",
       "misconfiguration"
-    ]
+    ],
+    "longDescription": "ScoutSuite is a multi-cloud security auditing tool that assesses the security posture of cloud environments like AWS, Azure, GCP, Alibaba Cloud, and Oracle Cloud. It collects configuration data through cloud provider APIs and analyzes this data for potential security risks and misconfigurations. The tool outputs findings in an easy-to-read HTML report, highlighting issues such as overly permissive access controls. ScoutSuite is valued for its ability to provide a comprehensive security overview across multiple cloud platforms."
   },
   {
     "slug": "cloudmapper",
@@ -4908,7 +5047,8 @@
       "network-diagram",
       "visualization",
       "security"
-    ]
+    ],
+    "longDescription": "CloudMapper is a tool for visualizing and analyzing Amazon Web Services (AWS) environments. It generates network diagrams, identifying security risks and architectural flaws by mapping out VPCs, subnets, and other resources. The tool aids in understanding complex AWS setups and spotting potential vulnerabilities in the network design. CloudMapper is particularly useful for security audits and compliance checks, offering insights into the cloud infrastructure's security posture."
   },
   {
     "slug": "s3scanner",
@@ -4927,7 +5067,8 @@
       "aws",
       "bucket",
       "misconfiguration"
-    ]
+    ],
+    "longDescription": "S3Scanner is a security tool designed to detect misconfigured Amazon S3 buckets, which may expose sensitive information. It scans across various AWS regions to identify publicly accessible buckets and can attempt to list and dump their contents if permissions allow. This tool helps organizations identify potential data leaks and secure their cloud storage configurations. S3Scanner is appreciated for its efficiency in pinpointing misconfiguration issues that could lead to data breaches."
   },
   {
     "slug": "cloudbrute",
@@ -4946,7 +5087,8 @@
       "enumeration",
       "assets",
       "multi-cloud"
-    ]
+    ],
+    "longDescription": "CloudBrute is an enumeration tool used to discover cloud assets across multiple cloud service providers. By leveraging publicly accessible APIs and services, it identifies exposed company resources and infrastructure components. CloudBrute is capable of scanning for assets on popular platforms like AWS, Azure, and Google Cloud, offering insights into potential security exposures. Its utility lies in its ability to provide a comprehensive view of an organization's cloud footprint, aiding in asset management and security assessments."
   },
   {
     "slug": "microburst",
@@ -4964,7 +5106,8 @@
       "powershell",
       "storage",
       "key-vault"
-    ]
+    ],
+    "longDescription": "MicroBurst is a PowerShell-based toolkit designed for security testing and enumeration of Microsoft Azure services. It targets various Azure components including storage accounts, key vaults, and automation scripts, aiming to identify vulnerabilities and misconfigurations. MicroBurst provides scripts for reconnaissance, lateral movement, and privilege escalation within Azure environments. Its focus on Azure-specific attack vectors makes it a valuable tool for penetration testers and security professionals working with Microsoft's cloud offerings."
   },
   {
     "slug": "roadtools",
@@ -4983,7 +5126,8 @@
       "enumeration",
       "active-directory",
       "exploitation"
-    ]
+    ],
+    "longDescription": "ROADtools is a framework for exploring and exploiting Azure Active Directory environments. It includes modules like ROADrecon for enumeration and ROADlib for interfacing with Azure AD. The tool allows security researchers to map out the structure of Azure AD, identify potential security weaknesses, and exploit them. ROADtools is notable for its ability to interact with Azure AD in depth, providing valuable insights for both offensive security assessments and defensive hardening."
   },
   {
     "slug": "crystal-blockchain",
@@ -5003,7 +5147,8 @@
       "transaction-flow",
       "investigation"
     ],
-    "website": "https://crystalblockchain.com"
+    "website": "https://crystalblockchain.com",
+    "longDescription": "Crystal Blockchain is a blockchain analytics platform aimed at compliance and investigative purposes, providing transaction flow visualization and risk assessment. It enables users to trace cryptocurrency movements and identify suspicious activities through a sophisticated analytical engine. This tool supports a range of cryptocurrencies and is used by financial institutions and law enforcement agencies for monitoring and forensic investigations. Crystal Blockchain's advanced visualization capabilities make it a leader in blockchain intelligence and analysis."
   },
   {
     "slug": "frida",
@@ -5023,7 +5168,8 @@
       "dynamic-analysis",
       "injection"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "Frida is a dynamic instrumentation toolkit that allows developers and security researchers to inject scripts into native applications for real-time analysis. It supports multiple platforms, including Windows, macOS, Linux, iOS, and Android, enabling deep inspection and manipulation of running processes. Frida is notable for its ease of integration and powerful scripting capabilities, which facilitate tasks like function hooking and API monitoring. It is widely used for reverse engineering and security testing applications."
   },
   {
     "slug": "objection",
@@ -5042,12 +5188,13 @@
       "ios",
       "android",
       "runtime-analysis"
-    ]
+    ],
+    "longDescription": "Objection is a runtime mobile exploration toolkit that leverages Frida to perform security assessments on iOS and Android devices without requiring a jailbreak. It allows testers to inspect and modify application behavior, explore file systems, and manipulate memory. Objection simplifies the process of dynamic analysis by providing a user-friendly interface to Frida's capabilities, making it accessible for security research on mobile applications. Its non-invasive nature makes it ideal for conducting security tests on live apps."
   },
   {
     "slug": "apktool",
     "name": "APKTool",
-    "description": "Reverse engineer Android APK files — decode resources, rebuild, and step-through debug smali code.",
+    "description": "Reverse engineer Android APK files \u2014 decode resources, rebuild, and step-through debug smali code.",
     "category": "mobile",
     "language": "Java",
     "platform": [
@@ -5061,7 +5208,8 @@
       "apk",
       "reverse-engineering",
       "smali"
-    ]
+    ],
+    "longDescription": "APKTool is a tool for reverse engineering Android APK files, allowing users to decode resources and rebuild them after modifications. It facilitates the analysis and modification of APK files by converting them into smali code, which can be debugged and altered before recompilation. This tool is invaluable for developers and researchers aiming to understand app behavior, identify vulnerabilities, or localize applications. APKTool's ability to handle complex APK structures makes it a staple in Android reverse engineering."
   },
   {
     "slug": "mobsf",
@@ -5081,7 +5229,8 @@
       "android",
       "ios"
     ],
-    "featured": true
+    "featured": true,
+    "longDescription": "MobSF (Mobile Security Framework) is an automated framework for performing static and dynamic analysis on Android, iOS, and Windows mobile applications. It can decompile apps, analyze code for vulnerabilities, and perform runtime analysis to detect potential security issues. MobSF supports both binary and source code analysis, providing comprehensive security insights through detailed reports. The framework is widely used for mobile application security testing, offering a robust toolset for identifying and mitigating security risks."
   },
   {
     "slug": "drozer",
@@ -5100,7 +5249,8 @@
       "vulnerability",
       "app-security",
       "testing"
-    ]
+    ],
+    "longDescription": "Drozer is an Android security testing framework that helps identify vulnerabilities within applications and devices. It provides a comprehensive environment for testing Android apps, leveraging the Dalvik VM to inspect and interact with app components. Drozer can exploit weaknesses in app permissions, data storage, and communication channels, making it a vital tool for security professionals. Its modular design and extensive library of plugins allow for flexible and thorough penetration testing of Android environments."
   },
   {
     "slug": "jadx",
@@ -5120,7 +5270,8 @@
       "dex",
       "java",
       "reverse-engineering"
-    ]
+    ],
+    "longDescription": "JADX is a DEX to Java decompiler that produces readable Java source code from Android APK and DEX files. It is particularly useful for reverse engineering Android applications, allowing security researchers and developers to analyze app behavior by converting compiled code back into a human-readable form. The tool supports both command-line and GUI interfaces, making it versatile for diverse use cases. Its ability to handle large applications efficiently makes it a popular choice in the mobile security domain."
   },
   {
     "slug": "sleuth-kit",
@@ -5139,7 +5290,8 @@
       "file-system",
       "analysis",
       "imaging"
-    ]
+    ],
+    "longDescription": "The Sleuth Kit is a comprehensive collection of command-line tools used for forensic analysis of disk images and file systems. It enables investigators to extract and analyze data from various file system types, including FAT, NTFS, and EXT. The tools can recover deleted files, extract metadata, and perform timeline analysis, providing crucial insights during digital investigations. Its open-source nature and compatibility with Autopsy, a graphical frontend, make it a staple in digital forensics."
   },
   {
     "slug": "cylr",
@@ -5158,7 +5310,8 @@
       "artifact-collection",
       "live-response",
       "triage"
-    ]
+    ],
+    "longDescription": "CyLR is a live response tool designed for quickly collecting forensic artifacts from hosts during incident response activities. It supports the extraction of key data such as registry hives, event logs, and memory captures, which are vital for triaging security incidents. By automating the collection process, CyLR enables responders to gather evidence efficiently without impacting system performance. Its ease of use and comprehensive artifact collection make it valuable for rapid incident response."
   },
   {
     "slug": "hping3",
@@ -5166,9 +5319,18 @@
     "description": "Active network security tool for firewall testing, advanced port scanning, and manual TCP/IP packet crafting.",
     "category": "network-recon",
     "language": "C",
-    "platform": ["linux", "macos"],
+    "platform": [
+      "linux",
+      "macos"
+    ],
     "github": "antirez/hping",
-    "tags": ["packet-crafting", "firewall-testing", "traceroute", "tcp-ip"]
+    "tags": [
+      "packet-crafting",
+      "firewall-testing",
+      "traceroute",
+      "tcp-ip"
+    ],
+    "longDescription": "hping3 is an advanced network security tool used for firewall testing, port scanning, and crafting TCP/IP packets manually. It allows users to create custom packets to test network defenses and discover open ports stealthily. With features like traceroute mode and the ability to spoof IP addresses, hping3 is versatile for both offensive and defensive security auditing. Its flexibility in packet manipulation makes it a favored tool among network security professionals."
   },
   {
     "slug": "fping",
@@ -5176,9 +5338,18 @@
     "description": "High-performance parallel ping tool designed for sweeping large network ranges with minimal overhead.",
     "category": "network-recon",
     "language": "C",
-    "platform": ["linux", "macos"],
+    "platform": [
+      "linux",
+      "macos"
+    ],
     "github": "schweikert/fping",
-    "tags": ["ping-sweep", "host-discovery", "network-scanning", "alive-detection"]
+    "tags": [
+      "ping-sweep",
+      "host-discovery",
+      "network-scanning",
+      "alive-detection"
+    ],
+    "longDescription": "fping is a high-performance parallel ping tool designed to sweep large network ranges quickly and with minimal overhead. Unlike the standard ping utility, fping can ping multiple hosts simultaneously, making it efficient for discovering active hosts in large-scale networks. It is particularly useful for network administrators needing to monitor network availability and performance. Its ability to handle large volumes of ICMP requests distinguishes it from traditional ping tools."
   },
   {
     "slug": "naabu",
@@ -5186,9 +5357,19 @@
     "description": "Fast port scanner written in Go with SYN/CONNECT scan support, designed for integration with other ProjectDiscovery tools.",
     "category": "network-recon",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "projectdiscovery/naabu",
-    "tags": ["port-scanner", "syn-scan", "host-discovery", "projectdiscovery"]
+    "tags": [
+      "port-scanner",
+      "syn-scan",
+      "host-discovery",
+      "projectdiscovery"
+    ],
+    "longDescription": "Naabu is a fast port scanner written in Go, capable of performing SYN and CONNECT scans to discover open ports on hosts. Designed to integrate seamlessly with other ProjectDiscovery tools, it is optimized for speed and can handle large-scale scanning operations. Naabu's efficiency in scanning and its support for custom configurations make it a preferred choice for security researchers conducting network reconnaissance. Its ability to automate workflow with ProjectDiscovery tools enhances its utility in complex security assessments."
   },
   {
     "slug": "shuffledns",
@@ -5196,9 +5377,19 @@
     "description": "Wrapper around massdns for enumerating valid subdomains using active bruteforce and resolving with wildcard filtering.",
     "category": "subdomain-enum",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "projectdiscovery/shuffledns",
-    "tags": ["subdomain-bruteforce", "dns-resolution", "wildcard-filtering", "massdns"]
+    "tags": [
+      "subdomain-bruteforce",
+      "dns-resolution",
+      "wildcard-filtering",
+      "massdns"
+    ],
+    "longDescription": "shuffleDNS is a subdomain enumeration tool that acts as a wrapper around massdns, facilitating active bruteforce techniques and resolving with wildcard filtering. It is engineered to identify valid subdomains by filtering out false positives caused by DNS wildcards. By leveraging massdns's high-performance capabilities, shuffleDNS performs extensive subdomain discovery efficiently. Its effectiveness in uncovering valid subdomains makes it a critical tool for penetration testers and security researchers."
   },
   {
     "slug": "puredns",
@@ -5206,9 +5397,19 @@
     "description": "Fast domain resolver and subdomain bruteforcing tool that handles wildcard detection and DNS validation.",
     "category": "subdomain-enum",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "d3mondev/puredns",
-    "tags": ["dns-bruteforce", "wildcard-detection", "resolver", "subdomain-discovery"]
+    "tags": [
+      "dns-bruteforce",
+      "wildcard-detection",
+      "resolver",
+      "subdomain-discovery"
+    ],
+    "longDescription": "puredns is a fast domain resolver and subdomain bruteforcing tool that excels in wildcard detection and DNS validation. It is designed to perform efficient DNS resolution and can handle large datasets, making it suitable for thorough subdomain enumeration tasks. The tool's ability to detect and filter out wildcard DNS responses ensures accurate results, enhancing its reliability in security assessments. puredns's speed and robustness are crucial for security professionals conducting detailed DNS reconnaissance."
   },
   {
     "slug": "findomain",
@@ -5216,9 +5417,19 @@
     "description": "Cross-platform subdomain enumerator using certificate transparency logs and multiple APIs for fast passive discovery.",
     "category": "subdomain-enum",
     "language": "Rust",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "Findomain/Findomain",
-    "tags": ["cert-transparency", "subdomain-enum", "passive-recon", "monitoring"]
+    "tags": [
+      "cert-transparency",
+      "subdomain-enum",
+      "passive-recon",
+      "monitoring"
+    ],
+    "longDescription": "Findomain is a cross-platform subdomain enumerator that leverages certificate transparency logs and multiple APIs for swift passive subdomain discovery. It automates the process of gathering subdomains without directly interacting with the target, making it ideal for stealthy reconnaissance. Written in Rust, Findomain is known for its speed and efficiency, providing security researchers with comprehensive subdomain lists for further analysis. Its integration with various data sources enhances its coverage and accuracy."
   },
   {
     "slug": "dirsearch",
@@ -5226,19 +5437,39 @@
     "description": "Mature web path discovery tool with recursive scanning, wordlist-based bruteforcing, and extensive extension support.",
     "category": "web-scanning",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "maurosoria/dirsearch",
-    "tags": ["directory-bruteforce", "path-discovery", "web-scanner", "enumeration"]
+    "tags": [
+      "directory-bruteforce",
+      "path-discovery",
+      "web-scanner",
+      "enumeration"
+    ],
+    "longDescription": "dirsearch is a mature web path discovery tool that employs recursive scanning and wordlist-based bruteforcing to uncover hidden directories and files on web servers. It supports a wide range of extensions, making it versatile for different web technologies. Security testers use dirsearch to identify misconfigurations and potential entry points in web applications. Its robustness and flexibility make it an essential tool for web application security assessments."
   },
   {
     "slug": "meg",
     "name": "meg",
-    "description": "Fetch many paths for many hosts concurrently without overloading servers — ideal for large-scale recon on bug bounties.",
+    "description": "Fetch many paths for many hosts concurrently without overloading servers \u2014 ideal for large-scale recon on bug bounties.",
     "category": "web-scanning",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "tomnomnom/meg",
-    "tags": ["mass-fetch", "bug-bounty", "concurrent", "path-probing"]
+    "tags": [
+      "mass-fetch",
+      "bug-bounty",
+      "concurrent",
+      "path-probing"
+    ],
+    "longDescription": "meg is a tool designed to fetch many paths from many hosts concurrently without overwhelming servers, making it ideal for large-scale reconnaissance in bug bounty programs. It operates by queuing requests efficiently, enabling users to probe numerous URLs simultaneously. This capability allows security researchers to quickly gather information about web server configurations and potential vulnerabilities. Its emphasis on concurrency and performance sets it apart as a go-to utility for extensive web path probing."
   },
   {
     "slug": "caido",
@@ -5246,9 +5477,19 @@
     "description": "Lightweight and modern web security testing toolkit built in Rust, designed as a fast alternative to Burp Suite.",
     "category": "web-scanning",
     "language": "Rust",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "caido/caido",
-    "tags": ["web-proxy", "interceptor", "security-testing", "burp-alternative"]
+    "tags": [
+      "web-proxy",
+      "interceptor",
+      "security-testing",
+      "burp-alternative"
+    ],
+    "longDescription": "Caido is a modern web security testing toolkit built in Rust, offering a lightweight and fast alternative to traditional tools like Burp Suite. It functions as a web proxy and interceptor, allowing security researchers to analyze, modify, and replay web traffic. Caido's user-friendly interface and high performance make it suitable for both experienced testers and newcomers. Its focus on speed and efficiency makes it a compelling choice for web application security testing."
   },
   {
     "slug": "trivy",
@@ -5256,9 +5497,19 @@
     "description": "Comprehensive vulnerability scanner for containers, filesystems, git repos, and Kubernetes with SBOM generation.",
     "category": "vulnerability",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "aquasecurity/trivy",
-    "tags": ["container-security", "sbom", "vulnerability-scanner", "iac-scanning"]
+    "tags": [
+      "container-security",
+      "sbom",
+      "vulnerability-scanner",
+      "iac-scanning"
+    ],
+    "longDescription": "Trivy is a comprehensive vulnerability scanner capable of analyzing containers, filesystems, git repositories, and Kubernetes configurations. It generates Software Bill of Materials (SBOM) and identifies vulnerabilities by matching known CVEs against the scanned components. Designed for ease of use, Trivy integrates seamlessly into CI/CD pipelines, enabling continuous security assessments. Its broad coverage and support for multiple formats make it a versatile tool for maintaining security across diverse environments."
   },
   {
     "slug": "grype",
@@ -5266,9 +5517,19 @@
     "description": "Vulnerability scanner for container images and filesystems that matches installed packages against known CVEs.",
     "category": "vulnerability",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "anchore/grype",
-    "tags": ["container-security", "cve-scanning", "sbom", "image-scanning"]
+    "tags": [
+      "container-security",
+      "cve-scanning",
+      "sbom",
+      "image-scanning"
+    ],
+    "longDescription": "Grype is a vulnerability scanner for container images and filesystems that identifies known vulnerabilities by matching installed packages against CVE databases. It provides detailed reports and integrates with SBOM to enhance software supply chain security. Grype's capabilities in scanning and its focus on container security make it an essential tool for DevOps teams and security professionals. Its support for multiple image formats and package managers broadens its applicability in modern development workflows."
   },
   {
     "slug": "semgrep",
@@ -5276,9 +5537,19 @@
     "description": "Lightweight static analysis engine for finding bugs and enforcing code standards across 30+ languages with custom rules.",
     "category": "vulnerability",
     "language": "OCaml",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "semgrep/semgrep",
-    "tags": ["sast", "static-analysis", "code-scanning", "custom-rules"]
+    "tags": [
+      "sast",
+      "static-analysis",
+      "code-scanning",
+      "custom-rules"
+    ],
+    "longDescription": "Semgrep is a lightweight static analysis engine that helps find bugs and enforce code standards across over 30 programming languages. It uses custom rules to perform code scanning, offering flexibility in detecting vulnerabilities and ensuring best practices. Semgrep's ability to integrate into development environments allows developers to catch issues early in the coding process. Its focus on customizable rules and language support makes it a powerful tool for secure software development."
   },
   {
     "slug": "dalfox",
@@ -5286,9 +5557,19 @@
     "description": "Parameter analysis and XSS scanner with automatic payload generation, DOM-based detection, and pipeline support.",
     "category": "vulnerability",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "hahwul/dalfox",
-    "tags": ["xss", "parameter-analysis", "dom-xss", "reflected-xss"]
+    "tags": [
+      "xss",
+      "parameter-analysis",
+      "dom-xss",
+      "reflected-xss"
+    ],
+    "longDescription": "DalFox is a powerful tool for parameter analysis and detecting cross-site scripting (XSS) vulnerabilities. Built in Go, it automates the generation of payloads and supports DOM-based detection techniques, making it suitable for both reflected and stored XSS. The tool's pipeline support allows for seamless integration into testing workflows. DalFox stands out due to its speed and efficiency in identifying complex XSS vectors across various web applications."
   },
   {
     "slug": "retire-js",
@@ -5296,9 +5577,19 @@
     "description": "Scanner for detecting use of JavaScript libraries with known vulnerabilities in web applications.",
     "category": "vulnerability",
     "language": "JavaScript",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "RetireJS/retire.js",
-    "tags": ["javascript", "dependency-scanning", "cve", "web-security"]
+    "tags": [
+      "javascript",
+      "dependency-scanning",
+      "cve",
+      "web-security"
+    ],
+    "longDescription": "Retire.js is a JavaScript library scanner designed to detect known vulnerabilities in web applications. It identifies outdated and insecure dependencies by checking against a comprehensive database of CVEs and other vulnerability sources. The tool is essential for developers and security professionals seeking to ensure their applications are free from exploitable third-party components. Retire.js is widely used for dependency scanning in the development lifecycle."
   },
   {
     "slug": "h8mail",
@@ -5306,9 +5597,19 @@
     "description": "Email OSINT and password breach hunting tool that queries multiple breach databases and paste sites.",
     "category": "osint-general",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "khast3x/h8mail",
-    "tags": ["email-osint", "breach-lookup", "credential-hunting", "password-breach"]
+    "tags": [
+      "email-osint",
+      "breach-lookup",
+      "credential-hunting",
+      "password-breach"
+    ],
+    "longDescription": "h8mail is an open-source tool for conducting OSINT investigations and hunting for compromised email credentials. Written in Python, it queries multiple breach databases and paste sites to uncover leaked passwords and other sensitive information. The tool is highly effective for credential hunting, allowing users to assess the exposure of email accounts across various data breaches. h8mail is valuable for both security professionals and individuals concerned with email security."
   },
   {
     "slug": "maryam",
@@ -5316,9 +5617,19 @@
     "description": "Modular open-source OSINT framework with search engine scraping, DNS enum, and social media gathering modules.",
     "category": "osint-general",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "saeeddhqan/Maryam",
-    "tags": ["osint-framework", "search-engine", "modular", "intelligence-gathering"]
+    "tags": [
+      "osint-framework",
+      "search-engine",
+      "modular",
+      "intelligence-gathering"
+    ],
+    "longDescription": "Maryam is a modular OSINT framework that facilitates comprehensive data gathering from numerous sources. With its Python-based architecture, it supports modules for search engine scraping, DNS enumeration, and social media intelligence. The tool's modular design allows users to customize their reconnaissance efforts based on specific needs. Maryam is frequently used for intelligence gathering in cybersecurity operations and research projects."
   },
   {
     "slug": "sn0int",
@@ -5326,9 +5637,18 @@
     "description": "Semi-automatic OSINT framework and package manager for gathering intelligence about IPs, emails, domains, and people.",
     "category": "osint-general",
     "language": "Rust",
-    "platform": ["linux", "macos"],
+    "platform": [
+      "linux",
+      "macos"
+    ],
     "github": "kpcyrd/sn0int",
-    "tags": ["osint-framework", "intelligence", "package-manager", "reconnaissance"]
+    "tags": [
+      "osint-framework",
+      "intelligence",
+      "package-manager",
+      "reconnaissance"
+    ],
+    "longDescription": "sn0int is a semi-automatic OSINT framework and package manager designed for gathering intelligence on IPs, emails, domains, and individuals. Developed in Rust, it offers a flexible approach to reconnaissance, allowing users to install and manage custom modules. The tool integrates various sources and techniques to streamline data collection processes, making it a valuable asset for researchers and security analysts conducting detailed investigations."
   },
   {
     "slug": "socialscan",
@@ -5336,9 +5656,19 @@
     "description": "Accurately check email address and username availability across multiple platforms via direct API queries.",
     "category": "osint-social",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "iojw/socialscan",
-    "tags": ["username-check", "email-check", "availability", "social-media"]
+    "tags": [
+      "username-check",
+      "email-check",
+      "availability",
+      "social-media"
+    ],
+    "longDescription": "socialscan is a tool for checking the availability of email addresses and usernames across multiple platforms. It utilizes direct API queries to provide accurate results, ensuring reliable information on the status of user accounts. Written in Python, socialscan is particularly useful for OSINT practitioners and individuals monitoring online presence. The tool's precision and efficiency make it a go-to solution for social media and account reconnaissance."
   },
   {
     "slug": "zphisher",
@@ -5346,9 +5676,17 @@
     "description": "Automated phishing tool with 30+ templates for major platforms, tunneling support, and credential capture.",
     "category": "phishing",
     "language": "Shell",
-    "platform": ["linux"],
+    "platform": [
+      "linux"
+    ],
     "github": "htr-tech/zphisher",
-    "tags": ["phishing-templates", "credential-capture", "tunneling", "social-engineering"]
+    "tags": [
+      "phishing-templates",
+      "credential-capture",
+      "tunneling",
+      "social-engineering"
+    ],
+    "longDescription": "Zphisher is an automated phishing tool offering over 30 templates for popular platforms, enabling rapid deployment of phishing campaigns. With support for tunneling and credential capture, it facilitates social engineering attacks by mimicking legitimate login interfaces. The shell-based tool is notable for its ease of use and extensive template library, making it a common choice for both ethical hackers and malicious actors conducting phishing simulations."
   },
   {
     "slug": "socialfish",
@@ -5356,9 +5694,17 @@
     "description": "Social media phishing tool with real-time credential interception, geolocation tracking, and a web-based dashboard.",
     "category": "phishing",
     "language": "Python",
-    "platform": ["linux"],
+    "platform": [
+      "linux"
+    ],
     "github": "UndeadSec/SocialFish",
-    "tags": ["social-media", "credential-harvesting", "geolocation", "dashboard"]
+    "tags": [
+      "social-media",
+      "credential-harvesting",
+      "geolocation",
+      "dashboard"
+    ],
+    "longDescription": "SocialFish is a phishing tool focused on social media platforms, providing real-time credential interception and geolocation tracking. It features a web-based dashboard for monitoring phishing campaigns and analyzing captured data. Developed in Python, SocialFish is designed for ease of use, offering capabilities for both offensive security testing and educational purposes. The tool's ability to mimic social media sites makes it effective for targeted phishing attacks."
   },
   {
     "slug": "hidden-eye",
@@ -5366,9 +5712,17 @@
     "description": "Modern phishing and social engineering tool with live attack monitoring, keylogger integration, and 40+ templates.",
     "category": "phishing",
     "language": "Python",
-    "platform": ["linux"],
+    "platform": [
+      "linux"
+    ],
     "github": "Open-Starter/HiddenEye",
-    "tags": ["phishing", "keylogger", "social-engineering", "attack-monitoring"]
+    "tags": [
+      "phishing",
+      "keylogger",
+      "social-engineering",
+      "attack-monitoring"
+    ],
+    "longDescription": "HiddenEye is a comprehensive phishing and social engineering tool featuring live attack monitoring and keylogger integration. With over 40 templates, it allows attackers to launch convincing phishing campaigns against various targets. The Python-based tool provides a user-friendly interface for tracking ongoing attacks and collecting sensitive information. HiddenEye's extensive feature set makes it suitable for both security assessments and demonstrations of phishing techniques."
   },
   {
     "slug": "cloudfox",
@@ -5376,9 +5730,19 @@
     "description": "Find exploitable attack paths in cloud infrastructure by enumerating IAM permissions, secrets, and network exposure.",
     "category": "cloud-recon",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "BishopFox/cloudfox",
-    "tags": ["cloud-attack-paths", "iam-enumeration", "aws", "azure"]
+    "tags": [
+      "cloud-attack-paths",
+      "iam-enumeration",
+      "aws",
+      "azure"
+    ],
+    "longDescription": "CloudFox is a tool for identifying exploitable attack paths within cloud infrastructures. It enumerates IAM permissions, secrets, and network exposure to uncover potential vulnerabilities in AWS and Azure environments. Written in Go, CloudFox helps security professionals assess the security posture of cloud deployments by revealing misconfigurations and access control weaknesses. The tool is essential for cloud security audits and penetration testing."
   },
   {
     "slug": "enumerate-iam",
@@ -5386,9 +5750,19 @@
     "description": "Enumerate AWS IAM permissions for a given set of credentials by brute-forcing API calls.",
     "category": "cloud-recon",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "andresriancho/enumerate-iam",
-    "tags": ["aws", "iam", "permission-enum", "credential-testing"]
+    "tags": [
+      "aws",
+      "iam",
+      "permission-enum",
+      "credential-testing"
+    ],
+    "longDescription": "enumerate-iam is a Python tool designed for enumerating AWS IAM permissions by brute-forcing API calls. It tests a given set of credentials to uncover misconfigured permissions and potential security risks. The tool's ability to reveal over-privileged accounts and roles makes it a valuable resource for AWS security assessments. enumerate-iam is essential for identifying and mitigating risks associated with improper permission configurations."
   },
   {
     "slug": "cloudsploit",
@@ -5396,9 +5770,19 @@
     "description": "Open-source cloud security configuration scanner for AWS, Azure, GCP, and Oracle Cloud Infrastructure.",
     "category": "cloud-recon",
     "language": "JavaScript",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "aquasecurity/cloudsploit",
-    "tags": ["cloud-security", "misconfiguration", "aws", "azure"]
+    "tags": [
+      "cloud-security",
+      "misconfiguration",
+      "aws",
+      "azure"
+    ],
+    "longDescription": "CloudSploit is an open-source security configuration scanner for cloud environments, including AWS, Azure, GCP, and Oracle Cloud. It detects misconfigurations and security risks by analyzing cloud service settings against best practices. Written in JavaScript, CloudSploit is used by security teams to identify vulnerabilities in cloud infrastructure and ensure compliance with security standards. Its comprehensive coverage makes it a critical tool for cloud security monitoring."
   },
   {
     "slug": "androguard",
@@ -5406,9 +5790,19 @@
     "description": "Reverse engineering framework for Android applications with DEX/APK analysis, decompilation, and malware detection.",
     "category": "mobile",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "androguard/androguard",
-    "tags": ["android", "reverse-engineering", "apk-analysis", "malware-detection"]
+    "tags": [
+      "android",
+      "reverse-engineering",
+      "apk-analysis",
+      "malware-detection"
+    ],
+    "longDescription": "Androguard is a reverse engineering framework for Android applications, enabling DEX/APK analysis, decompilation, and malware detection. The Python-based tool allows researchers to dissect Android app components and identify security vulnerabilities or malicious code. Androguard supports static and dynamic analysis, making it a versatile solution for cybersecurity professionals engaged in mobile app security assessment. Its ability to handle complex APK structures is widely recognized in the industry."
   },
   {
     "slug": "qark",
@@ -5416,9 +5810,18 @@
     "description": "Quick Android Review Kit for finding security vulnerabilities in Android apps through static source code analysis.",
     "category": "mobile",
     "language": "Python",
-    "platform": ["linux", "macos"],
+    "platform": [
+      "linux",
+      "macos"
+    ],
     "github": "linkedin/qark",
-    "tags": ["android", "static-analysis", "vulnerability", "code-review"]
+    "tags": [
+      "android",
+      "static-analysis",
+      "vulnerability",
+      "code-review"
+    ],
+    "longDescription": "QARK (Quick Android Review Kit) is a static analysis tool designed to identify security vulnerabilities in Android applications. By analyzing source code, QARK detects common security flaws and provides detailed reports to assist developers in fortifying their apps. The Python-based tool is integral to the Android security review process, offering insights into potential risks and suggesting remediation strategies. QARK is frequently used by developers and security teams for comprehensive code audits."
   },
   {
     "slug": "rms",
@@ -5426,9 +5829,19 @@
     "description": "Runtime Mobile Security toolkit for manipulating Android and iOS apps at runtime using Frida under the hood.",
     "category": "mobile",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "nicolo-travaini/RMS-Runtime-Mobile-Security",
-    "tags": ["runtime-analysis", "frida", "android", "ios"]
+    "tags": [
+      "runtime-analysis",
+      "frida",
+      "android",
+      "ios"
+    ],
+    "longDescription": "RMS (Runtime Mobile Security) is a toolkit for dynamically analyzing and manipulating Android and iOS applications using Frida. It enables real-time inspection and modification of app behavior, assisting in security testing and debugging. The Python-based tool is essential for mobile security professionals looking to understand app vulnerabilities and bypass security controls. RMS offers a flexible environment for exploring runtime behaviors and enhancing mobile application security."
   },
   {
     "slug": "chainsaw",
@@ -5436,9 +5849,19 @@
     "description": "Rapidly search and hunt through Windows forensic artifacts like event logs, MFT, and Shimcache using Sigma rules.",
     "category": "forensics",
     "language": "Rust",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "WithSecureLabs/chainsaw",
-    "tags": ["windows-forensics", "event-logs", "sigma-rules", "threat-hunting"]
+    "tags": [
+      "windows-forensics",
+      "event-logs",
+      "sigma-rules",
+      "threat-hunting"
+    ],
+    "longDescription": "Chainsaw is a tool for rapid forensic analysis of Windows artifacts such as event logs, Master File Table (MFT), and Shimcache leveraging Sigma rules. Developed in Rust, it provides efficient searching and threat hunting capabilities by parsing logs and artifacts to identify potential security incidents. Chainsaw is notable for its speed and ability to automate complex forensic tasks, aiding analysts in detecting and responding to threats quickly."
   },
   {
     "slug": "hayabusa",
@@ -5446,19 +5869,39 @@
     "description": "Windows event log fast forensics timeline generator and threat hunting tool with built-in Sigma rule support.",
     "category": "forensics",
     "language": "Rust",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "Yamato-Security/hayabusa",
-    "tags": ["windows-events", "timeline", "sigma", "dfir"]
+    "tags": [
+      "windows-events",
+      "timeline",
+      "sigma",
+      "dfir"
+    ],
+    "longDescription": "Hayabusa is a forensic tool designed to generate timelines from Windows event logs and facilitate threat hunting. Written in Rust, it integrates Sigma rule support to automatically detect suspicious activities, making it a powerful utility for digital forensics and incident response (DFIR) operations. Its fast processing capability allows security professionals to efficiently analyze large volumes of log data for potential security threats."
   },
   {
     "slug": "oletools",
     "name": "oletools",
-    "description": "Python tools for analyzing OLE and MS Office files — detect VBA macros, embedded objects, and malicious content.",
+    "description": "Python tools for analyzing OLE and MS Office files \u2014 detect VBA macros, embedded objects, and malicious content.",
     "category": "forensics",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "decalage2/oletools",
-    "tags": ["office-analysis", "vba-macros", "ole", "malware-analysis"]
+    "tags": [
+      "office-analysis",
+      "vba-macros",
+      "ole",
+      "malware-analysis"
+    ],
+    "longDescription": "Oletools is a Python library for analyzing OLE and Microsoft Office files, focusing on detecting VBA macros, embedded objects, and other potentially malicious content. It facilitates the examination of document structures and identifies threats hidden within complex file formats. Oletools is widely used for malware analysis and reverse engineering of suspicious documents, providing a comprehensive suite of utilities for assessing document security."
   },
   {
     "slug": "pe-sieve",
@@ -5466,19 +5909,37 @@
     "description": "Scans running processes for suspicious in-memory modifications including hollowing, hooking, and code injection.",
     "category": "forensics",
     "language": "C++",
-    "platform": ["windows"],
+    "platform": [
+      "windows"
+    ],
     "github": "hasherezade/pe-sieve",
-    "tags": ["process-scanning", "memory-forensics", "code-injection", "malware-detection"]
+    "tags": [
+      "process-scanning",
+      "memory-forensics",
+      "code-injection",
+      "malware-detection"
+    ],
+    "longDescription": "PE-sieve is a C++ based tool that scans active processes for in-memory anomalies such as process hollowing, code injection, and hooking. It is designed to identify and report suspicious modifications that could indicate malware presence or process tampering. PE-sieve is valuable for memory forensics and incident response, as it helps analysts detect and analyze advanced threats that manipulate process memory."
   },
   {
     "slug": "capa",
     "name": "capa",
-    "description": "Automatically identify capabilities in executable files — detects techniques like persistence, C2, and anti-analysis.",
+    "description": "Automatically identify capabilities in executable files \u2014 detects techniques like persistence, C2, and anti-analysis.",
     "category": "forensics",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "mandiant/capa",
-    "tags": ["malware-analysis", "capability-detection", "reverse-engineering", "triage"]
+    "tags": [
+      "malware-analysis",
+      "capability-detection",
+      "reverse-engineering",
+      "triage"
+    ],
+    "longDescription": "Capa is an automated tool for identifying capabilities in executable files, detecting techniques such as persistence mechanisms, command and control (C2) communications, and anti-analysis methods. Built in Python, Capa uses a rule-based approach to analyze binary files and report on the functionalities they contain. This tool is essential for malware analysis, aiding security researchers in understanding the potential impact of a sample."
   },
   {
     "slug": "kerbrute",
@@ -5486,39 +5947,78 @@
     "description": "Tool to quickly bruteforce and enumerate valid Active Directory accounts through Kerberos pre-authentication.",
     "category": "password-attack",
     "language": "Go",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "ropnop/kerbrute",
-    "tags": ["kerberos", "active-directory", "user-enum", "password-spray"]
+    "tags": [
+      "kerberos",
+      "active-directory",
+      "user-enum",
+      "password-spray"
+    ],
+    "longDescription": "Kerbrute is a Go-based tool designed to quickly brute-force and enumerate valid Active Directory accounts through Kerberos pre-authentication. It is utilized for discovering valid usernames and testing password policies within AD environments. Kerbrute is a useful utility for security assessments, allowing penetration testers to identify weaknesses in Kerberos authentication configurations."
   },
   {
     "slug": "ophcrack",
     "name": "Ophcrack",
-    "description": "Windows password cracker based on rainbow tables — cracks LM and NTLM hashes via time-memory tradeoff.",
+    "description": "Windows password cracker based on rainbow tables \u2014 cracks LM and NTLM hashes via time-memory tradeoff.",
     "category": "password-attack",
     "language": "C",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "luisgg/ophcrack",
-    "tags": ["rainbow-tables", "windows-passwords", "ntlm", "lm-hash"]
+    "tags": [
+      "rainbow-tables",
+      "windows-passwords",
+      "ntlm",
+      "lm-hash"
+    ],
+    "longDescription": "Ophcrack is a Windows password cracking tool that utilizes rainbow tables to crack LM and NTLM hashes. Written in C, it employs a time-memory tradeoff technique to efficiently break password hashes. Ophcrack is recognized for its ability to rapidly recover Windows passwords without the need for complex computation, making it a staple in the toolkit of security researchers and penetration testers."
   },
   {
     "slug": "name-that-hash",
     "name": "Name-That-Hash",
-    "description": "Instantly identify hash types from unknown hashes — supports 300+ hash formats with confidence ratings.",
+    "description": "Instantly identify hash types from unknown hashes \u2014 supports 300+ hash formats with confidence ratings.",
     "category": "password-attack",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "HashPals/Name-That-Hash",
-    "tags": ["hash-identification", "hash-cracking", "reconnaissance", "ctf"]
+    "tags": [
+      "hash-identification",
+      "hash-cracking",
+      "reconnaissance",
+      "ctf"
+    ],
+    "longDescription": "Name-That-Hash is a Python tool designed to identify hash types from unknown hashes, supporting over 300 hash formats and providing confidence ratings. It assists users in determining the specific hash algorithm used, which is essential for subsequent hash cracking efforts. Name-That-Hash is particularly useful for cybersecurity professionals and CTF participants who encounter various hash formats."
   },
   {
     "slug": "searchsploit",
     "name": "SearchSploit",
-    "description": "Command-line tool for searching Exploit-DB — find public exploits and shellcode for known vulnerabilities offline.",
+    "description": "Command-line tool for searching Exploit-DB \u2014 find public exploits and shellcode for known vulnerabilities offline.",
     "category": "exploitation",
     "language": "Shell",
-    "platform": ["linux", "macos"],
+    "platform": [
+      "linux",
+      "macos"
+    ],
     "github": "offensive-security/exploitdb",
-    "tags": ["exploit-database", "cve", "shellcode", "vulnerability-research"]
+    "tags": [
+      "exploit-database",
+      "cve",
+      "shellcode",
+      "vulnerability-research"
+    ],
+    "longDescription": "SearchSploit is a command-line utility for searching the Exploit-DB database to find public exploits and shellcode for known vulnerabilities. It allows offline access to a vast repository of exploit information, assisting security researchers in vulnerability assessments and penetration tests. SearchSploit is an invaluable resource for exploit development and security audits, simplifying the process of finding applicable exploits."
   },
   {
     "slug": "pwntools",
@@ -5526,9 +6026,17 @@
     "description": "CTF framework and exploit development library for rapid prototyping of binary exploitation and reverse engineering.",
     "category": "exploitation",
     "language": "Python",
-    "platform": ["linux"],
+    "platform": [
+      "linux"
+    ],
     "github": "Gallopsled/pwntools",
-    "tags": ["ctf", "binary-exploitation", "rop", "shellcode"]
+    "tags": [
+      "ctf",
+      "binary-exploitation",
+      "rop",
+      "shellcode"
+    ],
+    "longDescription": "Pwntools is a Python-based framework and library for CTF competitions and exploit development, enabling rapid prototyping of binary exploitation and reverse engineering tasks. It provides a suite of utilities for crafting payloads, manipulating binaries, and automating complex exploits. Pwntools is widely adopted by security enthusiasts and professionals for its versatility and ease of use in developing and testing exploits."
   },
   {
     "slug": "ropper",
@@ -5536,29 +6044,58 @@
     "description": "Display and search for ROP/JOP/SOP gadgets in binaries to assist with exploit development and bypass mitigations.",
     "category": "exploitation",
     "language": "Python",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "sashs/Ropper",
-    "tags": ["rop-gadgets", "exploit-development", "binary-analysis", "mitigation-bypass"]
+    "tags": [
+      "rop-gadgets",
+      "exploit-development",
+      "binary-analysis",
+      "mitigation-bypass"
+    ],
+    "longDescription": "Ropper is a Python tool that helps identify and display Return-Oriented Programming (ROP), Jump-Oriented Programming (JOP), and Syscall-Oriented Programming (SOP) gadgets in binaries. It aids in exploit development by enabling users to bypass mitigations and craft advanced exploits. Ropper is essential for security researchers focused on binary analysis and the development of custom exploit techniques."
   },
   {
     "slug": "starkiller",
     "name": "Starkiller",
-    "description": "Frontend GUI for PowerShell Empire — manage listeners, agents, and modules through a modern Electron interface.",
+    "description": "Frontend GUI for PowerShell Empire \u2014 manage listeners, agents, and modules through a modern Electron interface.",
     "category": "offensive-ops",
     "language": "JavaScript",
-    "platform": ["linux", "macos", "windows"],
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
     "github": "BC-SECURITY/Starkiller",
-    "tags": ["c2-gui", "empire", "agent-management", "red-team"]
+    "tags": [
+      "c2-gui",
+      "empire",
+      "agent-management",
+      "red-team"
+    ],
+    "longDescription": "Starkiller is a frontend GUI for PowerShell Empire, providing a modern Electron interface to manage listeners, agents, and modules. It enhances user experience by offering a visual interface for the command and control (C2) operations facilitated by Empire. Starkiller is designed for red team operations, allowing easy orchestration of tasks and monitoring of compromised systems."
   },
   {
     "slug": "hoaxshell",
     "name": "hoaxshell",
-    "description": "Unconventional Windows reverse shell using HTTP(S) traffic — fully undetectable by Microsoft Defender.",
+    "description": "Unconventional Windows reverse shell using HTTP(S) traffic \u2014 fully undetectable by Microsoft Defender.",
     "category": "offensive-ops",
     "language": "Python",
-    "platform": ["linux", "windows"],
+    "platform": [
+      "linux",
+      "windows"
+    ],
     "github": "t3l3machus/hoaxshell",
-    "tags": ["reverse-shell", "evasion", "windows", "http-shell"]
+    "tags": [
+      "reverse-shell",
+      "evasion",
+      "windows",
+      "http-shell"
+    ],
+    "longDescription": "Hoaxshell is an unconventional Windows reverse shell that uses HTTP(S) traffic for communication, designed to be fully undetectable by Microsoft Defender. Developed in Python, it leverages web-based traffic to evade traditional detection mechanisms, making it suitable for stealthy penetration testing and red team activities. Hoaxshell is notable for its unique approach to bypassing endpoint security solutions."
   },
   {
     "slug": "silver-bullet",
@@ -5566,8 +6103,17 @@
     "description": "Multi-purpose automation suite for web testing with configurable request sequences, scraping, and credential testing.",
     "category": "web-scanning",
     "language": "C#",
-    "platform": ["windows", "linux"],
+    "platform": [
+      "windows",
+      "linux"
+    ],
     "github": "openbullet/OpenBullet2",
-    "tags": ["automation", "credential-testing", "web-testing", "config-based"]
+    "tags": [
+      "automation",
+      "credential-testing",
+      "web-testing",
+      "config-based"
+    ],
+    "longDescription": "SilverBullet is a C# automation suite for web testing, offering configurable request sequences, web scraping, and credential testing capabilities. It is highly adaptable with configuration-based operations, allowing users to tailor automated tests to specific web applications. SilverBullet is a versatile tool for web application security assessments, enabling efficient testing and analysis of web vulnerabilities."
   }
 ]
