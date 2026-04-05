@@ -8,6 +8,9 @@ const cache = new Map<string, { data: GitHubRepo; ts: number }>();
 export async function enrichTool(tool: Tool): Promise<Tool> {
   if (!tool.github) return tool;
 
+  // If stats are already baked into tools.json, skip the API call
+  if (tool.stars !== undefined) return tool;
+
   const cached = cache.get(tool.github);
   if (cached && Date.now() - cached.ts < CACHE_TTL) {
     return applyGitHubData(tool, cached.data);
