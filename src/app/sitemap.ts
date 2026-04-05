@@ -1,9 +1,26 @@
 import { MetadataRoute } from "next";
 import toolsData from "@/data/tools.json";
 import libraryData from "@/data/library.json";
+import { categories } from "@/data/categories";
 import { Tool } from "@/types";
 
 const siteUrl = "https://www.en-na.com";
+
+function getComparisonPairs(): string[] {
+  const tools = toolsData as Tool[];
+  const slugSet = new Set(tools.map((t) => t.slug));
+  const pairs = new Set<string>();
+
+  for (const tool of tools) {
+    for (const alt of tool.alternatives || []) {
+      if (slugSet.has(alt)) {
+        const sorted = [tool.slug, alt].sort();
+        pairs.add(`${sorted[0]}-vs-${sorted[1]}`);
+      }
+    }
+  }
+  return Array.from(pairs);
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = (toolsData as Tool[]).map((tool) => ({
@@ -11,6 +28,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.7,
+  }));
+
+  const categoryPages = categories.map((cat) => ({
+    url: `${siteUrl}/category/${cat.id}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const comparisons = getComparisonPairs().map((slug) => ({
+    url: `${siteUrl}/compare/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }));
 
   const books = libraryData.books.map((book) => ({
@@ -40,7 +71,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...categoryPages,
     ...tools,
+    ...comparisons,
     ...books,
     ...hardware,
   ];
