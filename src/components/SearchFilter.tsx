@@ -68,9 +68,9 @@ export default function SearchFilter({
           const isActive = cat.id === activeCategory;
           const activeStyle =
             scheme === "caution" && isActive
-              ? { borderColor: "rgba(245, 158, 11, 0.4)", background: "rgba(245, 158, 11, 0.1)", color: "#fbbf24" }
+              ? { borderColor: "rgba(232, 160, 173, 0.4)", background: "rgba(232, 160, 173, 0.1)", color: "#E8A0AD" }
               : scheme === "danger" && isActive
-                ? { borderColor: "rgba(139, 92, 246, 0.4)", background: "rgba(139, 92, 246, 0.1)", color: "#a78bfa" }
+                ? { borderColor: "rgba(196, 160, 185, 0.4)", background: "rgba(196, 160, 185, 0.1)", color: "#C4A0B9" }
                 : undefined;
           return (
             <button

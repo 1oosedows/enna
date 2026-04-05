@@ -16,7 +16,7 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#0f1117",
+          backgroundColor: "#0D1B24",
           fontFamily: "monospace",
           position: "relative",
         }}
@@ -29,7 +29,7 @@ export default async function Image() {
             left: 0,
             width: 1200,
             height: 4,
-            background: "linear-gradient(90deg, #e63950, #d42040)",
+            background: "linear-gradient(90deg, #FF5A6E, #8DCAE8)",
           }}
         />
 
@@ -52,7 +52,7 @@ export default async function Image() {
           style={{
             fontSize: 24,
             fontWeight: 500,
-            color: "#e63950",
+            color: "#FF5A6E",
             letterSpacing: 8,
             marginBottom: 32,
             display: "flex",
@@ -66,7 +66,7 @@ export default async function Image() {
           style={{
             width: 300,
             height: 1,
-            backgroundColor: "rgba(230,57,80,0.4)",
+            backgroundColor: "rgba(255,90,110,0.4)",
             marginBottom: 32,
           }}
         />
@@ -75,7 +75,7 @@ export default async function Image() {
         <div
           style={{
             fontSize: 18,
-            color: "#9ca3af",
+            color: "#8DCAE8",
             marginBottom: 8,
             display: "flex",
           }}
@@ -85,7 +85,7 @@ export default async function Image() {
         <div
           style={{
             fontSize: 18,
-            color: "#9ca3af",
+            color: "#8DCAE8",
             marginBottom: 40,
             display: "flex",
           }}
@@ -101,23 +101,23 @@ export default async function Image() {
             gap: 32,
             padding: "14px 40px",
             borderRadius: 8,
-            backgroundColor: "rgba(28,32,48,0.8)",
-            border: "1px solid rgba(42,47,62,0.5)",
+            backgroundColor: "rgba(14,27,36,0.8)",
+            border: "1px solid rgba(30,58,74,0.5)",
           }}
         >
-          <div style={{ fontSize: 16, fontWeight: 600, color: "#e63950", display: "flex" }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: "#FF5A6E", display: "flex" }}>
             250+ Tools
           </div>
           <div
-            style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}
+            style={{ width: 1, height: 24, backgroundColor: "rgba(30,58,74,0.8)" }}
           />
-          <div style={{ fontSize: 16, fontWeight: 600, color: "#a855a0", display: "flex" }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: "#C4A0B9", display: "flex" }}>
             16 Categories
           </div>
           <div
-            style={{ width: 1, height: 24, backgroundColor: "rgba(42,47,62,0.8)" }}
+            style={{ width: 1, height: 24, backgroundColor: "rgba(30,58,74,0.8)" }}
           />
-          <div style={{ fontSize: 16, fontWeight: 600, color: "#9ca3af", display: "flex" }}>
+          <div style={{ fontSize: 16, fontWeight: 600, color: "#8DCAE8", display: "flex" }}>
             12 Languages
           </div>
         </div>
@@ -128,7 +128,7 @@ export default async function Image() {
             position: "absolute",
             bottom: 40,
             fontSize: 20,
-            color: "rgba(230,57,80,0.6)",
+            color: "rgba(255,90,110,0.6)",
             letterSpacing: 4,
             display: "flex",
           }}

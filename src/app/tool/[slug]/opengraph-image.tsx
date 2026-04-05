@@ -26,7 +26,7 @@ export default async function Image({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#0f1117",
+            backgroundColor: "#0D1B24",
             color: "#e8eaed",
             fontSize: 48,
             fontFamily: "monospace",
@@ -50,7 +50,7 @@ export default async function Image({
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#0f1117",
+          backgroundColor: "#0D1B24",
           fontFamily: "monospace",
           position: "relative",
           padding: "60px 80px",
@@ -64,7 +64,7 @@ export default async function Image({
             left: 0,
             width: 1200,
             height: 4,
-            background: "linear-gradient(90deg, #e63950, #a855a0)",
+            background: "linear-gradient(90deg, #FF5A6E, #8DCAE8)",
           }}
         />
 
@@ -84,7 +84,7 @@ export default async function Image({
               width: 36,
               height: 36,
               borderRadius: 8,
-              background: "linear-gradient(135deg, #e63950, #a855a0)",
+              background: "linear-gradient(135deg, #FF5A6E, #8DCAE8)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -99,7 +99,7 @@ export default async function Image({
             style={{
               fontSize: 20,
               fontWeight: 600,
-              color: "#e63950",
+              color: "#FF5A6E",
               letterSpacing: 2,
               display: "flex",
             }}
@@ -120,7 +120,7 @@ export default async function Image({
             style={{
               padding: "6px 16px",
               borderRadius: 6,
-              background: "linear-gradient(135deg, #e63950, #a855a0)",
+              background: "linear-gradient(135deg, #FF5A6E, #8DCAE8)",
               color: "white",
               fontSize: 13,
               fontWeight: 600,
@@ -135,7 +135,7 @@ export default async function Image({
             style={{
               marginLeft: 16,
               fontSize: 16,
-              color: "#9ca3af",
+              color: "#8DCAE8",
               display: "flex",
             }}
           >
@@ -161,7 +161,7 @@ export default async function Image({
         <div
           style={{
             fontSize: 22,
-            color: "#9ca3af",
+            color: "#8DCAE8",
             lineHeight: 1.5,
             marginBottom: 32,
             maxWidth: 900,
@@ -187,9 +187,9 @@ export default async function Image({
               style={{
                 padding: "6px 14px",
                 borderRadius: 20,
-                backgroundColor: "rgba(230, 57, 80, 0.1)",
-                border: "1px solid rgba(230, 57, 80, 0.2)",
-                color: "#f25c6e",
+                backgroundColor: "rgba(255, 90, 110, 0.12)",
+                border: "1px solid rgba(255, 90, 110, 0.25)",
+                color: "#FF5A6E",
                 fontSize: 14,
                 display: "flex",
               }}
@@ -223,7 +223,7 @@ export default async function Image({
                 key={p}
                 style={{
                   fontSize: 14,
-                  color: "#6b7280",
+                  color: "#4A8CAD",
                   textTransform: "uppercase",
                   letterSpacing: 1,
                   display: "flex",
@@ -236,7 +236,7 @@ export default async function Image({
           <div
             style={{
               fontSize: 18,
-              color: "rgba(230,57,80,0.6)",
+              color: "rgba(255,90,110,0.6)",
               letterSpacing: 3,
               display: "flex",
             }}
