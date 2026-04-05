@@ -441,7 +441,7 @@
       "windows"
     ],
     "website": "https://www.maltego.com/",
-    "github": "paterva/maltego-trx",
+    "github": "",
     "tags": [
       "graph-analysis",
       "link-analysis",
@@ -2204,7 +2204,7 @@
       "windows"
     ],
     "website": "https://www.chainalysis.com/",
-    "github": "nicedoc/chainalysis",
+    "github": "",
     "tags": [
       "blockchain",
       "graph",
@@ -2226,7 +2226,7 @@
       "windows"
     ],
     "website": "https://www.breadcrumbs.app/",
-    "github": "nicedoc/breadcrumbs",
+    "github": "",
     "tags": [
       "bitcoin",
       "ethereum",
@@ -2269,7 +2269,7 @@
       "windows"
     ],
     "website": "https://whale-alert.io/",
-    "github": "nicedoc/whale-alert",
+    "github": "",
     "tags": [
       "whale-watching",
       "real-time",
@@ -2290,7 +2290,7 @@
       "macos",
       "windows"
     ],
-    "github": "nicedoc/ethtective",
+    "github": "",
     "tags": [
       "ethereum",
       "graph",
@@ -2353,7 +2353,7 @@
       "macos",
       "windows"
     ],
-    "github": "nicedoc/tornado-tracker",
+    "github": "",
     "tags": [
       "mixer",
       "tornado-cash",
@@ -2398,7 +2398,7 @@
       "windows"
     ],
     "website": "https://www.walletexplorer.com/",
-    "github": "nicedoc/wallet-explorer",
+    "github": "",
     "tags": [
       "bitcoin",
       "clustering",
@@ -2420,7 +2420,7 @@
       "windows"
     ],
     "website": "https://misttrack.io/",
-    "github": "nicedoc/misttrack",
+    "github": "",
     "tags": [
       "cross-chain",
       "aml",
@@ -2441,7 +2441,7 @@
       "macos",
       "windows"
     ],
-    "github": "nicedoc/orbit",
+    "github": "",
     "tags": [
       "visualization",
       "graph",
@@ -2496,7 +2496,7 @@
       "windows"
     ],
     "website": "https://www.scorechain.com/",
-    "github": "nicedoc/scorechain",
+    "github": "",
     "tags": [
       "compliance",
       "risk-scoring",
@@ -2541,7 +2541,7 @@
       "windows"
     ],
     "website": "https://txstreet.com/",
-    "github": "nicedoc/txstreet",
+    "github": "",
     "tags": [
       "visualization",
       "real-time",
@@ -2776,7 +2776,7 @@
       "windows"
     ],
     "website": "https://debank.com/",
-    "github": "nicedoc/debank-api",
+    "github": "",
     "tags": [
       "defi",
       "portfolio",
@@ -2798,7 +2798,7 @@
       "windows"
     ],
     "website": "https://www.nansen.ai/",
-    "github": "nicedoc/nansen-labels",
+    "github": "",
     "tags": [
       "labels",
       "whale-tracking",
@@ -2820,7 +2820,7 @@
       "windows"
     ],
     "website": "https://www.arkhamintelligence.com/",
-    "github": "nicedoc/arkham-intel",
+    "github": "",
     "tags": [
       "entity-mapping",
       "intelligence",
@@ -2842,7 +2842,7 @@
       "windows"
     ],
     "website": "https://www.elliptic.co/",
-    "github": "nicedoc/elliptic-lens",
+    "github": "",
     "tags": [
       "compliance",
       "sanctions",
@@ -2907,7 +2907,7 @@
       "linux",
       "macos"
     ],
-    "github": "nicedoc/chainsight",
+    "github": "",
     "tags": [
       "dex-monitoring",
       "bridges",
@@ -2994,7 +2994,7 @@
       "macos",
       "windows"
     ],
-    "github": "nicedoc/drainer-detector",
+    "github": "",
     "tags": [
       "drainer",
       "phishing",
@@ -3036,7 +3036,7 @@
       "windows"
     ],
     "website": "https://eigenphi.io/",
-    "github": "nicedoc/eigenphi",
+    "github": "",
     "tags": [
       "flash-loan",
       "rug-pull",
@@ -3058,7 +3058,7 @@
       "windows"
     ],
     "website": "https://tokensniffer.com/",
-    "github": "nicedoc/token-sniffer",
+    "github": "",
     "tags": [
       "scam-detection",
       "honeypot",
@@ -3079,7 +3079,7 @@
       "macos",
       "windows"
     ],
-    "github": "nicedoc/rugdoc",
+    "github": "",
     "tags": [
       "risk-assessment",
       "defi",
@@ -5140,7 +5140,7 @@
       "macos",
       "windows"
     ],
-    "github": "nicedoc/crystal-blockchain-ruby",
+    "github": "",
     "tags": [
       "compliance",
       "analytics",

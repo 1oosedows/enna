@@ -12,7 +12,7 @@ export interface Tool {
   website?: string;
   documentation?: string;
   downloadUrl?: string;
-  github: string;
+  github?: string;
   tags: string[];
   featured?: boolean;
   useCases?: string[];
