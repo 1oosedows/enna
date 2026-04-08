@@ -13,7 +13,7 @@ Sentry.init({
   tracesSampleRate: 0.1,
   enableLogs: true,
 
-  // Don't record replays on normal sessions — only on errors
+  // Don't record replays on normal sessions - only on errors
   replaysSessionSampleRate: 0,
   replaysOnErrorSampleRate: 1.0,
 

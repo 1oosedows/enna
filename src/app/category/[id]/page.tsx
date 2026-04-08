@@ -41,7 +41,7 @@ const categoryDescriptions: Record<string, string> = {
   mobile:
     "Mobile security tools for Android and iOS application analysis, APK reverse engineering, dynamic instrumentation, and mobile penetration testing. These tools help identify vulnerabilities in mobile applications and their backend APIs.",
   "dual-use":
-    "Legitimate security and networking tools with well-known offensive applications. These dual-use tools serve both defensive and offensive purposes — useful for system administration, network diagnostics, and security testing.",
+    "Legitimate security and networking tools with well-known offensive applications. These dual-use tools serve both defensive and offensive purposes - useful for system administration, network diagnostics, and security testing.",
   "offensive-ops":
     "Red team and offensive operations tooling including C2 frameworks, evasion techniques, lateral movement utilities, and specialized attack tools. Built for authorized penetration testing and adversary simulation exercises.",
   "threat-intel":
@@ -90,7 +90,7 @@ export async function generateMetadata({
   const toolCount = (toolsData as Tool[]).filter(
     (t) => t.category === id
   ).length;
-  const pageTitle = `${category.name} Tools (${toolCount}) — ENNA`;
+  const pageTitle = `${category.name} Tools (${toolCount}) - ENNA`;
   const pageDescription = categoryDescriptions[id] || category.description;
 
   return {

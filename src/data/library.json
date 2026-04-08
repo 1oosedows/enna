@@ -20,7 +20,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/id/8336400-L.jpg",
-      "isbn": "9798345969250"
+      "isbn": "9798345969250",
+      "longDescription": "Michael Bazzell's OSINT Techniques is the definitive guide to open-source intelligence investigation, updated annually to reflect changes in available data sources and search techniques. The book covers systematic approaches to locating information about people, businesses, and online activities using publicly available resources. Bazzell provides detailed methodologies for searching social media platforms, public records databases, people search engines, domain registration data, and archived web content. Each chapter focuses on a specific data category with step-by-step instructions for both manual techniques and automated tools. The book also covers creating anonymous research infrastructure, managing investigation notes, and maintaining operational security during OSINT investigations. Bazzell's experience as a former FBI cyber crimes investigator and technical advisor to the TV show Mr. Robot gives the content a practical, field-tested quality."
     },
     {
       "slug": "extreme-privacy",
@@ -42,7 +43,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/id/9379691-L.jpg",
-      "isbn": "9798335024334"
+      "isbn": "9798335024334",
+      "longDescription": "Extreme Privacy is Michael Bazzell's comprehensive guide to protecting your personal information and digital identity from both targeted investigation and mass surveillance. Drawing on his experience as an OSINT investigator, Bazzell essentially reverses his own techniques, showing readers how to remove themselves from the databases, social networks, and public records that investigators use to find people. The book covers legal name changes, address obfuscation, phone number and email privacy, financial privacy, vehicle registration, real estate ownership structures, and digital compartmentalization. Each chapter provides actionable steps for reducing your digital footprint, with specific instructions for opting out of data brokers, configuring privacy settings, and creating layered identity protection. The level of detail is extraordinary, covering everything from how to receive packages anonymously to structuring LLC ownership to keep your name off public records."
     },
     {
       "slug": "hacking-art-of-exploitation",
@@ -68,7 +70,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781593271442-L.jpg",
-      "isbn": "9781593271442"
+      "isbn": "9781593271442",
+      "longDescription": "Jon Erickson's Hacking: The Art of Exploitation approaches security from a fundamentally different angle than most hacking books. Rather than teaching readers to run existing tools, Erickson builds understanding from the ground up, starting with C programming, x86 assembly, and how programs actually execute in memory. From this foundation, the book explains buffer overflows, format string vulnerabilities, and shellcode writing in a way that makes the underlying principles clear rather than just demonstrating specific techniques. The second edition includes a bootable Linux CD that provides a complete development and exploitation environment. Topics progress from basic stack overflows through network programming, cryptography attacks, and countermeasure bypass techniques. The book remains relevant decades after publication because it teaches the fundamental concepts rather than tool-specific procedures."
     },
     {
       "slug": "rtfm-book-1",
@@ -90,7 +93,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/1494295504-L.jpg",
-      "isbn": "9781787399051"
+      "isbn": "9781787399051",
+      "longDescription": "The original RTFM (Red Team Field Manual) by Ben Clark is a compact, no-nonsense command reference designed to be carried into penetration testing engagements. Organized by operating system and attack phase, it provides quick-lookup commands for Linux, Windows, networking, and common attack techniques. The manual covers enumeration commands, file transfer techniques, privilege escalation one-liners, pivoting methods, and common tool syntax. Each entry is stripped to the essential command and flags with minimal explanation, making it a pure reference rather than a tutorial. RTFM has become a staple of the security community because it solves a real problem: remembering the exact syntax for hundreds of commands across different platforms during the pressure of a live engagement."
     },
     {
       "slug": "rtfm-book-2",
@@ -120,7 +124,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781075091834-L.jpg",
-      "isbn": "9781075091834"
+      "isbn": "9781075091834",
+      "longDescription": "The second edition of RTFM significantly expands the original's scope while maintaining the quick-reference format. Ben Clark and Nick Downer add coverage for modern attack techniques, cloud environments, containerized infrastructure, and updated tool syntax. New sections cover PowerShell offensive techniques, Active Directory attack commands, Kubernetes enumeration, AWS/Azure CLI commands for security testing, and modern C2 framework syntax. The book also includes updated sections on web application testing, mobile security commands, and wireless attack references. The second edition acknowledges that the attack surface has expanded dramatically since the original was published and aims to be the single field reference that covers the modern pentester's full toolkit."
     },
     {
       "slug": "btfm-book-1",
@@ -146,7 +151,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781541016361-L.jpg",
-      "isbn": "9781541016361"
+      "isbn": "9781541016361",
+      "longDescription": "The Blue Team Field Manual is the defensive counterpart to RTFM, providing quick-reference commands and procedures for incident response, forensics, and network defense. Ben Clark and Alan White organize the manual by defensive function: log analysis, network monitoring, host-based forensics, malware analysis, and incident response procedures. Each section provides the specific commands needed to investigate suspicious activity on Windows and Linux systems, collect forensic artifacts, analyze network traffic, and contain active threats. The manual covers Windows Event Log queries, Linux audit commands, memory forensics procedures, network packet analysis syntax, and SIEM query patterns. Like RTFM, it prioritizes brevity and accuracy over explanation, making it a tool for practitioners who understand the concepts but need quick access to the right command."
     },
     {
       "slug": "ftfm-book-2",
@@ -167,7 +173,8 @@
           "url": "https://amzn.to/4cfnqg5"
         }
       ],
-      "isbn": "9798314490181"
+      "isbn": "9798314490181",
+      "longDescription": "The Forensic Team Field Manual extends the BTFM series into dedicated digital forensics territory. Alan White and Ben Clark provide a comprehensive quick-reference for forensic examiners covering evidence acquisition, chain of custody procedures, file system analysis commands, registry forensics, browser artifact extraction, email analysis, and mobile device forensics. The manual includes commands for tools like FTK Imager, Autopsy, Volatility, RegRipper, and Eric Zimmerman's suite, organized by forensic task rather than tool. It covers both Windows and Linux forensic procedures, with sections on timeline creation, artifact correlation, and report writing. The 2025 edition reflects current forensic practices including cloud evidence collection, container forensics, and modern Windows artifact locations."
     },
     {
       "slug": "web-app-hackers-handbook-1e",
@@ -189,7 +196,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9780470170779-L.jpg",
-      "isbn": "9780470170779"
+      "isbn": "9780470170779",
+      "longDescription": "The first edition of The Web Application Hacker's Handbook established the standard methodology for web application penetration testing. Written by Dafydd Stuttard, the creator of Burp Suite, the book provides systematic approaches to discovering and exploiting every class of web vulnerability. It covers authentication flaws, session management weaknesses, access control bypasses, injection attacks (SQL, OS command, LDAP, XPath), cross-site scripting, cross-site request forgery, and logic flaws. The methodology walks through the complete assessment process from mapping the application and analyzing its functionality to testing each attack surface and exploiting discovered vulnerabilities. Despite being superseded by the second edition, the first edition remains valuable for its foundational treatment of web security concepts."
     },
     {
       "slug": "web-app-hackers-handbook-2e",
@@ -215,7 +223,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781118026472-L.jpg",
-      "isbn": "9781118026472"
+      "isbn": "9781118026472",
+      "longDescription": "The second edition of The Web Application Hacker's Handbook updates and significantly expands the original to cover the evolution of web technologies and attack techniques. Dafydd Stuttard and Marcus Pinto add comprehensive coverage of HTML5 security, cross-domain integration vulnerabilities, clickjacking, framebusting bypasses, and modern browser security controls. New chapters address attacking web services, testing thick-client components, and exploiting web application frameworks. The updated methodology reflects how web applications have become more complex, with richer client-side logic, extensive API usage, and deeper integration with backend services. The book remains the most comprehensive single reference for web application security testing, and its systematic methodology continues to influence how the industry approaches web assessments."
     },
     {
       "slug": "penetration-testing",
@@ -241,7 +250,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781593275648-L.jpg",
-      "isbn": "9781593275648"
+      "isbn": "9781593275648",
+      "longDescription": "Georgia Weidman's Penetration Testing provides a structured, hands-on introduction to the art of penetration testing. The book follows the standard penetration testing methodology, walking readers through setting up a lab environment, information gathering, vulnerability scanning, exploitation, post-exploitation, and reporting. Weidman uses a virtual lab setup so readers can practice every technique safely. The book covers Kali Linux configuration, Metasploit Framework in depth, web application testing with Burp Suite, social engineering with SET, wireless security assessment, and mobile application testing. Each chapter includes practical exercises that reinforce the concepts. Weidman's background as both a pentester and trainer shows in the clear, progressive structure that takes complete beginners through to competent junior testers."
     },
     {
       "slug": "network-security-assessment",
@@ -267,7 +277,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781491910955-L.jpg",
-      "isbn": "9781491910955"
+      "isbn": "9781491910955",
+      "longDescription": "Chris McNab's Network Security Assessment is a practical guide to evaluating the security of networks using the same techniques that real attackers use. The third edition covers modern network infrastructure including cloud services, IPv6, and software-defined networking alongside traditional LAN/WAN assessment techniques. The book walks through the complete assessment methodology: network scanning and enumeration, service identification, vulnerability assessment, and exploitation of common network services (DNS, SMTP, HTTP, FTP, SSH, SNMP, and more). Each chapter covers a specific protocol or service family, documenting known vulnerabilities, testing techniques, and the tools used by professional assessors. McNab provides the technical depth needed to understand why vulnerabilities exist, not just how to find them."
     },
     {
       "slug": "practical-malware-analysis",
@@ -293,7 +304,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781593272906-L.jpg",
-      "isbn": "9781593272906"
+      "isbn": "9781593272906",
+      "longDescription": "Practical Malware Analysis by Michael Sikorski and Andrew Honig is the standard textbook for learning malware reverse engineering. The book progresses from basic static analysis techniques (examining file headers, strings, imports) through dynamic analysis (running malware in controlled environments and monitoring behavior) to advanced reverse engineering with IDA Pro and OllyDbg. Each chapter introduces new concepts and techniques, with hands-on lab exercises using real malware samples. The book covers anti-analysis techniques that malware uses to evade detection and analysis, including anti-debugging, anti-VM, packing, and encryption. Advanced chapters cover shellcode analysis, C++ malware patterns, and 64-bit analysis. The methodical approach and excellent lab exercises have made it the go-to resource for training new malware analysts in both government and private sector organizations."
     },
     {
       "slug": "art-of-deception",
@@ -323,7 +335,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9780764542800-L.jpg",
-      "isbn": "9780764542800"
+      "isbn": "9780764542800",
+      "longDescription": "Kevin Mitnick's The Art of Deception draws on his notorious career as a social engineer to illustrate how human psychology is the weakest link in any security system. Through detailed fictional scenarios based on real techniques, Mitnick demonstrates how attackers manipulate trust, authority, fear, and helpfulness to bypass technical security controls entirely. Each chapter presents attack scenarios from both the attacker's and victim's perspectives, then provides analysis of what went wrong and how the attack could have been prevented. The book covers pretexting, phishing, tailgating, dumpster diving, and more sophisticated manipulation techniques that combine technical knowledge with psychological exploitation. Despite being published in 2002, the fundamental human vulnerabilities it describes remain unchanged, making it perpetually relevant for security awareness training."
     },
     {
       "slug": "art-of-intrusion",
@@ -353,7 +366,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9780764569593-L.jpg",
-      "isbn": "9780764569593"
+      "isbn": "9780764569593",
+      "longDescription": "The Art of Intrusion follows up The Art of Deception with real stories of actual hacking incidents, told by the attackers themselves. Mitnick convinced hackers, social engineers, and security researchers to share their most impressive exploits, then worked with them to verify and document each story. The result is a collection of compelling narratives covering casino hacking, prison phone system exploitation, corporate espionage, and military system penetration. Each chapter concludes with analysis of the techniques used, the mistakes that enabled the attack, and lessons for defenders. The stories range from technically sophisticated network intrusions to pure social engineering, illustrating the diverse approaches attackers take and the creative thinking that makes some attacks succeed against seemingly secure systems."
     },
     {
       "slug": "art-of-invisibility",
@@ -383,7 +397,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9780316380508-L.jpg",
-      "isbn": "9780316380508"
+      "isbn": "9780316380508",
+      "longDescription": "The Art of Invisibility is Mitnick's guide to personal privacy in an age of pervasive surveillance. Drawing on his unique perspective as both a former hacker and a security consultant, Mitnick provides practical techniques for protecting your communications, browsing habits, financial transactions, and physical movements from surveillance by corporations, governments, and malicious actors. The book covers encrypted messaging, VPNs, Tor, burner phones, anonymous email, cryptocurrency privacy, and physical surveillance countermeasures. Each chapter addresses a specific privacy concern with escalating levels of protection, from basic steps anyone can take to advanced techniques for high-risk individuals. Mitnick acknowledges that perfect privacy is nearly impossible but argues that raising the cost of surveillance is both achievable and worthwhile."
     },
     {
       "slug": "mastering-blockchain-1e",
@@ -409,7 +424,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781787125445-L.jpg",
-      "isbn": "9781787125445"
+      "isbn": "9781787125445",
+      "longDescription": "The first edition of Mastering Blockchain by Imran Bashir provides a comprehensive introduction to blockchain technology, covering the fundamental concepts of decentralization, cryptography, and distributed consensus. The book explains how Bitcoin works at a technical level, including transaction structure, mining algorithms, and the peer-to-peer network protocol. It extends beyond Bitcoin to cover Ethereum, Hyperledger, and other blockchain platforms, explaining smart contracts, alternative consensus mechanisms, and enterprise blockchain use cases. The first edition laid the groundwork for understanding blockchain from both a theoretical and practical perspective, covering the mathematics of elliptic curve cryptography, hash functions, and Merkle trees alongside practical development examples."
     },
     {
       "slug": "mastering-blockchain-2e",
@@ -435,7 +451,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781788839044-L.jpg",
-      "isbn": "9781788839044"
+      "isbn": "9781788839044",
+      "longDescription": "The second edition of Mastering Blockchain expands coverage to reflect the rapid evolution of blockchain technology. Imran Bashir adds detailed treatment of Ethereum smart contract development, Hyperledger Fabric architecture, and emerging consensus algorithms beyond proof-of-work. New chapters cover tokenization, initial coin offerings (ICOs), blockchain scalability challenges, and privacy-preserving techniques like zero-knowledge proofs. The edition provides deeper technical coverage of distributed ledger technology (DLT) variants that diverge from traditional blockchain architecture, including directed acyclic graphs (DAGs) and hashgraph. Development examples are updated to reflect current tooling and best practices for building blockchain applications."
     },
     {
       "slug": "mastering-blockchain-3e",
@@ -462,7 +479,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781839213199-L.jpg",
-      "isbn": "9781839213199"
+      "isbn": "9781839213199",
+      "longDescription": "The third edition of Mastering Blockchain arrives at a time when DeFi, NFTs, and enterprise blockchain deployments have moved from experimental to mainstream. Imran Bashir provides comprehensive coverage of decentralized finance protocols, non-fungible token standards, and the Web3 ecosystem alongside the foundational blockchain concepts from earlier editions. New material covers Ethereum 2.0 and the proof-of-stake transition, layer-2 scaling solutions (rollups, state channels, sidechains), cross-chain interoperability protocols, and decentralized autonomous organizations (DAOs). The edition also addresses the growing intersection of blockchain with IoT, supply chain management, and digital identity systems, providing both technical depth and practical implementation guidance."
     },
     {
       "slug": "mastering-blockchain-4e",
@@ -489,7 +507,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/id/14838956-L.jpg",
-      "isbn": "9781803241067"
+      "isbn": "9781803241067",
+      "longDescription": "The fourth edition of Mastering Blockchain reflects the maturation of the blockchain ecosystem through multiple market cycles and technological generations. Imran Bashir covers the latest developments in consensus mechanisms, zero-knowledge proof systems (zk-SNARKs, zk-STARKs), account abstraction, and modular blockchain architectures. New chapters address the regulatory landscape, central bank digital currencies (CBDCs), real-world asset tokenization, and the convergence of AI with blockchain technology. The edition provides updated development tutorials using current frameworks and languages, including Solidity best practices informed by years of smart contract exploits and audits. The book maintains its role as the comprehensive reference for understanding blockchain technology across all layers of the stack."
     },
     {
       "slug": "investigating-cryptocurrencies",
@@ -516,7 +535,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781119480587-L.jpg",
-      "isbn": "9781119480587"
+      "isbn": "9781119480587",
+      "longDescription": "Nick Furneaux's Investigating Cryptocurrencies is a practical guide for law enforcement, forensic examiners, and security professionals who need to trace cryptocurrency transactions and identify wallet owners. The book covers the fundamentals of blockchain technology, Bitcoin transaction structure, and the pseudonymous nature of cryptocurrency addresses. It then progresses to practical investigation techniques including blockchain exploration, transaction graph analysis, address clustering, exchange identification, and working with commercial analysis tools. Furneaux covers the legal considerations for cryptocurrency investigations, how to seize and manage digital assets, and how to present blockchain evidence in court. The book addresses Bitcoin, Ethereum, and privacy coins, with guidance on the limitations of tracing techniques when mixers, tumblers, and privacy-focused cryptocurrencies are involved."
     },
     {
       "slug": "black-hat-python-1e",
@@ -538,7 +558,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781593275907-L.jpg",
-      "isbn": "9781593275907"
+      "isbn": "9781593275907",
+      "longDescription": "The first edition of Black Hat Python by Justin Seitz teaches Python programming in the context of security tool development. The book covers building network sniffers, manipulating packets with Scapy, creating SSH tunnels and proxy tools, building web scrapers for OSINT, developing Burp Suite extensions, crafting trojans with Python, and automating offensive tasks. Each chapter focuses on a practical project that builds a useful security tool from scratch, teaching both Python programming concepts and the underlying networking and security principles. The first edition uses Python 2 and focuses on tools and techniques relevant to its 2014 publication date, but the fundamental approach of teaching offensive Python through project-based learning established the template that the second edition later updated."
     },
     {
       "slug": "black-hat-python-2e",
@@ -565,7 +586,8 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781718501126-L.jpg",
-      "isbn": "9781718501126"
+      "isbn": "9781718501126",
+      "longDescription": "The second edition of Black Hat Python updates the original for Python 3 and modern security tooling. Justin Seitz and Tim Arnold rewrite all code examples for Python 3, add new chapters on using the GitHub API for C2 communication and building web application attack tools, and update existing content to reflect current libraries and techniques. The book covers network programming with raw sockets, building SSH command-and-control tools, creating proxy tools for traffic manipulation, developing Burp Suite extensions in Python, and automating web application attacks. New material addresses modern defensive controls and how to work around them. The hands-on approach remains the book's strength, with each chapter producing a working tool that demonstrates both the Python programming and the security concept."
     },
     {
       "slug": "gray-hat-python",
@@ -591,7 +613,570 @@
         }
       ],
       "coverImage": "https://covers.openlibrary.org/b/isbn/9781593271923-L.jpg",
-      "isbn": "9781593271923"
+      "isbn": "9781593271923",
+      "longDescription": "Gray Hat Python by Justin Seitz bridges the gap between security research and Python programming, focusing specifically on reverse engineering and vulnerability research. The book covers using Python to build debugging tools, including writing a Windows debugger from scratch using the ctypes library and Win32 API. Chapters cover hooking function calls, setting breakpoints, manipulating process memory, and building fuzzers for vulnerability discovery. Seitz demonstrates how to use Python with IDA Pro for automated binary analysis, how to build custom fuzzers that can find real vulnerabilities, and how to develop exploits using Python. The book also covers using PyDbg for automated debugging, Immunity Debugger scripting, and fuzzing frameworks. While some tools have evolved since publication, the concepts of using Python as glue between low-level debugging APIs and higher-level analysis remain fundamental to security research."
+    },
+    {
+      "slug": "hacker-playbook-1",
+      "title": "The Hacker Playbook: Practical Guide To Penetration Testing",
+      "author": "Peter Kim",
+      "description": "The Hacker Playbook provides a practical, step-by-step guide to penetration testing methodology. Peter Kim draws on his experience as a security consultant to walk readers through the phases of a.",
+      "longDescription": "The Hacker Playbook provides a practical, step-by-step guide to penetration testing methodology. Peter Kim draws on his experience as a security consultant to walk readers through the phases of a real engagement, from setting up a penetration testing lab and performing reconnaissance, to gaining access, maintaining persistence, and writing the final report. The book follows a sports analogy structure with plays and game plans, making complex attack chains accessible to intermediate practitioners. It covers network attacks, web application testing, social engineering, password cracking, and post-exploitation techniques using tools like Metasploit, Burp Suite, and Cobalt Strike. Each chapter builds on the previous one, creating a cohesive methodology that readers can apply directly to their own assessments.",
+      "category": "pentesting",
+      "tags": [
+        "pentesting",
+        "methodology",
+        "red-team"
+      ],
+      "imageTag": "H1",
+      "year": 2014,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3PMAKjq"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/3PQns5o"
+        }
+      ],
+      "isbn": "978-1494932633",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1494932633-L.jpg"
+    },
+    {
+      "slug": "hacker-playbook-2",
+      "title": "The Hacker Playbook 2: Practical Guide To Penetration",
+      "author": "Peter Kim",
+      "description": "The second installment of The Hacker Playbook series updates and expands the penetration testing methodology with new techniques, tools, and attack vectors. Peter Kim covers the evolution of.",
+      "longDescription": "The second installment of The Hacker Playbook series updates and expands the penetration testing methodology with new techniques, tools, and attack vectors. Peter Kim covers the evolution of defensive security and how offensive techniques have adapted, introducing advanced topics like pivoting through networks, bypassing antivirus and endpoint detection, attacking Active Directory environments, and using PowerShell for post-exploitation. The book adds new plays for web application attacks, social engineering campaigns, and physical security assessments. It maintains the practical, hands-on approach of the first book while pushing into more sophisticated territory, making it suitable for practitioners who have mastered the basics and want to level up their red team capabilities.",
+      "category": "pentesting",
+      "tags": [
+        "pentesting",
+        "methodology",
+        "red-team",
+        "advanced"
+      ],
+      "imageTag": "H2",
+      "year": 2015,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4sflV6C"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4e11WF5"
+        }
+      ],
+      "isbn": "978-1512214567",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1512214567-L.jpg"
+    },
+    {
+      "slug": "hacker-playbook-3",
+      "title": "The Hacker Playbook 3: Practical Guide To Penetration Testing",
+      "author": "Peter Kim",
+      "description": "The Hacker Playbook 3 shifts focus from traditional penetration testing to red team operations, reflecting the industry's evolution toward adversary simulation. Peter Kim introduces the concept of.",
+      "longDescription": "The Hacker Playbook 3 shifts focus from traditional penetration testing to red team operations, reflecting the industry's evolution toward adversary simulation. Peter Kim introduces the concept of red team engagements where the goal is not just finding vulnerabilities but testing an organization's detection and response capabilities. The book covers building custom command-and-control infrastructure, evading modern endpoint detection and response (EDR) solutions, attacking cloud environments, exploiting Active Directory trust relationships, and conducting physical intrusions. New chapters address purple teaming, where offensive and defensive teams collaborate to improve security posture. The practical lab exercises have been updated with current tools and techniques, including Cobalt Strike, Empire, and custom tooling.",
+      "category": "pentesting",
+      "tags": [
+        "pentesting",
+        "red-team",
+        "advanced",
+        "purple-team"
+      ],
+      "imageTag": "H3",
+      "year": 2018,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4toZ0X8"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4vfRtfo"
+        }
+      ],
+      "isbn": "978-1980901754",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1980901754-L.jpg"
+    },
+    {
+      "slug": "red-team-zenko",
+      "title": "Red Team: How to Succeed By Thinking Like the Enemy",
+      "author": "Micah Zenko",
+      "description": "Micah Zenko's Red Team explores the practice of adversarial thinking across military, intelligence, corporate, and cybersecurity domains. Drawing from extensive research and interviews with red team.",
+      "longDescription": "Micah Zenko's Red Team explores the practice of adversarial thinking across military, intelligence, corporate, and cybersecurity domains. Drawing from extensive research and interviews with red team practitioners, Zenko examines how organizations use structured devil's advocacy, alternative analysis, and simulated attacks to challenge assumptions and improve decision-making. The book covers the history of red teaming from medieval Catholic Church advocatus diaboli to modern military wargames and corporate penetration testing. Zenko analyzes why organizations resist red teaming, how institutional politics can undermine its effectiveness, and what makes some red team programs succeed while others are reduced to checkbox exercises. Essential reading for anyone building or managing red team programs, as it provides the strategic and organizational context that technical manuals miss.",
+      "category": "red-team",
+      "tags": [
+        "red-team",
+        "strategy",
+        "adversarial-thinking",
+        "military"
+      ],
+      "imageTag": "RT",
+      "year": 2015,
+      "editions": [
+        {
+          "format": "Hardcover",
+          "url": "https://amzn.to/4898EoM"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/47AKJys"
+        }
+      ],
+      "isbn": "978-0465048946",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-0465048946-L.jpg"
+    },
+    {
+      "slug": "operator-handbook-picolet",
+      "title": "Operator Handbook: Red Team + OSINT + Blue Team Reference",
+      "author": "Joshua Picolet",
+      "description": "Joshua Picolet's Operator Handbook is an A-to-Z quick reference covering the commands, tools, and techniques used across red team, OSINT, and blue team operations. Organized alphabetically by topic,.",
+      "longDescription": "Joshua Picolet's Operator Handbook is an A-to-Z quick reference covering the commands, tools, and techniques used across red team, OSINT, and blue team operations. Organized alphabetically by topic, it provides concise, actionable entries for everything from Active Directory enumeration to Zeek network analysis. Each entry includes the relevant commands, common flags, and practical usage examples without lengthy explanations, making it ideal for quick consultation during live engagements. The handbook covers Linux and Windows command-line operations, network protocols, web application testing, forensic artifact locations, OSINT data sources, and scripting snippets. Its compact format and comprehensive scope have made it a popular desk reference and field manual for security professionals who need quick access to commands across multiple disciplines.",
+      "category": "red-team",
+      "tags": [
+        "reference",
+        "red-team",
+        "blue-team",
+        "osint",
+        "commands"
+      ],
+      "imageTag": "OH",
+      "year": 2020,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4c4wQKd"
+        }
+      ],
+      "isbn": "979-8605493952",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/979-8605493952-L.jpg"
+    },
+    {
+      "slug": "tribe-of-hackers-red-team",
+      "title": "Tribe of Hackers Red Team: Tribal Knowledge from the Best in Offensive Cybersecurity - Book 1",
+      "author": "Marcus J. Carey and Jennifer Jin",
+      "description": "Tribe of Hackers Red Team collects insights from dozens of the world's top offensive security professionals through structured interviews. Marcus J. Carey and Jennifer Jin ask each expert the same.",
+      "longDescription": "Tribe of Hackers Red Team collects insights from dozens of the world's top offensive security professionals through structured interviews. Marcus J. Carey and Jennifer Jin ask each expert the same set of questions about how they got started, their favorite tools and techniques, the biggest mistakes they see in the industry, and advice for aspiring red teamers. The result is a mosaic of perspectives from practitioners at different stages of their careers and from different backgrounds, revealing both common themes and surprising disagreements about offensive security best practices. The book provides career guidance, technical insights, and philosophical perspectives on the role of red teaming in improving security, making it valuable for both newcomers considering the field and veterans seeking fresh perspectives.",
+      "category": "red-team",
+      "tags": [
+        "red-team",
+        "interviews",
+        "career",
+        "wisdom"
+      ],
+      "imageTag": "T1",
+      "year": 2019,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3OfyII9"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4sSUP6l"
+        }
+      ],
+      "isbn": "978-1119643326",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1119643326-L.jpg"
+    },
+    {
+      "slug": "tribe-of-hackers-general",
+      "title": "Tribe of Hackers: Cybersecurity Advice from the Best Hackers in the World - Book 2",
+      "author": "Marcus J. Carey and Jennifer Jin",
+      "description": "The original Tribe of Hackers book casts a wider net than the red team edition, interviewing cybersecurity professionals across all disciplines, from penetration testers and incident responders to.",
+      "longDescription": "The original Tribe of Hackers book casts a wider net than the red team edition, interviewing cybersecurity professionals across all disciplines, from penetration testers and incident responders to CISOs and security researchers. Marcus J. Carey and Jennifer Jin explore the diverse paths people take into cybersecurity, the challenges facing the industry, and the hard-won wisdom of practitioners who have spent decades defending against and simulating attacks. Each interview covers the expert's background, their views on the skills gap, diversity in security, the future of the industry, and practical advice for people at any stage of their career. The book humanizes an industry often reduced to technical certifications and toolsets, showing the range of personalities, motivations, and perspectives that make cybersecurity work.",
+      "category": "red-team",
+      "tags": [
+        "cybersecurity",
+        "interviews",
+        "career",
+        "wisdom"
+      ],
+      "imageTag": "T2",
+      "year": 2019,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4bOz9SO"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4dtpFO8"
+        }
+      ],
+      "isbn": "978-1119643371",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1119643371-L.jpg"
+    },
+    {
+      "slug": "tribe-of-hackers-leaders",
+      "title": "Tribe of Hackers Security Leaders: Tribal Knowledge from the Best in Cybersecurity Leadership - Book 3",
+      "author": "Marcus J. Carey and Jennifer Jin",
+      "description": "The Security Leaders edition of Tribe of Hackers focuses on the management and leadership side of cybersecurity. Interviews with CISOs, security directors, and program leaders explore how to build.",
+      "longDescription": "The Security Leaders edition of Tribe of Hackers focuses on the management and leadership side of cybersecurity. Interviews with CISOs, security directors, and program leaders explore how to build and manage security teams, communicate risk to executive leadership, handle board-level reporting, manage budgets, and navigate organizational politics. The book addresses challenges specific to security leadership, including burnout management, building diverse teams, measuring security program effectiveness, and making the case for security investment. For technical practitioners considering the move to management, it provides honest perspectives on what changes, what you gain, and what you give up. For current leaders, it offers validation, alternative approaches, and the reassurance that everyone struggles with the same fundamental challenges.",
+      "category": "red-team",
+      "tags": [
+        "leadership",
+        "ciso",
+        "management",
+        "career"
+      ],
+      "imageTag": "T3",
+      "year": 2020,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4tvmgDe"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/3Q22AIq"
+        }
+      ],
+      "isbn": "978-1119643777",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1119643777-L.jpg"
+    },
+    {
+      "slug": "tribe-of-hackers-blue-team",
+      "title": "Tribe of Hackers Blue Team: Tribal Knowledge from the Best in Defensive Cybersecurity - Book 4",
+      "author": "Marcus J. Carey and Jennifer Jin",
+      "description": "The Blue Team edition of Tribe of Hackers gives voice to the defensive side of cybersecurity, interviewing SOC analysts, incident responders, threat hunters, detection engineers, and security.",
+      "longDescription": "The Blue Team edition of Tribe of Hackers gives voice to the defensive side of cybersecurity, interviewing SOC analysts, incident responders, threat hunters, detection engineers, and security architects. The interviews explore the unique challenges of defensive security, including alert fatigue, tool sprawl, the asymmetry between attackers and defenders, and the difficulty of proving the value of prevention. Experts share their approaches to building detection programs, conducting threat hunts, responding to incidents under pressure, and staying current with evolving threats. The book provides an important counterbalance to the offensive-focused majority of security literature, highlighting that defense is not just the unglamorous flip side of red teaming but a discipline requiring its own creativity, deep technical skills, and strategic thinking.",
+      "category": "blue-team",
+      "tags": [
+        "blue-team",
+        "defense",
+        "interviews",
+        "career"
+      ],
+      "imageTag": "T4",
+      "year": 2020,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4mbm0Xw"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/3NHU00X"
+        }
+      ],
+      "isbn": "978-1119643418",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1119643418-L.jpg"
+    },
+    {
+      "slug": "social-engineering-hadnagy",
+      "title": "Social Engineering: The Science of Human Hacking",
+      "author": "Christopher Hadnagy",
+      "description": "Christopher Hadnagy's Social Engineering explores the full spectrum of human manipulation techniques used in security testing and real-world attacks. The second edition covers the psychological.",
+      "longDescription": "Christopher Hadnagy's Social Engineering explores the full spectrum of human manipulation techniques used in security testing and real-world attacks. The second edition covers the psychological principles behind influence, pretexting, elicitation, phishing, vishing (voice phishing), and physical social engineering. Hadnagy draws on research in psychology, neuroscience, and behavioral economics to explain why social engineering works at a fundamental level, then provides practical frameworks for both conducting social engineering assessments and defending against them. The book covers microexpressions, rapport building, nonverbal communication, and the neuroscience of trust and decision-making. Each technique is illustrated with real-world case studies from Hadnagy's consulting work. The defensive chapters help organizations build human-layer security programs that go beyond annual phishing simulations.",
+      "category": "social-engineering",
+      "tags": [
+        "social-engineering",
+        "psychology",
+        "manipulation",
+        "defense"
+      ],
+      "imageTag": "SE",
+      "year": 2018,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4bOC0v0"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/48pdVZm"
+        }
+      ],
+      "isbn": "978-1119433385",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1119433385-L.jpg"
+    },
+    {
+      "slug": "silence-on-the-wire",
+      "title": "Silence on the Wire: A Field Guide to Passive Reconnaissance and Indirect Attacks",
+      "author": "Michael Zalewsi",
+      "description": "Silence on the Wire is a deeply technical exploration of passive network reconnaissance and information leakage. Michal Zalewski examines how seemingly innocuous network traffic reveals far more than.",
+      "longDescription": "Silence on the Wire is a deeply technical exploration of passive network reconnaissance and information leakage. Michal Zalewski examines how seemingly innocuous network traffic reveals far more than most people realize, covering TCP/IP stack fingerprinting, timing attacks, electromagnetic emanations, protocol-level information disclosure, and covert communication channels hidden in normal traffic patterns. The book explores how an observer can identify operating systems, applications, network topology, and user behavior purely through passive observation without sending a single packet. Zalewski's writing is both technically rigorous and intellectually engaging, connecting low-level protocol details to broader security implications. Despite its age, the fundamental principles remain highly relevant, and many of the techniques described have only become more powerful with modern hardware and analysis tools.",
+      "category": "network",
+      "tags": [
+        "passive-recon",
+        "network-analysis",
+        "covert-channels",
+        "traffic-analysis"
+      ],
+      "imageTag": "SW",
+      "year": 2005,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4vbBa2T"
+        }
+      ]
+    },
+    {
+      "slug": "tangled-web",
+      "title": "The Tangled Web: A Guide to Securing Modern Web Applications",
+      "author": "Michael Zalewsi",
+      "description": "Michal Zalewski's The Tangled Web provides a deep exploration of web browser security and the chaotic landscape of web standards that create security vulnerabilities. Rather than cataloging specific.",
+      "longDescription": "Michal Zalewski's The Tangled Web provides a deep exploration of web browser security and the chaotic landscape of web standards that create security vulnerabilities. Rather than cataloging specific attack techniques, Zalewski dissects the fundamental building blocks of the web, including URL parsing, HTTP protocol behavior, HTML rendering, CSS processing, JavaScript execution, and the same-origin policy, to explain why web security is so difficult. Each chapter covers a different layer of the web stack, documenting the inconsistencies between browser implementations, the historical accidents that created security holes, and the defense mechanisms that attempt to contain the resulting chaos. The book is essential reading for anyone building or testing web applications, as it provides the foundational understanding of browser behavior that makes both attacks and defenses make sense.",
+      "category": "web-security",
+      "tags": [
+        "web-security",
+        "browser",
+        "http",
+        "same-origin-policy"
+      ],
+      "imageTag": "TW",
+      "year": 2011,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3OfCoJX"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/47E3hhb"
+        }
+      ],
+      "isbn": "978-1593273880",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1593273880-L.jpg"
+    },
+    {
+      "slug": "sandworm",
+      "title": "Sandworm: A New Era of Cyberwar and the Hunt for the Kremlin's Most Dangerous Hackers",
+      "author": "Andy Greenberg",
+      "description": "Andy Greenberg's Sandworm tells the story of the Russian military hacking unit behind some of the most destructive cyberattacks in history. The book traces the evolution of the group known as.",
+      "longDescription": "Andy Greenberg's Sandworm tells the story of the Russian military hacking unit behind some of the most destructive cyberattacks in history. The book traces the evolution of the group known as Sandworm (Unit 74455 of Russia's GRU) from their early attacks on Ukrainian power grids, which caused real-world blackouts affecting hundreds of thousands of people, through the devastating NotPetya malware that caused over $10 billion in damage worldwide and the Olympic Destroyer attack on the 2018 Winter Games. Greenberg weaves together the technical details of the attacks with the geopolitical context, the investigation by security researchers and intelligence agencies, and the human stories of the people affected. The book is a landmark work of cybersecurity journalism that makes the case for treating destructive cyber operations as a form of warfare with real-world consequences.",
+      "category": "cyber-warfare",
+      "tags": [
+        "apt",
+        "russia",
+        "cyberwar",
+        "infrastructure",
+        "journalism"
+      ],
+      "imageTag": "SD",
+      "year": 2019,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4bVlPdW"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4v7Ol4S"
+        }
+      ],
+      "isbn": "978-0525564638",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-0525564638-L.jpg"
+    },
+    {
+      "slug": "countdown-to-zero-day",
+      "title": "Stuxnet and the Launch of the World's First Digital Weapon Countdown to Zero Day",
+      "author": "Kim Zetter",
+      "description": "Kim Zetter's Countdown to Zero Day is the definitive account of the discovery and analysis of Stuxnet, the first known cyber weapon designed to cause physical destruction. The book chronicles how.",
+      "longDescription": "Kim Zetter's Countdown to Zero Day is the definitive account of the discovery and analysis of Stuxnet, the first known cyber weapon designed to cause physical destruction. The book chronicles how security researchers at Symantec and other firms unraveled the most sophisticated piece of malware ever seen, revealing a joint US-Israeli operation to sabotage Iran's nuclear enrichment program. Zetter traces the technical details of Stuxnet's multiple zero-day exploits, its precision targeting of Siemens industrial control systems, and its carefully engineered payload that subtly damaged centrifuges while reporting normal operations to monitoring systems. Beyond the technical narrative, the book explores the policy implications of cyber weapons, the precedent Stuxnet set for nation-state cyber operations, and the unintended consequences when sophisticated malware escapes its intended target.",
+      "category": "cyber-warfare",
+      "tags": [
+        "stuxnet",
+        "cyber-weapon",
+        "iran",
+        "nation-state",
+        "journalism"
+      ],
+      "imageTag": "CZ",
+      "year": 2014,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4do93qX"
+        }
+      ]
+    },
+    {
+      "slug": "dark-wire",
+      "title": "Dark Wire: The Incredible True Story of the Largest Sting Operation Ever",
+      "author": "Joseph Cox",
+      "description": "Joseph Cox's Dark Wire reveals the full story behind ANOM, the encrypted phone company secretly run by the FBI. After taking over the encrypted communications platform from a confidential informant,.",
+      "longDescription": "Joseph Cox's Dark Wire reveals the full story behind ANOM, the encrypted phone company secretly run by the FBI. After taking over the encrypted communications platform from a confidential informant, the FBI operated it for years, reading every message sent by criminal organizations worldwide in real time. The operation, known as Trojan Shield, resulted in hundreds of arrests across multiple countries and provided unprecedented insight into organized crime communications. Cox, a veteran cybersecurity journalist, details the technical implementation of the backdoor, the legal challenges of operating an international surveillance operation, the ethical dilemmas faced by law enforcement, and the cat-and-mouse dynamics between criminals seeking secure communications and agencies seeking to intercept them. The book raises fundamental questions about the limits of government surveillance and the future of encrypted communications.",
+      "category": "cyber-warfare",
+      "tags": [
+        "anom",
+        "fbi",
+        "encryption",
+        "sting-operation",
+        "journalism"
+      ],
+      "imageTag": "DW",
+      "year": 2024,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3Ogbul8"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4vam7GI"
+        }
+      ],
+      "isbn": "978-1541702707",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1541702707-L.jpg"
+    },
+    {
+      "slug": "tracers-in-the-dark",
+      "title": "Tracers in the Dark: The Global Hunt for the Crime Lords of Cryptocurrency",
+      "author": "Andy Greenberg",
+      "description": "Andy Greenberg's Tracers in the Dark follows the investigators who shattered the myth that cryptocurrency is untraceable. The book chronicles how a small group of researchers and law enforcement.",
+      "longDescription": "Andy Greenberg's Tracers in the Dark follows the investigators who shattered the myth that cryptocurrency is untraceable. The book chronicles how a small group of researchers and law enforcement agents developed blockchain analysis techniques that led to the takedowns of the world's largest dark web markets, a massive child exploitation ring, and state-sponsored North Korean hackers. Greenberg traces the evolution from academic research into transaction graph analysis to the operational tradecraft used by IRS Criminal Investigation and other agencies to follow money through Bitcoin, Monero, and other cryptocurrencies. The book covers the AlphaBay and Hansa takedowns, the Welcome to Video investigation, the Chainalysis and CipherTrace tools that made tracing possible, and the ongoing arms race between privacy technologies and chain analysis. Essential reading for anyone working in cryptocurrency forensics or blockchain security.",
+      "category": "crypto-forensics",
+      "tags": [
+        "crypto",
+        "tracing",
+        "law-enforcement",
+        "journalism",
+        "blockchain-analysis"
+      ],
+      "imageTag": "TD",
+      "year": 2022,
+      "editions": [
+        {
+          "format": "Hardcover",
+          "url": "https://amzn.to/4coS9HG"
+        },
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4c0xfx7"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4m6ABDk"
+        }
+      ],
+      "isbn": "978-0385548090",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-0385548090-L.jpg"
+    },
+    {
+      "slug": "mastering-ethereum",
+      "title": "Mastering Ethereum: Building Smart Contracts and DApps",
+      "author": "Andreas M. Antonopoulos and Gavin Wood",
+      "description": "Mastering Ethereum by Andreas Antonopoulos and Gavin Wood (Ethereum's co-founder) is the authoritative technical guide to the Ethereum platform. The book covers Ethereum's architecture from the.",
+      "longDescription": "Mastering Ethereum by Andreas Antonopoulos and Gavin Wood (Ethereum's co-founder) is the authoritative technical guide to the Ethereum platform. The book covers Ethereum's architecture from the ground up, including the Ethereum Virtual Machine (EVM), account model, gas mechanism, and consensus protocol. It provides comprehensive coverage of smart contract development in Solidity, including security patterns, common vulnerabilities (reentrancy, integer overflow, access control), and best practices for writing safe, auditable code. Later chapters cover decentralized application (DApp) architecture, token standards (ERC-20, ERC-721), oracles, layer-2 scaling solutions, and development frameworks like Truffle and Hardhat. Written by the same author as Mastering Bitcoin, it maintains the same rigorous yet accessible style that made that book the standard reference for Bitcoin development.",
+      "category": "blockchain",
+      "tags": [
+        "ethereum",
+        "smart-contracts",
+        "solidity",
+        "dapps",
+        "development"
+      ],
+      "imageTag": "ME",
+      "year": 2018,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/3Q2a7XH"
+        }
+      ],
+      "isbn": "978-1491971949",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1491971949-L.jpg"
+    },
+    {
+      "slug": "mastering-bitcoin",
+      "title": "Mastering Bitcoin: Programming the Open Blockchain",
+      "author": "Andreas M. Antonopoulos and David A. Harding",
+      "description": "Mastering Bitcoin by Andreas Antonopoulos is the definitive technical guide to Bitcoin and blockchain technology. Now in its third edition with co-author David Harding, the book covers Bitcoin's.",
+      "longDescription": "Mastering Bitcoin by Andreas Antonopoulos is the definitive technical guide to Bitcoin and blockchain technology. Now in its third edition with co-author David Harding, the book covers Bitcoin's technical foundations from elliptic curve cryptography and transaction structure through the scripting language, mining mechanics, and peer-to-peer network protocol. The updated edition covers Segregated Witness (SegWit), the Lightning Network, Taproot, and Schnorr signatures. Each concept is explained with code examples, transaction diagrams, and protocol-level detail that makes it accessible to developers while maintaining the depth needed for serious implementation work. The book progresses from basic concepts to advanced topics like payment channels, timelocked transactions, and script constructions, making it useful for both newcomers to Bitcoin development and experienced blockchain engineers seeking a comprehensive reference.",
+      "category": "blockchain",
+      "tags": [
+        "bitcoin",
+        "programming",
+        "blockchain",
+        "cryptography",
+        "development"
+      ],
+      "imageTag": "MB",
+      "year": 2023,
+      "editions": [
+        {
+          "format": "Paperback",
+          "url": "https://amzn.to/4vfdoDq"
+        },
+        {
+          "format": "Kindle",
+          "url": "https://amzn.to/4bQQXg1"
+        }
+      ],
+      "isbn": "978-1098150099",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/978-1098150099-L.jpg"
+    },
+    {
+      "slug": "red-team-operators-handbook",
+      "title": "The Red Team Operator's Handbook",
+      "author": "Joseph Haynes",
+      "description": "Joseph Haynes' Red Team Operator's Handbook is a comprehensive reference for offensive security practitioners conducting adversary simulation engagements. The book covers the full red team lifecycle.",
+      "longDescription": "Joseph Haynes' Red Team Operator's Handbook is a comprehensive reference for offensive security practitioners conducting adversary simulation engagements. The book covers the full red team lifecycle from infrastructure setup and OPSEC through initial access, execution, persistence, privilege escalation, lateral movement, and exfiltration, mapped to the MITRE ATT&CK framework. Haynes provides detailed guidance on building resilient C2 infrastructure, evading endpoint detection, operating in Active Directory environments, and simulating advanced persistent threat (APT) tradecraft. Each technique includes practical implementation details, detection considerations, and OPSEC guidelines. The handbook is designed as both a learning resource and a field reference that operators can consult during live engagements.",
+      "category": "red-team",
+      "tags": [
+        "red-team",
+        "adversary-simulation",
+        "offensive-security",
+        "ttps"
+      ],
+      "imageTag": "RO",
+      "year": 2025,
+      "editions": []
+    },
+    {
+      "slug": "blue-team-operators-handbook",
+      "title": "The Blue Team Operator's Handbook",
+      "author": "Joseph Haynes",
+      "description": "The companion to the Red Team Operator's Handbook, this blue team edition provides defenders with the detection strategies and hunting techniques needed to counter the offensive TTPs described in its.",
+      "longDescription": "The companion to the Red Team Operator's Handbook, this blue team edition provides defenders with the detection strategies and hunting techniques needed to counter the offensive TTPs described in its red team counterpart. Joseph Haynes maps defensive operations to the same MITRE ATT&CK framework, giving blue team operators specific detection rules, log sources, and hunting queries for each attack technique. The book covers building detection engineering programs, writing effective SIEM rules, conducting threat hunts based on behavioral indicators, and running incident response playbooks. Each detection includes the relevant data sources, expected false positive rates, and tuning guidance.",
+      "category": "blue-team",
+      "tags": [
+        "blue-team",
+        "detection",
+        "incident-response",
+        "hunting"
+      ],
+      "imageTag": "BO",
+      "year": 2025,
+      "editions": []
+    },
+    {
+      "slug": "purple-team-operators-handbook",
+      "title": "The Purple Team Operator's Handbook",
+      "author": "Joseph Haynes",
+      "description": "Completing the Operator's Handbook trilogy, the Purple Team edition bridges the gap between offense and defense by providing a structured methodology for adversary emulation and detection validation..",
+      "longDescription": "Completing the Operator's Handbook trilogy, the Purple Team edition bridges the gap between offense and defense by providing a structured methodology for adversary emulation and detection validation. Joseph Haynes describes how to plan and execute purple team exercises that produce measurable improvements in security posture. The book covers selecting adversary profiles based on threat intelligence, mapping emulation plans to ATT&CK techniques, executing controlled attack simulations, and validating that detections fire correctly. Each chapter includes worksheets for tracking detection coverage, templates for reporting results to stakeholders, and metrics for measuring defensive improvement over time.",
+      "category": "red-team",
+      "tags": [
+        "purple-team",
+        "adversary-emulation",
+        "detection-engineering",
+        "collaboration"
+      ],
+      "imageTag": "PO",
+      "year": 2025,
+      "editions": []
+    },
+    {
+      "slug": "world-ends-chip-war-collection",
+      "title": "This Is How They Tell Me the World Ends, Chip War & Dead in the Water - 3 Books Collection Set",
+      "author": "Nicole Perlroth",
+      "description": "This three-book collection bundles three essential works on the intersection of technology, geopolitics, and security. Nicole Perlroth's This Is How They Tell Me the World Ends exposes the secretive.",
+      "longDescription": "This three-book collection bundles three essential works on the intersection of technology, geopolitics, and security. Nicole Perlroth's This Is How They Tell Me the World Ends exposes the secretive market for zero-day exploits and how it fuels a global cyber arms race. Chris Miller's Chip War traces the geopolitical battle over semiconductor manufacturing that underpins all modern technology and military power. Matthew Campbell's Dead in the Water investigates the suspicious destruction of a supertanker and the murky world of maritime insurance fraud. Together, these books provide a comprehensive view of how technology supply chains, digital weapons markets, and physical infrastructure vulnerabilities shape modern geopolitical conflict.",
+      "category": "cyber-warfare",
+      "tags": [
+        "zero-days",
+        "chip-war",
+        "geopolitics",
+        "collection"
+      ],
+      "imageTag": "3B",
+      "year": 2023,
+      "editions": []
     }
   ],
   "hardware": [
@@ -678,9 +1263,15 @@
       "slug": "macbook-pro-2019-i9",
       "title": "Apple MacBook Pro with Touch Bar (Late 2019)",
       "manufacturer": "Apple",
-      "description": "16\" Intel i9 with 32GB RAM and 2TB SSD. Space Grey. The last Intel-based MacBook Pro — still a powerhouse for virtualization and running multiple VMs.",
+      "description": "16\" Intel i9 with 32GB RAM and 2TB SSD. Space Grey. The last Intel-based MacBook Pro - still a powerhouse for virtualization and running multiple VMs.",
       "category": "laptop",
-      "tags": ["intel-i9", "16-inch", "32gb", "2tb", "macos"],
+      "tags": [
+        "intel-i9",
+        "16-inch",
+        "32gb",
+        "2tb",
+        "macos"
+      ],
       "amazonUrl": "https://amzn.to/3Od8GVV",
       "imageTag": "MP"
     },
@@ -688,9 +1279,15 @@
       "slug": "macbook-air-2020-m1",
       "title": "Apple MacBook Air (Late 2020)",
       "manufacturer": "Apple",
-      "description": "13.3\" M1 Silicon with 16GB RAM and 2TB SSD. Space Grey. Fanless design with all-day battery — perfect portable OSINT workstation.",
+      "description": "13.3\" M1 Silicon with 16GB RAM and 2TB SSD. Space Grey. Fanless design with all-day battery - perfect portable OSINT workstation.",
       "category": "laptop",
-      "tags": ["m1", "13-inch", "16gb", "2tb", "macos"],
+      "tags": [
+        "m1",
+        "13-inch",
+        "16gb",
+        "2tb",
+        "macos"
+      ],
       "amazonUrl": "https://amzn.to/4sa5uIG",
       "imageTag": "MA"
     },
@@ -700,7 +1297,13 @@
       "manufacturer": "Apple",
       "description": "14.2\" M1 Silicon with 16GB RAM and 1TB SSD. Space Grey. ProMotion display with the first Apple Silicon pro chip.",
       "category": "laptop",
-      "tags": ["m1", "14-inch", "16gb", "1tb", "macos"],
+      "tags": [
+        "m1",
+        "14-inch",
+        "16gb",
+        "1tb",
+        "macos"
+      ],
       "amazonUrl": "https://amzn.to/4tpMTJH",
       "imageTag": "MP"
     },
@@ -710,7 +1313,13 @@
       "manufacturer": "Apple",
       "description": "13.3\" M2 Silicon with 24GB RAM and 1TB SSD. Space Grey. Compact form factor with upgraded unified memory for heavy workloads.",
       "category": "laptop",
-      "tags": ["m2", "13-inch", "24gb", "1tb", "macos"],
+      "tags": [
+        "m2",
+        "13-inch",
+        "24gb",
+        "1tb",
+        "macos"
+      ],
       "amazonUrl": "https://amzn.to/4cgDUEG",
       "imageTag": "MP"
     },
@@ -720,7 +1329,13 @@
       "manufacturer": "Apple",
       "description": "13.6\" M3 Silicon with 8GB RAM and 512GB SSD. Midnight. Lightweight everyday machine with the latest Apple Silicon.",
       "category": "laptop",
-      "tags": ["m3", "13-inch", "8gb", "512gb", "macos"],
+      "tags": [
+        "m3",
+        "13-inch",
+        "8gb",
+        "512gb",
+        "macos"
+      ],
       "amazonUrl": "https://amzn.to/4maLDaY",
       "imageTag": "MA"
     },
@@ -730,7 +1345,13 @@
       "manufacturer": "Apple",
       "description": "16.2\" M5 Max with 48GB RAM and 2TB SSD. Silver. Top-tier performance for running full lab environments, large-scale analysis, and parallel tooling.",
       "category": "laptop",
-      "tags": ["m5-max", "16-inch", "48gb", "2tb", "macos"],
+      "tags": [
+        "m5-max",
+        "16-inch",
+        "48gb",
+        "2tb",
+        "macos"
+      ],
       "amazonUrl": "https://amzn.to/4tq6RUJ",
       "imageTag": "MP"
     },
@@ -738,9 +1359,15 @@
       "slug": "lg-gram-pro-2025",
       "title": "LG Gram Pro (2025)",
       "manufacturer": "LG",
-      "description": "17\" Intel Core Ultra 7 with 32GB RAM and 2TB SSD. Obsidian Black. Ultra-lightweight 17-inch — ideal for extended fieldwork with a large display.",
+      "description": "17\" Intel Core Ultra 7 with 32GB RAM and 2TB SSD. Obsidian Black. Ultra-lightweight 17-inch - ideal for extended fieldwork with a large display.",
       "category": "laptop",
-      "tags": ["intel-ultra-7", "17-inch", "32gb", "2tb", "windows"],
+      "tags": [
+        "intel-ultra-7",
+        "17-inch",
+        "32gb",
+        "2tb",
+        "windows"
+      ],
       "amazonUrl": "https://amzn.to/3NN25kV",
       "imageTag": "LG"
     },
@@ -750,7 +1377,14 @@
       "manufacturer": "LG",
       "description": "17\" Intel Core Ultra 9 with 32GB RAM and 4TB SSD. Black. Touchscreen business-class with massive storage for forensic image handling.",
       "category": "laptop",
-      "tags": ["intel-ultra-9", "17-inch", "32gb", "4tb", "touchscreen", "windows"],
+      "tags": [
+        "intel-ultra-9",
+        "17-inch",
+        "32gb",
+        "4tb",
+        "touchscreen",
+        "windows"
+      ],
       "amazonUrl": "https://amzn.to/4dfA7bQ",
       "imageTag": "LG"
     },
@@ -760,7 +1394,14 @@
       "manufacturer": "ASUS",
       "description": "14\" Intel Core Ultra 9 with 32GB RAM and 4TB SSD. Black. Compact touchscreen ultrabook with top-end specs for portable security work.",
       "category": "laptop",
-      "tags": ["intel-ultra-9", "14-inch", "32gb", "4tb", "touchscreen", "windows"],
+      "tags": [
+        "intel-ultra-9",
+        "14-inch",
+        "32gb",
+        "4tb",
+        "touchscreen",
+        "windows"
+      ],
       "amazonUrl": "https://amzn.to/4dVG4uJ",
       "imageTag": "AZ"
     },
@@ -770,7 +1411,13 @@
       "manufacturer": "ASUS",
       "description": "18\" AMD Ryzen 7 with 32GB RAM and 1TB SSD. Quiet Blue. Large-screen budget workhorse for lab setups and multi-window recon workflows.",
       "category": "laptop",
-      "tags": ["amd-ryzen-7", "18-inch", "32gb", "1tb", "windows"],
+      "tags": [
+        "amd-ryzen-7",
+        "18-inch",
+        "32gb",
+        "1tb",
+        "windows"
+      ],
       "amazonUrl": "https://amzn.to/4s4FNcc",
       "imageTag": "AV"
     }

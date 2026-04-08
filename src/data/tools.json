@@ -146,7 +146,7 @@
     "lastCommit": "2026-04-02T09:03:39Z",
     "license": "GPL-3.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/10378052?v=4",
-    "githubDescription": "🤖 The Modern Port Scanner 🤖",
+    "githubDescription": "\ud83e\udd16 The Modern Port Scanner \ud83e\udd16",
     "githubTopics": [
       "docker",
       "hacking",
@@ -601,7 +601,7 @@
     "lastCommit": "2026-04-04T17:08:53Z",
     "license": "MIT",
     "avatarUrl": "https://avatars.githubusercontent.com/u/31013580?v=4",
-    "githubDescription": "🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites",
+    "githubDescription": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Collect a dossier on a person by username from 3000+ sites",
     "githubTopics": [
       "blueteam",
       "cli",
@@ -1077,7 +1077,7 @@
   {
     "slug": "volatility3",
     "name": "Volatility 3",
-    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps — processes, network connections, registry.",
+    "description": "Advanced memory forensics framework. Extracts artifacts from RAM dumps - processes, network connections, registry.",
     "category": "forensics",
     "language": "Python",
     "platform": [
@@ -1158,7 +1158,7 @@
     "openIssues": 394,
     "lastCommit": "2026-04-05T14:29:25Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/866922?v=4",
-    "githubDescription": "Autopsy® is a digital forensics platform and graphical interface to The Sleuth Kit® and other digital forensics tools. It can be used by law enforcement, military, and corporate examiners to investigate what happened on a computer. You can even use it to recover photos from your camera's memory card. ",
+    "githubDescription": "Autopsy\u00ae is a digital forensics platform and graphical interface to The Sleuth Kit\u00ae and other digital forensics tools. It can be used by law enforcement, military, and corporate examiners to investigate what happened on a computer. You can even use it to recover photos from your camera's memory card. ",
     "githubTopics": [
       "forensics",
       "java"
@@ -1316,7 +1316,7 @@
   {
     "slug": "ffuf",
     "name": "ffuf",
-    "description": "Fast web fuzzer written in Go. Fuzz anything — URLs, headers, POST data — with blazing speed.",
+    "description": "Fast web fuzzer written in Go. Fuzz anything - URLs, headers, POST data - with blazing speed.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -4024,7 +4024,7 @@
   {
     "slug": "wallet-explorer",
     "name": "WalletExplorer",
-    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities — exchanges, mixers, markets, gambling.",
+    "description": "Bitcoin wallet clustering and labeling. Maps addresses to known entities - exchanges, mixers, markets, gambling.",
     "category": "crypto-tracing",
     "language": "Python",
     "platform": [
@@ -4733,7 +4733,7 @@
   {
     "slug": "bitcoin-cli",
     "name": "Bitcoin Core CLI",
-    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly — raw transactions, mempool, UTXO lookups.",
+    "description": "Official Bitcoin node with full RPC interface. Query the blockchain directly - raw transactions, mempool, UTXO lookups.",
     "category": "crypto-tracing",
     "language": "C++",
     "platform": [
@@ -4889,7 +4889,7 @@
     "lastCommit": "2024-11-27T21:42:52Z",
     "license": "MIT",
     "avatarUrl": "https://avatars.githubusercontent.com/u/71380475?v=4",
-    "githubDescription": "🔎 an MEV inspector for Ethereum 🔎"
+    "githubDescription": "\ud83d\udd0e an MEV inspector for Ethereum \ud83d\udd0e"
   },
   {
     "slug": "eigenphi",
@@ -5049,7 +5049,7 @@
   {
     "slug": "cast",
     "name": "Cast (Foundry)",
-    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes — all from CLI.",
+    "description": "Swiss army knife for Ethereum. Send transactions, query chain data, decode calldata, compute hashes - all from CLI.",
     "category": "crypto-tracing",
     "language": "Rust",
     "platform": [
@@ -5359,7 +5359,7 @@
     "lastCommit": "2026-03-25T13:57:45Z",
     "license": "MIT",
     "avatarUrl": "https://avatars.githubusercontent.com/u/90395851?v=4",
-    "githubDescription": "Find secrets with Gitleaks 🔑",
+    "githubDescription": "Find secrets with Gitleaks \ud83d\udd11",
     "githubTopics": [
       "ai-powered",
       "ci-cd",
@@ -5467,7 +5467,7 @@
   {
     "slug": "seclists",
     "name": "SecLists",
-    "description": "The security tester's companion. Huge collection of wordlists — usernames, passwords, URLs, fuzzing payloads, shells.",
+    "description": "The security tester's companion. Huge collection of wordlists - usernames, passwords, URLs, fuzzing payloads, shells.",
     "category": "password-attack",
     "language": "Shell",
     "platform": [
@@ -5672,7 +5672,7 @@
   {
     "slug": "socat",
     "name": "Socat",
-    "description": "Multipurpose relay tool. Bidirectional data transfer between two data channels — sockets, files, pipes, devices.",
+    "description": "Multipurpose relay tool. Bidirectional data transfer between two data channels - sockets, files, pipes, devices.",
     "longDescription": "Socat (SOcket CAT) is a command-line utility that establishes two bidirectional byte streams and transfers data between them. It's like an extended version of netcat with support for SSL, IPv6, SOCKS4 proxying, and dozens of address types. Socat can create virtual serial connections, tunnel traffic through SSL, act as a simple TCP forwarder, and much more. It's a sysadmin essential that doubles as a powerful offensive tool for port forwarding, bind/reverse shells, and encrypted tunnels.",
     "category": "dual-use",
     "language": "C",
@@ -5842,7 +5842,7 @@
       "Shell escape from restricted environments",
       "File read/write through unexpected binaries",
       "Reverse shell creation using system tools",
-      "Security hardening — knowing what to restrict"
+      "Security hardening - knowing what to restrict"
     ],
     "alternatives": [
       "lolbas"
@@ -5874,7 +5874,7 @@
     "slug": "lolbas",
     "name": "LOLBAS",
     "description": "Living Off The Land Binaries, Scripts and Libraries for Windows. Documenting every Windows binary with offensive potential.",
-    "longDescription": "LOLBAS (Living Off The Land Binaries, Scripts and Libraries) is the Windows equivalent of GTFOBins. It documents Windows binaries, scripts, and libraries that can be used for file download, code execution, lateral movement, persistence, credential theft, and more — all using tools already present on the system. This includes certutil, mshta, rundll32, regsvr32, bitsadmin, and dozens more. Understanding LOLBAS is essential for both red teams (evasion) and blue teams (detection).",
+    "longDescription": "LOLBAS (Living Off The Land Binaries, Scripts and Libraries) is the Windows equivalent of GTFOBins. It documents Windows binaries, scripts, and libraries that can be used for file download, code execution, lateral movement, persistence, credential theft, and more - all using tools already present on the system. This includes certutil, mshta, rundll32, regsvr32, bitsadmin, and dozens more. Understanding LOLBAS is essential for both red teams (evasion) and blue teams (detection).",
     "category": "dual-use",
     "language": "Shell",
     "platform": [
@@ -5921,7 +5921,7 @@
   {
     "slug": "sysinternals",
     "name": "Sysinternals Suite",
-    "description": "Microsoft's advanced system utilities. PsExec, Process Monitor, Autoruns, TCPView — essential for both ops and offense.",
+    "description": "Microsoft's advanced system utilities. PsExec, Process Monitor, Autoruns, TCPView - essential for both ops and offense.",
     "longDescription": "Sysinternals is a suite of advanced system utilities by Microsoft, used daily by system administrators worldwide. However, tools like PsExec (remote command execution), ProcDump (memory dumping), and Autoruns (persistence detection/creation) are heavily used in offensive operations. PsExec in particular is one of the most common lateral movement tools observed in real-world intrusions. Attackers use legitimate, Microsoft-signed binaries to blend in with normal administrative activity.",
     "category": "dual-use",
     "language": "C/C++",
@@ -6009,7 +6009,7 @@
     "slug": "tor",
     "name": "Tor",
     "description": "Anonymous communication network. Routes traffic through multiple relays to conceal location and usage.",
-    "longDescription": "Tor (The Onion Router) is free software and an open network that helps defend against traffic analysis. It directs Internet traffic through a worldwide overlay network of relays to conceal a user's location and usage from surveillance and traffic analysis. Tor is used by journalists, activists, whistleblowers, and privacy-conscious individuals — but also by threat actors for anonymous operations, C2 infrastructure, and accessing dark web markets. Understanding Tor is essential for both operational security and investigating dark web activity.",
+    "longDescription": "Tor (The Onion Router) is free software and an open network that helps defend against traffic analysis. It directs Internet traffic through a worldwide overlay network of relays to conceal a user's location and usage from surveillance and traffic analysis. Tor is used by journalists, activists, whistleblowers, and privacy-conscious individuals - but also by threat actors for anonymous operations, C2 infrastructure, and accessing dark web markets. Understanding Tor is essential for both operational security and investigating dark web activity.",
     "category": "dual-use",
     "language": "C",
     "platform": [
@@ -6054,7 +6054,7 @@
   {
     "slug": "openssh",
     "name": "OpenSSH",
-    "description": "The SSH protocol implementation. Remote access, tunneling, port forwarding, SOCKS proxying — everywhere.",
+    "description": "The SSH protocol implementation. Remote access, tunneling, port forwarding, SOCKS proxying - everywhere.",
     "longDescription": "OpenSSH is the premier connectivity tool for remote login using the SSH protocol. While it's the most fundamental sysadmin tool in existence, its tunneling capabilities make it equally powerful offensively. SSH supports local/remote/dynamic port forwarding, SOCKS proxying, and can create encrypted tunnels that bypass firewall restrictions. Attackers use SSH for pivoting, data exfiltration over encrypted channels, and maintaining persistent access to compromised systems.",
     "category": "dual-use",
     "language": "C",
@@ -6100,8 +6100,8 @@
   {
     "slug": "netexec",
     "name": "NetExec",
-    "description": "Network execution tool — the maintained successor to CrackMapExec. SMB, LDAP, WinRM, SSH, MSSQL, and more.",
-    "longDescription": "NetExec (nxc) is the actively maintained successor to CrackMapExec. It's a network service exploitation tool that supports SMB, LDAP, WinRM, SSH, MSSQL, RDP, and more. NetExec automates credential testing, command execution, and enumeration across network services. It's indispensable for Active Directory pentesting — spray credentials, dump SAM/LSA, execute commands, and enumerate shares across hundreds of hosts in seconds.",
+    "description": "Network execution tool - the maintained successor to CrackMapExec. SMB, LDAP, WinRM, SSH, MSSQL, and more.",
+    "longDescription": "NetExec (nxc) is the actively maintained successor to CrackMapExec. It's a network service exploitation tool that supports SMB, LDAP, WinRM, SSH, MSSQL, RDP, and more. NetExec automates credential testing, command execution, and enumeration across network services. It's indispensable for Active Directory pentesting - spray credentials, dump SAM/LSA, execute commands, and enumerate shares across hundreds of hosts in seconds.",
     "category": "dual-use",
     "language": "Python",
     "platform": [
@@ -6272,7 +6272,7 @@
     "slug": "dnscat2",
     "name": "dnscat2",
     "description": "Create an encrypted C2 channel over DNS. Tunnel data through DNS queries when all other protocols are blocked.",
-    "longDescription": "dnscat2 creates an encrypted command-and-control channel over the DNS protocol. It's designed for situations where all other outbound traffic is blocked but DNS resolution is still permitted — which is almost always. The tool consists of a client that runs on compromised hosts and a server that runs on an authoritative DNS server controlled by the attacker. All communication is encrypted and tunneled through DNS TXT, CNAME, or MX records.",
+    "longDescription": "dnscat2 creates an encrypted command-and-control channel over the DNS protocol. It's designed for situations where all other outbound traffic is blocked but DNS resolution is still permitted - which is almost always. The tool consists of a client that runs on compromised hosts and a server that runs on an authoritative DNS server controlled by the attacker. All communication is encrypted and tunneled through DNS TXT, CNAME, or MX records.",
     "category": "dual-use",
     "language": "Ruby",
     "platform": [
@@ -6310,7 +6310,7 @@
     "slug": "mythic",
     "name": "Mythic",
     "description": "Collaborative, multi-platform C2 framework. Docker-based with web UI, multiple agent types, and plugin architecture.",
-    "longDescription": "Mythic is a multiplayer, command and control platform for red team operations. It's designed to be collaborative, allowing multiple operators to manage agents simultaneously through a web-based UI. Mythic supports multiple agent types (Apollo for .NET, Poseidon for Go, Medusa for Python, etc.) and uses a plugin architecture for extensibility. All communication is containerized and managed through Docker. It tracks operations, manages credentials, and provides file management — a complete red team platform.",
+    "longDescription": "Mythic is a multiplayer, command and control platform for red team operations. It's designed to be collaborative, allowing multiple operators to manage agents simultaneously through a web-based UI. Mythic supports multiple agent types (Apollo for .NET, Poseidon for Go, Medusa for Python, etc.) and uses a plugin architecture for extensibility. All communication is containerized and managed through Docker. It tracks operations, manages credentials, and provides file management - a complete red team platform.",
     "category": "offensive-ops",
     "language": "Go",
     "platform": [
@@ -6567,7 +6567,7 @@
     "slug": "beef",
     "name": "BeEF",
     "description": "Browser Exploitation Framework. Hook browsers via XSS, then pivot into the network using browser-based attacks.",
-    "longDescription": "The Browser Exploitation Framework (BeEF) focuses on the web browser as the attack vector. Unlike other security tools, BeEF looks past the hardened network perimeter and examines exploitability within the context of the browser. Once a browser is hooked (typically via XSS), BeEF can use it to launch further attacks including keylogging, clipboard theft, webcam/mic access, port scanning the internal network, and social engineering attacks — all from within the victim's browser context.",
+    "longDescription": "The Browser Exploitation Framework (BeEF) focuses on the web browser as the attack vector. Unlike other security tools, BeEF looks past the hardened network perimeter and examines exploitability within the context of the browser. Once a browser is hooked (typically via XSS), BeEF can use it to launch further attacks including keylogging, clipboard theft, webcam/mic access, port scanning the internal network, and social engineering attacks - all from within the victim's browser context.",
     "category": "offensive-ops",
     "language": "Ruby",
     "platform": [
@@ -6943,8 +6943,8 @@
   {
     "slug": "pwncat",
     "name": "pwncat",
-    "description": "Post-exploitation platform and target management. Automatic privesc, persistence, file transfer — the smart reverse shell.",
-    "longDescription": "pwncat is a post-exploitation platform that wraps around a standard reverse or bind shell to provide additional functionality. It automatically enumerates the target, uploads tools, manages file transfers, installs persistence mechanisms, and attempts privilege escalation — all through a single shell session. pwncat supports both Linux and Windows targets and provides a module system for extensibility. It turns a dumb shell into a full post-exploitation environment.",
+    "description": "Post-exploitation platform and target management. Automatic privesc, persistence, file transfer - the smart reverse shell.",
+    "longDescription": "pwncat is a post-exploitation platform that wraps around a standard reverse or bind shell to provide additional functionality. It automatically enumerates the target, uploads tools, manages file transfers, installs persistence mechanisms, and attempts privilege escalation - all through a single shell session. pwncat supports both Linux and Windows targets and provides a module system for extensibility. It turns a dumb shell into a full post-exploitation environment.",
     "category": "offensive-ops",
     "language": "Python",
     "platform": [
@@ -7081,7 +7081,7 @@
   {
     "slug": "pwndrop",
     "name": "pwndrop",
-    "description": "Self-deployable file hosting for red teams. Upload payloads, host phishing files, serve implants — with HTTPS and Let's Encrypt.",
+    "description": "Self-deployable file hosting for red teams. Upload payloads, host phishing files, serve implants - with HTTPS and Let's Encrypt.",
     "category": "offensive-ops",
     "language": "Go",
     "platform": [
@@ -7207,7 +7207,7 @@
     "slug": "pacu",
     "name": "Pacu",
     "description": "AWS exploitation framework. Enumerate, escalate, and exfiltrate across AWS services. The Metasploit of cloud.",
-    "longDescription": "Pacu is an open-source AWS exploitation framework designed for offensive security testing of cloud environments. It's built by Rhino Security Labs and provides a comprehensive set of modules for AWS reconnaissance, privilege escalation, data exfiltration, and persistence. Pacu automates common attack techniques across IAM, EC2, S3, Lambda, and dozens of other AWS services. It maintains session data, tracks discovered credentials, and maps out AWS environments — essentially the Metasploit for AWS.",
+    "longDescription": "Pacu is an open-source AWS exploitation framework designed for offensive security testing of cloud environments. It's built by Rhino Security Labs and provides a comprehensive set of modules for AWS reconnaissance, privilege escalation, data exfiltration, and persistence. Pacu automates common attack techniques across IAM, EC2, S3, Lambda, and dozens of other AWS services. It maintains session data, tracks discovered credentials, and maps out AWS environments - essentially the Metasploit for AWS.",
     "category": "offensive-ops",
     "language": "Python",
     "platform": [
@@ -7289,7 +7289,7 @@
     "lastCommit": "2026-04-02T14:06:27Z",
     "license": "Apache-2.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/97106991?v=4",
-    "githubDescription": "Prowler is the world’s most widely used open-source cloud security platform that automates security and compliance across any cloud environment.",
+    "githubDescription": "Prowler is the world\u2019s most widely used open-source cloud security platform that automates security and compliance across any cloud environment.",
     "githubTopics": [
       "aws",
       "azure",
@@ -7859,7 +7859,7 @@
     "openIssues": 59,
     "lastCommit": "2026-03-14T19:12:47Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/17338428?v=4",
-    "githubDescription": "🕵️‍♂️ Offensive Google framework.",
+    "githubDescription": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Offensive Google framework.",
     "githubTopics": [
       "google",
       "hideandsec",
@@ -8247,7 +8247,7 @@
     "lastCommit": "2026-03-25T12:36:17Z",
     "license": "GPL-3.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/1193973?v=4",
-    "githubDescription": "📱 objection - runtime mobile exploration",
+    "githubDescription": "\ud83d\udcf1 objection - runtime mobile exploration",
     "githubTopics": [
       "android",
       "framework",
@@ -8262,7 +8262,7 @@
   {
     "slug": "apktool",
     "name": "APKTool",
-    "description": "Reverse engineer Android APK files — decode resources, rebuild, and step-through debug smali code.",
+    "description": "Reverse engineer Android APK files - decode resources, rebuild, and step-through debug smali code.",
     "category": "mobile",
     "language": "Java",
     "platform": [
@@ -8440,7 +8440,7 @@
     "openIssues": 458,
     "lastCommit": "2026-04-03T21:09:47Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/866922?v=4",
-    "githubDescription": "The Sleuth Kit® (TSK) is a library and collection of command line digital forensics tools that allow you to investigate volume and file system data. The library can be incorporated into larger digital forensics tools and the command line tools can be directly used to find evidence. ",
+    "githubDescription": "The Sleuth Kit\u00ae (TSK) is a library and collection of command line digital forensics tools that allow you to investigate volume and file system data. The library can be incorporated into larger digital forensics tools and the command line tools can be directly used to find evidence. ",
     "githubTopics": [
       "forensics",
       "incident-response",
@@ -8749,7 +8749,7 @@
   {
     "slug": "meg",
     "name": "meg",
-    "description": "Fetch many paths for many hosts concurrently without overloading servers — ideal for large-scale recon on bug bounties.",
+    "description": "Fetch many paths for many hosts concurrently without overloading servers - ideal for large-scale recon on bug bounties.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -8797,7 +8797,7 @@
     "openIssues": 729,
     "lastCommit": "2026-03-04T20:05:29Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/78991750?v=4",
-    "githubDescription": "🚀 Caido releases, wiki and roadmap",
+    "githubDescription": "\ud83d\ude80 Caido releases, wiki and roadmap",
     "githubTopics": [
       "bugbounty",
       "pentesting",
@@ -8973,7 +8973,7 @@
     "lastCommit": "2026-04-05T01:39:34Z",
     "license": "MIT",
     "avatarUrl": "https://avatars.githubusercontent.com/u/13212227?v=4",
-    "githubDescription": "🌙🦊 Dalfox is a powerful open-source XSS scanner and utility focused on automation.",
+    "githubDescription": "\ud83c\udf19\ud83e\udd8a Dalfox is a powerful open-source XSS scanner and utility focused on automation.",
     "githubTopics": [
       "bugbounty",
       "bugbounty-tool",
@@ -9542,7 +9542,7 @@
     "lastCommit": "2026-03-21T09:39:42Z",
     "license": "AGPL-3.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/72480401?v=4",
-    "githubDescription": "Hayabusa (隼) is a sigma-based threat hunting and fast forensics timeline generator for Windows event logs.",
+    "githubDescription": "Hayabusa (\u96bc) is a sigma-based threat hunting and fast forensics timeline generator for Windows event logs.",
     "githubTopics": [
       "attack",
       "cybersecurity",
@@ -9569,7 +9569,7 @@
   {
     "slug": "oletools",
     "name": "oletools",
-    "description": "Python tools for analyzing OLE and MS Office files — detect VBA macros, embedded objects, and malicious content.",
+    "description": "Python tools for analyzing OLE and MS Office files - detect VBA macros, embedded objects, and malicious content.",
     "category": "forensics",
     "language": "Python",
     "platform": [
@@ -9651,7 +9651,7 @@
   {
     "slug": "capa",
     "name": "capa",
-    "description": "Automatically identify capabilities in executable files — detects techniques like persistence, C2, and anti-analysis.",
+    "description": "Automatically identify capabilities in executable files - detects techniques like persistence, C2, and anti-analysis.",
     "category": "forensics",
     "language": "Python",
     "platform": [
@@ -9713,7 +9713,7 @@
   {
     "slug": "ophcrack",
     "name": "Ophcrack",
-    "description": "Windows password cracker based on rainbow tables — cracks LM and NTLM hashes via time-memory tradeoff.",
+    "description": "Windows password cracker based on rainbow tables - cracks LM and NTLM hashes via time-memory tradeoff.",
     "category": "password-attack",
     "language": "C",
     "platform": [
@@ -9738,7 +9738,7 @@
   {
     "slug": "name-that-hash",
     "name": "Name-That-Hash",
-    "description": "Instantly identify hash types from unknown hashes — supports 300+ hash formats with confidence ratings.",
+    "description": "Instantly identify hash types from unknown hashes - supports 300+ hash formats with confidence ratings.",
     "category": "password-attack",
     "language": "Python",
     "platform": [
@@ -9760,7 +9760,7 @@
     "lastCommit": "2025-12-19T01:31:42Z",
     "license": "GPL-3.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/10378052?v=4",
-    "githubDescription": "🔗  Don't know what type of hash it is? Name That Hash will name that hash type! 🤖 Identify MD5, SHA256 and 300+ other hashes ☄ Comes with a neat web app 🔥",
+    "githubDescription": "\ud83d\udd17  Don't know what type of hash it is? Name That Hash will name that hash type! \ud83e\udd16 Identify MD5, SHA256 and 300+ other hashes \u2604 Comes with a neat web app \ud83d\udd25",
     "githubTopics": [
       "ctf",
       "ctf-tools",
@@ -9781,7 +9781,7 @@
   {
     "slug": "searchsploit",
     "name": "SearchSploit",
-    "description": "Command-line tool for searching Exploit-DB — find public exploits and shellcode for known vulnerabilities offline.",
+    "description": "Command-line tool for searching Exploit-DB - find public exploits and shellcode for known vulnerabilities offline.",
     "category": "exploitation",
     "language": "Shell",
     "platform": [
@@ -9890,7 +9890,7 @@
   {
     "slug": "starkiller",
     "name": "Starkiller",
-    "description": "Frontend GUI for PowerShell Empire — manage listeners, agents, and modules through a modern Electron interface.",
+    "description": "Frontend GUI for PowerShell Empire - manage listeners, agents, and modules through a modern Electron interface.",
     "category": "offensive-ops",
     "language": "JavaScript",
     "platform": [
@@ -9924,7 +9924,7 @@
   {
     "slug": "hoaxshell",
     "name": "hoaxshell",
-    "description": "Unconventional Windows reverse shell using HTTP(S) traffic — fully undetectable by Microsoft Defender.",
+    "description": "Unconventional Windows reverse shell using HTTP(S) traffic - fully undetectable by Microsoft Defender.",
     "category": "offensive-ops",
     "language": "Python",
     "platform": [
@@ -10222,7 +10222,7 @@
     "openIssues": 11,
     "lastCommit": "2025-05-01T10:06:43Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/136675?v=4",
-    "githubDescription": "🔎 Find origin servers of websites behind CloudFlare by using Internet-wide scan data from Censys.",
+    "githubDescription": "\ud83d\udd0e Find origin servers of websites behind CloudFlare by using Internet-wide scan data from Censys.",
     "githubTopics": [
       "censys",
       "cloudflare",
@@ -10438,7 +10438,7 @@
     "slug": "grr-rapid-response",
     "name": "GRR Rapid Response",
     "description": "Remote live forensics framework by Google. Deploy agents across thousands of endpoints for artifact collection and analysis.",
-    "longDescription": "GRR Rapid Response is an incident response framework developed at Google, focused on remote live forensics. It consists of a Python agent deployed to target systems and a Python server infrastructure that manages and communicates with agents. GRR enables security teams to collect forensic artifacts at scale across thousands of endpoints without disrupting operations. Analysts can remotely browse filesystems, collect specific files, dump process memory, query the Windows registry, search for IOCs, and execute YARA rules — all from a centralized web console. Its flow-based architecture allows complex investigation workflows to run asynchronously across the fleet. GRR's scalability makes it particularly valuable for large enterprises that need to investigate incidents affecting many machines simultaneously.",
+    "longDescription": "GRR Rapid Response is an incident response framework developed at Google, focused on remote live forensics. It consists of a Python agent deployed to target systems and a Python server infrastructure that manages and communicates with agents. GRR enables security teams to collect forensic artifacts at scale across thousands of endpoints without disrupting operations. Analysts can remotely browse filesystems, collect specific files, dump process memory, query the Windows registry, search for IOCs, and execute YARA rules - all from a centralized web console. Its flow-based architecture allows complex investigation workflows to run asynchronously across the fleet. GRR's scalability makes it particularly valuable for large enterprises that need to investigate incidents affecting many machines simultaneously.",
     "category": "threat-intel",
     "language": "Python",
     "platform": [
@@ -10493,7 +10493,7 @@
     "slug": "kape",
     "name": "KAPE",
     "description": "Kroll Artifact Parser and Extractor. Fast triage collection and parsing of forensic artifacts from Windows, macOS, and Linux.",
-    "longDescription": "KAPE (Kroll Artifact Parser and Extractor) is a triage tool that finds and parses forensic artifacts in minutes. Developed by Eric Zimmerman at Kroll, it operates in two phases: collection targets gather specific files and artifacts from a system, while module processors parse those artifacts into human-readable formats. KAPE ships with hundreds of pre-built targets covering browser history, event logs, registry hives, prefetch files, SRUM data, scheduled tasks, and virtually every forensic artifact type on Windows. Its module system integrates with Eric Zimmerman's tools (LECmd, PECmd, MFTECmd, etc.) and community parsers to process collected data automatically. KAPE is designed for speed — it can collect and parse a full forensic triage from a live system in under 10 minutes, making it the go-to tool for rapid incident response triage.",
+    "longDescription": "KAPE (Kroll Artifact Parser and Extractor) is a triage tool that finds and parses forensic artifacts in minutes. Developed by Eric Zimmerman at Kroll, it operates in two phases: collection targets gather specific files and artifacts from a system, while module processors parse those artifacts into human-readable formats. KAPE ships with hundreds of pre-built targets covering browser history, event logs, registry hives, prefetch files, SRUM data, scheduled tasks, and virtually every forensic artifact type on Windows. Its module system integrates with Eric Zimmerman's tools (LECmd, PECmd, MFTECmd, etc.) and community parsers to process collected data automatically. KAPE is designed for speed - it can collect and parse a full forensic triage from a live system in under 10 minutes, making it the go-to tool for rapid incident response triage.",
     "category": "threat-intel",
     "language": "C#",
     "platform": [
@@ -10536,7 +10536,7 @@
     "slug": "cortex",
     "name": "Cortex",
     "description": "Observable analysis and active response engine. Analyze IOCs at scale with 100+ analyzers for IPs, hashes, URLs, and domains.",
-    "longDescription": "Cortex is a powerful observable analysis and active response engine that pairs with TheHive to supercharge incident response workflows. It provides a unified API for running analyzers against observables — IP addresses, file hashes, domain names, URLs, email addresses, and more — using over 100 built-in analyzers that query services like VirusTotal, Shodan, PassiveTotal, MISP, MaxMind, AbuseIPDB, and many others. Analysts can submit observables individually or in bulk and receive structured reports with taxonomy-based classifications. Cortex also supports responders for active response actions like blocking IPs on firewalls, disabling user accounts, or quarantining endpoints. Its REST API and TheHive integration allow organizations to automate the tedious parts of IOC analysis while keeping analysts in control of decision-making.",
+    "longDescription": "Cortex is a powerful observable analysis and active response engine that pairs with TheHive to supercharge incident response workflows. It provides a unified API for running analyzers against observables - IP addresses, file hashes, domain names, URLs, email addresses, and more - using over 100 built-in analyzers that query services like VirusTotal, Shodan, PassiveTotal, MISP, MaxMind, AbuseIPDB, and many others. Analysts can submit observables individually or in bulk and receive structured reports with taxonomy-based classifications. Cortex also supports responders for active response actions like blocking IPs on firewalls, disabling user accounts, or quarantining endpoints. Its REST API and TheHive integration allow organizations to automate the tedious parts of IOC analysis while keeping analysts in control of decision-making.",
     "category": "threat-intel",
     "language": "Scala/Python",
     "platform": [
@@ -10797,7 +10797,7 @@
     "slug": "detect-it-easy",
     "name": "Detect It Easy",
     "description": "Binary packer and compiler detection. Identifies compilers, linkers, packers, and protectors used to build PE, ELF, and Mach-O files.",
-    "longDescription": "Detect It Easy (DiE) is a program for determining types of files. It identifies the compiler, linker, packer, or protector used to build a binary, supporting PE, ELF, Mach-O, and other executable formats. DiE uses a signature-based detection system with user-editable JavaScript signatures, making it highly extensible. Beyond basic identification, it provides entropy analysis to detect packed or encrypted sections, a hex viewer for raw binary inspection, and string extraction. For malware analysts, DiE is typically the first tool used when triaging a new sample — knowing whether a binary is packed with UPX, compiled with Visual Studio, or protected with Themida immediately informs the analysis approach. It's lightweight, fast, and available as both a GUI application and command-line tool.",
+    "longDescription": "Detect It Easy (DiE) is a program for determining types of files. It identifies the compiler, linker, packer, or protector used to build a binary, supporting PE, ELF, Mach-O, and other executable formats. DiE uses a signature-based detection system with user-editable JavaScript signatures, making it highly extensible. Beyond basic identification, it provides entropy analysis to detect packed or encrypted sections, a hex viewer for raw binary inspection, and string extraction. For malware analysts, DiE is typically the first tool used when triaging a new sample - knowing whether a binary is packed with UPX, compiled with Visual Studio, or protected with Themida immediately informs the analysis approach. It's lightweight, fast, and available as both a GUI application and command-line tool.",
     "category": "reverse-engineering",
     "language": "C++/Qt",
     "platform": [
@@ -11032,7 +11032,7 @@
     "lastCommit": "2026-02-23T13:44:40Z",
     "license": "Apache-2.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/77223274?v=4",
-    "githubDescription": "📦  Make security testing of K8s, Docker, and Containerd easier.",
+    "githubDescription": "\ud83d\udce6  Make security testing of K8s, Docker, and Containerd easier.",
     "githubTopics": [
       "blackhat",
       "cloud-native",
@@ -11114,7 +11114,7 @@
     "slug": "interactsh",
     "name": "Interactsh",
     "description": "Out-of-band interaction server. Detect blind vulnerabilities with DNS, HTTP, SMTP, and LDAP callback listeners.",
-    "longDescription": "Interactsh is an open-source tool from ProjectDiscovery for detecting out-of-band (OOB) interactions — the callbacks that prove blind vulnerabilities like SSRF, blind XSS, blind SQLi, and log4shell are exploitable. It provides unique callback URLs for DNS, HTTP, SMTP, FTP, and LDAP protocols, and records any interactions that hit those URLs. When testing for blind vulnerabilities, you inject an Interactsh URL as a payload and wait for the target to make a callback, proving the vulnerability exists even when there's no direct response. Interactsh can be self-hosted for privacy or used via the public server at interact.sh. It integrates directly with Nuclei, httpx, and other ProjectDiscovery tools, and provides a web dashboard, CLI client, and API for monitoring interactions in real-time.",
+    "longDescription": "Interactsh is an open-source tool from ProjectDiscovery for detecting out-of-band (OOB) interactions - the callbacks that prove blind vulnerabilities like SSRF, blind XSS, blind SQLi, and log4shell are exploitable. It provides unique callback URLs for DNS, HTTP, SMTP, FTP, and LDAP protocols, and records any interactions that hit those URLs. When testing for blind vulnerabilities, you inject an Interactsh URL as a payload and wait for the target to make a callback, proving the vulnerability exists even when there's no direct response. Interactsh can be self-hosted for privacy or used via the public server at interact.sh. It integrates directly with Nuclei, httpx, and other ProjectDiscovery tools, and provides a web dashboard, CLI client, and API for monitoring interactions in real-time.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -11174,7 +11174,7 @@
     "slug": "notify",
     "name": "Notify",
     "description": "Stream tool output to messaging platforms. Pipe results from any CLI tool to Slack, Discord, Telegram, or email in real-time.",
-    "longDescription": "Notify is a Go-based utility from ProjectDiscovery that streams output from any command-line tool to one or more messaging platforms. It acts as a bridge between your security toolchain and your communication channels, supporting Slack, Discord, Telegram, Microsoft Teams, email (SMTP), Pushover, and custom webhooks. Security teams use Notify to get real-time alerts when tools find interesting results — for example, piping Nuclei vulnerability findings directly to a Slack channel, or streaming Subfinder discoveries to a Telegram group. Notify reads from stdin, so it works with any tool that produces text output. It supports multiple provider configurations simultaneously, rate limiting to avoid flooding channels, and filtering with include/exclude patterns to only forward relevant results.",
+    "longDescription": "Notify is a Go-based utility from ProjectDiscovery that streams output from any command-line tool to one or more messaging platforms. It acts as a bridge between your security toolchain and your communication channels, supporting Slack, Discord, Telegram, Microsoft Teams, email (SMTP), Pushover, and custom webhooks. Security teams use Notify to get real-time alerts when tools find interesting results - for example, piping Nuclei vulnerability findings directly to a Slack channel, or streaming Subfinder discoveries to a Telegram group. Notify reads from stdin, so it works with any tool that produces text output. It supports multiple provider configurations simultaneously, rate limiting to avoid flooding channels, and filtering with include/exclude patterns to only forward relevant results.",
     "category": "dual-use",
     "language": "Go",
     "platform": [
@@ -11272,7 +11272,7 @@
     "slug": "penelope",
     "name": "Penelope",
     "description": "Advanced reverse shell handler. Auto-upgrades shells to PTY, handles multiple sessions, with built-in file transfer and logging.",
-    "longDescription": "Penelope is an advanced shell handler designed to replace netcat as the go-to reverse shell listener during penetration tests. Written in Python with zero external dependencies, it automatically upgrades received shells to fully interactive PTYs with tab completion, history, and job control — eliminating the manual 'python -c import pty' dance. Penelope handles multiple simultaneous shell sessions with a clean interface for switching between them, provides built-in file upload and download without needing to set up separate transfer servers, automatically logs all session activity for reporting, and can generate reverse shell payloads for various platforms and languages. It supports encrypted shells, can spawn listeners on multiple ports, and includes a command history searchable across sessions.",
+    "longDescription": "Penelope is an advanced shell handler designed to replace netcat as the go-to reverse shell listener during penetration tests. Written in Python with zero external dependencies, it automatically upgrades received shells to fully interactive PTYs with tab completion, history, and job control - eliminating the manual 'python -c import pty' dance. Penelope handles multiple simultaneous shell sessions with a clean interface for switching between them, provides built-in file upload and download without needing to set up separate transfer servers, automatically logs all session activity for reporting, and can generate reverse shell payloads for various platforms and languages. It supports encrypted shells, can spawn listeners on multiple ports, and includes a command history searchable across sessions.",
     "category": "offensive-ops",
     "language": "Python",
     "platform": [
@@ -11438,7 +11438,7 @@
     "slug": "ignorant",
     "name": "Ignorant",
     "description": "Phone number OSINT. Check if a phone number is registered on various platforms without alerting the target.",
-    "longDescription": "Ignorant is an OSINT tool that allows you to check if a phone number is used on different platforms like Snapchat, Instagram, and other services. Unlike tools that scrape profiles, Ignorant works by using the password reset and account recovery flows of various services, which typically reveal whether an account exists for a given phone number without notifying the account holder. This makes it a passive reconnaissance tool — the target receives no notification that their phone number was checked. Ignorant is written in Python with a modular architecture that makes it easy to add new platform checks. It's particularly useful during the reconnaissance phase of social engineering assessments, missing person investigations, or when building a profile of a target's digital footprint across services.",
+    "longDescription": "Ignorant is an OSINT tool that allows you to check if a phone number is used on different platforms like Snapchat, Instagram, and other services. Unlike tools that scrape profiles, Ignorant works by using the password reset and account recovery flows of various services, which typically reveal whether an account exists for a given phone number without notifying the account holder. This makes it a passive reconnaissance tool - the target receives no notification that their phone number was checked. Ignorant is written in Python with a modular architecture that makes it easy to add new platform checks. It's particularly useful during the reconnaissance phase of social engineering assessments, missing person investigations, or when building a profile of a target's digital footprint across services.",
     "category": "osint-general",
     "language": "Python",
     "platform": [
@@ -11490,7 +11490,7 @@
     "slug": "angr",
     "name": "angr",
     "description": "Binary analysis framework. Symbolic execution, CFG recovery, and vulnerability discovery for compiled binaries in Python.",
-    "longDescription": "angr is a platform-agnostic binary analysis framework developed at UC Santa Barbara's Seclab. It combines both static and dynamic symbolic (concolic) analysis, providing a powerful Python API for analyzing compiled binaries without source code. angr can automatically explore execution paths through a binary, solve for inputs that reach specific code locations, recover control flow graphs, perform taint analysis, and identify vulnerabilities like buffer overflows and format string bugs. Its architecture is modular — SimOS provides OS abstraction, SimEngine handles execution, and the exploration strategies (DFS, BFS, coverage-optimized) guide analysis through the program state space. angr is widely used in academic research and CTF competitions, and forms the backbone of several automated vulnerability discovery tools.",
+    "longDescription": "angr is a platform-agnostic binary analysis framework developed at UC Santa Barbara's Seclab. It combines both static and dynamic symbolic (concolic) analysis, providing a powerful Python API for analyzing compiled binaries without source code. angr can automatically explore execution paths through a binary, solve for inputs that reach specific code locations, recover control flow graphs, perform taint analysis, and identify vulnerabilities like buffer overflows and format string bugs. Its architecture is modular - SimOS provides OS abstraction, SimEngine handles execution, and the exploration strategies (DFS, BFS, coverage-optimized) guide analysis through the program state space. angr is widely used in academic research and CTF competitions, and forms the backbone of several automated vulnerability discovery tools.",
     "category": "reverse-engineering",
     "language": "Python",
     "platform": [
@@ -11607,7 +11607,7 @@
     "slug": "rizin",
     "name": "Rizin",
     "description": "Reverse engineering framework forked from radare2. Modernized API, improved UX, with Cutter as its official GUI.",
-    "longDescription": "Rizin is a free and open-source reverse engineering framework, forked from radare2 with a focus on usability, stability, and a cleaner API. It provides a complete binary analysis toolkit including disassembly, debugging, emulation, binary patching, and scripting across dozens of architectures and file formats. Rizin addresses many of radare2's historical pain points — inconsistent command naming, unstable APIs, and steep learning curve — while maintaining the powerful capabilities that made radare2 popular. The Cutter GUI, originally an r2 frontend, is now the official Rizin GUI, providing a modern graphical interface for reverse engineering workflows. Rizin supports x86, ARM, MIPS, RISC-V, PowerPC, and many other architectures, with plugins for additional formats and analysis capabilities.",
+    "longDescription": "Rizin is a free and open-source reverse engineering framework, forked from radare2 with a focus on usability, stability, and a cleaner API. It provides a complete binary analysis toolkit including disassembly, debugging, emulation, binary patching, and scripting across dozens of architectures and file formats. Rizin addresses many of radare2's historical pain points - inconsistent command naming, unstable APIs, and steep learning curve - while maintaining the powerful capabilities that made radare2 popular. The Cutter GUI, originally an r2 frontend, is now the official Rizin GUI, providing a modern graphical interface for reverse engineering workflows. Rizin supports x86, ARM, MIPS, RISC-V, PowerPC, and many other architectures, with plugins for additional formats and analysis capabilities.",
     "category": "reverse-engineering",
     "language": "C",
     "platform": [
@@ -11671,7 +11671,7 @@
     "slug": "unicorn-engine",
     "name": "Unicorn Engine",
     "description": "Lightweight CPU emulator framework. Emulate x86, ARM, MIPS, and more for binary analysis, fuzzing, and instrumentation.",
-    "longDescription": "Unicorn is a lightweight, multi-platform, multi-architecture CPU emulator framework based on QEMU. It provides a clean API for emulating machine code across x86 (16/32/64-bit), ARM, ARM64, MIPS, SPARC, and M68K architectures. Unlike full system emulators, Unicorn focuses purely on CPU instruction emulation — no OS, no hardware peripherals — which makes it fast and embeddable. Security researchers use Unicorn to emulate specific code snippets (like unpacking routines, decryption functions, or shellcode) without executing them on real hardware, making it invaluable for malware analysis, fuzzing, and binary instrumentation. Unicorn provides hooks for memory access, code execution, and interrupts, allowing fine-grained observation and control of emulated code. Bindings exist for Python, Java, Go, Rust, Ruby, and many other languages.",
+    "longDescription": "Unicorn is a lightweight, multi-platform, multi-architecture CPU emulator framework based on QEMU. It provides a clean API for emulating machine code across x86 (16/32/64-bit), ARM, ARM64, MIPS, SPARC, and M68K architectures. Unlike full system emulators, Unicorn focuses purely on CPU instruction emulation - no OS, no hardware peripherals - which makes it fast and embeddable. Security researchers use Unicorn to emulate specific code snippets (like unpacking routines, decryption functions, or shellcode) without executing them on real hardware, making it invaluable for malware analysis, fuzzing, and binary instrumentation. Unicorn provides hooks for memory access, code execution, and interrupts, allowing fine-grained observation and control of emulated code. Bindings exist for Python, Java, Go, Rust, Ruby, and many other languages.",
     "category": "reverse-engineering",
     "language": "C",
     "platform": [
@@ -11747,7 +11747,7 @@
     "slug": "capstone",
     "name": "Capstone",
     "description": "Multi-architecture disassembly framework. The engine behind Ghidra, radare2, and dozens of security tools.",
-    "longDescription": "Capstone is a lightweight, multi-platform, multi-architecture disassembly framework. It provides a clean, simple API to disassemble binary code into human-readable assembly for x86 (16/32/64-bit), ARM, ARM64, MIPS, PowerPC, SPARC, SystemZ, XCore, M68K, TMS320C64x, M680x, and EVM architectures. Capstone is the disassembly engine embedded in many major security tools including Ghidra, radare2/rizin, Cutter, Binary Ninja, and dozens of others. Its design emphasizes thread safety, zero external dependencies, and rich detail extraction — each disassembled instruction includes operand details, register access information, and instruction groups. Bindings are available for Python, Java, Go, Ruby, Rust, OCaml, and many other languages, making it the standard building block for custom disassembly and binary analysis tools.",
+    "longDescription": "Capstone is a lightweight, multi-platform, multi-architecture disassembly framework. It provides a clean, simple API to disassemble binary code into human-readable assembly for x86 (16/32/64-bit), ARM, ARM64, MIPS, PowerPC, SPARC, SystemZ, XCore, M68K, TMS320C64x, M680x, and EVM architectures. Capstone is the disassembly engine embedded in many major security tools including Ghidra, radare2/rizin, Cutter, Binary Ninja, and dozens of others. Its design emphasizes thread safety, zero external dependencies, and rich detail extraction - each disassembled instruction includes operand details, register access information, and instruction groups. Bindings are available for Python, Java, Go, Ruby, Rust, OCaml, and many other languages, making it the standard building block for custom disassembly and binary analysis tools.",
     "category": "reverse-engineering",
     "language": "C",
     "platform": [
@@ -11824,7 +11824,7 @@
     "slug": "pixiewps",
     "name": "Pixiewps",
     "description": "WPS offline brute force. Exploits weak random number generation in WPS implementations to recover PINs in seconds.",
-    "longDescription": "Pixiewps is a tool used to brute force offline the WPS PIN exploiting the low or non-existing entropy of some software implementations. This is known as the Pixie Dust attack, which exploits weak random number generation in the WPS protocol implementation of many routers. While Reaver performs online brute force (trying PINs against the router one by one), Pixiewps works offline — it captures the WPS exchange data and computes the PIN locally, typically recovering it in seconds rather than hours. The attack works because many router manufacturers use predictable values (like the router's own BSSID or timestamp) to seed the random number generator used in the WPS Diffie-Hellman key exchange. Pixiewps is typically used in conjunction with Reaver or Bully, which handle the network interaction while Pixiewps performs the offline computation.",
+    "longDescription": "Pixiewps is a tool used to brute force offline the WPS PIN exploiting the low or non-existing entropy of some software implementations. This is known as the Pixie Dust attack, which exploits weak random number generation in the WPS protocol implementation of many routers. While Reaver performs online brute force (trying PINs against the router one by one), Pixiewps works offline - it captures the WPS exchange data and computes the PIN locally, typically recovering it in seconds rather than hours. The attack works because many router manufacturers use predictable values (like the router's own BSSID or timestamp) to seed the random number generator used in the WPS Diffie-Hellman key exchange. Pixiewps is typically used in conjunction with Reaver or Bully, which handle the network interaction while Pixiewps performs the offline computation.",
     "category": "wireless",
     "language": "C",
     "platform": [
@@ -12025,7 +12025,7 @@
     "slug": "aquatone",
     "name": "Aquatone",
     "description": "Visual web discovery tool. Takes screenshots of web pages across large target lists and generates browsable HTML reports.",
-    "longDescription": "Aquatone is a tool for visual inspection of websites across a large number of hosts, designed to help quickly identify interesting targets in a sea of web servers. Given a list of URLs or domains, Aquatone visits each one, takes a screenshot, collects HTTP headers and response bodies, and generates an interactive HTML report that lets you visually browse through all discovered web services. This visual approach is much faster than manually visiting hundreds of URLs — you can quickly spot login panels, default pages, interesting applications, and potential targets by scanning through the screenshot gallery. Aquatone is commonly used after subdomain enumeration to triage discovered assets, identifying which subdomains host web applications worth deeper investigation. It runs headless Chrome for rendering and supports customizable viewport sizes, timeouts, and concurrent connections.",
+    "longDescription": "Aquatone is a tool for visual inspection of websites across a large number of hosts, designed to help quickly identify interesting targets in a sea of web servers. Given a list of URLs or domains, Aquatone visits each one, takes a screenshot, collects HTTP headers and response bodies, and generates an interactive HTML report that lets you visually browse through all discovered web services. This visual approach is much faster than manually visiting hundreds of URLs - you can quickly spot login panels, default pages, interesting applications, and potential targets by scanning through the screenshot gallery. Aquatone is commonly used after subdomain enumeration to triage discovered assets, identifying which subdomains host web applications worth deeper investigation. It runs headless Chrome for rendering and supports customizable viewport sizes, timeouts, and concurrent connections.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -12121,7 +12121,7 @@
     "slug": "crlfuzz",
     "name": "CRLFuzz",
     "description": "CRLF injection scanner. Fast detection of HTTP response splitting vulnerabilities across multiple URLs.",
-    "longDescription": "CRLFuzz is a fast tool to scan CRLF (Carriage Return Line Feed) injection vulnerabilities, written in Go. CRLF injection occurs when an attacker can inject \\r\\n characters into HTTP headers, potentially leading to HTTP response splitting, cache poisoning, cross-site scripting, and session fixation. CRLFuzz tests URLs by injecting CRLF payloads into various positions (query parameters, path, headers) and detecting whether the injected characters appear in the HTTP response headers. It supports reading URLs from stdin (integrating seamlessly with tools like httpx, waybackurls, and gau), concurrent scanning with configurable threads, custom payloads, and output in multiple formats. CRLFuzz is a focused, single-purpose scanner that does one thing well — finding CRLF injection — making it a reliable component in automated vulnerability scanning pipelines.",
+    "longDescription": "CRLFuzz is a fast tool to scan CRLF (Carriage Return Line Feed) injection vulnerabilities, written in Go. CRLF injection occurs when an attacker can inject \\r\\n characters into HTTP headers, potentially leading to HTTP response splitting, cache poisoning, cross-site scripting, and session fixation. CRLFuzz tests URLs by injecting CRLF payloads into various positions (query parameters, path, headers) and detecting whether the injected characters appear in the HTTP response headers. It supports reading URLs from stdin (integrating seamlessly with tools like httpx, waybackurls, and gau), concurrent scanning with configurable threads, custom payloads, and output in multiple formats. CRLFuzz is a focused, single-purpose scanner that does one thing well - finding CRLF injection - making it a reliable component in automated vulnerability scanning pipelines.",
     "category": "web-scanning",
     "language": "Go",
     "platform": [
@@ -12215,7 +12215,7 @@
     "slug": "regripper",
     "name": "RegRipper",
     "description": "Windows registry forensic parser. Extracts and decodes forensic artifacts from registry hives with extensible plugins.",
-    "longDescription": "RegRipper is a Windows registry data extraction and correlation tool, written in Perl with an extensible plugin architecture. It parses offline Windows registry hive files (SAM, SYSTEM, SOFTWARE, NTUSER.DAT, UsrClass.dat) and extracts forensically significant data including user accounts, network connections, USB device history, application execution, file access timestamps, autorun entries, and hundreds of other artifacts. Each plugin targets a specific registry key or set of keys, formatting the output for analyst consumption. RegRipper is the standard tool for Windows registry forensics — its plugin library covers virtually every registry artifact documented in DFIR literature. It can process hives from mounted images, extracted files, or live systems, and outputs timestamped data suitable for timeline analysis. Harlan Carvey, the author, continuously maintains the plugin library as new forensic artifacts are discovered.",
+    "longDescription": "RegRipper is a Windows registry data extraction and correlation tool, written in Perl with an extensible plugin architecture. It parses offline Windows registry hive files (SAM, SYSTEM, SOFTWARE, NTUSER.DAT, UsrClass.dat) and extracts forensically significant data including user accounts, network connections, USB device history, application execution, file access timestamps, autorun entries, and hundreds of other artifacts. Each plugin targets a specific registry key or set of keys, formatting the output for analyst consumption. RegRipper is the standard tool for Windows registry forensics - its plugin library covers virtually every registry artifact documented in DFIR literature. It can process hives from mounted images, extracted files, or live systems, and outputs timestamped data suitable for timeline analysis. Harlan Carvey, the author, continuously maintains the plugin library as new forensic artifacts are discovered.",
     "category": "forensics",
     "language": "Perl",
     "platform": [
@@ -12259,7 +12259,7 @@
     "slug": "bulk-extractor",
     "name": "bulk_extractor",
     "description": "High-performance forensic data carver. Extracts email addresses, URLs, credit cards, and other artifacts from disk images at speed.",
-    "longDescription": "bulk_extractor is a high-performance digital forensics tool that scans disk images, files, or directories and extracts useful information without parsing the file system or file system structures. It finds email addresses, URLs, credit card numbers, JPEG images, JSON fragments, GPS coordinates, Windows registry fragments, AES keys, and other artifacts by scanning raw data. This approach means it can recover data from unallocated space, slack space, compressed archives, and even encrypted volumes where the key is present in memory. bulk_extractor operates on the raw bytes of the input, dividing it into pages that are processed in parallel across all available CPU cores, making it extremely fast — often 10x faster than other carving tools. Its output consists of feature files that can be analyzed with tools like the included bulk_diff utility or imported into other analysis platforms.",
+    "longDescription": "bulk_extractor is a high-performance digital forensics tool that scans disk images, files, or directories and extracts useful information without parsing the file system or file system structures. It finds email addresses, URLs, credit card numbers, JPEG images, JSON fragments, GPS coordinates, Windows registry fragments, AES keys, and other artifacts by scanning raw data. This approach means it can recover data from unallocated space, slack space, compressed archives, and even encrypted volumes where the key is present in memory. bulk_extractor operates on the raw bytes of the input, dividing it into pages that are processed in parallel across all available CPU cores, making it extremely fast - often 10x faster than other carving tools. Its output consists of feature files that can be analyzed with tools like the included bulk_diff utility or imported into other analysis platforms.",
     "category": "forensics",
     "language": "C++",
     "platform": [
@@ -12357,7 +12357,7 @@
     "slug": "patator",
     "name": "Patator",
     "description": "Multi-purpose brute force tool. Modular design for attacking SSH, FTP, HTTP, SMB, LDAP, and dozens of other protocols.",
-    "longDescription": "Patator is a multi-purpose brute forcer with a modular design and flexible usage. Unlike single-protocol tools, Patator supports attacking FTP, SSH, Telnet, SMTP, HTTP, POP, IMAP, LDAP, SMB, MSSQL, MySQL, PostgreSQL, Oracle, Cisco, VNC, SNMP, DNS, and many other protocols through dedicated modules. Each module exposes protocol-specific options while sharing a common interface for wordlists, threading, logging, and result filtering. Patator's key advantage is its flexible action/condition system — you define what constitutes a successful or failed attempt based on response codes, response content, timing, or any combination, rather than relying on hardcoded success patterns. This makes it adaptable to unusual authentication implementations. It also provides clean output formatting, automatic response-based filtering to reduce noise, and CSV logging for post-analysis.",
+    "longDescription": "Patator is a multi-purpose brute forcer with a modular design and flexible usage. Unlike single-protocol tools, Patator supports attacking FTP, SSH, Telnet, SMTP, HTTP, POP, IMAP, LDAP, SMB, MSSQL, MySQL, PostgreSQL, Oracle, Cisco, VNC, SNMP, DNS, and many other protocols through dedicated modules. Each module exposes protocol-specific options while sharing a common interface for wordlists, threading, logging, and result filtering. Patator's key advantage is its flexible action/condition system - you define what constitutes a successful or failed attempt based on response codes, response content, timing, or any combination, rather than relying on hardcoded success patterns. This makes it adaptable to unusual authentication implementations. It also provides clean output formatting, automatic response-based filtering to reduce noise, and CSV logging for post-analysis.",
     "category": "password-attack",
     "language": "Python",
     "platform": [
@@ -12545,7 +12545,7 @@
     "slug": "weirdaal",
     "name": "WeirdAAL",
     "description": "AWS Attack Library. Enumerate, exploit, and backdoor AWS services with organized modules for cloud penetration testing.",
-    "longDescription": "WeirdAAL (AWS Attack Library) is a Python framework for offensive testing of Amazon Web Services environments. It organizes AWS attacks into categorized modules covering enumeration (listing resources, permissions, and configurations across services), exploitation (abusing misconfigurations and excessive permissions), and persistence (creating backdoor access). WeirdAAL supports testing across a wide range of AWS services including IAM, EC2, S3, Lambda, STS, CloudTrail, and many others. Each module performs a specific action — from enumerating all S3 buckets and their ACLs, to checking for privilege escalation paths through IAM policy misconfigurations, to creating persistence mechanisms via Lambda backdoors. WeirdAAL uses boto3 and works with standard AWS credential configurations, making it easy to test with compromised or provided access keys.",
+    "longDescription": "WeirdAAL (AWS Attack Library) is a Python framework for offensive testing of Amazon Web Services environments. It organizes AWS attacks into categorized modules covering enumeration (listing resources, permissions, and configurations across services), exploitation (abusing misconfigurations and excessive permissions), and persistence (creating backdoor access). WeirdAAL supports testing across a wide range of AWS services including IAM, EC2, S3, Lambda, STS, CloudTrail, and many others. Each module performs a specific action - from enumerating all S3 buckets and their ACLs, to checking for privilege escalation paths through IAM policy misconfigurations, to creating persistence mechanisms via Lambda backdoors. WeirdAAL uses boto3 and works with standard AWS credential configurations, making it easy to test with compromised or provided access keys.",
     "category": "cloud-recon",
     "language": "Python",
     "platform": [
@@ -12601,7 +12601,7 @@
     "slug": "zeek",
     "name": "Zeek",
     "description": "Network analysis framework (formerly Bro). Deep packet inspection, protocol analysis, and security monitoring at scale.",
-    "longDescription": "Zeek (formerly Bro) is a powerful network analysis framework that sits on a network tap, link, or live interface and generates detailed logs describing network activity. Unlike traditional IDS systems that match signatures, Zeek performs deep protocol analysis to produce structured logs for every connection, DNS query, HTTP request, SSL certificate, file transfer, and dozens of other protocol events. These logs are the foundation for network security monitoring — they tell you not just that something happened, but exactly what happened at the application layer. Zeek's scripting language allows custom analysis, from detecting specific attack patterns to extracting files from network traffic. It's widely deployed in academic networks, enterprises, and government agencies, and its logs are commonly fed into SIEM platforms for correlation and alerting. Zeek also includes a signature framework for traditional pattern matching and a file analysis framework for extracting and inspecting transferred files.",
+    "longDescription": "Zeek (formerly Bro) is a powerful network analysis framework that sits on a network tap, link, or live interface and generates detailed logs describing network activity. Unlike traditional IDS systems that match signatures, Zeek performs deep protocol analysis to produce structured logs for every connection, DNS query, HTTP request, SSL certificate, file transfer, and dozens of other protocol events. These logs are the foundation for network security monitoring - they tell you not just that something happened, but exactly what happened at the application layer. Zeek's scripting language allows custom analysis, from detecting specific attack patterns to extracting files from network traffic. It's widely deployed in academic networks, enterprises, and government agencies, and its logs are commonly fed into SIEM platforms for correlation and alerting. Zeek also includes a signature framework for traditional pattern matching and a file analysis framework for extracting and inspecting transferred files.",
     "category": "network-recon",
     "language": "C++",
     "platform": [
@@ -12781,7 +12781,7 @@
     "slug": "osquery",
     "name": "osquery",
     "description": "SQL-powered endpoint visibility. Query operating system state as a relational database for security monitoring and compliance.",
-    "longDescription": "osquery, developed at Facebook, exposes an operating system as a high-performance relational database. This allows you to write SQL queries to explore operating system data — running processes, loaded kernel modules, open network connections, browser plugins, hardware events, file hashes, and hundreds of other system attributes are all available as SQL tables. For security teams, this means you can query your fleet in real-time: 'SELECT * FROM processes WHERE name LIKE \\'%miner%\\'' finds cryptominers, 'SELECT * FROM listening_ports WHERE port = 4444' finds suspicious listeners. osquery supports scheduled queries that log differential changes over time, making it powerful for continuous security monitoring and compliance verification. It runs on Linux, macOS, Windows, and FreeBSD, and integrates with fleet management tools like Fleet (formerly Kolide) for centralized querying and alerting across thousands of endpoints.",
+    "longDescription": "osquery, developed at Facebook, exposes an operating system as a high-performance relational database. This allows you to write SQL queries to explore operating system data - running processes, loaded kernel modules, open network connections, browser plugins, hardware events, file hashes, and hundreds of other system attributes are all available as SQL tables. For security teams, this means you can query your fleet in real-time: 'SELECT * FROM processes WHERE name LIKE \\'%miner%\\'' finds cryptominers, 'SELECT * FROM listening_ports WHERE port = 4444' finds suspicious listeners. osquery supports scheduled queries that log differential changes over time, making it powerful for continuous security monitoring and compliance verification. It runs on Linux, macOS, Windows, and FreeBSD, and integrates with fleet management tools like Fleet (formerly Kolide) for centralized querying and alerting across thousands of endpoints.",
     "category": "threat-intel",
     "language": "C++",
     "platform": [
@@ -13110,7 +13110,7 @@
     "slug": "cyberchef",
     "name": "CyberChef",
     "description": "The Cyber Swiss Army Knife. Browser-based data transformation with 300+ operations for encoding, encryption, and analysis.",
-    "longDescription": "CyberChef is a web application developed by GCHQ for carrying out all manner of cyber operations within a web browser. It provides over 300 operations covering encoding/decoding (Base64, URL, hex, HTML entities), encryption/decryption (AES, DES, RSA, XOR), compression (gzip, bzip2, zlib), hashing (MD5, SHA, HMAC), data format conversion (JSON, XML, CSV, YAML), networking (IP parsing, URL parsing, HTTP headers), language operations (regex, character encoding, Unicode), and analysis (entropy, frequency, magic detection). Operations are chained together in a visual 'recipe' that processes data through each step sequentially, making it easy to build complex transformation pipelines. CyberChef's 'Magic' operation automatically detects the encoding or format of input data and suggests relevant operations. It runs entirely client-side — no data leaves the browser — making it safe for processing sensitive material. CyberChef is an essential daily tool for SOC analysts, malware researchers, and CTF players.",
+    "longDescription": "CyberChef is a web application developed by GCHQ for carrying out all manner of cyber operations within a web browser. It provides over 300 operations covering encoding/decoding (Base64, URL, hex, HTML entities), encryption/decryption (AES, DES, RSA, XOR), compression (gzip, bzip2, zlib), hashing (MD5, SHA, HMAC), data format conversion (JSON, XML, CSV, YAML), networking (IP parsing, URL parsing, HTTP headers), language operations (regex, character encoding, Unicode), and analysis (entropy, frequency, magic detection). Operations are chained together in a visual 'recipe' that processes data through each step sequentially, making it easy to build complex transformation pipelines. CyberChef's 'Magic' operation automatically detects the encoding or format of input data and suggests relevant operations. It runs entirely client-side - no data leaves the browser - making it safe for processing sensitive material. CyberChef is an essential daily tool for SOC analysts, malware researchers, and CTF players.",
     "category": "dual-use",
     "language": "JavaScript",
     "platform": [

@@ -9,7 +9,7 @@ export default function Footer() {
             </span>
           </div>
           <span className="font-mono text-sm text-text-secondary">
-            ENNA — OSINT & Recon Tool Index
+            ENNA - OSINT & Recon Tool Index
           </span>
         </div>
 

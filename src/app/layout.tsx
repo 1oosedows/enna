@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://www.en-na.com";
-const title = "ENNA — OSINT & Recon Tool Index";
+const title = "ENNA - OSINT & Recon Tool Index";
 const description =
   "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats for 250+ tools across 16 categories.";
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s — ENNA",
+    template: "%s - ENNA",
   },
   description,
   keywords: [

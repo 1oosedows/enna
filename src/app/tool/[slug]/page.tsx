@@ -25,8 +25,8 @@ export async function generateMetadata({
   const tool = (toolsData as Tool[]).find((t) => t.slug === slug);
   if (!tool) return { title: "Tool Not Found" };
   const category = categories.find((c) => c.id === tool.category);
-  const pageTitle = `${tool.name} — ${category?.name || "Tools"}`;
-  const pageDescription = `${tool.description} — ${tool.language} | ${tool.tags.slice(0, 3).join(", ")}`;
+  const pageTitle = `${tool.name} - ${category?.name || "Tools"}`;
+  const pageDescription = `${tool.description} - ${tool.language} | ${tool.tags.slice(0, 3).join(", ")}`;
   return {
     title: pageTitle,
     description: pageDescription,

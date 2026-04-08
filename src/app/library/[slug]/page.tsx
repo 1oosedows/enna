@@ -50,10 +50,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const book = (libraryData.books as Book[]).find((b) => b.slug === slug);
   if (book) {
     return {
-      title: `${book.title} — Library`,
+      title: `${book.title} - Library`,
       description: `${book.description} By ${book.author}.`,
       openGraph: {
-        title: `${book.title} — ENNA Library`,
+        title: `${book.title} - ENNA Library`,
         description: book.description,
         type: "article",
       },
@@ -62,10 +62,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const hw = (libraryData.hardware as HardwareItem[]).find((h) => h.slug === slug);
   if (hw) {
     return {
-      title: `${hw.title} — Library`,
+      title: `${hw.title} - Library`,
       description: `${hw.description} By ${hw.manufacturer}.`,
       openGraph: {
-        title: `${hw.title} — ENNA Library`,
+        title: `${hw.title} - ENNA Library`,
         description: hw.description,
         type: "article",
       },

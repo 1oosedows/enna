@@ -51,7 +51,7 @@ export async function generateMetadata({
   const toolB = tools.find((t) => t.slug === parts[1]);
   if (!toolA || !toolB) return { title: "Comparison Not Found" };
 
-  const pageTitle = `${toolA.name} vs ${toolB.name} — Feature Comparison | ENNA`;
+  const pageTitle = `${toolA.name} vs ${toolB.name} - Feature Comparison | ENNA`;
   const pageDescription = `Compare ${toolA.name} and ${toolB.name} side by side. Language, platform support, GitHub stats, features, and use cases compared for security professionals.`;
 
   return {
@@ -78,7 +78,7 @@ function StatBar({
   format?: "number" | "stars" | "date" | "text";
 }) {
   const display = (v: number | string | undefined) => {
-    if (v === undefined) return "—";
+    if (v === undefined) return "-";
     if (format === "stars" && typeof v === "number") return formatStars(v);
     if (format === "date" && typeof v === "string") return timeAgo(v);
     return String(v);
@@ -167,7 +167,7 @@ export default async function ComparePage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${toolA.name} vs ${toolB.name} — Feature Comparison`,
+    headline: `${toolA.name} vs ${toolB.name} - Feature Comparison`,
     description: `Side-by-side comparison of ${toolA.name} and ${toolB.name} for security professionals.`,
     url: `https://www.en-na.com/compare/${slug}`,
     about: [
@@ -289,8 +289,8 @@ export default async function ComparePage({
             />
             <StatBar
               label="License"
-              valueA={toolA.license || "—"}
-              valueB={toolB.license || "—"}
+              valueA={toolA.license || "-"}
+              valueB={toolB.license || "-"}
               format="text"
             />
             <StatBar

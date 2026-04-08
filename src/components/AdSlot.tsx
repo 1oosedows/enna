@@ -110,7 +110,7 @@ export default function AdSlot({
                 Your ad here
               </p>
               <p className="text-xs text-text-muted">
-                Reach security professionals and developers — ads@en-na.com
+                Reach security professionals and developers - ads@en-na.com
               </p>
             </div>
           </a>

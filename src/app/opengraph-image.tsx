@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ENNA — OSINT & Recon Tool Index";
+export const alt = "ENNA - OSINT & Recon Tool Index";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
