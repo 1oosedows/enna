@@ -760,7 +760,8 @@
     "longDescription": "Maltego CE is a visual link analysis tool that enables comprehensive OSINT investigations by mapping relationships between entities like people, companies, domains, and infrastructure. Developed in Java, it provides a graphical interface to visualize complex data sets using transforms and link analysis. Maltego's ability to reveal hidden connections and patterns makes it indispensable for analysts and investigators conducting in-depth research and threat intelligence operations.",
     "alternatives": [
       "spiderfoot"
-    ]
+    ],
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://maltego.com&size=128"
   },
   {
     "slug": "holehe",
@@ -3731,7 +3732,8 @@
       "api"
     ],
     "featured": false,
-    "longDescription": "URLScan.io CLI is a tool for scanning and analyzing URLs to identify phishing indicators, malware, and suspicious behavior. It provides features such as screenshot and DOM capture, enabling detailed examination of web pages. Written in Python, this tool leverages the URLScan.io API to deliver comprehensive analysis results, making it a valuable asset for incident responders and security analysts focused on web-based threat detection."
+    "longDescription": "URLScan.io CLI is a tool for scanning and analyzing URLs to identify phishing indicators, malware, and suspicious behavior. It provides features such as screenshot and DOM capture, enabling detailed examination of web pages. Written in Python, this tool leverages the URLScan.io API to deliver comprehensive analysis results, making it a valuable asset for incident responders and security analysts focused on web-based threat detection.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://urlscan.io&size=128"
   },
   {
     "slug": "modlishka",
@@ -3789,7 +3791,8 @@
       "entity-id"
     ],
     "featured": false,
-    "longDescription": "Chainalysis Reactor (Free) is a blockchain investigation tool that offers transaction graph visualization, wallet clustering, and entity identification. It helps analysts track and understand the flow of cryptocurrency transactions across the blockchain. Developed in JavaScript, this tool is used for identifying suspicious activities and entities within blockchain networks, supporting law enforcement and compliance efforts in the cryptocurrency domain."
+    "longDescription": "Chainalysis Reactor (Free) is a blockchain investigation tool that offers transaction graph visualization, wallet clustering, and entity identification. It helps analysts track and understand the flow of cryptocurrency transactions across the blockchain. Developed in JavaScript, this tool is used for identifying suspicious activities and entities within blockchain networks, supporting law enforcement and compliance efforts in the cryptocurrency domain.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://chainalysis.com&size=128"
   },
   {
     "slug": "breadcrumbs",
@@ -3811,7 +3814,8 @@
       "investigation"
     ],
     "featured": true,
-    "longDescription": "Breadcrumbs is a blockchain analytics and investigation tool designed to trace Bitcoin and Ethereum transactions through multiple hops. By analyzing blockchain data, it provides insights into transaction patterns and relationships between addresses. This TypeScript-based tool aids in the detection of suspicious transaction chains and assists in financial investigations. Notable for its ability to visualize complex transaction paths, Breadcrumbs is an essential tool for blockchain analysts."
+    "longDescription": "Breadcrumbs is a blockchain analytics and investigation tool designed to trace Bitcoin and Ethereum transactions through multiple hops. By analyzing blockchain data, it provides insights into transaction patterns and relationships between addresses. This TypeScript-based tool aids in the detection of suspicious transaction chains and assists in financial investigations. Notable for its ability to visualize complex transaction paths, Breadcrumbs is an essential tool for blockchain analysts.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://breadcrumbs.app&size=128"
   },
   {
     "slug": "blockscout",
@@ -3871,7 +3875,8 @@
       "multi-chain"
     ],
     "featured": false,
-    "longDescription": "Whale Alert CLI is a tool for tracking large cryptocurrency transactions in real-time across major blockchains. Leveraging a Python-based command line interface, it provides alerts and API access to monitor significant fund movements. It's particularly useful for traders and analysts looking to detect market-moving transactions. The tool's multi-chain compatibility makes it versatile in the rapidly evolving cryptocurrency landscape."
+    "longDescription": "Whale Alert CLI is a tool for tracking large cryptocurrency transactions in real-time across major blockchains. Leveraging a Python-based command line interface, it provides alerts and API access to monitor significant fund movements. It's particularly useful for traders and analysts looking to detect market-moving transactions. The tool's multi-chain compatibility makes it versatile in the rapidly evolving cryptocurrency landscape.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://whale-alert.io&size=128"
   },
   {
     "slug": "ethtective",
@@ -3892,7 +3897,8 @@
       "explorer"
     ],
     "featured": false,
-    "longDescription": "Ethtective is an Ethereum transaction explorer and visualizer that utilizes graph-based methods to explore address and transaction flows. Built with JavaScript, it enables users to visually analyze the intricate relationships and activities on the Ethereum blockchain. This tool is particularly valuable for investigators seeking to understand transaction patterns and identify potential fraudulent activities. Its graphical representation simplifies complex blockchain data analysis."
+    "longDescription": "Ethtective is an Ethereum transaction explorer and visualizer that utilizes graph-based methods to explore address and transaction flows. Built with JavaScript, it enables users to visually analyze the intricate relationships and activities on the Ethereum blockchain. This tool is particularly valuable for investigators seeking to understand transaction patterns and identify potential fraudulent activities. Its graphical representation simplifies complex blockchain data analysis.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://ethtective.com&size=128"
   },
   {
     "slug": "bitcoin-abe",
@@ -3980,7 +3986,8 @@
       "linking"
     ],
     "featured": false,
-    "longDescription": "Tornado Cash Tracker is a specialized tool for monitoring deposits and withdrawals through the Tornado Cash mixer. Using probabilistic linking techniques, it attempts to associate mixed transactions with their original sources. Developed in Python, this tool is particularly useful for investigators seeking to trace funds through privacy-enhancing mixers. It aids in uncovering the flow of assets that might be obscured by mixing services."
+    "longDescription": "Tornado Cash Tracker is a specialized tool for monitoring deposits and withdrawals through the Tornado Cash mixer. Using probabilistic linking techniques, it attempts to associate mixed transactions with their original sources. Developed in Python, this tool is particularly useful for investigators seeking to trace funds through privacy-enhancing mixers. It aids in uncovering the flow of assets that might be obscured by mixing services.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://tornadocash.eth.link&size=128"
   },
   {
     "slug": "etherscan-api",
@@ -4041,7 +4048,8 @@
       "exchanges"
     ],
     "featured": false,
-    "longDescription": "WalletExplorer is a Bitcoin wallet clustering and labeling tool that maps addresses to known entities such as exchanges, mixers, and markets. Using Python, it helps investigators and analysts identify patterns and associations within Bitcoin transaction data. This tool is particularly valuable for anti-money laundering (AML) efforts and regulatory compliance by revealing connections between seemingly disparate addresses."
+    "longDescription": "WalletExplorer is a Bitcoin wallet clustering and labeling tool that maps addresses to known entities such as exchanges, mixers, and markets. Using Python, it helps investigators and analysts identify patterns and associations within Bitcoin transaction data. This tool is particularly valuable for anti-money laundering (AML) efforts and regulatory compliance by revealing connections between seemingly disparate addresses.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://walletexplorer.com&size=128"
   },
   {
     "slug": "misttrack",
@@ -4063,7 +4071,8 @@
       "fund-tracing"
     ],
     "featured": true,
-    "longDescription": "MistTrack is SlowMist's crypto tracking platform offering cross-chain fund tracing, address labeling, and risk scoring for AML purposes. Built with TypeScript, it provides comprehensive tools for monitoring and analyzing cryptocurrency transactions across different blockchains. Its risk scoring and labeling features assist in identifying high-risk transactions and entities, playing a crucial role in compliance and security operations."
+    "longDescription": "MistTrack is SlowMist's crypto tracking platform offering cross-chain fund tracing, address labeling, and risk scoring for AML purposes. Built with TypeScript, it provides comprehensive tools for monitoring and analyzing cryptocurrency transactions across different blockchains. Its risk scoring and labeling features assist in identifying high-risk transactions and entities, playing a crucial role in compliance and security operations.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://misttrack.io&size=128"
   },
   {
     "slug": "orbit",
@@ -4084,7 +4093,8 @@
       "force-directed"
     ],
     "featured": false,
-    "longDescription": "Orbit is a blockchain transaction visualizer that generates interactive force-directed graphs of Ethereum address relationships. Developed in JavaScript, it allows users to explore connections and transactions on the Ethereum network visually. This tool is particularly useful for analysts and investigators seeking to uncover hidden relationships and patterns within blockchain data. Its interactive nature enhances the exploration and understanding of complex blockchain networks."
+    "longDescription": "Orbit is a blockchain transaction visualizer that generates interactive force-directed graphs of Ethereum address relationships. Developed in JavaScript, it allows users to explore connections and transactions on the Ethereum network visually. This tool is particularly useful for analysts and investigators seeking to uncover hidden relationships and patterns within blockchain data. Its interactive nature enhances the exploration and understanding of complex blockchain networks.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://orbitchain.io&size=128"
   },
   {
     "slug": "graphsense",
@@ -4151,7 +4161,8 @@
       "aml"
     ],
     "featured": false,
-    "longDescription": "Scorechain Analytics offers blockchain analytics with risk scoring, transaction monitoring, and compliance reporting across over 8000 assets. Utilizing Python, it provides comprehensive tools for analyzing blockchain data to support anti-money laundering (AML) and regulatory compliance. Its extensive asset coverage and risk assessment capabilities make it a valuable resource for financial institutions and regulatory bodies aiming to maintain compliance and security."
+    "longDescription": "Scorechain Analytics offers blockchain analytics with risk scoring, transaction monitoring, and compliance reporting across over 8000 assets. Utilizing Python, it provides comprehensive tools for analyzing blockchain data to support anti-money laundering (AML) and regulatory compliance. Its extensive asset coverage and risk assessment capabilities make it a valuable resource for financial institutions and regulatory bodies aiming to maintain compliance and security.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://scorechain.com&size=128"
   },
   {
     "slug": "dune-analytics",
@@ -4211,7 +4222,8 @@
       "animated"
     ],
     "featured": false,
-    "longDescription": "TxStreet is a real-time blockchain transaction visualizer that presents an animated street view of pending and confirmed transactions. Built with JavaScript, it provides an engaging way to observe blockchain activity and transaction flows. This tool is particularly useful for users interested in understanding the dynamics of blockchain networks in a visual and intuitive manner. It highlights mempool activity, offering insights into transaction congestion and priorities."
+    "longDescription": "TxStreet is a real-time blockchain transaction visualizer that presents an animated street view of pending and confirmed transactions. Built with JavaScript, it provides an engaging way to observe blockchain activity and transaction flows. This tool is particularly useful for users interested in understanding the dynamics of blockchain networks in a visual and intuitive manner. It highlights mempool activity, offering insights into transaction congestion and priorities.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://txstreet.com&size=128"
   },
   {
     "slug": "bitcoinlib",
@@ -4568,7 +4580,8 @@
       "approvals"
     ],
     "featured": false,
-    "longDescription": "DeBank API is a multi-chain portfolio tracker for DeFi users, offering insights into token holdings, protocol positions, NFTs, and approval management across more than 100 chains. It enables seamless tracking and management of decentralized finance assets, providing comprehensive data on user investments. Its extensive chain support makes it a valuable resource for users interacting with diverse DeFi ecosystems."
+    "longDescription": "DeBank API is a multi-chain portfolio tracker for DeFi users, offering insights into token holdings, protocol positions, NFTs, and approval management across more than 100 chains. It enables seamless tracking and management of decentralized finance assets, providing comprehensive data on user investments. Its extensive chain support makes it a valuable resource for users interacting with diverse DeFi ecosystems.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://debank.com&size=128"
   },
   {
     "slug": "nansen-labels",
@@ -4590,7 +4603,8 @@
       "identification"
     ],
     "featured": false,
-    "longDescription": "Nansen Labels (Open) is an open-source database for wallet labeling, identifying entities such as exchanges, whales, MEV bots, and funds. It offers detailed insights into wallet ownership and activity, aiding in blockchain analysis and intelligence. By providing publicly accessible labels, it enhances transparency and understanding of blockchain interactions at scale."
+    "longDescription": "Nansen Labels (Open) is an open-source database for wallet labeling, identifying entities such as exchanges, whales, MEV bots, and funds. It offers detailed insights into wallet ownership and activity, aiding in blockchain analysis and intelligence. By providing publicly accessible labels, it enhances transparency and understanding of blockchain interactions at scale.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://nansen.ai&size=128"
   },
   {
     "slug": "arkham-intel",
@@ -4612,7 +4626,8 @@
       "deanonymization"
     ],
     "featured": true,
-    "longDescription": "Arkham Intelligence provides entity-based analytics for blockchain data, mapping on-chain activity to real-world entities across multiple chains. Its advanced system enables users to associate blockchain addresses with known entities, facilitating deanonymization and intelligence gathering. This tool is essential for analysts looking to understand complex blockchain networks and the entities operating within them."
+    "longDescription": "Arkham Intelligence provides entity-based analytics for blockchain data, mapping on-chain activity to real-world entities across multiple chains. Its advanced system enables users to associate blockchain addresses with known entities, facilitating deanonymization and intelligence gathering. This tool is essential for analysts looking to understand complex blockchain networks and the entities operating within them.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://arkhamintelligence.com&size=128"
   },
   {
     "slug": "elliptic-lens",
@@ -4634,7 +4649,8 @@
       "risk-profile"
     ],
     "featured": false,
-    "longDescription": "Elliptic Lens is a crypto compliance and investigation tool designed for cross-chain tracing, sanctions screening, and risk profiling. It allows users to trace funds across different blockchains and assess potential regulatory risks. Elliptic Lens is a key resource for compliance teams aiming to ensure adherence to global regulations and mitigate financial crime in the crypto space."
+    "longDescription": "Elliptic Lens is a crypto compliance and investigation tool designed for cross-chain tracing, sanctions screening, and risk profiling. It allows users to trace funds across different blockchains and assess potential regulatory risks. Elliptic Lens is a key resource for compliance teams aiming to ensure adherence to global regulations and mitigate financial crime in the crypto space.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://elliptic.co&size=128"
   },
   {
     "slug": "transpose-api",
@@ -4728,7 +4744,8 @@
       "real-time"
     ],
     "featured": false,
-    "longDescription": "ChainSight offers real-time monitoring of DEX trades, bridge transfers, and large crypto movements, with custom alerting via webhook or Telegram. It provides immediate insights into significant blockchain events, aiding in prompt decision-making and risk management. ChainSight's capabilities make it a vital tool for traders and analysts monitoring dynamic crypto markets."
+    "longDescription": "ChainSight offers real-time monitoring of DEX trades, bridge transfers, and large crypto movements, with custom alerting via webhook or Telegram. It provides immediate insights into significant blockchain events, aiding in prompt decision-making and risk management. ChainSight's capabilities make it a vital tool for traders and analysts monitoring dynamic crypto markets.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://chainsight.com&size=128"
   },
   {
     "slug": "bitcoin-cli",
@@ -4862,7 +4879,8 @@
       "permit2"
     ],
     "featured": false,
-    "longDescription": "Drainer Detector is a Python-based tool designed to identify and flag wallet drainer contracts and phishing approval signatures in the crypto space. It specifically scans for the misuse of SetApprovalForAll and Permit2 functions, which are often exploited in phishing attacks. The tool helps protect users by detecting potential vulnerabilities in smart contracts and alerting them to possible security risks before they approve any transactions."
+    "longDescription": "Drainer Detector is a Python-based tool designed to identify and flag wallet drainer contracts and phishing approval signatures in the crypto space. It specifically scans for the misuse of SetApprovalForAll and Permit2 functions, which are often exploited in phishing attacks. The tool helps protect users by detecting potential vulnerabilities in smart contracts and alerting them to possible security risks before they approve any transactions.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://revoke.cash&size=128"
   },
   {
     "slug": "mev-inspect",
@@ -4911,7 +4929,8 @@
       "defi"
     ],
     "featured": false,
-    "longDescription": "EigenPhi Tools offer a comprehensive analysis suite for DeFi attacks and MEV events, with a focus on visualizing complex transactions such as flash loan attacks, rug pulls, and arbitrage opportunities. It decodes blockchain transactions to provide a clear picture of attack vectors and profit extraction methods. This Python-based tool aids in understanding the dynamics of DeFi and the risks associated with various financial operations."
+    "longDescription": "EigenPhi Tools offer a comprehensive analysis suite for DeFi attacks and MEV events, with a focus on visualizing complex transactions such as flash loan attacks, rug pulls, and arbitrage opportunities. It decodes blockchain transactions to provide a clear picture of attack vectors and profit extraction methods. This Python-based tool aids in understanding the dynamics of DeFi and the risks associated with various financial operations.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://eigenphi.io&size=128"
   },
   {
     "slug": "token-sniffer",
@@ -4933,7 +4952,8 @@
       "contract-audit"
     ],
     "featured": false,
-    "longDescription": "Token Sniffer is an automated tool written in TypeScript that detects scam tokens on the blockchain by analyzing smart contract code. It looks for common fraudulent practices such as honeypots, hidden mints, tax manipulation, and rug pull vectors. This tool is essential for investors and developers looking to identify and avoid deceptive tokens before they cause financial loss."
+    "longDescription": "Token Sniffer is an automated tool written in TypeScript that detects scam tokens on the blockchain by analyzing smart contract code. It looks for common fraudulent practices such as honeypots, hidden mints, tax manipulation, and rug pull vectors. This tool is essential for investors and developers looking to identify and avoid deceptive tokens before they cause financial loss.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://tokensniffer.com&size=128"
   },
   {
     "slug": "rugdoc",
@@ -4954,7 +4974,8 @@
       "rug-pull"
     ],
     "featured": false,
-    "longDescription": "RugDoc Scanner is a Python-based tool for assessing the risk of smart contracts, particularly in the DeFi space. It reviews code for patterns commonly associated with rug pulls and backdoor functionalities. By analyzing contract code, RugDoc Scanner helps users identify potential security threats and avoid malicious projects that could lead to significant financial losses."
+    "longDescription": "RugDoc Scanner is a Python-based tool for assessing the risk of smart contracts, particularly in the DeFi space. It reviews code for patterns commonly associated with rug pulls and backdoor functionalities. By analyzing contract code, RugDoc Scanner helps users identify potential security threats and avoid malicious projects that could lead to significant financial losses.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://rugdoc.io&size=128"
   },
   {
     "slug": "cryo",
@@ -8187,7 +8208,8 @@
       "investigation"
     ],
     "website": "https://crystalblockchain.com",
-    "longDescription": "Crystal Blockchain is a blockchain analytics platform aimed at compliance and investigative purposes, providing transaction flow visualization and risk assessment. It enables users to trace cryptocurrency movements and identify suspicious activities through a sophisticated analytical engine. This tool supports a range of cryptocurrencies and is used by financial institutions and law enforcement agencies for monitoring and forensic investigations. Crystal Blockchain's advanced visualization capabilities make it a leader in blockchain intelligence and analysis."
+    "longDescription": "Crystal Blockchain is a blockchain analytics platform aimed at compliance and investigative purposes, providing transaction flow visualization and risk assessment. It enables users to trace cryptocurrency movements and identify suspicious activities through a sophisticated analytical engine. This tool supports a range of cryptocurrencies and is used by financial institutions and law enforcement agencies for monitoring and forensic investigations. Crystal Blockchain's advanced visualization capabilities make it a leader in blockchain intelligence and analysis.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://crystalblockchain.com&size=128"
   },
   {
     "slug": "frida",
@@ -9275,7 +9297,8 @@
       "social-engineering",
       "attack-monitoring"
     ],
-    "longDescription": "HiddenEye is a comprehensive phishing and social engineering tool featuring live attack monitoring and keylogger integration. With over 40 templates, it allows attackers to launch convincing phishing campaigns against various targets. The Python-based tool provides a user-friendly interface for tracking ongoing attacks and collecting sensitive information. HiddenEye's extensive feature set makes it suitable for both security assessments and demonstrations of phishing techniques."
+    "longDescription": "HiddenEye is a comprehensive phishing and social engineering tool featuring live attack monitoring and keylogger integration. With over 40 templates, it allows attackers to launch convincing phishing campaigns against various targets. The Python-based tool provides a user-friendly interface for tracking ongoing attacks and collecting sensitive information. HiddenEye's extensive feature set makes it suitable for both security assessments and demonstrations of phishing techniques.",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/46369684?v=4"
   },
   {
     "slug": "cloudfox",
@@ -9473,7 +9496,8 @@
       "android",
       "ios"
     ],
-    "longDescription": "RMS (Runtime Mobile Security) is a toolkit for dynamically analyzing and manipulating Android and iOS applications using Frida. It enables real-time inspection and modification of app behavior, assisting in security testing and debugging. The Python-based tool is essential for mobile security professionals looking to understand app vulnerabilities and bypass security controls. RMS offers a flexible environment for exploring runtime behaviors and enhancing mobile application security."
+    "longDescription": "RMS (Runtime Mobile Security) is a toolkit for dynamically analyzing and manipulating Android and iOS applications using Frida. It enables real-time inspection and modification of app behavior, assisting in security testing and debugging. The Python-based tool is essential for mobile security professionals looking to understand app vulnerabilities and bypass security controls. RMS offers a flexible environment for exploring runtime behaviors and enhancing mobile application security.",
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://github.com&size=128"
   },
   {
     "slug": "chainsaw",
@@ -10530,7 +10554,8 @@
       "thehive",
       "velociraptor",
       "wazuh"
-    ]
+    ],
+    "avatarUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://kroll.com&size=128"
   },
   {
     "slug": "cortex",
