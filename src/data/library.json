@@ -174,7 +174,8 @@
         }
       ],
       "isbn": "9798314490181",
-      "longDescription": "The Forensic Team Field Manual extends the BTFM series into dedicated digital forensics territory. Alan White and Ben Clark provide a comprehensive quick-reference for forensic examiners covering evidence acquisition, chain of custody procedures, file system analysis commands, registry forensics, browser artifact extraction, email analysis, and mobile device forensics. The manual includes commands for tools like FTK Imager, Autopsy, Volatility, RegRipper, and Eric Zimmerman's suite, organized by forensic task rather than tool. It covers both Windows and Linux forensic procedures, with sections on timeline creation, artifact correlation, and report writing. The 2025 edition reflects current forensic practices including cloud evidence collection, container forensics, and modern Windows artifact locations."
+      "longDescription": "The Forensic Team Field Manual extends the BTFM series into dedicated digital forensics territory. Alan White and Ben Clark provide a comprehensive quick-reference for forensic examiners covering evidence acquisition, chain of custody procedures, file system analysis commands, registry forensics, browser artifact extraction, email analysis, and mobile device forensics. The manual includes commands for tools like FTK Imager, Autopsy, Volatility, RegRipper, and Eric Zimmerman's suite, organized by forensic task rather than tool. It covers both Windows and Linux forensic procedures, with sections on timeline creation, artifact correlation, and report writing. The 2025 edition reflects current forensic practices including cloud evidence collection, container forensics, and modern Windows artifact locations.",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798314490181-L.jpg"
     },
     {
       "slug": "web-app-hackers-handbook-1e",
@@ -912,7 +913,9 @@
           "format": "Paperback",
           "url": "https://amzn.to/4vbBa2T"
         }
-      ]
+      ],
+      "isbn": "9781593270469",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9781593270469-L.jpg"
     },
     {
       "slug": "tangled-web",
@@ -992,7 +995,9 @@
           "format": "Paperback",
           "url": "https://amzn.to/4do93qX"
         }
-      ]
+      ],
+      "isbn": "9780770436193",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9780770436193-L.jpg"
     },
     {
       "slug": "dark-wire",
@@ -1125,7 +1130,9 @@
       ],
       "imageTag": "RO",
       "year": 2025,
-      "editions": []
+      "editions": [],
+      "isbn": "9798297369993",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798297369993-L.jpg"
     },
     {
       "slug": "blue-team-operators-handbook",
@@ -1142,7 +1149,9 @@
       ],
       "imageTag": "BO",
       "year": 2025,
-      "editions": []
+      "editions": [],
+      "isbn": "9798298205801",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798298205801-L.jpg"
     },
     {
       "slug": "purple-team-operators-handbook",
@@ -1159,7 +1168,9 @@
       ],
       "imageTag": "PO",
       "year": 2025,
-      "editions": []
+      "editions": [],
+      "isbn": "9798298590037",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9798298590037-L.jpg"
     },
     {
       "slug": "world-ends-chip-war-collection",
@@ -1176,7 +1187,9 @@
       ],
       "imageTag": "3B",
       "year": 2023,
-      "editions": []
+      "editions": [],
+      "isbn": "9780593239681",
+      "coverImage": "https://covers.openlibrary.org/b/isbn/9780593239681-L.jpg"
     }
   ],
   "hardware": [
