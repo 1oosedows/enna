@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import toolsData from "@/data/tools.json";
 import libraryData from "@/data/library.json";
+import blogData from "@/data/blog.json";
 import { categories } from "@/data/categories";
 import { Tool } from "@/types";
 
@@ -77,6 +78,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${siteUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...blogData.posts.map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     ...categoryPages,
     ...tools,
     ...comparisons,
