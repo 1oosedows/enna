@@ -1,32 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
 export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    // Store subscriber in localStorage for now
-    // Replace with actual email service (Buttondown, ConvertKit, etc.) later
-    try {
-      const existing = JSON.parse(
-        localStorage.getItem("enna-subscribers") || "[]"
-      );
-      if (!existing.includes(email)) {
-        existing.push(email);
-        localStorage.setItem("enna-subscribers", JSON.stringify(existing));
-      }
-      setStatus("success");
-      setEmail("");
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
     <div className="glass rounded-xl p-6 md:p-8">
       <div className="flex flex-col md:flex-row md:items-center gap-6">
@@ -39,47 +13,28 @@ export default function NewsletterSignup() {
           </p>
         </div>
 
-        {status === "success" ? (
-          <div className="flex items-center gap-2 px-4 py-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-sm font-mono text-emerald-400">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            Subscribed
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex gap-2">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
-              required
-              className="input-field w-48 md:w-64"
-            />
-            <button
-              type="submit"
-              className="px-5 py-3 rounded-lg brand-gradient text-white text-sm font-mono font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
-        )}
+        <a
+          href="https://ennaosint.substack.com/subscribe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg brand-gradient text-white text-sm font-mono font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          Subscribe on Substack
+        </a>
       </div>
-
-      {status === "error" && (
-        <p className="text-xs font-mono text-red-400 mt-2">
-          Something went wrong. Please try again.
-        </p>
-      )}
     </div>
   );
 }
