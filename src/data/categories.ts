@@ -97,4 +97,22 @@ export const categories: CategoryInfo[] = [
     icon: "🔥",
     description: "Red team tooling, C2 frameworks, evasion, and edge-case utilities",
   },
+  {
+    id: "threat-intel",
+    name: "Threat Intelligence",
+    icon: "🧠",
+    description: "Threat sharing platforms, incident response, IOC management, case tracking",
+  },
+  {
+    id: "container-security",
+    name: "Container Security",
+    icon: "📦",
+    description: "Docker and Kubernetes security, container escape, runtime threat detection",
+  },
+  {
+    id: "reverse-engineering",
+    name: "Reverse Engineering",
+    icon: "🧬",
+    description: "Binary analysis, disassembly, decompilation, debuggers, packer detection",
+  },
 ];

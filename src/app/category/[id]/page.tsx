@@ -44,6 +44,12 @@ const categoryDescriptions: Record<string, string> = {
     "Legitimate security and networking tools with well-known offensive applications. These dual-use tools serve both defensive and offensive purposes — useful for system administration, network diagnostics, and security testing.",
   "offensive-ops":
     "Red team and offensive operations tooling including C2 frameworks, evasion techniques, lateral movement utilities, and specialized attack tools. Built for authorized penetration testing and adversary simulation exercises.",
+  "threat-intel":
+    "Threat intelligence platforms, incident response case management, and IOC sharing tools. These platforms help SOCs, CSIRTs, and threat analysts collect, correlate, and distribute indicators of compromise, manage security incidents collaboratively, and build structured knowledge bases of threat actors and campaigns.",
+  "container-security":
+    "Docker and Kubernetes security tools for runtime threat detection, container escape testing, cluster penetration testing, and configuration auditing. These tools assess the security of containerized environments from both offensive and defensive perspectives.",
+  "reverse-engineering":
+    "Binary analysis, disassembly, decompilation, and debugging tools for reverse engineering executables, malware, and firmware. These tools help security researchers understand how compiled software works, identify vulnerabilities, and analyze malicious code without access to source.",
 };
 
 const relatedCategories: Record<string, string[]> = {
@@ -63,6 +69,9 @@ const relatedCategories: Record<string, string[]> = {
   mobile: ["web-scanning", "forensics", "exploitation"],
   "dual-use": ["offensive-ops", "network-recon", "exploitation"],
   "offensive-ops": ["exploitation", "password-attack", "dual-use", "wireless"],
+  "threat-intel": ["forensics", "osint-general", "vulnerability", "container-security"],
+  "container-security": ["cloud-recon", "threat-intel", "offensive-ops", "exploitation"],
+  "reverse-engineering": ["forensics", "exploitation", "mobile", "dual-use"],
 };
 
 export async function generateStaticParams() {

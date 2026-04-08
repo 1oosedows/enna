@@ -47,7 +47,10 @@ export type Category =
   | "cloud-recon"
   | "mobile"
   | "dual-use"
-  | "offensive-ops";
+  | "offensive-ops"
+  | "threat-intel"
+  | "container-security"
+  | "reverse-engineering";
 
 export interface CategoryInfo {
   id: Category;

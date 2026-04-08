@@ -4,7 +4,7 @@ export type ColorScheme = "brand" | "caution" | "danger";
 
 export function getCategoryColorScheme(category: Category): ColorScheme {
   if (category === "dual-use") return "caution";
-  if (category === "offensive-ops") return "danger";
+  if (category === "offensive-ops" || category === "container-security") return "danger";
   return "brand";
 }
 
