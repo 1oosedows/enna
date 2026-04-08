@@ -52,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const hardware = libraryData.hardware.map((item) => ({
-    url: `${siteUrl}/library/${item.slug}`,
+    url: `${siteUrl}/gear/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.5,
@@ -67,6 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteUrl}/library`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/gear`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,

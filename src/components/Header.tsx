@@ -42,6 +42,12 @@ export default function Header() {
           >
             Library
           </Link>
+          <Link
+            href="/gear"
+            className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
+          >
+            Gear
+          </Link>
           <a
             href="https://github.com/1oosedows/enna"
             target="_blank"
@@ -114,6 +120,13 @@ export default function Header() {
               className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
             >
               Library
+            </Link>
+            <Link
+              href="/gear"
+              onClick={() => setOpen(false)}
+              className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
+            >
+              Gear
             </Link>
             <a
               href="https://github.com/1oosedows/enna"
