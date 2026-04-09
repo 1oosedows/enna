@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import toolsData from "@/data/tools.json";
 import libraryData from "@/data/library.json";
 import blogData from "@/data/blog.json";
+import workflowData from "@/data/workflows.json";
 import { categories } from "@/data/categories";
 import { Tool } from "@/types";
 
@@ -90,6 +91,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
+    {
+      url: `${siteUrl}/workflows`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...workflowData.workflows.map((w) => ({
+      url: `${siteUrl}/workflows/${w.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    {
+      url: `${siteUrl}/recently-added`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
     ...categoryPages,
     ...tools,
     ...comparisons,

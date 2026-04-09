@@ -49,6 +49,12 @@ export default function Header() {
             Gear
           </Link>
           <Link
+            href="/workflows"
+            className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
+          >
+            Workflows
+          </Link>
+          <Link
             href="/blog"
             className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
           >
@@ -133,6 +139,13 @@ export default function Header() {
               className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
             >
               Gear
+            </Link>
+            <Link
+              href="/workflows"
+              onClick={() => setOpen(false)}
+              className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
+            >
+              Workflows
             </Link>
             <Link
               href="/blog"

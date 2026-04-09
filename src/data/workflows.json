@@ -1,0 +1,292 @@
+{
+  "workflows": [
+    {
+      "slug": "osint-investigation",
+      "title": "OSINT Investigation Workflow",
+      "description": "A structured approach to open-source intelligence gathering, from target identification through to reporting. Covers passive reconnaissance, social media analysis, email and phone lookups, and data correlation.",
+      "icon": "🔎",
+      "difficulty": "Beginner",
+      "estimatedTime": "2-8 hours",
+      "tags": ["osint", "recon", "investigation", "passive"],
+      "steps": [
+        {
+          "title": "Define Your Target and Scope",
+          "description": "Before touching any tool, get clear on what you're looking for and what's in scope. Are you investigating a person, an organization, a domain, or an incident? Write down your known starting points - a name, email address, username, domain, phone number, or IP address. This becomes your seed data.",
+          "tools": [],
+          "tips": "Keep a running log from the start. Every finding should be timestamped and sourced. You'll thank yourself later when you need to write this up."
+        },
+        {
+          "title": "Email and Username Reconnaissance",
+          "description": "Start with the lightest touch. If you have an email address, check which platforms it's registered on. If you have a username, search for it across hundreds of sites. This builds your initial map of the target's digital footprint without generating any alerts.",
+          "tools": ["holehe", "sherlock", "maigret", "whatsmyname", "socialscan"],
+          "tips": "Holehe uses password reset flows to check email registrations - the target won't be notified. Sherlock and Maigret cast a wide net across hundreds of platforms. Run all three, they each catch sites the others miss."
+        },
+        {
+          "title": "Phone Number and Identity Lookups",
+          "description": "If you have a phone number, check which platforms it's linked to. Cross-reference with email findings to build a more complete picture. Look for patterns - does the target reuse usernames? Do they have accounts on platforms that suggest specific interests or locations?",
+          "tools": ["phoneinfoga", "ignorant"],
+          "tips": "PhoneInfoga queries multiple data sources for phone number intelligence. Ignorant checks platform registrations via password reset flows, similar to how Holehe works for emails."
+        },
+        {
+          "title": "Social Media Deep Dive",
+          "description": "With a list of confirmed accounts, dig deeper into each platform. Look for connections, posted content, check-in locations, photos with metadata, follower/following lists, and activity patterns. Public social media posts are some of the richest OSINT sources available.",
+          "tools": ["social-analyzer", "instaloader", "twint", "osintgram"],
+          "tips": "Instaloader can download entire Instagram profiles including stories and metadata. Twint scrapes Twitter without needing API access. Social Analyzer correlates accounts across platforms automatically."
+        },
+        {
+          "title": "Domain and Infrastructure Recon",
+          "description": "If the investigation involves a domain or organization, map their infrastructure. Find subdomains, identify hosting providers, check DNS history, and look for related domains. Certificate transparency logs are a goldmine for discovering subdomains and related services.",
+          "tools": ["subfinder", "amass", "theharvester", "dnsx", "spiderfoot"],
+          "tips": "SpiderFoot automates the entire OSINT process and correlates findings. theHarvester pulls emails, subdomains, and IPs from multiple search engines. Use Subfinder and Amass together for the most complete subdomain list."
+        },
+        {
+          "title": "Data Aggregation and Correlation",
+          "description": "Pull all your findings together. Look for connections between the data points you've collected - shared usernames across platforms, email addresses linked to domains, phone numbers associated with accounts, locations that appear in multiple sources. This is where individual data points become intelligence.",
+          "tools": ["spiderfoot", "maltego", "recon-ng"],
+          "tips": "Maltego's graph visualization is excellent for spotting connections you'd miss in a spreadsheet. SpiderFoot can automate correlation across dozens of data sources. Take screenshots of everything - web content can disappear at any time."
+        },
+        {
+          "title": "Document and Report",
+          "description": "Organize your findings into a structured report. Include your methodology, tools used, all findings with sources, a timeline of the target's online activity, and your analytical conclusions. A good OSINT report should be reproducible - someone else should be able to follow your steps and reach the same findings.",
+          "tools": [],
+          "tips": "Use CyberChef to decode any encoded data you've collected. Keep raw evidence (screenshots, exported data) separate from your analysis. Date everything."
+        }
+      ]
+    },
+    {
+      "slug": "web-app-pentest",
+      "title": "Web Application Penetration Test",
+      "description": "A systematic approach to testing web applications for security vulnerabilities. Covers reconnaissance, mapping, vulnerability discovery, exploitation, and reporting.",
+      "icon": "🕸",
+      "difficulty": "Intermediate",
+      "estimatedTime": "1-5 days",
+      "tags": ["web-security", "pentest", "vulnerability", "exploitation"],
+      "steps": [
+        {
+          "title": "Scope and Reconnaissance",
+          "description": "Understand what you're testing. Get the target URLs, any credentials provided, and the rules of engagement. Then start passive recon - discover subdomains, identify the technology stack, find JavaScript files and API endpoints, and check for any publicly exposed sensitive files.",
+          "tools": ["subfinder", "httpx", "whatweb", "katana", "waybackurls", "gau"],
+          "tips": "httpx quickly probes discovered subdomains to find live web servers. Katana crawls the application to map all endpoints. waybackurls and gau find historical URLs that may still be accessible. WhatWeb fingerprints the technology stack."
+        },
+        {
+          "title": "Mapping and Discovery",
+          "description": "Map the application's attack surface. Brute-force directories and files, identify all input points (forms, URL parameters, headers, cookies), find API endpoints, and understand the authentication mechanism. The goal is to have a complete picture of every way you can interact with the application.",
+          "tools": ["feroxbuster", "ffuf", "gobuster", "arjun", "paramspider", "linkfinder"],
+          "tips": "Feroxbuster and ffuf are the fastest directory bruters. Arjun discovers hidden HTTP parameters. ParamSpider mines archived URLs for parameters. LinkFinder extracts endpoints from JavaScript files - this often reveals API routes the UI doesn't expose."
+        },
+        {
+          "title": "Automated Vulnerability Scanning",
+          "description": "Run automated scanners to catch the low-hanging fruit. Template-based scanners like Nuclei check for thousands of known vulnerabilities, misconfigurations, and exposed sensitive files. Combine this with specialized scanners for specific vulnerability classes.",
+          "tools": ["nuclei", "nikto", "wpscan", "sqlmap", "interactsh"],
+          "tips": "Nuclei with the default template library catches an enormous amount. Run it first. Use Interactsh alongside Nuclei to detect blind/out-of-band vulnerabilities like SSRF and log4shell. WPScan if it's WordPress. Nikto for general web server checks."
+        },
+        {
+          "title": "Manual Testing",
+          "description": "This is where the real work happens. Use a web proxy to intercept and modify requests. Test every input point for injection vulnerabilities (SQL, XSS, command injection, SSTI). Check authentication and session management. Look for access control flaws - can you access other users' data? Can you escalate privileges? Test file upload functionality, API authorization, and business logic.",
+          "tools": ["burpsuite", "sqlmap", "xsstrike", "dalfox", "commix"],
+          "tips": "Burp Suite is the backbone of manual web testing - learn it well. sqlmap automates SQL injection detection and exploitation. XSStrike and DalFox find reflected and DOM XSS. Commix handles OS command injection. Always test manually too - automated tools miss logic flaws."
+        },
+        {
+          "title": "Testing for Advanced Vulnerabilities",
+          "description": "Go beyond the OWASP Top 10. Test for HTTP request smuggling, CRLF injection, CORS misconfiguration, server-side request forgery (SSRF), and web cache poisoning. These are often missed by automated scanners but can be critical.",
+          "tools": ["smuggler", "crlfuzz", "nuclei", "interactsh"],
+          "tips": "Smuggler tests for CL.TE and TE.CL desync vulnerabilities. CRLFuzz scans for response splitting. Use Interactsh callback URLs when testing for blind SSRF - if the server makes an outbound request to your URL, you've found it."
+        },
+        {
+          "title": "Screenshot and Evidence Collection",
+          "description": "As you find vulnerabilities, document everything. Take screenshots, save request/response pairs, and record the exact steps to reproduce each finding. For large target surfaces, use automated screenshot tools to capture the state of every endpoint.",
+          "tools": ["aquatone", "eyewitness"],
+          "tips": "Aquatone and EyeWitness generate browsable HTML reports from URL lists. Run these early for visual recon and again at the end to document your findings. Save Burp project files as evidence."
+        }
+      ]
+    },
+    {
+      "slug": "active-directory-attack-path",
+      "title": "Active Directory Attack Path",
+      "description": "From initial foothold to domain admin. A step-by-step approach to enumerating and attacking Active Directory environments during authorized penetration tests.",
+      "icon": "🔥",
+      "difficulty": "Advanced",
+      "estimatedTime": "2-5 days",
+      "tags": ["active-directory", "red-team", "lateral-movement", "privilege-escalation"],
+      "steps": [
+        {
+          "title": "Initial Enumeration",
+          "description": "Once you have a foothold on a domain-joined machine (or credentials), start mapping the environment. Enumerate users, groups, computers, group policies, trust relationships, and ACLs. This gives you the lay of the land and reveals potential attack paths before you start making noise.",
+          "tools": ["bloodhound", "sharphound", "crackmapexec", "enum4linux-ng"],
+          "tips": "BloodHound is the single most important tool here. SharpHound collects the data, BloodHound visualizes attack paths to Domain Admin. Run it first, study the output, plan your moves. CrackMapExec does quick checks across the network without BloodHound's collection overhead."
+        },
+        {
+          "title": "Credential Harvesting",
+          "description": "Look for credentials everywhere. Check for Kerberoastable accounts (service accounts with SPNs), AS-REP roastable accounts (no pre-authentication required), cached credentials, credentials in Group Policy Preferences, LSASS dumps, and passwords in shares or scripts.",
+          "tools": ["rubeus", "kerbrute", "mimikatz", "lazagne", "crackmapexec"],
+          "tips": "Rubeus handles Kerberoasting, AS-REP roasting, and ticket manipulation. Mimikatz dumps credentials from memory. LaZagne recovers passwords stored by browsers, mail clients, and other software. CrackMapExec can spray passwords across the domain to find reuse."
+        },
+        {
+          "title": "Coercion and Relay Attacks",
+          "description": "Force machines to authenticate to you, then relay those credentials to other services. This is one of the most powerful attack chains in AD - coerce a domain controller to authenticate to your machine, relay that authentication to AD Certificate Services, and get a certificate you can use for domain admin access.",
+          "tools": ["petitpotam", "coercer", "responder", "impacket"],
+          "tips": "PetitPotam coerces authentication via MS-EFSRPC. Coercer tries multiple coercion methods automatically. Responder captures hashes from LLMNR/NBT-NS poisoning. Impacket's ntlmrelayx relays captured authentication to target services. The PetitPotam to AD CS relay chain is devastating when it works."
+        },
+        {
+          "title": "Lateral Movement",
+          "description": "Move through the network using the credentials and access you've gathered. Use WinRM, SMB, WMI, or DCOM to execute commands on remote machines. Pivot through compromised hosts to reach network segments you couldn't access from your initial position.",
+          "tools": ["evil-winrm", "crackmapexec", "impacket", "ligolo-ng", "chisel"],
+          "tips": "Evil-WinRM gives you a PowerShell session on remote machines via WinRM. CrackMapExec executes commands across multiple hosts simultaneously. Ligolo-ng and Chisel create tunnels for pivoting through compromised networks. Keep track of which credentials work on which machines."
+        },
+        {
+          "title": "Privilege Escalation",
+          "description": "Escalate from your current access level to Domain Admin. BloodHound's analysis often reveals the shortest path. Common routes include abusing GenericAll/GenericWrite permissions on privileged groups, exploiting certificate templates via AD CS, shadow credentials attacks, and resource-based constrained delegation abuse.",
+          "tools": ["whisker", "certipy", "rubeus", "powersploit", "sharphound"],
+          "tips": "Whisker adds shadow credentials for stealthy Kerberos authentication. Certipy finds and exploits vulnerable AD CS certificate templates. PowerSploit's PowerView module helps enumerate ACL-based attack paths. Re-run SharpHound after compromising new accounts - you may see new paths."
+        },
+        {
+          "title": "Persistence and Domain Dominance",
+          "description": "Once you have Domain Admin, demonstrate the full impact. Extract the NTDS.dit database, create golden/silver tickets, and document the complete attack chain. In a real engagement, this proves the business impact and helps the client understand what needs to be fixed and in what order.",
+          "tools": ["mimikatz", "impacket", "crackmapexec"],
+          "tips": "Impacket's secretsdump.py extracts all domain hashes remotely. Document every step of your attack chain with timestamps and evidence. The client needs to understand not just that you got Domain Admin, but how, so they can fix the path."
+        }
+      ]
+    },
+    {
+      "slug": "crypto-tracing",
+      "title": "Cryptocurrency Tracing Workflow",
+      "description": "Tracing cryptocurrency transactions from a known address through the blockchain. Covers wallet identification, transaction graph analysis, exchange detection, and entity attribution.",
+      "icon": "₿",
+      "difficulty": "Intermediate",
+      "estimatedTime": "1-3 days",
+      "tags": ["crypto", "blockchain", "forensics", "tracing"],
+      "steps": [
+        {
+          "title": "Seed Address Analysis",
+          "description": "Start with your known address (the seed). Look up its balance, transaction history, first and last activity dates, and total volume. Identify what chain you're on and get familiar with the address's pattern of activity. Is it receiving from many addresses (possible exchange or service)? Sending to one address repeatedly (possible hot wallet to cold wallet)? Understanding the pattern tells you what you're dealing with.",
+          "tools": ["bitcoin-cli", "go-ethereum", "cast", "etherscan-api"],
+          "tips": "For Bitcoin, bitcoin-cli with a full node gives you the most reliable data. For Ethereum, Cast (from Foundry) or Geth let you query transactions directly. Etherscan API works for quick lookups without running a node."
+        },
+        {
+          "title": "Transaction Graph Mapping",
+          "description": "Trace the flow of funds in both directions. Follow the money forward (where did it go?) and backward (where did it come from?). Build a transaction graph showing all connected addresses and the amounts that flowed between them. Look for patterns like peeling chains (common in Bitcoin), token swaps (common in DeFi), and bridge transactions (cross-chain).",
+          "tools": ["cryo", "trueblocks", "ethtective", "graphsense"],
+          "tips": "Cryo extracts raw blockchain data efficiently. TrueBlocks indexes Ethereum data for fast queries. GraphSense does automated clustering and analysis. For complex investigations, export the data and build your own graph in Neo4j or a similar tool."
+        },
+        {
+          "title": "Mixer and Obfuscation Detection",
+          "description": "Check whether the funds passed through mixing services, privacy protocols, or obfuscation techniques. On Bitcoin, look for CoinJoin transactions (equal-output transactions with multiple participants). On Ethereum, check for Tornado Cash interactions or other mixing contracts. Cross-chain bridges are also used to break the trail.",
+          "tools": ["mev-inspect", "tornado-tracker", "wallet-explorer"],
+          "tips": "Tornado Cash transactions have a distinctive pattern - fixed deposit amounts followed by withdrawal to a different address after a delay. WalletExplorer can identify known mixer addresses on Bitcoin. Not all obfuscation is unbeatable - timing analysis and amount correlation can sometimes de-anonymize mixed funds."
+        },
+        {
+          "title": "Exchange and Service Identification",
+          "description": "Identify when funds hit a known exchange, payment processor, or service. Most crypto investigations end at an exchange because that's where KYC records exist. Use labeled address databases to identify known entity addresses and cluster analysis to group related addresses.",
+          "tools": ["nansen-labels", "arkham-intel", "whale-alert", "chainalysis-free"],
+          "tips": "Nansen and Arkham maintain extensive labeled address databases. Whale Alert tracks large transactions in real time. When you find an exchange deposit, that's typically where law enforcement serves subpoenas. Document the chain from seed to exchange thoroughly."
+        },
+        {
+          "title": "DeFi and Smart Contract Analysis",
+          "description": "If the funds interacted with DeFi protocols, analyze those interactions. Did they swap tokens on a DEX? Provide liquidity? Use a lending protocol? Each interaction leaves on-chain evidence. Decode the smart contract calls to understand exactly what happened with the funds.",
+          "tools": ["cast", "ethers-js", "eigenphi", "debank-api"],
+          "tips": "Cast can decode transaction calldata against known ABIs. EigenPhi visualizes DeFi transaction flows. DeBank API shows a wallet's complete DeFi positions and history. Token approvals can reveal which contracts a wallet has interacted with even if the transactions aren't obvious."
+        },
+        {
+          "title": "Report and Evidence Preservation",
+          "description": "Document the complete flow of funds with transaction hashes, timestamps, amounts, and entity attributions at every step. Blockchain data is immutable, but your analysis and the labeled databases you referenced might change. Preserve everything - screenshots of block explorer pages, API responses, and your graph visualizations.",
+          "tools": ["cyberchef"],
+          "tips": "Use CyberChef to convert between hex, decimal, and other encodings when working with raw blockchain data. Export your transaction graph as both a visual diagram and raw data. For legal proceedings, every link in the chain needs to be documented with the source of attribution."
+        }
+      ]
+    },
+    {
+      "slug": "wireless-security-assessment",
+      "title": "Wireless Security Assessment",
+      "description": "Testing the security of wireless networks from passive scanning through active attacks. Covers network discovery, client enumeration, WPA/WPA2 cracking, evil twin attacks, and rogue AP detection.",
+      "icon": "📡",
+      "difficulty": "Intermediate",
+      "estimatedTime": "4-8 hours",
+      "tags": ["wireless", "wifi", "pentest", "wpa"],
+      "steps": [
+        {
+          "title": "Equipment Setup and Monitor Mode",
+          "description": "Get your wireless adapter into monitor mode. You need an adapter that supports monitor mode and packet injection - the Alfa AWUS036ACH is the standard recommendation. Put the adapter into monitor mode and verify it's capturing traffic on all channels.",
+          "tools": ["aircrack-ng"],
+          "tips": "Use 'airmon-ng start wlan0' to enter monitor mode. Check for processes that might interfere with 'airmon-ng check kill'. If you're assessing 5GHz networks, make sure your adapter supports it. The Alfa AWUS036ACH handles both 2.4GHz and 5GHz."
+        },
+        {
+          "title": "Passive Network Discovery",
+          "description": "Before transmitting anything, listen. Capture beacon frames to identify all access points in range, their SSIDs, encryption types, channels, and signal strength. Also capture probe requests from client devices - these reveal what networks clients are looking for, which is useful for evil twin attacks later.",
+          "tools": ["aircrack-ng", "kismet", "bettercap"],
+          "tips": "Airodump-ng (part of Aircrack-ng) gives you a real-time view of all networks and connected clients. Kismet provides more detailed passive analysis. Let passive scanning run for a while - not all clients are active at the same time."
+        },
+        {
+          "title": "WPS Testing",
+          "description": "Check if any target networks have WPS enabled. WPS is a common weakness - the Pixie Dust attack can recover the WPS PIN in seconds if the router's random number generator is weak, and online brute force can crack it in hours regardless. Many networks that have strong WPA2 passwords are still vulnerable through WPS.",
+          "tools": ["reaver", "pixiewps"],
+          "tips": "Try Pixie Dust first (reaver with -K flag) - it's instant when it works. If Pixie Dust fails, online brute force with Reaver works against most WPS implementations but takes 4-10 hours. Some routers implement rate limiting or lockouts, so check the target's behavior first."
+        },
+        {
+          "title": "WPA/WPA2 Handshake Capture and Cracking",
+          "description": "Capture the four-way WPA handshake by either waiting for a client to connect naturally or deauthenticating a connected client to force a reconnection. Once you have the handshake, crack it offline with a wordlist or rule-based attack.",
+          "tools": ["aircrack-ng", "hashcat"],
+          "tips": "Use aireplay-ng to send deauth frames and force a handshake capture. Hashcat is significantly faster than Aircrack-ng for cracking because it uses GPU acceleration. Use targeted wordlists (the company name, location, common patterns) before moving to large generic wordlists."
+        },
+        {
+          "title": "Evil Twin and Rogue AP Attacks",
+          "description": "Set up a rogue access point impersonating the target network. When clients connect to your AP instead of the real one, you can capture credentials through a captive portal, intercept traffic, or harvest WPA-Enterprise credentials. This tests how well clients validate the networks they connect to.",
+          "tools": ["hostapd-mana", "wifi-pumpkin", "bettercap"],
+          "tips": "hostapd-mana automatically responds to client probe requests (karma attack). WiFi-Pumpkin3 provides a full framework with captive portal templates. For WPA-Enterprise networks, hostapd-mana can harvest RADIUS credentials from connecting clients. Position your rogue AP for stronger signal than the real one."
+        },
+        {
+          "title": "Protocol-Level Testing",
+          "description": "Test the resilience of the wireless infrastructure against protocol-level attacks. This includes deauthentication flooding, beacon frame spoofing, authentication floods, and SSID brute forcing for hidden networks. These tests evaluate how the wireless infrastructure handles adversarial conditions.",
+          "tools": ["mdk4", "aircrack-ng", "bettercap"],
+          "tips": "mdk4 provides a comprehensive suite of 802.11 protocol attacks. Be careful with flooding attacks - they affect all clients on the network, not just your test targets. Always coordinate with the client about which tests are acceptable and during what windows."
+        }
+      ]
+    },
+    {
+      "slug": "incident-response-triage",
+      "title": "Incident Response Triage Workflow",
+      "description": "Rapid triage when you suspect a compromise. Collect volatile evidence, assess the scope, contain the threat, and begin investigation. Time-critical steps organized by priority.",
+      "icon": "🚨",
+      "difficulty": "Intermediate",
+      "estimatedTime": "1-4 hours (initial triage)",
+      "tags": ["incident-response", "dfir", "triage", "forensics"],
+      "steps": [
+        {
+          "title": "Volatile Data Collection",
+          "description": "Collect evidence that will disappear when the machine is powered off or rebooted. This means running processes, network connections, logged-in users, clipboard contents, and memory. Do this before anything else - every minute that passes is data lost.",
+          "tools": ["velociraptor", "kape", "grr-rapid-response"],
+          "tips": "KAPE can collect a full forensic triage in under 10 minutes. Velociraptor can collect from multiple endpoints simultaneously if you have agents deployed. GRR enables remote collection at scale. Always collect memory if possible - it contains decrypted data, running malware, and network connections that don't survive a reboot."
+        },
+        {
+          "title": "Quick-Win IOC Checks",
+          "description": "While volatile data is being collected, run quick checks for known indicators of compromise. Check running processes against known malware names, look for suspicious network connections to known-bad IPs, scan for unauthorized scheduled tasks and services, and check autorun locations for persistence mechanisms.",
+          "tools": ["osquery", "velociraptor", "chainsaw", "hayabusa"],
+          "tips": "osquery lets you ask 'show me all listening ports' or 'show me all processes started in the last 24 hours' as simple SQL queries. Chainsaw and Hayabusa rapidly scan Windows event logs against Sigma rules. Check for processes running from unusual locations (Temp, AppData, ProgramData)."
+        },
+        {
+          "title": "Log Analysis and Timeline Building",
+          "description": "Pull logs from the affected systems and start building a timeline. Windows Event Logs, syslog, authentication logs, web server logs, and firewall logs all contribute to the picture. The goal is to establish: when did the compromise start, what was the initial access vector, and what happened after.",
+          "tools": ["plaso", "chainsaw", "hayabusa", "sigma"],
+          "tips": "Plaso (log2timeline) creates super-timelines from multiple log sources. Chainsaw scans event logs with Sigma rules to surface suspicious activity fast. Focus on authentication events (4624, 4625), process creation (4688), and PowerShell logging (4104) in Windows. Check for log gaps - attackers often clear logs."
+        },
+        {
+          "title": "Memory and Disk Forensics",
+          "description": "Analyze the memory dump and disk image from affected systems. Memory analysis can reveal running malware, injected code, network connections, and decrypted data. Disk analysis covers file system artifacts, deleted files, browser history, and persistence mechanisms.",
+          "tools": ["volatility3", "autopsy", "sleuth-kit", "regripper", "bulk-extractor"],
+          "tips": "Volatility 3 is the standard for memory forensics - check process lists, network connections, loaded DLLs, and injected code. Autopsy provides a full disk forensics GUI. RegRipper extracts forensic artifacts from Windows registry hives. bulk_extractor carves emails, URLs, and other data from raw images at high speed."
+        },
+        {
+          "title": "Malware Analysis (if applicable)",
+          "description": "If you've recovered malware samples, analyze them to understand capabilities and extract additional IOCs. Start with static analysis (file type, strings, imports), then move to dynamic analysis in a sandbox if needed. Extract C2 addresses, file paths, registry keys, and network signatures.",
+          "tools": ["detect-it-easy", "capa", "pe-sieve", "oletools", "yara"],
+          "tips": "Detect It Easy identifies packers and compilers instantly. capa detects capabilities (like 'encrypts files' or 'communicates via HTTP') automatically. PE-sieve scans running processes for injected code. oletools analyzes malicious Office documents. Write YARA rules for any unique malware indicators so you can scan other systems."
+        },
+        {
+          "title": "Scope Assessment and Containment",
+          "description": "Use everything you've learned to assess how far the compromise extends. Search for the IOCs you've discovered across all endpoints and network logs. Identify all affected systems, compromised accounts, and data that may have been accessed or exfiltrated. Then contain - isolate affected systems, reset compromised credentials, and block attacker infrastructure.",
+          "tools": ["velociraptor", "osquery", "wazuh", "yara"],
+          "tips": "Velociraptor and osquery can sweep entire endpoint fleets for IOCs. Wazuh correlates events across your monitoring infrastructure. Deploy YARA rules across endpoints to find malware variants. Don't just contain the systems you've confirmed - contain anything that might be compromised based on lateral movement paths."
+        }
+      ]
+    }
+  ]
+}
