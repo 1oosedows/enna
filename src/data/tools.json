@@ -1312,7 +1312,8 @@
       "takeover",
       "vulnerability-scanner"
     ],
-    "homepageUrl": "http://sqlmap.org"
+    "homepageUrl": "http://sqlmap.org",
+    "documentation": "https://sqlmap.org/docs/"
   },
   {
     "slug": "ffuf",
@@ -2249,7 +2250,8 @@
     ],
     "alternatives": [
       "sherlock"
-    ]
+    ],
+    "documentation": "https://github.com/qeeqbox/social-analyzer#readme"
   },
   {
     "slug": "twint",
@@ -3587,7 +3589,8 @@
       "rizin",
       "unicorn-engine",
       "x64dbg"
-    ]
+    ],
+    "documentation": "https://book.rada.re/"
   },
   {
     "slug": "cutter",
@@ -4782,7 +4785,8 @@
       "cryptography",
       "p2p"
     ],
-    "homepageUrl": "https://bitcoincore.org/en/download"
+    "homepageUrl": "https://bitcoincore.org/en/download",
+    "documentation": "https://developer.bitcoin.org/reference/rpc/"
   },
   {
     "slug": "go-ethereum",
@@ -4819,7 +4823,8 @@
       "go",
       "p2p"
     ],
-    "homepageUrl": "https://geth.ethereum.org"
+    "homepageUrl": "https://geth.ethereum.org",
+    "documentation": "https://geth.ethereum.org/docs"
   },
   {
     "slug": "solana-cli",
@@ -5406,7 +5411,8 @@
     "homepageUrl": "https://gitleaks.io",
     "alternatives": [
       "trufflehog"
-    ]
+    ],
+    "documentation": "https://github.com/gitleaks/gitleaks#readme"
   },
   {
     "slug": "dnsrecon",
@@ -5512,7 +5518,8 @@
     "license": "MIT",
     "avatarUrl": "https://avatars.githubusercontent.com/u/50654?v=4",
     "githubDescription": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.",
-    "homepageUrl": "https://www.owasp.org/index.php/OWASP_Internet_of_Things_Project"
+    "homepageUrl": "https://www.owasp.org/index.php/OWASP_Internet_of_Things_Project",
+    "documentation": "https://github.com/danielmiessler/SecLists#readme"
   },
   {
     "slug": "mimikatz",
@@ -5538,7 +5545,8 @@
     "lastCommit": "2025-05-11T22:32:30Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/2307945?v=4",
     "githubDescription": "A little tool to play with Windows security",
-    "homepageUrl": "http://blog.gentilkiwi.com/mimikatz"
+    "homepageUrl": "http://blog.gentilkiwi.com/mimikatz",
+    "documentation": "https://tools.thehacker.recipes/mimikatz/"
   },
   {
     "slug": "lazagne",
@@ -5774,7 +5782,8 @@
     "lastCommit": "2024-04-26T18:11:18Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/836692?v=4",
     "githubDescription": "Unified ingress for developers",
-    "homepageUrl": "https://ngrok.com"
+    "homepageUrl": "https://ngrok.com",
+    "documentation": "https://ngrok.com/docs"
   },
   {
     "slug": "rclone",
@@ -8315,7 +8324,8 @@
       "arsc",
       "reverse-engineering"
     ],
-    "homepageUrl": "https://apktool.org"
+    "homepageUrl": "https://apktool.org",
+    "documentation": "https://apktool.org/docs/install"
   },
   {
     "slug": "mobsf",
@@ -8436,7 +8446,8 @@
       "decompiler",
       "dex",
       "java"
-    ]
+    ],
+    "documentation": "https://github.com/skylot/jadx/wiki"
   },
   {
     "slug": "sleuth-kit",
@@ -8877,7 +8888,8 @@
       "dockle",
       "falco",
       "syft"
-    ]
+    ],
+    "documentation": "https://aquasecurity.github.io/trivy/"
   },
   {
     "slug": "grype",
@@ -10676,7 +10688,8 @@
     "openIssues": 185,
     "lastCommit": "2020-12-20T23:55:15Z",
     "avatarUrl": "https://avatars.githubusercontent.com/u/67931932?v=4",
-    "githubDescription": ".NET debugger and assembly editor"
+    "githubDescription": ".NET debugger and assembly editor",
+    "documentation": "https://github.com/dnSpy/dnSpy/wiki"
   },
   {
     "slug": "ilspy",
@@ -10742,7 +10755,8 @@
       "mono",
       "pdb",
       "unity"
-    ]
+    ],
+    "documentation": "https://github.com/icsharpcode/ILSpy/wiki"
   },
   {
     "slug": "x64dbg",
@@ -10816,7 +10830,8 @@
       "x86",
       "x86-64"
     ],
-    "homepageUrl": "http://x64dbg.com"
+    "homepageUrl": "http://x64dbg.com",
+    "documentation": "https://help.x64dbg.com/en/latest/"
   },
   {
     "slug": "detect-it-easy",

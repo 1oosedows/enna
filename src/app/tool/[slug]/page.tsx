@@ -8,6 +8,7 @@ import { categories } from "@/data/categories";
 import { enrichTool, formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
 import toolsData from "@/data/tools.json";
+import guidesData from "@/data/guides.json";
 import { Tool } from "@/types";
 
 export const revalidate = 3600;
@@ -363,6 +364,27 @@ export default async function ToolPage({
                   </svg>
                   Documentation
                 </a>
+              )}
+              {guidesData.guides.some((g: { slug: string }) => g.slug === tool.slug) && (
+                <Link
+                  href={`/tool/${tool.slug}/guide`}
+                  className="px-6 py-3 rounded-lg brand-gradient text-white font-mono text-sm font-semibold inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="10 8 16 12 10 16 10 8" />
+                  </svg>
+                  Getting Started Guide
+                </Link>
               )}
               {tool.downloadUrl && (
                 <a
