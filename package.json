@@ -19,7 +19,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "fuse.js": "^7.3.0",
-    "next": "^15.5.14",
+    "next": "^16.2.4",
     "next-auth": "^4.24.14",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
