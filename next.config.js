@@ -28,6 +28,9 @@ module.exports = nextConfig;
 const { withSentryConfig } = require("@sentry/nextjs");
 
 module.exports = withSentryConfig(module.exports, {
+  // Disable automatic 500/404 page instrumentation (App Router uses global-error.tsx)
+  autoInstrumentAppDirectory: true,
+  autoInstrumentServerFunctions: true,
   // For all available options, see:
   // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 

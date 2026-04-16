@@ -37,7 +37,7 @@ def send_webhook(tool):
     req = urllib.request.Request(
         WEBHOOK_URL,
         data=data,
-        headers={"Content-Type": "application/json"},
+        headers={"Content-Type": "application/json", "User-Agent": "ENNA-Bot/1.0"},
         method="POST"
     )
     try:
