@@ -13326,7 +13326,8 @@
       "static-analysis",
       "windows"
     ],
-    "homepageUrl": "https://imhex.werwolv.net/"
+    "homepageUrl": "https://imhex.werwolv.net/",
+    "longDescription": "ImHex is a feature-rich hex editor designed for reverse engineers, firmware analysts, and security researchers who need to understand binary file formats at the byte level. Its standout feature is a custom pattern language that lets you define complex data structures \u2014 structs, enums, bitfields, arrays \u2014 and overlay them directly on the hex view, turning raw bytes into labeled, color-coded fields. The built-in entropy visualization instantly highlights packed, encrypted, or compressed sections, making it invaluable for malware triage. ImHex also includes a disassembler, hash calculator, data inspector, bookmarks, and a node-based data processing pipeline. With over 53,000 GitHub stars, it has become the most popular open-source hex editor available, replacing both HxD and 010 Editor for many professionals. Cross-platform on Linux, macOS, and Windows."
   },
   {
     "slug": "bbot",
@@ -13385,7 +13386,8 @@
       "threat-intelligence",
       "threatintel"
     ],
-    "homepageUrl": "https://www.blacklanternsecurity.com/bbot/"
+    "homepageUrl": "https://www.blacklanternsecurity.com/bbot/",
+    "longDescription": "BBOT (Bighuge BLS OSINT Tool) is a recursive internet scanner built for automated reconnaissance, bug bounty hunting, and attack surface management. Unlike linear scanners that enumerate a fixed target list, BBOT discovers new targets as it scans \u2014 finding a subdomain triggers port scanning, which triggers web crawling, which discovers new subdomains, creating a recursive discovery loop. It ships with over 100 modules covering DNS enumeration, port scanning, web crawling, technology fingerprinting, secret detection, and vulnerability scanning. BBOT integrates natively with tools like Nuclei, httpx, and subfinder, and outputs to JSON, CSV, Neo4j, and its own web UI. Configuration is YAML-based with per-scan presets for different engagement types. With nearly 10,000 GitHub stars, it has become a serious contender to SpiderFoot and Amass for automated recon pipelines."
   },
   {
     "slug": "web-check",
@@ -13427,7 +13429,8 @@
       "sysadmin"
     ],
     "homepageUrl": "https://web-check.xyz",
-    "dockerImage": "lissy93/web-check"
+    "dockerImage": "lissy93/web-check",
+    "longDescription": "web-check is an all-in-one OSINT dashboard for analyzing any website's infrastructure, security posture, and technology stack from a single URL. It pulls DNS records, WHOIS data, SSL certificate details, HTTP headers, server location, open ports, linked pages, social tags, and performance metrics into a clean visual interface. Security-specific checks include HTTP security headers, cookie flags, content security policy analysis, and technology fingerprinting via Wappalyzer signatures. With over 32,000 GitHub stars, it is one of the most popular web reconnaissance tools on GitHub. Deployable as a Docker container for private use or accessible through the hosted instance. Built with TypeScript and designed to give you a complete picture of a target website in seconds rather than running five separate tools."
   },
   {
     "slug": "pwndbg",
@@ -13482,7 +13485,8 @@
       "python",
       "reverse-engineering"
     ],
-    "homepageUrl": "https://pwndbg.re/"
+    "homepageUrl": "https://pwndbg.re/",
+    "longDescription": "pwndbg is a GDB plugin that transforms the standard GNU Debugger into a powerful environment for exploit development and reverse engineering. It provides an enhanced context display showing registers, stack, disassembly, and source code simultaneously on every breakpoint. The heap analysis commands (heap, bins, arenas, tcache) make it essential for understanding heap exploitation techniques like use-after-free, double-free, and heap overflow attacks. pwndbg includes over 100 custom commands covering memory search, ROP gadget finding, format string analysis, and automatic symbol resolution. It integrates with pwntools for seamless CTF workflow and supports both GDB and LLDB backends. With over 10,000 GitHub stars, it has become the standard debugging environment for CTF players and exploit developers, largely replacing PEDA and GEF."
   },
   {
     "slug": "osv-scanner",
@@ -13525,7 +13529,8 @@
       "security-tools",
       "vulnerability-scanner"
     ],
-    "homepageUrl": "https://google.github.io/osv-scanner/"
+    "homepageUrl": "https://google.github.io/osv-scanner/",
+    "longDescription": "OSV-Scanner is Google's open-source dependency vulnerability scanner that checks your project's packages against the OSV.dev vulnerability database. Unlike Snyk or GitHub Dependabot which focus on specific ecosystems, OSV-Scanner covers virtually every package manager \u2014 npm, PyPI, RubyGems, Go modules, Cargo, Maven, NuGet, pub, and more \u2014 using a single unified database format. It scans lockfiles, SBOMs, Docker images, and source directories, producing machine-readable JSON output suitable for CI/CD integration. The guided remediation feature suggests the minimum version bumps needed to fix all vulnerabilities simultaneously, avoiding dependency hell. OSV-Scanner is designed for supply chain security at scale, with offline scanning support and SBOM generation. With nearly 9,000 GitHub stars, it is becoming a standard part of secure development pipelines alongside Trivy and Grype."
   },
   {
     "slug": "fscan",
@@ -13568,7 +13573,8 @@
       "sec",
       "security",
       "security-tools"
-    ]
+    ],
+    "longDescription": "fscan is a fast, portable internal network scanner designed for penetration testers who need rapid service enumeration and vulnerability detection during engagements. Written in Go as a single static binary with zero dependencies, it runs on any platform without installation \u2014 ideal for post-exploitation lateral movement scenarios. fscan combines host discovery, port scanning, service fingerprinting, and brute-force attacks into one tool, covering SMB, SSH, MySQL, MSSQL, Redis, PostgreSQL, FTP, MongoDB, and more. It includes built-in vulnerability detection for common CVEs like MS17-010 (EternalBlue), Redis unauthorized access, and default credential checks. The web scanning module detects common web vulnerabilities and fingerprints frameworks. With over 13,000 GitHub stars, fscan is widely used in red team operations for its speed and portability."
   },
   {
     "slug": "mvt",
@@ -13610,7 +13616,8 @@
       "mobile",
       "security"
     ],
-    "homepageUrl": "https://mvt.re"
+    "homepageUrl": "https://mvt.re",
+    "longDescription": "MVT (Mobile Verification Toolkit) is Amnesty International's forensic tool for detecting traces of commercial spyware like Pegasus, Predator, and other surveillance malware on iOS and Android devices. It gained worldwide attention through the Pegasus Project investigation and has since become the standard tool for journalists, activists, and human rights organizations to verify if their devices have been compromised. MVT analyzes iOS backups and filesystem dumps for known indicators of compromise (IOCs) published by Amnesty's Security Lab, checking SMS messages, browser history, installed profiles, process lists, and application data. For Android, it examines APK installations, SMS messages, and downloads for known malicious artifacts. The tool outputs timeline-based reports showing exactly when compromise indicators appeared. With over 12,000 GitHub stars, MVT represents a critical capability for civil society to detect state-sponsored surveillance."
   },
   {
     "slug": "dnstwist",
@@ -13657,7 +13664,8 @@
       "threat-intelligence",
       "typosquatting"
     ],
-    "homepageUrl": "https://dnstwist.it"
+    "homepageUrl": "https://dnstwist.it",
+    "longDescription": "dnstwist is a domain name permutation engine that detects potential phishing domains, typosquatting, and brand impersonation by generating thousands of lookalike domain variations and checking which ones are actually registered. It applies over a dozen fuzzing algorithms \u2014 character omission, repetition, replacement, insertion, homoglyphs (using Unicode lookalikes), hyphenation, subdomain tricks, and TLD swaps \u2014 to systematically generate every plausible misspelling or visual doppelganger of your domain. For each generated domain, dnstwist resolves DNS records, checks for active web servers, captures HTTP banners, fetches favicon hashes for visual comparison, and queries WHOIS data. It can detect phishing campaigns in progress by identifying newly registered lookalike domains serving content similar to your legitimate site. Output formats include CSV, JSON, and a live terminal display with color-coded threat levels. Essential for brand protection teams, SOC analysts, and anyone responsible for domain security."
   },
   {
     "slug": "caldera",
@@ -13701,7 +13709,8 @@
       "security-automation",
       "security-testing"
     ],
-    "homepageUrl": "https://caldera.mitre.org"
+    "homepageUrl": "https://caldera.mitre.org",
+    "longDescription": "CALDERA is MITRE's open-source adversary emulation platform that automates attack simulations based on the ATT&CK framework. It enables red teams and purple teams to run realistic, repeatable attack chains against their infrastructure without manually executing each technique. CALDERA uses an agent-based architecture where lightweight agents (called Sandcat) are deployed on target systems and execute adversary profiles \u2014 curated sequences of ATT&CK techniques that mimic real-world threat actors. The platform includes dozens of pre-built abilities covering reconnaissance, credential access, lateral movement, persistence, and exfiltration. Blue teams can use CALDERA to validate detection coverage by running known attack sequences and checking whether their SIEM, EDR, and monitoring tools triggered appropriate alerts. The web-based UI provides real-time visibility into operation progress and a reporting engine for gap analysis."
   },
   {
     "slug": "timesketch",
@@ -13741,7 +13750,8 @@
       "security",
       "timeline"
     ],
-    "dockerImage": "us-docker.pkg.dev/osdfir-registry/timesketch/timesketch"
+    "dockerImage": "us-docker.pkg.dev/osdfir-registry/timesketch/timesketch",
+    "longDescription": "Timesketch is Google's open-source collaborative forensic timeline analysis platform designed for security incident investigations. It ingests events from multiple forensic sources \u2014 Plaso supertimelines, CSV files, JSONL logs, and direct uploads \u2014 and presents them in a searchable, annotatable web interface where multiple analysts can work simultaneously. Investigators can create named views with saved queries, tag events with labels and comments, build investigation timelines, and share findings with teammates. Timesketch includes built-in analyzers that automatically detect suspicious patterns like lateral movement, credential access, and data staging. The Sigma integration allows analysts to run detection rules directly against timeline data. The sketch-based workflow means each investigation is self-contained with its own data, annotations, and analysis \u2014 making it easy to hand off cases between analysts or revisit investigations months later."
   },
   {
     "slug": "intelowl",
@@ -13801,7 +13811,8 @@
       "threatintel"
     ],
     "homepageUrl": "https://intelowlproject.github.io",
-    "dockerImage": "intelowlproject/intelowl"
+    "dockerImage": "intelowlproject/intelowl",
+    "longDescription": "IntelOwl is an open-source threat intelligence management platform that aggregates and correlates data from over 100 external analyzers, scanners, and enrichment services. Feed it an observable \u2014 IP address, domain, URL, file hash, or email \u2014 and IntelOwl automatically queries VirusTotal, AbuseIPDB, Shodan, URLhaus, MalwareBazaar, MISP feeds, and dozens of other sources in parallel, returning a unified report with cross-referenced findings. The platform supports both automatic triage workflows and manual analyst-driven investigations. IntelOwl integrates with MISP and OpenCTI for bidirectional threat intel sharing, and its playbook system allows you to define custom analysis chains for different observable types. The Docker-based deployment includes a web UI, REST API, and Celery task queue for handling high-volume enrichment. With over 4,500 GitHub stars, IntelOwl has become a popular alternative to commercial TIP platforms like ThreatConnect and Anomali."
   },
   {
     "slug": "rengine",
@@ -13853,7 +13864,8 @@
       "security-tools"
     ],
     "homepageUrl": "https://yogeshojha.github.io/rengine/",
-    "dockerImage": "yogeshojha/rengine"
+    "dockerImage": "yogeshojha/rengine",
+    "longDescription": "reNgine is an automated web application reconnaissance framework that combines multiple scanning engines into a single, correlated workflow with a web-based dashboard. It orchestrates subdomain enumeration (Subfinder, Amass), port scanning (Naabu), HTTP probing (httpx), screenshot capture (Aquatone), directory brute-forcing (ffuf), vulnerability scanning (Nuclei), and JavaScript analysis into configurable scan pipelines. What sets reNgine apart from simple tool wrappers is its correlation engine \u2014 it cross-references findings across all scan stages, deduplicates results, and presents a unified view of the target's attack surface. The platform supports scheduled scans for continuous monitoring, custom scan engine configurations, and Slack/Discord notifications for new findings. With over 8,500 GitHub stars, reNgine has become a popular choice for bug bounty hunters and security teams who want automated recon without building their own pipeline infrastructure."
   },
   {
     "slug": "reconftw",
@@ -13905,7 +13917,8 @@
       "subdomain-enumeration",
       "vulnerabilities"
     ],
-    "homepageUrl": "https://docs.reconftw.com/"
+    "homepageUrl": "https://docs.reconftw.com/",
+    "longDescription": "reconftw is an automated reconnaissance pipeline that chains together best-of-breed security tools into a comprehensive, single-command recon workflow. Running reconftw against a target domain triggers a full pipeline: subdomain enumeration, DNS resolution, port scanning, web probing, screenshot capture, technology fingerprinting, URL collection, parameter extraction, JavaScript analysis, vulnerability scanning, and nuclei template execution. The tool installs and manages all its dependencies automatically, making it one of the easiest ways to get a professional recon pipeline running. Configuration is done through a single profile file where you can enable/disable specific modules and set scope boundaries. reconftw outputs organized results in a structured directory format with separate files for each recon stage. With over 7,000 GitHub stars, it is one of the most popular recon automation frameworks in the bug bounty community."
   },
   {
     "slug": "lynis",
@@ -13959,7 +13972,8 @@
       "vulnerability-detection",
       "vulnerability-scanners"
     ],
-    "homepageUrl": "https://cisofy.com/lynis/"
+    "homepageUrl": "https://cisofy.com/lynis/",
+    "longDescription": "Lynis is an open-source security auditing and hardening tool for Linux, macOS, and BSD systems. It performs hundreds of individual tests covering file permissions, kernel parameters, authentication settings, firewall rules, service configurations, network settings, and installed software against known security baselines. Lynis checks compliance against CIS benchmarks, ISO 27001, PCI DSS, and HIPAA requirements, generating a detailed report with a hardening index score and specific remediation suggestions. Unlike vulnerability scanners that look for known CVEs, Lynis focuses on configuration hygiene \u2014 finding weak SSH settings, world-readable files, unpatched software, unnecessary services, and missing security controls. The tool runs entirely locally with no network dependencies, making it suitable for air-gapped environments and systems where agents cannot be installed. With over 15,000 GitHub stars, Lynis is the most widely used open-source system hardening tool, commonly run as part of deployment validation and periodic security reviews."
   },
   {
     "slug": "stratus-red-team",
@@ -14008,7 +14022,8 @@
       "security",
       "threat-detection"
     ],
-    "homepageUrl": "https://stratus-red-team.cloud"
+    "homepageUrl": "https://stratus-red-team.cloud",
+    "longDescription": "Stratus Red Team is Datadog's open-source adversary emulation tool specifically designed for cloud environments. While tools like CALDERA focus on endpoint and network attacks, Stratus Red Team provides granular, atomic attack techniques for AWS, Azure, GCP, and Kubernetes \u2014 mapped directly to the MITRE ATT&CK Cloud Matrix. Each technique is self-contained: Stratus handles all prerequisite infrastructure setup (creating test IAM roles, S3 buckets, EC2 instances), executes the attack technique, and then cleans up. This makes it ideal for purple team exercises where you need to validate that your cloud detection rules actually fire when specific attack patterns occur. Techniques cover initial access (stolen credentials, malicious Lambda layers), persistence (backdoor IAM users, modified trust policies), privilege escalation (IAM policy manipulation), and impact (S3 ransomware simulation). The CLI-based interface supports warm-up, detonate, and revert phases for repeatable testing."
   },
   {
     "slug": "apkleaks",
@@ -14054,7 +14069,8 @@
       "reverse-engineering",
       "scanning-apk",
       "static-analysis"
-    ]
+    ],
+    "longDescription": "APKLeaks is a Python tool for scanning Android APK files to extract URLs, API endpoints, and hardcoded secrets from decompiled source code. It uses JADX for decompilation and applies a comprehensive set of regex patterns to identify API keys, OAuth tokens, AWS credentials, Firebase URLs, database connection strings, and other sensitive data that developers accidentally leave in production builds. APKLeaks is particularly useful during mobile app security assessments where you need a quick initial triage of what backend services an app communicates with and whether any credentials are exposed. The tool outputs findings in JSON format and supports custom regex pattern files for organization-specific secret formats. With over 6,000 GitHub stars, APKLeaks has become a standard first step in Android application security testing, often used alongside MobSF for comprehensive static analysis."
   },
   {
     "slug": "sn1per",
@@ -14104,7 +14120,8 @@
       "sn1per",
       "sn1per-professional"
     ],
-    "homepageUrl": "https://sn1persecurity.com"
+    "homepageUrl": "https://sn1persecurity.com",
+    "longDescription": "Sn1per is an automated attack surface management and penetration testing framework that integrates reconnaissance, vulnerability scanning, and exploitation tools into configurable scan modes. It provides several predefined scan profiles \u2014 OSINT, Discovery, Stealth, Normal, and Full \u2014 each escalating in aggressiveness and scope. A Normal scan runs subdomain enumeration, port scanning, service fingerprinting, web application scanning, vulnerability detection, and brute-force attacks in sequence, producing an organized HTML report. Sn1per's workspace system lets you manage multiple targets and track findings across engagements. The professional edition adds a web interface, scheduled scanning, and team collaboration features, but the community edition covers the core automation pipeline. With nearly 10,000 GitHub stars, Sn1per is widely used for initial reconnaissance in penetration testing engagements where comprehensive coverage matters more than speed."
   },
   {
     "slug": "emba",
@@ -14156,7 +14173,8 @@
       "vulnerability-scanner",
       "vulnerability-scanners"
     ],
-    "homepageUrl": "https://www.securefirmware.de"
+    "homepageUrl": "https://www.securefirmware.de",
+    "longDescription": "EMBA is a firmware security analyzer designed for IoT and embedded device assessments. It extracts firmware images (using binwalk, unblob, and custom extractors), identifies the operating system and architecture, and performs both static and dynamic analysis. Static analysis includes binary hardening checks (NX, PIE, RELRO, stack canaries), known CVE matching against extracted software versions, password hash extraction, certificate analysis, and sensitive string detection. The dynamic analysis module uses QEMU emulation to actually boot extracted firmware and test running services for vulnerabilities \u2014 a capability that sets EMBA apart from simpler firmware scanners. EMBA generates detailed HTML reports with severity-rated findings, CVE references, and remediation guidance. It supports ARM, MIPS, x86, and PowerPC architectures. With over 3,000 GitHub stars, EMBA is the most comprehensive open-source firmware analysis framework available, used by security researchers auditing routers, cameras, industrial controllers, and other embedded devices."
   },
   {
     "slug": "afrog",
@@ -14200,6 +14218,7 @@
       "red-teaming",
       "vulnerability-scanner",
       "vulnerability-scanning-tools"
-    ]
+    ],
+    "longDescription": "afrog is a fast, low-false-positive vulnerability scanner with a growing library of community-contributed proof-of-concept templates. Written in Go for speed and portability, afrog focuses on practical vulnerability detection \u2014 CVEs, default credentials, misconfigurations, and command injection \u2014 with templates that verify exploitability rather than just fingerprinting potentially vulnerable versions. The template format is YAML-based (similar to Nuclei) and supports HTTP request/response matching, variable extraction, and multi-step workflows. afrog includes built-in rate limiting, proxy support, and multiple output formats including JSON and HTML reports. What differentiates afrog from Nuclei is its emphasis on reducing false positives through more precise matching conditions and its curated default template set. With over 4,000 GitHub stars and active Chinese and international security community contributions, afrog is gaining adoption as a complementary scanner alongside Nuclei for web vulnerability assessments."
   }
 ]
