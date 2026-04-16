@@ -7,6 +7,7 @@ import AdSlot from "@/components/AdSlot";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import RecentlyUpdated from "@/components/RecentlyUpdated";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import { categories } from "@/data/categories";
 import { enrichTools } from "@/lib/github";
 import toolsData from "@/data/tools.json";
@@ -54,9 +55,11 @@ export default async function Home() {
         />
         <AdSlot provider="custom" placement="hero" />
         {recentTools.length > 0 && <RecentlyUpdated tools={recentTools} />}
-        <Suspense>
-          <ToolGrid tools={tools} categories={categories} />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense>
+            <ToolGrid tools={tools} categories={categories} />
+          </Suspense>
+        </ErrorBoundary>
         <AdSlot provider="custom" placement="footer" />
       </main>
       <Footer />

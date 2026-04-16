@@ -3,30 +3,13 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import libraryData from "@/data/library.json";
+import { Book } from "@/types";
 
 export const metadata = {
   title: "Library - ENNA",
   description:
     "Curated books for OSINT, pentesting, and security research. Essential reading for professionals.",
 };
-
-interface BookEdition {
-  format: string;
-  url: string;
-}
-
-interface Book {
-  slug: string;
-  title: string;
-  author: string;
-  description: string;
-  category: string;
-  tags: string[];
-  imageTag: string;
-  year: number;
-  editions: BookEdition[];
-  coverImage?: string;
-}
 
 const formatIcons: Record<string, string> = {
   Book: "📖",

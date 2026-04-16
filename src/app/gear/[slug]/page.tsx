@@ -3,18 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import libraryData from "@/data/library.json";
-
-interface HardwareItem {
-  slug: string;
-  title: string;
-  manufacturer: string;
-  description: string;
-  category: string;
-  tags: string[];
-  amazonUrl: string;
-  imageTag: string;
-  relatedTool?: string;
-}
+import { HardwareItem } from "@/types";
 
 const categoryLabels: Record<string, string> = {
   rf: "RF / SDR",
@@ -104,9 +93,23 @@ export default async function GearDetailPage({
     .filter((h) => h.slug !== item.slug && h.category === item.category)
     .slice(0, 4);
 
+  const gearJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: item.title,
+    description: item.description,
+    manufacturer: { "@type": "Organization", name: item.manufacturer },
+    url: `https://www.en-na.com/gear/${item.slug}`,
+    category: categoryLabels[item.category] || item.category,
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(gearJsonLd) }}
+      />
       <main className="max-w-7xl mx-auto px-6 pt-24 pb-16">
         <nav className="flex items-center gap-2 text-sm font-mono text-text-muted mb-8">
           <Link href="/" className="hover:text-brand-400 transition-colors">

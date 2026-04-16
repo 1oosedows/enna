@@ -60,6 +60,40 @@ export interface CategoryInfo {
   count?: number;
 }
 
+export interface BookEdition {
+  format: string;
+  url: string;
+}
+
+export interface Book {
+  slug: string;
+  title: string;
+  author: string;
+  description: string;
+  category: string;
+  tags: string[];
+  imageTag: string;
+  year: number;
+  editions: BookEdition[];
+  coverImage?: string;
+  longDescription?: string;
+  pages?: number;
+  publisher?: string;
+  isbn?: string;
+}
+
+export interface HardwareItem {
+  slug: string;
+  title: string;
+  manufacturer: string;
+  description: string;
+  category: string;
+  tags: string[];
+  amazonUrl: string;
+  imageTag: string;
+  relatedTool?: string;
+}
+
 export interface GitHubRepo {
   stargazers_count: number;
   forks_count: number;

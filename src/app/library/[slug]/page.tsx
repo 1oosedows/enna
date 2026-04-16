@@ -4,28 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import libraryData from "@/data/library.json";
-
-interface BookEdition {
-  format: string;
-  url: string;
-}
-
-interface Book {
-  slug: string;
-  title: string;
-  author: string;
-  description: string;
-  category: string;
-  tags: string[];
-  imageTag: string;
-  year: number;
-  editions: BookEdition[];
-  coverImage?: string;
-  longDescription?: string;
-  pages?: number;
-  publisher?: string;
-  isbn?: string;
-}
+import { Book } from "@/types";
 
 export function generateStaticParams() {
   return libraryData.books.map((b) => ({ slug: b.slug }));
@@ -95,9 +74,25 @@ function BookDetail({ book }: { book: Book }) {
     )
     .slice(0, 4);
 
+  const bookJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: book.title,
+    author: { "@type": "Person", name: book.author },
+    datePublished: String(book.year),
+    description: book.longDescription || book.description,
+    url: `https://www.en-na.com/library/${book.slug}`,
+    ...(book.isbn ? { isbn: book.isbn } : {}),
+    ...(book.publisher ? { publisher: { "@type": "Organization", name: book.publisher } } : {}),
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookJsonLd) }}
+      />
       <main className="max-w-7xl mx-auto px-6 pt-24 pb-16">
         <Breadcrumb title={book.title} />
 

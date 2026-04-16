@@ -4,7 +4,7 @@ import ToolCard from "@/components/ToolCard";
 import toolsData from "@/data/tools.json";
 import blogData from "@/data/blog.json";
 import libraryData from "@/data/library.json";
-import { Tool } from "@/types";
+import { Tool, Book } from "@/types";
 import { LAUNCH_TOOL_COUNT } from "@/lib/constants";
 import Link from "next/link";
 
@@ -13,18 +13,6 @@ export const metadata = {
   description:
     "The latest tools, books, and updates added to ENNA. See what's new this week and browse recent additions to the index.",
 };
-
-interface Book {
-  slug: string;
-  title: string;
-  author: string;
-  description: string;
-  category: string;
-  tags: string[];
-  imageTag: string;
-  year: number;
-  coverImage?: string;
-}
 
 export default function RecentlyAddedPage() {
   const tools = toolsData as Tool[];

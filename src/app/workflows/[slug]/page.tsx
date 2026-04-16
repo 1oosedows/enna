@@ -78,9 +78,28 @@ export default async function WorkflowDetailPage({
     .filter((w) => w.slug !== slug)
     .slice(0, 3);
 
+  const workflowJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: workflow.title,
+    description: workflow.description,
+    totalTime: workflow.estimatedTime,
+    url: `https://www.en-na.com/workflows/${workflow.slug}`,
+    step: workflow.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.title,
+      text: s.description,
+    })),
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(workflowJsonLd) }}
+      />
       <main className="max-w-4xl mx-auto px-6 pt-24 pb-16">
         <nav className="flex items-center gap-2 text-sm font-mono text-text-muted mb-8">
           <Link href="/" className="hover:text-brand-400 transition-colors">

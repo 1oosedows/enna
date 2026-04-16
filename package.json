@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "validate": "python3 scripts/validate-data.py",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "husky"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.47.0",
@@ -19,6 +22,8 @@
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20.0.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
@@ -26,9 +31,17 @@
     "checkly": "^7.7.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^15.5.14",
+    "husky": "^9.1.7",
+    "jsdom": "^29.0.2",
+    "lint-staged": "^16.4.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "bash -c 'npx tsc --noEmit'",
+    "src/data/tools.json": "python3 scripts/validate-data.py"
   },
   "overrides": {
     "lodash": ">=4.18.0"

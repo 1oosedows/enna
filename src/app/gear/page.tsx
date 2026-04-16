@@ -1,25 +1,14 @@
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import libraryData from "@/data/library.json";
-import Link from "next/link";
+import { HardwareItem } from "@/types";
 
 export const metadata = {
   title: "Gear - ENNA",
   description:
     "Curated hardware and devices for security professionals. Laptops, SDR equipment, RFID tools, WiFi adapters, and more.",
 };
-
-interface HardwareItem {
-  slug: string;
-  title: string;
-  manufacturer: string;
-  description: string;
-  category: string;
-  tags: string[];
-  amazonUrl: string;
-  imageTag: string;
-  relatedTool?: string;
-}
 
 const categoryOrder = ["rf", "multi-tool", "rfid", "wireless", "laptop"];
 
