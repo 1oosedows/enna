@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { getDb } from "@/lib/db";
+import { notifyNewReview } from "@/lib/discord";
+import toolsData from "@/data/tools.json";
+import { Tool } from "@/types";
 
 // GET /api/reviews?tool=slug
 export async function GET(request: NextRequest) {
@@ -68,6 +71,13 @@ export async function POST(request: NextRequest) {
       DO UPDATE SET rating = ${rating}, comment = ${comment}, created_at = NOW()
       RETURNING id
     `;
+
+    // Discord notification (fire and forget)
+    const userRows = await sql`SELECT username FROM users WHERE id = ${userId}`;
+    const tool = (toolsData as Tool[]).find((t) => t.slug === toolSlug);
+    if (userRows.length > 0 && tool) {
+      notifyNewReview(userRows[0].username as string, toolSlug, tool.name, rating, comment);
+    }
 
     return NextResponse.json({ id: result[0].id }, { status: 201 });
   } catch (error) {

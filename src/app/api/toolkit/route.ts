@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { getDb } from "@/lib/db";
+import { notifyToolkitAdd } from "@/lib/discord";
+import toolsData from "@/data/tools.json";
+import { Tool } from "@/types";
 
 // GET /api/toolkit?user=username OR /api/toolkit?tool=slug
 export async function GET(request: NextRequest) {
@@ -86,6 +89,14 @@ export async function POST(request: NextRequest) {
   } else {
     // Add
     await sql`INSERT INTO toolkits (user_id, tool_slug) VALUES (${userId}, ${toolSlug})`;
+
+    // Discord notification (fire and forget)
+    const userRows = await sql`SELECT username FROM users WHERE id = ${userId}`;
+    const tool = (toolsData as Tool[]).find((t) => t.slug === toolSlug);
+    if (userRows.length > 0 && tool) {
+      notifyToolkitAdd(userRows[0].username as string, toolSlug, tool.name);
+    }
+
     return NextResponse.json({ added: true });
   }
 }
