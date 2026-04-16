@@ -78,9 +78,38 @@ function WorkflowCard({ workflow }: { workflow: Workflow }) {
 export default function WorkflowsPage() {
   const workflows = workflowData.workflows as Workflow[];
 
+  const workflowsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Security Workflows & Playbooks",
+    description: `${workflows.length} step-by-step security workflows linking tools in sequence.`,
+    url: "https://www.en-na.com/workflows",
+    numberOfItems: workflows.length,
+    itemListElement: workflows.map((w, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "HowTo",
+        name: w.title,
+        description: w.description,
+        url: `https://www.en-na.com/workflows/${w.slug}`,
+        totalTime: w.estimatedTime,
+        step: w.steps.map((s, j) => ({
+          "@type": "HowToStep",
+          position: j + 1,
+          name: s.title,
+        })),
+      },
+    })),
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(workflowsJsonLd) }}
+      />
       <main className="max-w-7xl mx-auto px-6 pt-24 pb-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-mono text-text-secondary mb-6">

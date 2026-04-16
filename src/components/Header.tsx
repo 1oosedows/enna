@@ -60,6 +60,12 @@ export default function Header() {
           >
             Blog
           </Link>
+          <Link
+            href="/suggest"
+            className="text-sm font-mono text-brand-400 hover:text-brand-300 transition-colors"
+          >
+            + Suggest
+          </Link>
           <a
             href="https://github.com/1oosedows/enna"
             target="_blank"
@@ -153,6 +159,13 @@ export default function Header() {
               className="text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
             >
               Blog
+            </Link>
+            <Link
+              href="/suggest"
+              onClick={() => setOpen(false)}
+              className="text-sm font-mono text-brand-400 hover:text-brand-300 transition-colors"
+            >
+              + Suggest a Tool
             </Link>
             <a
               href="https://github.com/1oosedows/enna"

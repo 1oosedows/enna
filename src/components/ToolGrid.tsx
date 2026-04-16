@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import { track } from "@vercel/analytics";
 import { Tool, Category, CategoryInfo } from "@/types";
 import { PAGE_SIZE } from "@/lib/constants";
 import SearchFilter from "./SearchFilter";
@@ -26,6 +27,18 @@ export default function ToolGrid({ tools, categories }: Props) {
     (searchParams.get("sort") as SortOption) || "name"
   );
   const [visible, setVisible] = useState(PAGE_SIZE);
+  const searchTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  // Track search queries (debounced, only non-empty)
+  useEffect(() => {
+    clearTimeout(searchTimer.current);
+    if (query.trim().length >= 2) {
+      searchTimer.current = setTimeout(() => {
+        track("search", { query: query.trim(), results: filtered.length });
+      }, 1000);
+    }
+    return () => clearTimeout(searchTimer.current);
+  }, [query]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const params = new URLSearchParams();

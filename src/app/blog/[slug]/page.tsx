@@ -189,9 +189,28 @@ export default async function BlogPostPage({
   const prevPost = currentIdx < sorted.length - 1 ? sorted[currentIdx + 1] : null;
   const nextPost = currentIdx > 0 ? sorted[currentIdx - 1] : null;
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: "ENNA" },
+    url: `https://www.en-na.com/blog/${post.slug}`,
+    publisher: {
+      "@type": "Organization",
+      name: "ENNA",
+      url: "https://www.en-na.com",
+    },
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <main className="max-w-3xl mx-auto px-6 pt-24 pb-16">
         <nav className="flex items-center gap-2 text-sm font-mono text-text-muted mb-8">
           <Link href="/" className="hover:text-brand-400 transition-colors">

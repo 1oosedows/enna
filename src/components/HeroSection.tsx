@@ -2,7 +2,17 @@
 
 import { useEffect, useRef } from "react";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  toolCount?: number;
+  categoryCount?: number;
+  languageCount?: number;
+}
+
+export default function HeroSection({
+  toolCount = 300,
+  categoryCount = 19,
+  languageCount = 12,
+}: HeroSectionProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -161,9 +171,9 @@ export default function HeroSection() {
         {/* Stats bar */}
         <div className="flex items-center justify-center gap-8 mt-16 font-mono text-sm">
           {[
-            { label: "Tools", value: "250+" },
-            { label: "Categories", value: "16" },
-            { label: "Languages", value: "12" },
+            { label: "Tools", value: `${toolCount}+` },
+            { label: "Categories", value: String(categoryCount) },
+            { label: "Languages", value: String(languageCount) },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl font-bold brand-gradient-text">

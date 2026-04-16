@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import libraryData from "@/data/library.json";
-import Link from "next/link";
 
 export const metadata = {
   title: "Library - ENNA",
@@ -97,9 +97,33 @@ function BookCard({ book }: { book: Book }) {
 export default function LibraryPage() {
   const books = libraryData.books as Book[];
 
+  const libraryJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Security & OSINT Book Library",
+    description: `${books.length} curated books for OSINT, pentesting, and security research.`,
+    url: "https://www.en-na.com/library",
+    numberOfItems: books.length,
+    itemListElement: books.map((book, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Book",
+        name: book.title,
+        author: { "@type": "Person", name: book.author },
+        datePublished: String(book.year),
+        url: `https://www.en-na.com/library/${book.slug}`,
+      },
+    })),
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(libraryJsonLd) }}
+      />
       <main className="max-w-7xl mx-auto px-6 pt-24 pb-16">
         {/* Hero */}
         <div className="text-center mb-16">
@@ -164,6 +188,18 @@ export default function LibraryPage() {
             ))}
           </div>
         </section>
+        <div className="text-center mt-12">
+          <Link
+            href="/gear"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg glass glass-hover text-sm font-mono text-text-secondary hover:text-brand-400 transition-colors"
+          >
+            Looking for hardware? Browse Gear
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+        </div>
       </main>
       <Footer />
     </>

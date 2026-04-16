@@ -110,6 +110,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.7,
     },
+    {
+      url: `${siteUrl}/suggest`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
     ...guidesData.guides.map((g) => ({
       url: `${siteUrl}/tool/${g.slug}/guide`,
       lastModified: new Date(),
