@@ -73,7 +73,9 @@
       "socket",
       "windows"
     ],
-    "homepageUrl": "https://svn.nmap.org/"
+    "homepageUrl": "https://svn.nmap.org/",
+    "dockerImage": "instrumentisto/nmap",
+    "youtubeUrl": "https://www.youtube.com/watch?v=4t4kBkMsDbQ"
   },
   {
     "slug": "masscan",
@@ -220,7 +222,8 @@
       "subdomain-enumeration",
       "subdomains"
     ],
-    "homepageUrl": "https://projectdiscovery.io"
+    "homepageUrl": "https://projectdiscovery.io",
+    "dockerImage": "projectdiscovery/subfinder"
   },
   {
     "slug": "amass",
@@ -314,7 +317,8 @@
       "aquatone",
       "eyewitness",
       "interactsh"
-    ]
+    ],
+    "dockerImage": "projectdiscovery/httpx"
   },
   {
     "slug": "nuclei",
@@ -380,7 +384,9 @@
       "vulnerability-detection",
       "vulnerability-scanner"
     ],
-    "homepageUrl": "https://docs.projectdiscovery.io/tools/nuclei"
+    "homepageUrl": "https://docs.projectdiscovery.io/tools/nuclei",
+    "dockerImage": "projectdiscovery/nuclei",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ksy0Dle2hhM"
   },
   {
     "slug": "nikto",
@@ -410,7 +416,8 @@
     "githubDescription": "Nikto web server scanner",
     "alternatives": [
       "nuclei"
-    ]
+    ],
+    "dockerImage": "sullo/nikto"
   },
   {
     "slug": "gobuster",
@@ -575,7 +582,8 @@
       "sherlock",
       "tools"
     ],
-    "homepageUrl": "https://sherlockproject.xyz"
+    "homepageUrl": "https://sherlockproject.xyz",
+    "youtubeUrl": "https://www.youtube.com/watch?v=HX99t8zTz70"
   },
   {
     "slug": "maigret",
@@ -739,7 +747,8 @@
       "threat-intelligence",
       "threatintel"
     ],
-    "homepageUrl": "http://www.spiderfoot.net"
+    "homepageUrl": "http://www.spiderfoot.net",
+    "dockerImage": "smicallef/spiderfoot"
   },
   {
     "slug": "maltego",
@@ -899,7 +908,9 @@
     "githubTopics": [
       "hacktoberfest"
     ],
-    "homepageUrl": "https://www.metasploit.com/"
+    "homepageUrl": "https://www.metasploit.com/",
+    "dockerImage": "metasploitframework/metasploit-framework",
+    "youtubeUrl": "https://www.youtube.com/watch?v=8lR27r8Y_ik"
   },
   {
     "slug": "john",
@@ -953,7 +964,8 @@
       "hashcat",
       "hydra",
       "mentalist"
-    ]
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=XjVYl1Ts6XI"
   },
   {
     "slug": "hashcat",
@@ -1013,7 +1025,8 @@
       "opencl",
       "password"
     ],
-    "homepageUrl": "https://hashcat.net/hashcat/"
+    "homepageUrl": "https://hashcat.net/hashcat/",
+    "youtubeUrl": "https://www.youtube.com/watch?v=z4_oqTZJqCo"
   },
   {
     "slug": "aircrack-ng",
@@ -1077,7 +1090,8 @@
       "wifi",
       "wifi-security"
     ],
-    "homepageUrl": "https://aircrack-ng.org"
+    "homepageUrl": "https://aircrack-ng.org",
+    "youtubeUrl": "https://www.youtube.com/watch?v=WfYxrLaqlN8"
   },
   {
     "slug": "volatility3",
@@ -1135,7 +1149,8 @@
       "volatility",
       "volatility-framework"
     ],
-    "homepageUrl": "https://volatilityfoundation.org/"
+    "homepageUrl": "https://volatilityfoundation.org/",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Uk3DEgY0pSQ"
   },
   {
     "slug": "autopsy",
@@ -1231,7 +1246,9 @@
       "tshark",
       "wireshark"
     ],
-    "homepageUrl": "https://www.wireshark.org"
+    "homepageUrl": "https://www.wireshark.org",
+    "dockerImage": "linuxserver/wireshark",
+    "youtubeUrl": "https://www.youtube.com/watch?v=lb1Dw0elw0Q"
   },
   {
     "slug": "burpsuite",
@@ -1276,7 +1293,8 @@
     "githubDescription": "Burp Extensions Api",
     "githubTopics": [
       "extensibility"
-    ]
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=h2duGBZLEek"
   },
   {
     "slug": "sqlmap",
@@ -1317,7 +1335,9 @@
       "vulnerability-scanner"
     ],
     "homepageUrl": "http://sqlmap.org",
-    "documentation": "https://sqlmap.org/docs/"
+    "documentation": "https://sqlmap.org/docs/",
+    "dockerImage": "paoloo/sqlmap",
+    "youtubeUrl": "https://www.youtube.com/watch?v=nVj8MUKkzQk"
   },
   {
     "slug": "ffuf",
@@ -1373,7 +1393,8 @@
       "infosec",
       "pentesting",
       "web"
-    ]
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=aN3Nayvd7FU"
   },
   {
     "slug": "responder",
@@ -1449,7 +1470,8 @@
     "license": "Apache-2.0",
     "avatarUrl": "https://avatars.githubusercontent.com/u/25406560?v=4",
     "githubDescription": "Six Degrees of Domain Admin",
-    "homepageUrl": "https://specterops.io/bloodhound-enterprise/"
+    "homepageUrl": "https://specterops.io/bloodhound-enterprise/",
+    "youtubeUrl": "https://www.youtube.com/watch?v=yp8fw72oQvY"
   },
   {
     "slug": "impacket",
@@ -1560,7 +1582,9 @@
       "reverse-engineering",
       "software-analysis"
     ],
-    "homepageUrl": "https://www.nsa.gov/ghidra"
+    "homepageUrl": "https://www.nsa.gov/ghidra",
+    "dockerImage": "blacktop/ghidra",
+    "youtubeUrl": "https://www.youtube.com/watch?v=fTGTnrgjuGA"
   },
   {
     "slug": "exiftool",
@@ -1656,7 +1680,8 @@
       "phishing",
       "security"
     ],
-    "homepageUrl": "https://getgophish.com"
+    "homepageUrl": "https://getgophish.com",
+    "dockerImage": "gophish/gophish"
   },
   {
     "slug": "phoneinfoga",
@@ -1776,7 +1801,8 @@
     "alternatives": [
       "aquatone",
       "eyewitness"
-    ]
+    ],
+    "dockerImage": "projectdiscovery/katana"
   },
   {
     "slug": "dnsx",
@@ -1815,7 +1841,8 @@
       "hacktoberfest",
       "wildcard-filtering"
     ],
-    "homepageUrl": "https://docs.projectdiscovery.io/tools/dnsx"
+    "homepageUrl": "https://docs.projectdiscovery.io/tools/dnsx",
+    "dockerImage": "projectdiscovery/dnsx"
   },
   {
     "slug": "knockpy",
@@ -2077,7 +2104,8 @@
     "homepageUrl": "https://greenbone.github.io/docs/",
     "alternatives": [
       "nuclei"
-    ]
+    ],
+    "dockerImage": "greenbone/openvas-scanner"
   },
   {
     "slug": "xsstrike",
@@ -3505,7 +3533,8 @@
       "osquery",
       "wazuh",
       "yara"
-    ]
+    ],
+    "dockerImage": "velocidex/velociraptor"
   },
   {
     "slug": "plaso",
@@ -3864,7 +3893,8 @@
     "homepageUrl": "http://docs.blockscout.com",
     "alternatives": [
       "graphsense"
-    ]
+    ],
+    "dockerImage": "blockscout/blockscout"
   },
   {
     "slug": "whale-alert",
@@ -5364,7 +5394,8 @@
       "trufflehog",
       "verification"
     ],
-    "homepageUrl": "https://trufflesecurity.com"
+    "homepageUrl": "https://trufflesecurity.com",
+    "dockerImage": "trufflesecurity/trufflehog"
   },
   {
     "slug": "gitleaks",
@@ -5420,7 +5451,8 @@
     "alternatives": [
       "trufflehog"
     ],
-    "documentation": "https://github.com/gitleaks/gitleaks#readme"
+    "documentation": "https://github.com/gitleaks/gitleaks#readme",
+    "dockerImage": "zricethezav/gitleaks"
   },
   {
     "slug": "dnsrecon",
@@ -8259,7 +8291,8 @@
       "instrumentation",
       "vala"
     ],
-    "homepageUrl": "https://frida.re"
+    "homepageUrl": "https://frida.re",
+    "youtubeUrl": "https://www.youtube.com/watch?v=iMNs8YAy6pk"
   },
   {
     "slug": "objection",
@@ -8387,7 +8420,8 @@
     "alternatives": [
       "mvt",
       "apkleaks"
-    ]
+    ],
+    "dockerImage": "opensecurity/mobile-security-framework-mobsf"
   },
   {
     "slug": "drozer",
@@ -8632,7 +8666,8 @@
       "portscanner",
       "scan-ports"
     ],
-    "homepageUrl": "https://projectdiscovery.io"
+    "homepageUrl": "https://projectdiscovery.io",
+    "dockerImage": "projectdiscovery/naabu"
   },
   {
     "slug": "shuffledns",
@@ -8853,7 +8888,8 @@
       "security",
       "tool"
     ],
-    "homepageUrl": "https://caido.io"
+    "homepageUrl": "https://caido.io",
+    "dockerImage": "caido/caido"
   },
   {
     "slug": "trivy",
@@ -8905,7 +8941,8 @@
       "syft",
       "osv-scanner"
     ],
-    "documentation": "https://aquasecurity.github.io/trivy/"
+    "documentation": "https://aquasecurity.github.io/trivy/",
+    "dockerImage": "aquasec/trivy"
   },
   {
     "slug": "grype",
@@ -8955,7 +8992,8 @@
       "falco",
       "syft",
       "osv-scanner"
-    ]
+    ],
+    "dockerImage": "anchore/grype"
   },
   {
     "slug": "semgrep",
@@ -8997,7 +9035,8 @@
       "static-code-analysis",
       "typescript"
     ],
-    "homepageUrl": "https://semgrep.dev"
+    "homepageUrl": "https://semgrep.dev",
+    "dockerImage": "semgrep/semgrep"
   },
   {
     "slug": "dalfox",
@@ -10357,7 +10396,8 @@
       "threat-sharing",
       "threatintel"
     ],
-    "homepageUrl": "https://www.misp-project.org/"
+    "homepageUrl": "https://www.misp-project.org/",
+    "dockerImage": "coolacid/misp-docker"
   },
   {
     "slug": "opencti",
@@ -10416,7 +10456,8 @@
       "security",
       "threat-intelligence"
     ],
-    "homepageUrl": "https://opencti.io"
+    "homepageUrl": "https://opencti.io",
+    "dockerImage": "opencti/platform"
   },
   {
     "slug": "thehive",
@@ -10487,7 +10528,8 @@
       "security-incidents",
       "thehive"
     ],
-    "homepageUrl": "https://strangebee.com/"
+    "homepageUrl": "https://strangebee.com/",
+    "dockerImage": "strangebee/thehive"
   },
   {
     "slug": "grr-rapid-response",
@@ -10993,7 +11035,8 @@
       "runtime-security",
       "security"
     ],
-    "homepageUrl": "https://falco.org"
+    "homepageUrl": "https://falco.org",
+    "dockerImage": "falcosecurity/falco"
   },
   {
     "slug": "kube-hunter",
@@ -11047,7 +11090,8 @@
       "hacktoberfest",
       "kubernetes-clusters",
       "vulnerabilities"
-    ]
+    ],
+    "dockerImage": "aquasec/kube-hunter"
   },
   {
     "slug": "cdk",
@@ -11228,7 +11272,8 @@
       "security",
       "smtp"
     ],
-    "homepageUrl": "https://app.interactsh.com"
+    "homepageUrl": "https://app.interactsh.com",
+    "dockerImage": "projectdiscovery/interactsh-server"
   },
   {
     "slug": "notify",
@@ -12971,7 +13016,8 @@
       "wazuh",
       "xdr"
     ],
-    "homepageUrl": "https://wazuh.com/"
+    "homepageUrl": "https://wazuh.com/",
+    "dockerImage": "wazuh/wazuh-manager"
   },
   {
     "slug": "sigma",
@@ -13100,7 +13146,8 @@
       "security-tools",
       "vulnerability"
     ],
-    "homepageUrl": "https://containers.goodwith.tech/"
+    "homepageUrl": "https://containers.goodwith.tech/",
+    "dockerImage": "goodwithtech/dockle"
   },
   {
     "slug": "syft",
@@ -13164,7 +13211,8 @@
       "spdx",
       "static-analysis",
       "tool"
-    ]
+    ],
+    "dockerImage": "anchore/syft"
   },
   {
     "slug": "cyberchef",
@@ -13378,7 +13426,8 @@
       "security-tools",
       "sysadmin"
     ],
-    "homepageUrl": "https://web-check.xyz"
+    "homepageUrl": "https://web-check.xyz",
+    "dockerImage": "lissy93/web-check"
   },
   {
     "slug": "pwndbg",
@@ -13691,7 +13740,8 @@
       "forensics",
       "security",
       "timeline"
-    ]
+    ],
+    "dockerImage": "us-docker.pkg.dev/osdfir-registry/timesketch/timesketch"
   },
   {
     "slug": "intelowl",
@@ -13750,7 +13800,8 @@
       "threathunting",
       "threatintel"
     ],
-    "homepageUrl": "https://intelowlproject.github.io"
+    "homepageUrl": "https://intelowlproject.github.io",
+    "dockerImage": "intelowlproject/intelowl"
   },
   {
     "slug": "rengine",
@@ -13801,7 +13852,8 @@
       "scanning",
       "security-tools"
     ],
-    "homepageUrl": "https://yogeshojha.github.io/rengine/"
+    "homepageUrl": "https://yogeshojha.github.io/rengine/",
+    "dockerImage": "yogeshojha/rengine"
   },
   {
     "slug": "reconftw",

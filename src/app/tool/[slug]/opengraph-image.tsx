@@ -8,6 +8,11 @@ export const alt = "ENNA Tool";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+function formatStars(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+  return String(n);
+}
+
 export default async function Image({
   params,
 }: {
@@ -108,53 +113,95 @@ export default async function Image({
           </div>
         </div>
 
-        {/* Category badge */}
+        {/* Avatar + Name row */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
+            gap: 24,
             marginBottom: 20,
           }}
         >
-          <div
-            style={{
-              padding: "6px 16px",
-              borderRadius: 6,
-              background: "linear-gradient(135deg, #FF5A6E, #8DCAE8)",
-              color: "white",
-              fontSize: 13,
-              fontWeight: 600,
-              letterSpacing: 2,
-              textTransform: "uppercase",
-              display: "flex",
-            }}
-          >
-            {category?.name || tool.category}
-          </div>
-          <div
-            style={{
-              marginLeft: 16,
-              fontSize: 16,
-              color: "#8DCAE8",
-              display: "flex",
-            }}
-          >
-            {tool.language}
-          </div>
-        </div>
+          {tool.avatarUrl ? (
+            <img
+              src={tool.avatarUrl}
+              alt=""
+              width={80}
+              height={80}
+              style={{ borderRadius: 16, border: "2px solid rgba(141,202,232,0.3)" }}
+            />
+          ) : (
+            <div
+              style={{
+                width: 80,
+                height: 80,
+                borderRadius: 16,
+                background: "linear-gradient(135deg, #FF5A6E, #8DCAE8)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "white",
+                fontSize: 32,
+                fontWeight: 700,
+              }}
+            >
+              {tool.name.slice(0, 2).toUpperCase()}
+            </div>
+          )}
 
-        {/* Tool name */}
-        <div
-          style={{
-            fontSize: 72,
-            fontWeight: 700,
-            color: "#e8eaed",
-            lineHeight: 1.1,
-            marginBottom: 16,
-            display: "flex",
-          }}
-        >
-          {tool.name}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {/* Tool name */}
+            <div
+              style={{
+                fontSize: 64,
+                fontWeight: 700,
+                color: "#e8eaed",
+                lineHeight: 1.1,
+                display: "flex",
+              }}
+            >
+              {tool.name}
+            </div>
+
+            {/* Category + Language + Stars row */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginTop: 4,
+              }}
+            >
+              <div
+                style={{
+                  padding: "4px 12px",
+                  borderRadius: 6,
+                  background: "linear-gradient(135deg, #FF5A6E, #8DCAE8)",
+                  color: "white",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                  display: "flex",
+                }}
+              >
+                {category?.name || tool.category}
+              </div>
+              <div style={{ fontSize: 16, color: "#8DCAE8", display: "flex" }}>
+                {tool.language}
+              </div>
+              {tool.stars !== undefined && (
+                <div style={{ fontSize: 16, color: "#FFD700", display: "flex" }}>
+                  ★ {formatStars(tool.stars)}
+                </div>
+              )}
+              {tool.forks !== undefined && (
+                <div style={{ fontSize: 14, color: "#4A8CAD", display: "flex" }}>
+                  {formatStars(tool.forks)} forks
+                </div>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Description */}
@@ -163,13 +210,14 @@ export default async function Image({
             fontSize: 22,
             color: "#8DCAE8",
             lineHeight: 1.5,
-            marginBottom: 32,
-            maxWidth: 900,
+            marginBottom: 24,
+            marginTop: 12,
+            maxWidth: 1000,
             display: "flex",
           }}
         >
-          {tool.description.length > 120
-            ? tool.description.substring(0, 120) + "..."
+          {tool.description.length > 140
+            ? tool.description.substring(0, 140) + "..."
             : tool.description}
         </div>
 
@@ -229,7 +277,7 @@ export default async function Image({
                   display: "flex",
                 }}
               >
-                {p}
+                {p === "linux" ? "🐧 Linux" : p === "macos" ? "🍎 macOS" : "🪟 Windows"}
               </div>
             ))}
           </div>

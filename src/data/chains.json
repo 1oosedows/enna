@@ -1,0 +1,100 @@
+{
+  "chains": [
+    {
+      "slug": "subdomain-to-vulns",
+      "title": "Subdomain Discovery to Vulnerability Scan",
+      "description": "Find subdomains, probe for live hosts, then scan for vulnerabilities. The most common bug bounty pipeline.",
+      "tools": ["subfinder", "httpx", "nuclei"],
+      "command": "subfinder -d target.com -silent | httpx -silent | nuclei -as",
+      "tags": ["recon", "bug-bounty", "automation"]
+    },
+    {
+      "slug": "port-scan-to-exploit",
+      "title": "Port Scan to Service Exploitation",
+      "description": "Discover open ports and services, then search for matching exploits. Classic pentest workflow.",
+      "tools": ["nmap", "searchsploit", "metasploit"],
+      "command": "nmap -sV -oX scan.xml target && searchsploit --nmap scan.xml",
+      "tags": ["pentest", "exploitation", "recon"]
+    },
+    {
+      "slug": "web-crawl-to-params",
+      "title": "Web Crawl to Parameter Discovery",
+      "description": "Crawl a web app, extract parameters from archived URLs, then fuzz them for hidden endpoints.",
+      "tools": ["katana", "gau", "ffuf"],
+      "command": "katana -u https://target.com -jc -d 3 | sort -u | tee urls.txt && cat urls.txt | grep '=' | ffuf -w - -u FUZZ",
+      "tags": ["web", "fuzzing", "parameters"]
+    },
+    {
+      "slug": "ad-recon-to-pwn",
+      "title": "AD Recon to Domain Admin",
+      "description": "Map Active Directory attack paths, extract Kerberos tickets, then move laterally to domain admin.",
+      "tools": ["bloodhound", "rubeus", "impacket"],
+      "command": "SharpHound.exe -c All && Rubeus.exe kerberoast /outfile:hashes.txt",
+      "tags": ["active-directory", "red-team", "kerberos"]
+    },
+    {
+      "slug": "osint-email-to-profile",
+      "title": "Email to Full OSINT Profile",
+      "description": "Start with an email address and build a complete profile: registered accounts, phone, social media, and data breaches.",
+      "tools": ["holehe", "theharvester", "sherlock"],
+      "command": "holehe target@email.com && theharvester -d email.com -b all && sherlock username",
+      "tags": ["osint", "email", "social-media"]
+    },
+    {
+      "slug": "container-scan-to-escape",
+      "title": "Container Scan to Escape",
+      "description": "Scan container images for vulnerabilities, check runtime config, then test for escape paths.",
+      "tools": ["trivy", "falco", "cdk"],
+      "command": "trivy image target:latest && cdk evaluate",
+      "tags": ["containers", "docker", "kubernetes"]
+    },
+    {
+      "slug": "wifi-handshake-to-crack",
+      "title": "WiFi Handshake Capture to Crack",
+      "description": "Capture WPA handshakes from nearby networks, then crack them offline with GPU acceleration.",
+      "tools": ["aircrack-ng", "hashcat"],
+      "command": "airodump-ng wlan0mon && aircrack-ng -w wordlist.txt capture.cap",
+      "tags": ["wireless", "cracking", "wpa"]
+    },
+    {
+      "slug": "crypto-trace-flow",
+      "title": "Wallet Address to Transaction Graph",
+      "description": "Index blockchain data locally, then trace fund flows and cluster related addresses.",
+      "tools": ["cryo", "trueblocks", "graphsense"],
+      "command": "cryo transactions --blocks 18M:18.1M && chifra export 0xaddress --fmt json",
+      "tags": ["blockchain", "tracing", "forensics"]
+    },
+    {
+      "slug": "mobile-decompile-to-secrets",
+      "title": "APK Decompile to Secret Extraction",
+      "description": "Decompile an Android APK, search for hardcoded secrets, then hook the app at runtime to bypass protections.",
+      "tools": ["jadx", "apkleaks", "frida"],
+      "command": "apkleaks -f app.apk && jadx -d output/ app.apk && frida -U -l hook.js com.target.app",
+      "tags": ["mobile", "android", "secrets"]
+    },
+    {
+      "slug": "cloud-enum-to-exploit",
+      "title": "Cloud Asset Discovery to Exploitation",
+      "description": "Enumerate cloud resources, find exposed storage buckets and misconfigured IAM, then simulate attacks.",
+      "tools": ["cloudfox", "s3scanner", "stratus-red-team"],
+      "command": "cloudfox aws all-checks && s3scanner --bucket-file buckets.txt",
+      "tags": ["cloud", "aws", "iam"]
+    },
+    {
+      "slug": "log-hunt-to-timeline",
+      "title": "Log Analysis to Forensic Timeline",
+      "description": "Parse Windows event logs for suspicious activity, then build a visual timeline for the investigation.",
+      "tools": ["hayabusa", "plaso", "timesketch"],
+      "command": "hayabusa csv-timeline -d logs/ -o timeline.csv && log2timeline.py plaso.dump logs/",
+      "tags": ["dfir", "logs", "timeline"]
+    },
+    {
+      "slug": "phishing-detect-to-report",
+      "title": "Domain Typosquat Detection to Analysis",
+      "description": "Generate domain permutations, check which are registered, then capture screenshots for evidence.",
+      "tools": ["dnstwist", "eyewitness"],
+      "command": "dnstwist -r -w domain.com | tee results.csv && eyewitness --web -f urls.txt",
+      "tags": ["phishing", "brand-protection", "detection"]
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import guidesData from "@/data/guides.json";
 import alternativesData from "@/data/alternatives.json";
 import cheatsheetsData from "@/data/cheatsheets.json";
 import kitsData from "@/data/kits.json";
+import chainsData from "@/data/chains.json";
 import { categories } from "@/data/categories";
 import { Tool } from "@/types";
 
@@ -161,6 +162,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
+    {
+      url: `${siteUrl}/chains`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
     {
       url: `${siteUrl}/changelog`,
       lastModified: new Date(),

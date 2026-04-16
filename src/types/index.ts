@@ -19,6 +19,8 @@ export interface Tool {
   alternatives?: string[];
   affiliateUrl?: string;
   affiliateLabel?: string;
+  dockerImage?: string;
+  youtubeUrl?: string;
   // GitHub enrichment (populated at build time)
   stars?: number;
   forks?: number;

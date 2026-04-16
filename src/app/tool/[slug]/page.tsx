@@ -298,6 +298,32 @@ export default async function ToolPage({
               )}
             </div>
 
+            {/* Docker + YouTube badges */}
+            {(tool.dockerImage || tool.youtubeUrl) && (
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                {tool.dockerImage && (
+                  <a
+                    href={`https://hub.docker.com/r/${tool.dockerImage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 hover:border-blue-500/40 transition-colors"
+                  >
+                    🐳 Docker Ready
+                  </a>
+                )}
+                {tool.youtubeUrl && (
+                  <a
+                    href={tool.youtubeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-500/10 border border-red-500/20 text-xs font-mono text-red-400 hover:border-red-500/40 transition-colors"
+                  >
+                    ▶ Video Tutorial
+                  </a>
+                )}
+              </div>
+            )}
+
             {/* Action buttons */}
             <div className="flex flex-wrap gap-3">
               {tool.github && (
