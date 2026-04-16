@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { track } from "@vercel/analytics";
+import Fuse from "fuse.js";
 import { Tool, Category, CategoryInfo } from "@/types";
 import { PAGE_SIZE } from "@/lib/constants";
 import SearchFilter from "./SearchFilter";
@@ -23,13 +24,58 @@ export default function ToolGrid({ tools, categories }: Props) {
   const [activeCategory, setActiveCategory] = useState<Category | null>(
     (searchParams.get("category") as Category) || null
   );
+  const [activeLanguage, setActiveLanguage] = useState<string | null>(
+    searchParams.get("lang") || null
+  );
+  const [activePlatform, setActivePlatform] = useState<string | null>(
+    searchParams.get("platform") || null
+  );
   const [sortBy, setSortBy] = useState<SortOption>(
     (searchParams.get("sort") as SortOption) || "name"
   );
   const [visible, setVisible] = useState(PAGE_SIZE);
   const searchTimer = useRef<ReturnType<typeof setTimeout>>();
 
-  // Track search queries (debounced, only non-empty)
+  // Build Fuse index once
+  const fuse = useMemo(
+    () =>
+      new Fuse(tools, {
+        keys: [
+          { name: "name", weight: 3 },
+          { name: "tags", weight: 2 },
+          { name: "description", weight: 1 },
+          { name: "category", weight: 1 },
+          { name: "language", weight: 1 },
+        ],
+        threshold: 0.35,
+        includeScore: true,
+      }),
+    [tools]
+  );
+
+  // Derive available languages and platforms from tools
+  const languages = useMemo(() => {
+    const counts = new Map<string, number>();
+    tools.forEach((t) => {
+      const lang = t.language;
+      counts.set(lang, (counts.get(lang) || 0) + 1);
+    });
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([lang, count]) => ({ lang, count }));
+  }, [tools]);
+
+  const platforms = useMemo(() => {
+    const counts = new Map<string, number>();
+    tools.forEach((t) => {
+      t.platform.forEach((p) => counts.set(p, (counts.get(p) || 0) + 1));
+    });
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([platform, count]) => ({ platform, count }));
+  }, [tools]);
+
+  // Track search queries (debounced)
   useEffect(() => {
     clearTimeout(searchTimer.current);
     if (query.trim().length >= 2) {
@@ -44,15 +90,17 @@ export default function ToolGrid({ tools, categories }: Props) {
     const params = new URLSearchParams();
     if (query.trim()) params.set("q", query.trim());
     if (activeCategory) params.set("category", activeCategory);
+    if (activeLanguage) params.set("lang", activeLanguage);
+    if (activePlatform) params.set("platform", activePlatform);
     if (sortBy !== "name") params.set("sort", sortBy);
     const str = params.toString();
     router.replace(str ? `/?${str}` : "/", { scroll: false });
-  }, [query, activeCategory, sortBy, router]);
+  }, [query, activeCategory, activeLanguage, activePlatform, sortBy, router]);
 
   // Reset visible count when filters change
   useEffect(() => {
     setVisible(PAGE_SIZE);
-  }, [query, activeCategory, sortBy]);
+  }, [query, activeCategory, activeLanguage, activePlatform, sortBy]);
 
   const categoriesWithCount = useMemo(() => {
     return categories.map((c) => ({
@@ -62,36 +110,47 @@ export default function ToolGrid({ tools, categories }: Props) {
   }, [tools, categories]);
 
   const filtered = useMemo(() => {
-    let result = tools;
+    let result: Tool[];
 
+    // Fuzzy search or full list
+    if (query.trim()) {
+      result = fuse.search(query.trim()).map((r) => r.item);
+    } else {
+      result = [...tools];
+    }
+
+    // Category filter
     if (activeCategory) {
       result = result.filter((t) => t.category === activeCategory);
     }
 
-    if (query.trim()) {
-      const q = query.toLowerCase();
-      result = result.filter(
-        (t) =>
-          t.name.toLowerCase().includes(q) ||
-          t.description.toLowerCase().includes(q) ||
-          t.tags.some((tag) => tag.toLowerCase().includes(q)) ||
-          t.category.toLowerCase().includes(q) ||
-          t.language.toLowerCase().includes(q)
-      );
+    // Language filter
+    if (activeLanguage) {
+      result = result.filter((t) => t.language === activeLanguage);
     }
 
-    return result.sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      if (sortBy === "stars") return (b.stars ?? 0) - (a.stars ?? 0);
-      if (sortBy === "recent") {
-        if (!a.lastCommit) return 1;
-        if (!b.lastCommit) return -1;
-        return new Date(b.lastCommit).getTime() - new Date(a.lastCommit).getTime();
-      }
-      return a.name.localeCompare(b.name);
-    });
-  }, [tools, query, activeCategory, sortBy]);
+    // Platform filter
+    if (activePlatform) {
+      result = result.filter((t) => t.platform.includes(activePlatform));
+    }
+
+    // Sort (skip if fuzzy search is active — Fuse already ranks by relevance)
+    if (!query.trim()) {
+      result.sort((a, b) => {
+        if (a.featured && !b.featured) return -1;
+        if (!a.featured && b.featured) return 1;
+        if (sortBy === "stars") return (b.stars ?? 0) - (a.stars ?? 0);
+        if (sortBy === "recent") {
+          if (!a.lastCommit) return 1;
+          if (!b.lastCommit) return -1;
+          return new Date(b.lastCommit).getTime() - new Date(a.lastCommit).getTime();
+        }
+        return a.name.localeCompare(b.name);
+      });
+    }
+
+    return result;
+  }, [tools, fuse, query, activeCategory, activeLanguage, activePlatform, sortBy]);
 
   const showMore = useCallback(() => {
     setVisible((v) => Math.min(v + PAGE_SIZE, filtered.length));
@@ -111,8 +170,63 @@ export default function ToolGrid({ tools, categories }: Props) {
         resultCount={filtered.length}
       />
 
-      <div className="flex justify-end mb-6">
-        <div className="flex items-center gap-2 text-xs font-mono text-text-muted">
+      {/* Language & Platform filters */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+        <span className="text-xs font-mono text-text-muted mr-1">Language</span>
+        <button
+          onClick={() => setActiveLanguage(null)}
+          className={`px-2 py-0.5 rounded-md text-xs font-mono transition-colors ${
+            !activeLanguage
+              ? "bg-accent-500/15 text-accent-400 border border-accent-500/30"
+              : "text-text-muted hover:text-text-secondary"
+          }`}
+        >
+          All
+        </button>
+        {languages.slice(0, 8).map(({ lang, count }) => (
+          <button
+            key={lang}
+            onClick={() => setActiveLanguage(lang === activeLanguage ? null : lang)}
+            className={`px-2 py-0.5 rounded-md text-xs font-mono transition-colors ${
+              activeLanguage === lang
+                ? "bg-accent-500/15 text-accent-400 border border-accent-500/30"
+                : "text-text-muted hover:text-text-secondary"
+            }`}
+          >
+            {lang} <span className="opacity-50">({count})</span>
+          </button>
+        ))}
+
+        <span className="text-border mx-2">|</span>
+
+        <span className="text-xs font-mono text-text-muted mr-1">Platform</span>
+        {platforms.map(({ platform, count }) => (
+          <button
+            key={platform}
+            onClick={() => setActivePlatform(platform === activePlatform ? null : platform)}
+            className={`px-2 py-0.5 rounded-md text-xs font-mono transition-colors ${
+              activePlatform === platform
+                ? "bg-accent-500/15 text-accent-400 border border-accent-500/30"
+                : "text-text-muted hover:text-text-secondary"
+            }`}
+          >
+            {platform === "linux" ? "🐧" : platform === "macos" ? "🍎" : "🪟"}{" "}
+            {platform} <span className="opacity-50">({count})</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Sort + active filter summary */}
+      <div className="flex items-center justify-between mb-6">
+        {(activeLanguage || activePlatform) && (
+          <button
+            onClick={() => { setActiveLanguage(null); setActivePlatform(null); }}
+            className="text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors"
+          >
+            Clear filters
+          </button>
+        )}
+        <div className="flex items-center gap-2 text-xs font-mono text-text-muted ml-auto">
           <span>Sort by</span>
           {(["name", "stars", "recent"] as const).map((opt) => (
             <button

@@ -1,0 +1,84 @@
+{
+  "alternatives": [
+    {
+      "slug": "maltego-alternatives",
+      "commercial": "Maltego",
+      "commercialUrl": "https://www.maltego.com",
+      "description": "Maltego is a commercial OSINT and link analysis platform for visual investigation. These open-source tools provide similar graph-based intelligence gathering and entity relationship mapping.",
+      "tools": ["spiderfoot", "recon-ng", "theharvester", "bbot", "sn0int"],
+      "tags": ["osint", "link-analysis", "investigation"]
+    },
+    {
+      "slug": "burp-suite-alternatives",
+      "commercial": "Burp Suite Pro",
+      "commercialUrl": "https://portswigger.net/burp/pro",
+      "description": "Burp Suite Pro is the industry-standard web application security testing platform. These open-source tools cover similar functionality for web scanning, proxying, and vulnerability discovery.",
+      "tools": ["caido", "nuclei", "ffuf", "sqlmap", "dalfox", "feroxbuster", "arjun"],
+      "tags": ["web-security", "proxy", "scanning"]
+    },
+    {
+      "slug": "cobalt-strike-alternatives",
+      "commercial": "Cobalt Strike",
+      "commercialUrl": "https://www.cobaltstrike.com",
+      "description": "Cobalt Strike is a commercial adversary simulation and red team C2 framework. These open-source alternatives provide similar command and control, payload generation, and post-exploitation capabilities.",
+      "tools": ["sliver", "havoc", "mythic", "covenant", "powershell-empire"],
+      "tags": ["c2", "red-team", "post-exploitation"]
+    },
+    {
+      "slug": "nessus-alternatives",
+      "commercial": "Tenable Nessus",
+      "commercialUrl": "https://www.tenable.com/products/nessus",
+      "description": "Nessus is a commercial vulnerability scanner widely used in enterprise environments. These open-source tools provide vulnerability scanning, configuration auditing, and compliance checking.",
+      "tools": ["openvas", "nuclei", "trivy", "grype", "lynis", "osv-scanner"],
+      "tags": ["vulnerability-scanning", "compliance", "audit"]
+    },
+    {
+      "slug": "chainalysis-alternatives",
+      "commercial": "Chainalysis Reactor",
+      "commercialUrl": "https://www.chainalysis.com",
+      "description": "Chainalysis Reactor is a commercial blockchain investigation platform used by law enforcement and financial institutions. These open-source tools provide transaction tracing, wallet clustering, and blockchain analytics.",
+      "tools": ["graphsense", "trueblocks", "blockscout", "bitcoin-cli", "cryo", "slither"],
+      "tags": ["blockchain", "crypto-forensics", "tracing"]
+    },
+    {
+      "slug": "ida-pro-alternatives",
+      "commercial": "IDA Pro",
+      "commercialUrl": "https://hex-rays.com/ida-pro",
+      "description": "IDA Pro is the gold standard commercial disassembler and decompiler for reverse engineering. These open-source tools provide disassembly, decompilation, and binary analysis capabilities.",
+      "tools": ["ghidra", "radare2", "cutter", "rizin", "imhex", "angr", "capstone"],
+      "tags": ["reverse-engineering", "disassembly", "decompilation"]
+    },
+    {
+      "slug": "splunk-alternatives",
+      "commercial": "Splunk Enterprise",
+      "commercialUrl": "https://www.splunk.com",
+      "description": "Splunk is a commercial SIEM and log management platform. These open-source tools provide log analysis, threat detection, timeline analysis, and security monitoring.",
+      "tools": ["wazuh", "sigma", "osquery", "timesketch", "hayabusa", "plaso"],
+      "tags": ["siem", "logging", "detection"]
+    },
+    {
+      "slug": "acunetix-alternatives",
+      "commercial": "Acunetix",
+      "commercialUrl": "https://www.acunetix.com",
+      "description": "Acunetix is a commercial web vulnerability scanner focused on automated detection of SQL injection, XSS, and other web flaws. These open-source tools cover similar automated web app scanning.",
+      "tools": ["nuclei", "nikto", "sqlmap", "xsstrike", "dalfox", "commix", "wpscan", "afrog"],
+      "tags": ["web-scanning", "sql-injection", "xss"]
+    },
+    {
+      "slug": "cellebrite-alternatives",
+      "commercial": "Cellebrite UFED",
+      "commercialUrl": "https://www.cellebrite.com",
+      "description": "Cellebrite UFED is a commercial mobile forensics platform for extracting data from smartphones. These open-source tools provide mobile device forensics, app analysis, and spyware detection.",
+      "tools": ["mvt", "mobsf", "frida", "objection", "apkleaks", "jadx", "androguard"],
+      "tags": ["mobile-forensics", "android", "ios"]
+    },
+    {
+      "slug": "qualys-alternatives",
+      "commercial": "Qualys Cloud Platform",
+      "commercialUrl": "https://www.qualys.com",
+      "description": "Qualys is a commercial cloud-based vulnerability management and compliance platform. These open-source tools provide cloud security scanning, asset discovery, and configuration auditing.",
+      "tools": ["prowler", "scoutsuite", "cloudfox", "steampipe", "trivy", "cloudsploit", "stratus-red-team"],
+      "tags": ["cloud-security", "compliance", "asset-management"]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import libraryData from "@/data/library.json";
 import blogData from "@/data/blog.json";
 import workflowData from "@/data/workflows.json";
 import guidesData from "@/data/guides.json";
+import alternativesData from "@/data/alternatives.json";
 import { categories } from "@/data/categories";
 import { Tool } from "@/types";
 
@@ -115,6 +116,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.5,
+    },
+    {
+      url: `${siteUrl}/alternatives`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...alternativesData.alternatives.map((a) => ({
+      url: `${siteUrl}/alternatives/${a.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    {
+      url: `${siteUrl}/install`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
     ...guidesData.guides.map((g) => ({
       url: `${siteUrl}/tool/${g.slug}/guide`,
