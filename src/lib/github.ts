@@ -1,6 +1,7 @@
 import { Tool, GitHubRepo } from "@/types";
 
 const GITHUB_API = "https://api.github.com/repos";
+const GITHUB_GRAPHQL = "https://api.github.com/graphql";
 const CACHE_TTL = 3600 * 1000; // 1 hour
 
 const cache = new Map<string, { data: GitHubRepo; ts: number }>();
@@ -56,6 +57,19 @@ function applyGitHubData(tool: Tool, data: GitHubRepo): Tool {
 }
 
 export async function enrichTools(tools: Tool[]): Promise<Tool[]> {
+  // Try GraphQL batch first (much fewer API calls), fall back to REST
+  const needEnrichment = tools.filter(
+    (t) => t.github && t.stars === undefined
+  );
+
+  if (needEnrichment.length === 0) return tools;
+
+  if (process.env.GITHUB_TOKEN && needEnrichment.length > 5) {
+    const enriched = await enrichToolsGraphQL(tools);
+    if (enriched) return enriched;
+  }
+
+  // REST fallback: batch in groups of 20
   const BATCH_SIZE = 20;
   const enriched: Tool[] = [];
 
@@ -70,6 +84,88 @@ export async function enrichTools(tools: Tool[]): Promise<Tool[]> {
   }
 
   return enriched;
+}
+
+async function enrichToolsGraphQL(tools: Tool[]): Promise<Tool[] | null> {
+  const needEnrichment = tools.filter(
+    (t) => t.github && t.stars === undefined
+  );
+
+  if (needEnrichment.length === 0) return tools;
+
+  // GraphQL can handle ~100 repos per query
+  const GRAPHQL_BATCH = 100;
+  const repoDataMap = new Map<string, GitHubRepo>();
+
+  try {
+    for (let i = 0; i < needEnrichment.length; i += GRAPHQL_BATCH) {
+      const batch = needEnrichment.slice(i, i + GRAPHQL_BATCH);
+      const fragments = batch.map((tool, idx) => {
+        const [owner, name] = tool.github!.split("/");
+        return `repo${idx}: repository(owner: "${owner}", name: "${name}") {
+          stargazerCount
+          forkCount
+          issues(states: OPEN) { totalCount }
+          pushedAt
+          licenseInfo { spdxId }
+          owner { avatarUrl }
+          description
+          repositoryTopics(first: 10) { nodes { topic { name } } }
+          homepageUrl
+        }`;
+      });
+
+      const query = `query { ${fragments.join("\n")} }`;
+
+      const res = await fetch(GITHUB_GRAPHQL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        body: JSON.stringify({ query }),
+        next: { revalidate: 3600 },
+      });
+
+      if (!res.ok) return null; // Fall back to REST
+
+      const json = await res.json();
+      if (json.errors && !json.data) return null;
+
+      batch.forEach((tool, idx) => {
+        const data = json.data?.[`repo${idx}`];
+        if (!data) return;
+
+        const mapped: GitHubRepo = {
+          stargazers_count: data.stargazerCount,
+          forks_count: data.forkCount,
+          open_issues_count: data.issues?.totalCount ?? 0,
+          pushed_at: data.pushedAt,
+          license: data.licenseInfo?.spdxId
+            ? { spdx_id: data.licenseInfo.spdxId }
+            : null,
+          owner: { avatar_url: data.owner?.avatarUrl ?? "" },
+          description: data.description,
+          topics:
+            data.repositoryTopics?.nodes?.map(
+              (n: { topic: { name: string } }) => n.topic.name
+            ) ?? [],
+          homepage: data.homepageUrl || null,
+        };
+
+        repoDataMap.set(tool.github!, mapped);
+        cache.set(tool.github!, { data: mapped, ts: Date.now() });
+      });
+    }
+  } catch {
+    return null; // Fall back to REST
+  }
+
+  return tools.map((tool) => {
+    if (!tool.github || tool.stars !== undefined) return tool;
+    const data = repoDataMap.get(tool.github);
+    return data ? applyGitHubData(tool, data) : tool;
+  });
 }
 
 export function formatStars(n: number): string {

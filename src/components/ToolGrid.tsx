@@ -3,10 +3,11 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Tool, Category, CategoryInfo } from "@/types";
+import { PAGE_SIZE } from "@/lib/constants";
 import SearchFilter from "./SearchFilter";
 import ToolCard from "./ToolCard";
 
-const PAGE_SIZE = 30;
+type SortOption = "name" | "stars" | "recent";
 
 interface Props {
   tools: Tool[];
@@ -21,20 +22,24 @@ export default function ToolGrid({ tools, categories }: Props) {
   const [activeCategory, setActiveCategory] = useState<Category | null>(
     (searchParams.get("category") as Category) || null
   );
+  const [sortBy, setSortBy] = useState<SortOption>(
+    (searchParams.get("sort") as SortOption) || "name"
+  );
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   useEffect(() => {
     const params = new URLSearchParams();
     if (query.trim()) params.set("q", query.trim());
     if (activeCategory) params.set("category", activeCategory);
+    if (sortBy !== "name") params.set("sort", sortBy);
     const str = params.toString();
     router.replace(str ? `/?${str}` : "/", { scroll: false });
-  }, [query, activeCategory, router]);
+  }, [query, activeCategory, sortBy, router]);
 
   // Reset visible count when filters change
   useEffect(() => {
     setVisible(PAGE_SIZE);
-  }, [query, activeCategory]);
+  }, [query, activeCategory, sortBy]);
 
   const categoriesWithCount = useMemo(() => {
     return categories.map((c) => ({
@@ -65,9 +70,15 @@ export default function ToolGrid({ tools, categories }: Props) {
     return result.sort((a, b) => {
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
+      if (sortBy === "stars") return (b.stars ?? 0) - (a.stars ?? 0);
+      if (sortBy === "recent") {
+        if (!a.lastCommit) return 1;
+        if (!b.lastCommit) return -1;
+        return new Date(b.lastCommit).getTime() - new Date(a.lastCommit).getTime();
+      }
       return a.name.localeCompare(b.name);
     });
-  }, [tools, query, activeCategory]);
+  }, [tools, query, activeCategory, sortBy]);
 
   const showMore = useCallback(() => {
     setVisible((v) => Math.min(v + PAGE_SIZE, filtered.length));
@@ -86,6 +97,25 @@ export default function ToolGrid({ tools, categories }: Props) {
         categories={categoriesWithCount}
         resultCount={filtered.length}
       />
+
+      <div className="flex justify-end mb-6">
+        <div className="flex items-center gap-2 text-xs font-mono text-text-muted">
+          <span>Sort by</span>
+          {(["name", "stars", "recent"] as const).map((opt) => (
+            <button
+              key={opt}
+              onClick={() => setSortBy(opt)}
+              className={`px-2.5 py-1 rounded-md transition-colors ${
+                sortBy === opt
+                  ? "bg-brand-500/15 text-brand-400 border border-brand-500/30"
+                  : "hover:text-text-secondary"
+              }`}
+            >
+              {opt === "name" ? "A-Z" : opt === "stars" ? "Stars" : "Recent"}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {filtered.length === 0 ? (
         <div className="text-center py-20">

@@ -6,7 +6,9 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate": "python3 scripts/validate-data.py",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.47.0",

@@ -5,6 +5,7 @@ import toolsData from "@/data/tools.json";
 import blogData from "@/data/blog.json";
 import libraryData from "@/data/library.json";
 import { Tool } from "@/types";
+import { LAUNCH_TOOL_COUNT } from "@/lib/constants";
 import Link from "next/link";
 
 export const metadata = {
@@ -12,9 +13,6 @@ export const metadata = {
   description:
     "The latest tools, books, and updates added to ENNA. See what's new this week and browse recent additions to the index.",
 };
-
-// Tools added after launch (Mar 30) - identified by not being in the original 251
-const LAUNCH_TOOL_COUNT = 251;
 
 interface Book {
   slug: string;
