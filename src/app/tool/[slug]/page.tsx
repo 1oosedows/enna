@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AdSlot from "@/components/AdSlot";
 import CopyButton from "@/components/CopyButton";
 import ReviewSection from "@/components/ReviewSection";
+import UseThisButton from "@/components/UseThisButton";
 import { categories } from "@/data/categories";
 import { enrichTool, formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
@@ -299,9 +300,9 @@ export default async function ToolPage({
               )}
             </div>
 
-            {/* Docker + YouTube badges */}
-            {(tool.dockerImage || tool.youtubeUrl) && (
-              <div className="flex flex-wrap items-center gap-3 mb-6">
+            {/* I use this + Docker + YouTube badges */}
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <UseThisButton toolSlug={tool.slug} />
                 {tool.dockerImage && (
                   <a
                     href={`https://hub.docker.com/r/${tool.dockerImage}`}
@@ -322,8 +323,7 @@ export default async function ToolPage({
                     ▶ Video Tutorial
                   </a>
                 )}
-              </div>
-            )}
+            </div>
 
             {/* Action buttons */}
             <div className="flex flex-wrap gap-3">

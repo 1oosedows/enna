@@ -37,4 +37,22 @@ export async function initDb() {
   await sql`
     CREATE INDEX IF NOT EXISTS idx_reviews_user ON reviews(user_id)
   `;
+
+  await sql`
+    CREATE TABLE IF NOT EXISTS toolkits (
+      id SERIAL PRIMARY KEY,
+      user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+      tool_slug TEXT NOT NULL,
+      created_at TIMESTAMP DEFAULT NOW(),
+      UNIQUE(user_id, tool_slug)
+    )
+  `;
+
+  await sql`
+    CREATE INDEX IF NOT EXISTS idx_toolkits_user ON toolkits(user_id)
+  `;
+
+  await sql`
+    CREATE INDEX IF NOT EXISTS idx_toolkits_tool ON toolkits(tool_slug)
+  `;
 }
