@@ -45,7 +45,8 @@
       "scapy",
       "suricata",
       "zeek",
-      "zmap"
+      "zmap",
+      "fscan"
     ],
     "stars": 12646,
     "forks": 2788,
@@ -162,7 +163,8 @@
     ],
     "alternatives": [
       "masscan",
-      "nmap"
+      "nmap",
+      "fscan"
     ]
   },
   {
@@ -355,7 +357,8 @@
       "nikto",
       "openvas",
       "smuggler",
-      "wpscan"
+      "wpscan",
+      "afrog"
     ],
     "stars": 27770,
     "forks": 3339,
@@ -705,7 +708,8 @@
     ],
     "alternatives": [
       "maltego",
-      "recon-ng"
+      "recon-ng",
+      "bbot"
     ],
     "stars": 17282,
     "forks": 2895,
@@ -1728,7 +1732,8 @@
     "avatarUrl": "https://avatars.githubusercontent.com/u/2516395?v=4",
     "githubDescription": "Open Source Intelligence gathering tool aimed at reducing the time spent harvesting information from open sources.",
     "alternatives": [
-      "spiderfoot"
+      "spiderfoot",
+      "bbot"
     ]
   },
   {
@@ -3535,7 +3540,10 @@
       "parsing",
       "timeline"
     ],
-    "homepageUrl": "https://plaso.readthedocs.io"
+    "homepageUrl": "https://plaso.readthedocs.io",
+    "alternatives": [
+      "timesketch"
+    ]
   },
   {
     "slug": "radare2",
@@ -8375,7 +8383,11 @@
       "web-security",
       "windows-mobile-security"
     ],
-    "homepageUrl": "https://opensecurity.in"
+    "homepageUrl": "https://opensecurity.in",
+    "alternatives": [
+      "mvt",
+      "apkleaks"
+    ]
   },
   {
     "slug": "drozer",
@@ -8447,7 +8459,10 @@
       "dex",
       "java"
     ],
-    "documentation": "https://github.com/skylot/jadx/wiki"
+    "documentation": "https://github.com/skylot/jadx/wiki",
+    "alternatives": [
+      "apkleaks"
+    ]
   },
   {
     "slug": "sleuth-kit",
@@ -8887,7 +8902,8 @@
     "alternatives": [
       "dockle",
       "falco",
-      "syft"
+      "syft",
+      "osv-scanner"
     ],
     "documentation": "https://aquasecurity.github.io/trivy/"
   },
@@ -8937,7 +8953,8 @@
     "alternatives": [
       "dockle",
       "falco",
-      "syft"
+      "syft",
+      "osv-scanner"
     ]
   },
   {
@@ -10307,7 +10324,8 @@
       "osquery",
       "sigma",
       "thehive",
-      "wazuh"
+      "wazuh",
+      "intelowl"
     ],
     "documentation": "https://www.misp-project.org/documentation/",
     "stars": 6222,
@@ -10379,7 +10397,8 @@
       "osquery",
       "sigma",
       "thehive",
-      "wazuh"
+      "wazuh",
+      "intelowl"
     ],
     "documentation": "https://docs.opencti.io",
     "stars": 9119,
@@ -10800,7 +10819,8 @@
       "radare2",
       "retdec",
       "rizin",
-      "unicorn-engine"
+      "unicorn-engine",
+      "pwndbg"
     ],
     "stars": 48025,
     "forks": 2703,
@@ -13201,5 +13221,499 @@
       "parsing"
     ],
     "homepageUrl": "https://gchq.github.io/CyberChef"
+  },
+  {
+    "slug": "imhex",
+    "name": "ImHex",
+    "description": "Feature-rich hex editor with pattern language, data analysis, disassembly, and entropy visualization.",
+    "category": "reverse-engineering",
+    "language": "C++",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "hex-editor",
+      "binary-analysis",
+      "patterns",
+      "reverse-engineering"
+    ],
+    "github": "WerWolv/ImHex",
+    "installCommands": {
+      "brew": "brew install imhex",
+      "pacman": "pacman -S imhex"
+    },
+    "useCases": [
+      "Binary file analysis and editing",
+      "Firmware reverse engineering with pattern templates",
+      "Visualizing file structure and entropy for malware triage"
+    ]
+  },
+  {
+    "slug": "bbot",
+    "name": "BBOT",
+    "description": "Recursive internet scanner for automated recon, bug bounties, and attack surface management with 100+ modules.",
+    "category": "network-recon",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "recon",
+      "attack-surface",
+      "bug-bounty",
+      "automation"
+    ],
+    "github": "blacklanternsecurity/bbot",
+    "installCommand": "pipx install bbot",
+    "useCases": [
+      "Automated attack surface discovery",
+      "Bug bounty recon pipeline",
+      "Recursive subdomain and port enumeration"
+    ],
+    "alternatives": [
+      "spiderfoot",
+      "recon-ng"
+    ]
+  },
+  {
+    "slug": "web-check",
+    "name": "web-check",
+    "description": "All-in-one OSINT tool for analysing any website including DNS, SSL, headers, security audit, and performance.",
+    "category": "osint-general",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "website-analysis",
+      "dns",
+      "ssl",
+      "headers",
+      "osint"
+    ],
+    "github": "Lissy93/web-check",
+    "installCommand": "docker run -p 3000:3000 lissy93/web-check",
+    "useCases": [
+      "Quick website reconnaissance and fingerprinting",
+      "SSL certificate and DNS record analysis",
+      "Security header auditing"
+    ]
+  },
+  {
+    "slug": "pwndbg",
+    "name": "pwndbg",
+    "description": "GDB plugin for exploit developers and reverse engineers with context display, heap analysis, and PEDA-like commands.",
+    "category": "reverse-engineering",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "tags": [
+      "gdb",
+      "debugging",
+      "exploit-dev",
+      "heap"
+    ],
+    "github": "pwndbg/pwndbg",
+    "installCommand": "pip install pwndbg",
+    "useCases": [
+      "Binary exploitation and CTF challenges",
+      "Heap corruption analysis",
+      "Debugging stripped binaries with enhanced context"
+    ],
+    "alternatives": [
+      "x64dbg"
+    ]
+  },
+  {
+    "slug": "osv-scanner",
+    "name": "OSV-Scanner",
+    "description": "Google's dependency vulnerability scanner using the OSV.dev database across multiple language ecosystems.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "dependency-scanning",
+      "sca",
+      "supply-chain",
+      "cve"
+    ],
+    "github": "google/osv-scanner",
+    "installCommand": "go install github.com/google/osv-scanner/cmd/osv-scanner@latest",
+    "useCases": [
+      "CI/CD dependency vulnerability scanning",
+      "Supply chain security auditing",
+      "License compliance checking"
+    ],
+    "alternatives": [
+      "grype",
+      "trivy"
+    ]
+  },
+  {
+    "slug": "fscan",
+    "name": "fscan",
+    "description": "Fast internal network scanner with service brute-forcing, vulnerability detection, and exploit modules.",
+    "category": "network-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "internal-recon",
+      "lateral-movement",
+      "brute-force",
+      "scanner"
+    ],
+    "github": "shadow1ng/fscan",
+    "useCases": [
+      "Internal network penetration testing",
+      "Rapid service enumeration and brute-forcing",
+      "Post-exploitation lateral movement recon"
+    ],
+    "alternatives": [
+      "nmap",
+      "rustscan"
+    ]
+  },
+  {
+    "slug": "mvt",
+    "name": "MVT",
+    "description": "Amnesty International's Mobile Verification Toolkit for forensic analysis of iOS and Android devices to detect spyware.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "tags": [
+      "spyware",
+      "pegasus",
+      "mobile-forensics",
+      "amnesty"
+    ],
+    "github": "mvt-project/mvt",
+    "installCommand": "pip install mvt",
+    "useCases": [
+      "Detecting Pegasus and other commercial spyware",
+      "iOS backup forensic analysis",
+      "Android device compromise indicators"
+    ],
+    "alternatives": [
+      "mobsf"
+    ]
+  },
+  {
+    "slug": "dnstwist",
+    "name": "dnstwist",
+    "description": "Domain name permutation engine for detecting homograph phishing, typo squatting, and brand impersonation.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "phishing-detection",
+      "typosquatting",
+      "domain",
+      "brand-protection"
+    ],
+    "github": "elceef/dnstwist",
+    "installCommand": "pip install dnstwist",
+    "useCases": [
+      "Detecting phishing domains impersonating your brand",
+      "Typosquatting and homograph attack detection",
+      "Domain monitoring for brand protection"
+    ]
+  },
+  {
+    "slug": "caldera",
+    "name": "CALDERA",
+    "description": "MITRE ATT&CK-based automated adversary emulation platform for red team operations and security testing.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "tags": [
+      "adversary-emulation",
+      "mitre-attack",
+      "red-team",
+      "automation"
+    ],
+    "github": "mitre/caldera",
+    "useCases": [
+      "Automated adversary emulation using ATT&CK techniques",
+      "Purple team exercises and detection validation",
+      "Security control gap analysis"
+    ]
+  },
+  {
+    "slug": "timesketch",
+    "name": "Timesketch",
+    "description": "Google's collaborative forensic timeline analysis platform for organizing and annotating investigation events.",
+    "category": "forensics",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "tags": [
+      "timeline",
+      "forensics",
+      "dfir",
+      "collaboration"
+    ],
+    "github": "google/timesketch",
+    "useCases": [
+      "Collaborative incident investigation timelines",
+      "Correlating events from multiple forensic sources",
+      "Annotating and sharing investigation findings"
+    ],
+    "alternatives": [
+      "plaso"
+    ]
+  },
+  {
+    "slug": "intelowl",
+    "name": "IntelOwl",
+    "description": "Threat intelligence management platform integrating 100+ analyzers for enriching observables and malware samples.",
+    "category": "threat-intel",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "threat-intel",
+      "ioc",
+      "malware-analysis",
+      "soar"
+    ],
+    "github": "intelowlproject/IntelOwl",
+    "installCommand": "docker compose up -d",
+    "useCases": [
+      "Automated IOC enrichment at scale",
+      "Malware sample analysis orchestration",
+      "Threat intel feed aggregation and correlation"
+    ],
+    "alternatives": [
+      "misp",
+      "opencti"
+    ]
+  },
+  {
+    "slug": "rengine",
+    "name": "reNgine",
+    "description": "Automated reconnaissance framework with correlated scan engines, continuous monitoring, and vulnerability reporting.",
+    "category": "web-scanning",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "recon",
+      "automation",
+      "continuous-monitoring",
+      "bug-bounty"
+    ],
+    "github": "yogeshojha/rengine",
+    "installCommand": "docker compose up -d",
+    "useCases": [
+      "Continuous web application reconnaissance",
+      "Automated vulnerability discovery for bug bounties",
+      "Attack surface monitoring with scheduled scans"
+    ]
+  },
+  {
+    "slug": "reconftw",
+    "name": "reconftw",
+    "description": "Automated recon pipeline orchestrating subdomain enum, vulnerability scanning, and OSINT via best-of-breed tools.",
+    "category": "web-scanning",
+    "language": "Shell",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "tags": [
+      "recon",
+      "automation",
+      "pipeline",
+      "bug-bounty"
+    ],
+    "github": "six2dez/reconftw",
+    "useCases": [
+      "Full-stack automated recon from a single command",
+      "Bug bounty target enumeration",
+      "Chaining multiple recon tools into one pipeline"
+    ]
+  },
+  {
+    "slug": "lynis",
+    "name": "Lynis",
+    "description": "Security auditing and hardening tool for Linux/macOS with compliance testing for HIPAA, ISO27001, and PCI DSS.",
+    "category": "vulnerability",
+    "language": "Shell",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "tags": [
+      "hardening",
+      "audit",
+      "compliance",
+      "cis-benchmark"
+    ],
+    "github": "CISOfy/lynis",
+    "installCommand": "brew install lynis",
+    "useCases": [
+      "System hardening and security baseline auditing",
+      "Compliance checks against CIS, HIPAA, PCI DSS",
+      "Post-deployment security validation"
+    ]
+  },
+  {
+    "slug": "stratus-red-team",
+    "name": "Stratus Red Team",
+    "description": "Datadog's adversary emulation for cloud environments (AWS, Azure, GCP, K8s) mapped to MITRE ATT&CK.",
+    "category": "cloud-recon",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "cloud-attack",
+      "adversary-emulation",
+      "aws",
+      "azure",
+      "mitre-attack"
+    ],
+    "github": "DataDog/stratus-red-team",
+    "installCommand": "go install github.com/datadog/stratus-red-team/v2/cmd/stratus@latest",
+    "useCases": [
+      "Cloud-specific adversary emulation exercises",
+      "Testing cloud detection and response capabilities",
+      "Validating cloud security controls against ATT&CK"
+    ]
+  },
+  {
+    "slug": "apkleaks",
+    "name": "APKLeaks",
+    "description": "Scans Android APK files for URIs, API endpoints, and hardcoded secrets using JADX decompilation.",
+    "category": "mobile",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "android",
+      "apk",
+      "secrets",
+      "static-analysis"
+    ],
+    "github": "dwisiswant0/apkleaks",
+    "installCommand": "pip install apkleaks",
+    "useCases": [
+      "Finding hardcoded API keys and secrets in APKs",
+      "Extracting backend endpoints from mobile apps",
+      "Android app security assessments"
+    ],
+    "alternatives": [
+      "mobsf",
+      "jadx"
+    ]
+  },
+  {
+    "slug": "sn1per",
+    "name": "Sn1per",
+    "description": "Automated attack surface management platform integrating recon, vulnerability scanning, and exploit tools.",
+    "category": "network-recon",
+    "language": "Shell",
+    "platform": [
+      "linux"
+    ],
+    "tags": [
+      "asm",
+      "recon",
+      "automation",
+      "pentest"
+    ],
+    "github": "1N3/Sn1per",
+    "useCases": [
+      "Automated pentest recon and enumeration",
+      "Attack surface discovery and management",
+      "Continuous vulnerability monitoring"
+    ]
+  },
+  {
+    "slug": "emba",
+    "name": "EMBA",
+    "description": "Firmware security analyzer for IoT and embedded devices performing static and dynamic analysis via emulation.",
+    "category": "reverse-engineering",
+    "language": "Shell",
+    "platform": [
+      "linux"
+    ],
+    "tags": [
+      "firmware",
+      "iot",
+      "embedded",
+      "emulation"
+    ],
+    "github": "e-m-b-a/emba",
+    "useCases": [
+      "IoT firmware vulnerability analysis",
+      "Embedded device security assessments",
+      "Automated firmware extraction and emulation"
+    ]
+  },
+  {
+    "slug": "afrog",
+    "name": "afrog",
+    "description": "Fast vulnerability scanner with custom PoC support for CVEs, default credentials, and command injection.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "tags": [
+      "vuln-scanner",
+      "poc",
+      "cve",
+      "fast"
+    ],
+    "github": "zan8in/afrog",
+    "useCases": [
+      "Rapid CVE scanning with low false positives",
+      "Custom vulnerability PoC execution",
+      "Large-scale web vulnerability assessment"
+    ],
+    "alternatives": [
+      "nuclei"
+    ]
   }
 ]
