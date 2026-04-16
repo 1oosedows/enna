@@ -1,0 +1,154 @@
+{
+  "kits": [
+    {
+      "slug": "bug-bounty-starter",
+      "title": "Bug Bounty Starter Kit",
+      "description": "Everything you need to start finding vulnerabilities in bug bounty programs. This kit walks you through passive reconnaissance, web content discovery, and automated vulnerability scanning using battle-tested open source tools. Ideal for hunters new to the game or building their first recon pipeline.",
+      "icon": "🎯",
+      "difficulty": "Beginner",
+      "tools": ["subfinder", "httpx", "nuclei", "ffuf", "gau", "katana", "dalfox", "arjun", "waybackurls", "paramspider"],
+      "sections": [
+        {
+          "title": "Recon",
+          "description": "Start by mapping the target's attack surface. Subdomain enumeration reveals hidden assets, while HTTP probing confirms which hosts are alive. URL crawling and archive mining surface endpoints that may have been overlooked or forgotten by the target.",
+          "tools": ["subfinder", "httpx", "gau", "katana"]
+        },
+        {
+          "title": "Web Scanning",
+          "description": "Brute-force directories and harvest parameters from historical archives and live crawling. These tools help you discover hidden endpoints, backup files, and input parameters that become injection points for further testing.",
+          "tools": ["ffuf", "waybackurls", "paramspider"]
+        },
+        {
+          "title": "Vulnerability Discovery",
+          "description": "Run targeted vulnerability checks against discovered endpoints. Template-based scanning catches known CVEs and misconfigurations, while specialized tools focus on XSS and parameter injection testing with payload generation.",
+          "tools": ["nuclei", "dalfox", "arjun"]
+        }
+      ]
+    },
+    {
+      "slug": "soc-analyst-toolkit",
+      "title": "SOC Analyst Toolkit",
+      "description": "A curated stack for security operations center analysts handling detection, triage, and incident response. Covers real-time monitoring and alerting, log analysis with detection rule frameworks, and forensic triage for endpoint investigation. Built around open source tools that integrate well together.",
+      "icon": "🛡",
+      "difficulty": "Intermediate",
+      "tools": ["wazuh", "sigma", "osquery", "hayabusa", "velociraptor", "yara", "chainsaw", "plaso", "timesketch", "capa"],
+      "sections": [
+        {
+          "title": "Detection & Monitoring",
+          "description": "Deploy continuous monitoring across your environment. Wazuh provides host-based intrusion detection and SIEM capabilities, Sigma gives you portable detection rules that work across platforms, and osquery lets you query endpoint state using SQL syntax for real-time visibility.",
+          "tools": ["wazuh", "sigma", "osquery"]
+        },
+        {
+          "title": "Log Analysis",
+          "description": "Process and analyze Windows event logs and system artifacts at speed. Hayabusa and Chainsaw parse EVTX files against Sigma rules for rapid threat hunting, while Plaso creates super timelines from multiple artifact sources to reconstruct incident sequences.",
+          "tools": ["hayabusa", "chainsaw", "plaso"]
+        },
+        {
+          "title": "Forensic Triage",
+          "description": "Collect and analyze endpoint artifacts for incident response. Velociraptor enables remote endpoint interrogation at scale, YARA rules identify malware by pattern matching, Timesketch correlates timeline data collaboratively, and capa detects malware capabilities through static analysis.",
+          "tools": ["velociraptor", "yara", "timesketch", "capa"]
+        }
+      ]
+    },
+    {
+      "slug": "crypto-investigator",
+      "title": "Crypto Investigator Pack",
+      "description": "Tools for tracing cryptocurrency transactions, analyzing on-chain activity, and auditing smart contracts. This kit supports investigations across Bitcoin, Ethereum, and EVM-compatible chains with both node-level data access and higher-level analytics platforms. Essential for forensic accountants and blockchain analysts working fraud and money laundering cases.",
+      "icon": "🔗",
+      "difficulty": "Advanced",
+      "tools": ["bitcoin-cli", "go-ethereum", "trueblocks", "graphsense", "blockscout", "cryo", "slither", "dune-analytics", "etherscan-api", "web3py"],
+      "sections": [
+        {
+          "title": "Node & Data Access",
+          "description": "Run your own blockchain nodes for trustless data access and extract raw chain data programmatically. Bitcoin Core and Geth provide full node capabilities, Cryo extracts bulk historical data into analysis-friendly formats, and web3.py enables custom Python scripts for targeted on-chain queries.",
+          "tools": ["bitcoin-cli", "go-ethereum", "cryo", "web3py"]
+        },
+        {
+          "title": "Chain Analysis",
+          "description": "Trace transaction flows, cluster addresses, and build attribution graphs across blockchain networks. TrueBlocks indexes chain data locally for private investigations, GraphSense provides entity clustering and flow analysis, while Blockscout, Etherscan API, and Dune Analytics offer complementary query interfaces for cross-referencing findings.",
+          "tools": ["trueblocks", "graphsense", "blockscout", "etherscan-api", "dune-analytics"]
+        },
+        {
+          "title": "Smart Contract Audit",
+          "description": "Analyze Solidity smart contracts for vulnerabilities, backdoors, and logic flaws. Slither performs static analysis to detect reentrancy, access control issues, and other common vulnerability patterns that are critical to identify in DeFi protocols and token contracts under investigation.",
+          "tools": ["slither"]
+        }
+      ]
+    },
+    {
+      "slug": "red-team-essentials",
+      "title": "Red Team Essentials",
+      "description": "Core tools for simulated adversary operations in enterprise environments. This kit covers command and control infrastructure, Active Directory attack paths, and lateral movement techniques used in red team engagements. Designed for operators running assumed-breach assessments against Windows-dominant networks.",
+      "icon": "🔴",
+      "difficulty": "Advanced",
+      "tools": ["sliver", "bloodhound", "impacket", "crackmapexec", "rubeus", "certipy", "ligolo-ng", "scarecrow", "mimikatz", "chisel"],
+      "sections": [
+        {
+          "title": "C2 & Infrastructure",
+          "description": "Establish and maintain covert communication channels with implants on target systems. Sliver provides a modern C2 framework with mutual TLS and DNS tunneling, Ligolo-ng and Chisel create encrypted tunnels for pivoting through network segments, and ScareCrow generates EDR-evasive loaders for initial payload delivery.",
+          "tools": ["sliver", "ligolo-ng", "chisel", "scarecrow"]
+        },
+        {
+          "title": "Active Directory",
+          "description": "Map and exploit Active Directory attack paths from initial foothold to domain compromise. BloodHound visualizes privilege escalation routes through AD relationships, Rubeus handles Kerberos abuse including roasting and delegation attacks, and Certipy exploits misconfigured certificate templates for privilege escalation via AD CS.",
+          "tools": ["bloodhound", "rubeus", "certipy"]
+        },
+        {
+          "title": "Lateral Movement",
+          "description": "Move between systems using legitimate protocols and stolen credentials. Impacket provides Python implementations of Windows network protocols for remote execution, CrackMapExec automates credential spraying and command execution across subnets, and Mimikatz extracts plaintext passwords, hashes, and Kerberos tickets from memory.",
+          "tools": ["impacket", "crackmapexec", "mimikatz"]
+        }
+      ]
+    },
+    {
+      "slug": "osint-investigator",
+      "title": "OSINT Investigator Kit",
+      "description": "Open source intelligence gathering tools for investigating people, organizations, and digital assets. This kit covers identity research across social platforms, email and phone number reconnaissance, and website infrastructure analysis. Suitable for journalism, due diligence, fraud investigation, and missing persons cases.",
+      "icon": "🔎",
+      "difficulty": "Beginner",
+      "tools": ["sherlock", "maigret", "theharvester", "spiderfoot", "holehe", "exiftool", "ghunt", "phoneinfoga", "web-check", "dnstwist"],
+      "sections": [
+        {
+          "title": "Identity Research",
+          "description": "Enumerate a target's presence across hundreds of social media platforms and online services. Sherlock and Maigret check username availability to map digital footprints, GHunt extracts information from Google accounts, and Holehe identifies which services an email address is registered on without alerting the target.",
+          "tools": ["sherlock", "maigret", "ghunt", "holehe"]
+        },
+        {
+          "title": "Email & Phone",
+          "description": "Harvest email addresses, phone numbers, and associated metadata from public sources. theHarvester aggregates results from search engines, DNS, and certificate transparency logs. PhoneInfoga performs OSINT gathering on phone numbers, and SpiderFoot automates multi-source intelligence collection with a modular architecture.",
+          "tools": ["theharvester", "phoneinfoga", "spiderfoot"]
+        },
+        {
+          "title": "Website Analysis",
+          "description": "Analyze website infrastructure, detect impersonation domains, and extract metadata from files. Web-Check provides comprehensive site profiling including DNS, headers, and technology detection. DNSTwist generates and checks domain permutations to find typosquatting and phishing domains, while ExifTool extracts metadata from documents and images.",
+          "tools": ["web-check", "dnstwist", "exiftool"]
+        }
+      ]
+    },
+    {
+      "slug": "mobile-pentester",
+      "title": "Mobile Pentester Kit",
+      "description": "A complete toolkit for Android and iOS application security testing. Covers static analysis of APKs and binaries, dynamic instrumentation and runtime hooking, and mobile device forensics. These tools support both black-box testing of production apps and white-box auditing of source-available projects.",
+      "icon": "📱",
+      "difficulty": "Intermediate",
+      "tools": ["mobsf", "frida", "objection", "jadx", "apkleaks", "mvt", "androguard", "drozer", "apktool", "qark"],
+      "sections": [
+        {
+          "title": "Static Analysis",
+          "description": "Decompile, inspect, and scan mobile application packages without executing them. MobSF provides automated security scoring, JADX decompiles APKs to readable Java source, APKLeaks scans for hardcoded secrets and URLs, Androguard enables programmatic APK analysis in Python, and APKTool decodes resources for manual review.",
+          "tools": ["mobsf", "jadx", "apkleaks", "androguard", "apktool"]
+        },
+        {
+          "title": "Dynamic Analysis",
+          "description": "Instrument running applications to intercept function calls, bypass security controls, and test runtime behavior. Frida injects JavaScript into running processes for real-time hooking, Objection provides a higher-level interface for common mobile testing tasks, Drozer is an Android-specific security assessment framework, and QARK performs automated vulnerability scanning.",
+          "tools": ["frida", "objection", "drozer", "qark"]
+        },
+        {
+          "title": "Device Forensics",
+          "description": "Extract and analyze artifacts from mobile devices for incident response and forensic investigation. MVT (Mobile Verification Toolkit) detects indicators of compromise from sophisticated spyware like Pegasus, supporting both Android and iOS device analysis through backup extraction and artifact parsing.",
+          "tools": ["mvt"]
+        }
+      ]
+    }
+  ]
+}

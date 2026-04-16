@@ -4,6 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import blogData from "@/data/blog.json";
+import toolsData from "@/data/tools.json";
+import { Tool } from "@/types";
+import { formatStars } from "@/lib/github";
 
 interface Post {
   slug: string;
@@ -13,6 +16,10 @@ interface Post {
   excerpt: string;
   tags: string[];
   content: string;
+  toolOfTheWeek?: {
+    slug: string;
+    reason: string;
+  };
 }
 
 export function generateStaticParams() {
@@ -256,6 +263,55 @@ export default async function BlogPostPage({
             {renderContent(post.content)}
           </div>
         </article>
+
+        {post.toolOfTheWeek && (() => {
+          const tools = toolsData as Tool[];
+          const totw = tools.find((t) => t.slug === post.toolOfTheWeek!.slug);
+          if (!totw) return null;
+          return (
+            <div className="glass rounded-2xl p-8 md:p-10 mb-10 border border-brand-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="px-2.5 py-1 rounded text-xs font-mono uppercase tracking-wider brand-gradient text-white">
+                  Tool of the Week
+                </span>
+              </div>
+              <div className="flex items-start gap-4 mb-4">
+                {totw.avatarUrl ? (
+                  <img src={totw.avatarUrl} alt="" className="w-14 h-14 rounded-xl" />
+                ) : (
+                  <div className="w-14 h-14 rounded-xl brand-gradient flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-mono font-bold text-lg">
+                      {totw.name.slice(0, 2).toUpperCase()}
+                    </span>
+                  </div>
+                )}
+                <div>
+                  <Link href={`/tool/${totw.slug}`} className="hover:opacity-80 transition-opacity">
+                    <h3 className="font-mono font-bold text-xl text-text-primary">
+                      {totw.name}
+                    </h3>
+                  </Link>
+                  <p className="text-sm font-mono text-text-muted">
+                    {totw.language} · {totw.stars !== undefined ? `${formatStars(totw.stars)} stars` : ""} · {totw.category}
+                  </p>
+                </div>
+              </div>
+              <p className="text-text-secondary leading-relaxed mb-4">
+                {post.toolOfTheWeek.reason}
+              </p>
+              <Link
+                href={`/tool/${totw.slug}`}
+                className="inline-flex items-center gap-2 text-sm font-mono text-brand-400 hover:text-brand-300 transition-colors"
+              >
+                View {totw.name} on ENNA
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
+            </div>
+          );
+        })()}
 
         <div className="mb-10">
           <NewsletterSignup />
