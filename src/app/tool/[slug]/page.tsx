@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdSlot from "@/components/AdSlot";
 import CopyButton from "@/components/CopyButton";
+import ReviewSection from "@/components/ReviewSection";
 import { categories } from "@/data/categories";
 import { enrichTool, formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
@@ -875,6 +876,11 @@ export default async function ToolPage({
               {/* Ad slot */}
               <AdSlot provider="custom" placement="sidebar" />
             </div>
+          </div>
+
+          {/* Reviews */}
+          <div className="mb-12">
+            <ReviewSection toolSlug={tool.slug} toolName={tool.name} />
           </div>
 
           {/* Alternatives */}
