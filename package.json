@@ -22,14 +22,14 @@
     "next": "^15.5.14",
     "next-auth": "^4.24.14",
     "react": "^18.3.0",
-    "react-dom": "^18.3.0"
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^20.0.0",
     "@types/react": "^18.3.0",
-    "@types/react-dom": "^18.3.0",
+    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.0",
     "checkly": "^7.7.0",
     "eslint": "^8.0.0",
