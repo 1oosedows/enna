@@ -12,12 +12,13 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-8 h-8 flex items-center justify-center">
-            <div className="absolute inset-0 brand-gradient rounded-lg opacity-80 group-hover:opacity-100 transition-opacity" />
-            <span className="relative text-white font-mono font-bold text-sm">
-              EN
-            </span>
-          </div>
+          <img
+            src="/icon.png"
+            alt="ENNA"
+            width={32}
+            height={32}
+            className="rounded-lg group-hover:opacity-90 transition-opacity"
+          />
           <span className="font-mono font-semibold text-lg tracking-tight">
             <span className="brand-gradient-text">ENNA</span>
           </span>

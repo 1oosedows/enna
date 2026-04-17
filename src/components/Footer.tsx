@@ -3,11 +3,7 @@ export default function Footer() {
     <footer className="border-t border-border py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
-          <div className="w-6 h-6 brand-gradient rounded flex items-center justify-center">
-            <span className="text-white font-mono text-[10px] font-bold">
-              EN
-            </span>
-          </div>
+          <img src="/icon.png" alt="ENNA" width={24} height={24} className="rounded" />
           <span className="font-mono text-sm text-text-secondary">
             ENNA - OSINT & Recon Tool Index
           </span>
