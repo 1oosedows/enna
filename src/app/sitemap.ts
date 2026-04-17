@@ -169,6 +169,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${siteUrl}/sponsors`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
       url: `${siteUrl}/changelog`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,

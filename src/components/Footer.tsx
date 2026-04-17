@@ -10,9 +10,17 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-6 text-xs font-mono text-text-muted">
-          <span>en-na.com</span>
+          <a href="/sponsors" className="hover:text-brand-400 transition-colors">
+            Sponsors
+          </a>
           <span className="text-border">|</span>
-          <span>Open source tools, curated</span>
+          <a href="/feed.xml" className="hover:text-brand-400 transition-colors">
+            RSS
+          </a>
+          <span className="text-border">|</span>
+          <a href="https://github.com/1oosedows/enna" target="_blank" rel="noopener noreferrer" className="hover:text-brand-400 transition-colors">
+            GitHub
+          </a>
           <span className="text-border">|</span>
           <span>Data from GitHub API</span>
         </div>
