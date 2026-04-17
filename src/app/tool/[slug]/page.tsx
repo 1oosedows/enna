@@ -11,6 +11,7 @@ import { enrichTool, formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
 import toolsData from "@/data/tools.json";
 import guidesData from "@/data/guides.json";
+import workflowData from "@/data/workflows.json";
 import { Tool } from "@/types";
 
 export const revalidate = 3600;
@@ -84,6 +85,10 @@ export default async function ToolPage({
   const alternativeTools = tool.alternatives
     ? (toolsData as Tool[]).filter((t) => tool.alternatives?.includes(t.slug))
     : [];
+
+  const toolWorkflows = workflowData.workflows.filter((w) =>
+    w.steps.some((s) => s.tools.includes(tool.slug))
+  );
 
   const scheme = getCategoryColorScheme(tool.category);
   const gradientClass =
@@ -877,6 +882,39 @@ export default async function ToolPage({
               <AdSlot provider="custom" placement="sidebar" />
             </div>
           </div>
+
+          {/* Used in workflows */}
+          {toolWorkflows.length > 0 && (
+            <div className="mb-12">
+              <h2 className="font-mono font-semibold text-sm uppercase tracking-wider text-text-muted mb-4">
+                Used in {toolWorkflows.length} {toolWorkflows.length === 1 ? "Workflow" : "Workflows"}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {toolWorkflows.map((w) => (
+                  <Link
+                    key={w.slug}
+                    href={`/workflows/${w.slug}`}
+                    className="block"
+                  >
+                    <div className="glass glass-hover rounded-xl p-4 flex items-center gap-3">
+                      <span className="text-2xl">{w.icon}</span>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-mono font-semibold text-sm text-text-primary">
+                          {w.title}
+                        </h3>
+                        <p className="text-xs font-mono text-text-muted">
+                          {w.difficulty} · {w.steps.length} steps · {w.estimatedTime}
+                        </p>
+                      </div>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-text-muted">
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Reviews */}
           <div className="mb-12">
