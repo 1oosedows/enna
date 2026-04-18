@@ -6,12 +6,12 @@
 
 <p align="center">
   <strong>Open-source OSINT & reconnaissance tool index</strong><br>
-  Discover, compare, and deploy 325+ security tools with live GitHub stats.
+  Discover, compare, and deploy 376 security tools with live GitHub stats.
 </p>
 
 <p align="center">
   <a href="https://www.en-na.com"><img src="https://img.shields.io/badge/website-en--na.com-e63950?style=flat-square&labelColor=0f1117" /></a>
-  <img src="https://img.shields.io/badge/tools-325+-e63950?style=flat-square&labelColor=0f1117" />
+  <img src="https://img.shields.io/badge/tools-376-e63950?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/badge/categories-19-a855a0?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/badge/cheat%20sheets-10-8dcae8?style=flat-square&labelColor=0f1117" />
   <img src="https://img.shields.io/badge/starter%20kits-6-22c55e?style=flat-square&labelColor=0f1117" />
@@ -29,7 +29,7 @@
 
 ## What is ENNA
 
-ENNA is a curated, searchable directory of 325+ open-source OSINT, reconnaissance, and security tools across 19 categories. Built for security professionals who are tired of scattered GitHub repos and outdated blog listicles.
+ENNA is a curated, searchable directory of 376 open-source OSINT, reconnaissance, and security tools across 19 categories. Built for security professionals who are tired of scattered GitHub repos and outdated blog listicles.
 
 **Every tool page includes:**
 - Full description and use cases

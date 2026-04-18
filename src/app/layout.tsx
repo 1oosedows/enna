@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 const siteUrl = "https://www.en-na.com";
 const title = "ENNA - OSINT & Recon Tool Index";
 const description =
-  "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats for 300+ tools across 19 categories.";
+  "Discover, compare, and deploy open-source OSINT and reconnaissance tools. Curated directory with live GitHub stats for 375+ tools across 19 categories.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -91,7 +91,7 @@ export default function RootLayout({
               name: "ENNA",
               url: siteUrl,
               description:
-                "Curated directory of 300+ open-source OSINT and reconnaissance tools with live GitHub stats.",
+                "Curated directory of 375+ open-source OSINT and reconnaissance tools with live GitHub stats.",
               potentialAction: {
                 "@type": "SearchAction",
                 target: `${siteUrl}/?q={search_term_string}`,
