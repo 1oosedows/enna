@@ -7,7 +7,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 export const metadata = {
   title: "Blog - ENNA",
   description:
-    "Weekly updates on new tools, categories, and features added to ENNA. Subscribe to the newsletter for Sunday updates.",
+    "Weekly updates on new tools, categories, and features added to ENNA. Subscribe to the newsletter for Monday morning updates.",
 };
 
 interface Post {
@@ -83,7 +83,7 @@ export default function BlogPage() {
             <span className="brand-gradient-text">Blog</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            Weekly updates every Sunday. New tools, categories, features, and
+            Weekly updates every Monday. New tools, categories, features, and
             site improvements.
           </p>
         </div>
