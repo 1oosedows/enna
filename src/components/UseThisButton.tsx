@@ -12,6 +12,7 @@ export default function UseThisButton({ toolSlug }: Props) {
   const [count, setCount] = useState(0);
   const [userUses, setUserUses] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     fetch(`/api/toolkit?tool=${toolSlug}`)
@@ -20,7 +21,8 @@ export default function UseThisButton({ toolSlug }: Props) {
         setCount(data.count);
         setUserUses(data.userUses);
       })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setHydrated(true));
   }, [toolSlug]);
 
   const handleClick = async () => {
@@ -45,6 +47,15 @@ export default function UseThisButton({ toolSlug }: Props) {
       setLoading(false);
     }
   };
+
+  if (!hydrated) {
+    return (
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-secondary border border-border text-sm font-mono text-text-muted animate-pulse">
+        <span>+</span>
+        <span>I use this</span>
+      </div>
+    );
+  }
 
   return (
     <button

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { getDb } from "@/lib/db";
+import { rateLimit } from "@/lib/rate-limit";
 import { notifyToolkitAdd } from "@/lib/discord";
 import toolsData from "@/data/tools.json";
 import { Tool } from "@/types";
@@ -67,6 +68,12 @@ export async function POST(request: NextRequest) {
 
   if (!session?.userId) {
     return NextResponse.json({ error: "Sign in required" }, { status: 401 });
+  }
+
+  // Rate limit: 20 toolkit toggles per minute per user
+  const { ok } = rateLimit(`toolkit:${session.userId}`, 20, 60_000);
+  if (!ok) {
+    return NextResponse.json({ error: "Too many requests. Try again in a minute." }, { status: 429 });
   }
 
   const { toolSlug } = await request.json();

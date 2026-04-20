@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { getDb } from "@/lib/db";
+import { rateLimit } from "@/lib/rate-limit";
 import { notifyNewReview } from "@/lib/discord";
 import toolsData from "@/data/tools.json";
 import { Tool } from "@/types";
@@ -43,6 +44,12 @@ export async function POST(request: NextRequest) {
 
   if (!session?.userId) {
     return NextResponse.json({ error: "Sign in to leave a review" }, { status: 401 });
+  }
+
+  // Rate limit: 5 reviews per minute per user
+  const { ok } = rateLimit(`review:${session.userId}`, 5, 60_000);
+  if (!ok) {
+    return NextResponse.json({ error: "Too many reviews. Try again in a minute." }, { status: 429 });
   }
 
   const body = await request.json();

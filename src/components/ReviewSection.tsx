@@ -67,6 +67,7 @@ export default function ReviewSection({ toolSlug, toolName }: Props) {
   const [comment, setComment] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [loaded, setLoaded] = useState(false);
 
   const fetchReviews = useCallback(async () => {
     try {
@@ -78,6 +79,8 @@ export default function ReviewSection({ toolSlug, toolName }: Props) {
       }
     } catch {
       // silently fail
+    } finally {
+      setLoaded(true);
     }
   }, [toolSlug]);
 
@@ -116,6 +119,23 @@ export default function ReviewSection({ toolSlug, toolName }: Props) {
       setSubmitting(false);
     }
   };
+
+  if (!loaded) {
+    return (
+      <div className="glass rounded-xl p-6">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="font-mono font-semibold text-sm uppercase tracking-wider text-text-muted">
+            Community Reviews
+          </h2>
+        </div>
+        <div className="space-y-3 animate-pulse">
+          <div className="h-10 bg-surface-secondary rounded-lg" />
+          <div className="h-24 bg-surface-secondary rounded-lg" />
+          <div className="h-16 bg-surface-secondary rounded-lg" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="glass rounded-xl p-6">
