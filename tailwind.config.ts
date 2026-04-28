@@ -56,6 +56,7 @@ const config: Config = {
         "fade-in": "fadeIn 0.5s ease-out",
         "slide-up": "slideUp 0.5s ease-out",
         "glow": "glow 2s ease-in-out infinite alternate",
+        "pop-in": "popIn 0.15s ease-out",
       },
       keyframes: {
         scan: {
@@ -77,6 +78,10 @@ const config: Config = {
         glow: {
           "0%": { boxShadow: "0 0 5px rgba(255, 90, 110, 0.2), 0 0 20px rgba(255, 90, 110, 0.1)" },
           "100%": { boxShadow: "0 0 10px rgba(255, 90, 110, 0.4), 0 0 40px rgba(255, 90, 110, 0.2)" },
+        },
+        popIn: {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
     },

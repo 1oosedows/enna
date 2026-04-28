@@ -5,6 +5,14 @@ import { Tool } from "@/types";
 import { formatStars, timeAgo } from "@/lib/github";
 import { getCategoryColorScheme } from "@/lib/category-colors";
 
+function getHealthStatus(lastCommit?: string): { color: string; label: string } | null {
+  if (!lastCommit) return null;
+  const days = Math.floor((Date.now() - new Date(lastCommit).getTime()) / (1000 * 60 * 60 * 24));
+  if (days <= 90) return { color: "bg-emerald-500", label: "Active" };
+  if (days <= 365) return { color: "bg-yellow-500", label: "Moderate" };
+  return { color: "bg-red-500", label: "Stale" };
+}
+
 interface Props {
   tool: Tool;
   index: number;
@@ -189,6 +197,15 @@ export default function ToolCard({ tool, index }: Props) {
           )}
           {tool.lastCommit && (
             <span className="stat-chip ml-auto">
+              {(() => {
+                const health = getHealthStatus(tool.lastCommit);
+                return health ? (
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full ${health.color}`}
+                    title={health.label}
+                  />
+                ) : null;
+              })()}
               {timeAgo(tool.lastCommit)}
             </span>
           )}

@@ -4,7 +4,7 @@
       "slug": "osint-investigation",
       "title": "OSINT Investigation Workflow",
       "description": "A structured approach to open-source intelligence gathering, from target identification through to reporting. Covers passive reconnaissance, social media analysis, email and phone lookups, and data correlation.",
-      "icon": "\ud83d\udd0e",
+      "icon": "🔎",
       "difficulty": "Beginner",
       "estimatedTime": "2-8 hours",
       "tags": [
@@ -86,7 +86,7 @@
       "slug": "web-app-pentest",
       "title": "Web Application Penetration Test",
       "description": "A systematic approach to testing web applications for security vulnerabilities. Covers reconnaissance, mapping, vulnerability discovery, exploitation, and reporting.",
-      "icon": "\ud83d\udd78",
+      "icon": "🕸",
       "difficulty": "Intermediate",
       "estimatedTime": "1-5 days",
       "tags": [
@@ -172,7 +172,7 @@
       "slug": "active-directory-attack-path",
       "title": "Active Directory Attack Path",
       "description": "From initial foothold to domain admin. A step-by-step approach to enumerating and attacking Active Directory environments during authorized penetration tests.",
-      "icon": "\ud83d\udd25",
+      "icon": "🔥",
       "difficulty": "Advanced",
       "estimatedTime": "2-5 days",
       "tags": [
@@ -256,7 +256,7 @@
       "slug": "crypto-tracing",
       "title": "Cryptocurrency Tracing Workflow",
       "description": "Tracing cryptocurrency transactions from a known address through the blockchain. Covers wallet identification, transaction graph analysis, exchange detection, and entity attribution.",
-      "icon": "\u20bf",
+      "icon": "₿",
       "difficulty": "Intermediate",
       "estimatedTime": "1-3 days",
       "tags": [
@@ -334,7 +334,7 @@
       "slug": "wireless-security-assessment",
       "title": "Wireless Security Assessment",
       "description": "Testing the security of wireless networks from passive scanning through active attacks. Covers network discovery, client enumeration, WPA/WPA2 cracking, evil twin attacks, and rogue AP detection.",
-      "icon": "\ud83d\udce1",
+      "icon": "📡",
       "difficulty": "Intermediate",
       "estimatedTime": "4-8 hours",
       "tags": [
@@ -406,7 +406,7 @@
       "slug": "incident-response-triage",
       "title": "Incident Response Triage Workflow",
       "description": "Rapid triage when you suspect a compromise. Collect volatile evidence, assess the scope, contain the threat, and begin investigation. Time-critical steps organized by priority.",
-      "icon": "\ud83d\udea8",
+      "icon": "🚨",
       "difficulty": "Intermediate",
       "estimatedTime": "1-4 hours (initial triage)",
       "tags": [
@@ -489,7 +489,7 @@
       "slug": "cloud-security-audit",
       "title": "Cloud Security Audit",
       "description": "Auditing AWS, Azure, and GCP environments for misconfigurations, exposed resources, and overly permissive IAM policies. This workflow covers automated compliance scanning, manual enumeration of cloud-specific attack surfaces, and adversary emulation to validate real-world exploitability.",
-      "icon": "\u2601\ufe0f",
+      "icon": "☁️",
       "difficulty": "Intermediate",
       "estimatedTime": "4-8 hours",
       "tags": [
@@ -568,7 +568,7 @@
       "slug": "mobile-app-pentest",
       "title": "Mobile App Penetration Test",
       "description": "Testing Android and iOS applications for security vulnerabilities including insecure data storage, weak cryptography, hardcoded secrets, and exploitable API endpoints. Covers both static analysis of the application binary and dynamic analysis of runtime behavior.",
-      "icon": "\ud83d\udcf1",
+      "icon": "📱",
       "difficulty": "Intermediate",
       "estimatedTime": "4-6 hours",
       "tags": [
@@ -638,7 +638,7 @@
       "slug": "bug-bounty-recon",
       "title": "Bug Bounty Recon Pipeline",
       "description": "A full reconnaissance pipeline for bug bounty targets, from initial subdomain discovery through to vulnerability scanning. Designed to maximize attack surface coverage while minimizing noise, so you find the bugs other hunters miss.",
-      "icon": "\ud83c\udfaf",
+      "icon": "🎯",
       "difficulty": "Beginner",
       "estimatedTime": "2-4 hours",
       "tags": [
@@ -714,7 +714,7 @@
       "slug": "malware-analysis",
       "title": "Malware Analysis Workflow",
       "description": "Analyzing suspicious files and binaries to understand their capabilities, behavior, and indicators of compromise. Covers safe environment setup, static analysis, dynamic execution in sandboxes, behavioral monitoring, and IOC extraction for threat intelligence sharing.",
-      "icon": "\ud83e\udda0",
+      "icon": "🦠",
       "difficulty": "Advanced",
       "estimatedTime": "4-12 hours",
       "tags": [
@@ -790,7 +790,7 @@
       "slug": "container-pentest",
       "title": "Container & Kubernetes Pentest",
       "description": "Testing containerized environments and Kubernetes clusters for security weaknesses including vulnerable images, misconfigured RBAC, container escape vectors, and exposed cluster services. Covers both offensive testing and defensive hardening validation.",
-      "icon": "\ud83d\udce6",
+      "icon": "📦",
       "difficulty": "Advanced",
       "estimatedTime": "3-6 hours",
       "tags": [
@@ -857,7 +857,7 @@
       "slug": "phishing-campaign-analysis",
       "title": "Phishing Campaign Analysis",
       "description": "Investigating and analyzing phishing attacks to understand the campaign infrastructure, identify victims, and extract indicators of compromise. Covers email header analysis, domain investigation, payload examination, and evidence collection for takedown requests or law enforcement.",
-      "icon": "\ud83c\udfa3",
+      "icon": "🎣",
       "difficulty": "Beginner",
       "estimatedTime": "1-3 hours",
       "tags": [
@@ -930,7 +930,7 @@
       "slug": "network-pentest",
       "title": "Internal Network Penetration Test",
       "description": "Testing internal networks from an initial foothold to identify vulnerabilities, capture credentials, move laterally, and demonstrate business impact. Covers host discovery, service enumeration, vulnerability exploitation, credential attacks, and lateral movement through segmented networks.",
-      "icon": "\ud83c\udf10",
+      "icon": "🌐",
       "difficulty": "Advanced",
       "estimatedTime": "8-16 hours",
       "tags": [
@@ -1023,7 +1023,7 @@
       "slug": "reverse-engineering",
       "title": "Binary Reverse Engineering",
       "description": "Analyzing compiled binaries and firmware to understand functionality, discover vulnerabilities, and extract embedded data. Covers file identification, disassembly, decompilation, dynamic debugging, and cryptographic analysis for applications ranging from malware to IoT firmware.",
-      "icon": "\ud83e\uddec",
+      "icon": "🧬",
       "difficulty": "Advanced",
       "estimatedTime": "4-12 hours",
       "tags": [
@@ -1101,6 +1101,256 @@
           "description": "Document your reverse engineering findings in a structured report. For vulnerability research, include the root cause, trigger conditions, exploitability assessment, and proof-of-concept. For malware analysis, include capabilities, IOCs, and detection signatures. Include annotated disassembly or decompiler output for key functions to support your findings.",
           "tools": [],
           "tips": "Include annotated screenshots from Ghidra or your debugger showing the vulnerability or key functionality. For vulnerability reports, provide a minimal proof-of-concept that demonstrates the issue. Map malware capabilities to MITRE ATT&CK techniques. If the binary uses anti-analysis techniques, document what you encountered and how you bypassed each one."
+        }
+      ]
+    },
+    {
+      "slug": "supply-chain-security-audit",
+      "title": "Supply Chain Security Audit",
+      "description": "Assessing software supply chain risk by analyzing dependencies, container images, infrastructure-as-code, and build pipelines for vulnerabilities, embedded secrets, and policy violations. Covers SBOM generation, dependency confusion testing, and CI/CD pipeline hardening validation.",
+      "icon": "⛓️",
+      "difficulty": "Intermediate",
+      "estimatedTime": "4-8 hours",
+      "tags": [
+        "supply-chain",
+        "sbom",
+        "dependencies",
+        "devsecops",
+        "containers"
+      ],
+      "steps": [
+        {
+          "title": "Dependency Inventory and SBOM Generation",
+          "description": "Generate a complete software bill of materials for every artifact in scope - application source code, container images, and deployed binaries. Identify every direct and transitive dependency, its version, license, and source. You cannot secure what you haven't inventoried, and most organizations dramatically underestimate their transitive dependency count.",
+          "tools": [
+            "syft",
+            "trivy",
+            "osv-scanner"
+          ],
+          "tips": "Syft generates SBOMs in SPDX and CycloneDX formats from source, containers, and filesystems. Run it against both the source repo and the built container image - they often differ because build steps pull additional dependencies. Feed the SBOM into OSV-Scanner for vulnerability matching against the OSV database, which aggregates CVEs from multiple ecosystems."
+        },
+        {
+          "title": "Dependency Vulnerability Scanning",
+          "description": "Scan all identified dependencies against vulnerability databases to find known CVEs. Prioritize by exploitability and reachability - a critical CVE in a dependency that your code never actually calls is lower priority than a medium-severity issue in a function you invoke directly. Check for dependencies that are unmaintained, archived, or have suspicious recent maintainer changes.",
+          "tools": [
+            "grype",
+            "osv-scanner",
+            "trivy",
+            "retire-js"
+          ],
+          "tips": "Grype provides fast vulnerability matching with detailed CVE information and fix versions. Use retire.js specifically for JavaScript/Node projects where transitive dependency chains get absurdly deep. Check whether vulnerable functions are actually reachable from your code before raising critical alerts - many CVEs affect functionality that the application never touches."
+        },
+        {
+          "title": "Secrets Detection Across the Codebase",
+          "description": "Scan the entire repository history, not just the current HEAD, for accidentally committed secrets. Developers routinely commit API keys, database passwords, private keys, and tokens, then try to remove them in a later commit. The secret remains in git history permanently unless the repo is rewritten. Check configuration files, environment templates, and CI/CD pipeline definitions too.",
+          "tools": [
+            "gitleaks",
+            "trufflehog"
+          ],
+          "tips": "Gitleaks scans the full git history by default and uses regex plus entropy detection. TruffleHog goes further by actually verifying found credentials against live services to confirm they're active. Run both - they use different detection approaches and catch different things. Pay special attention to .env.example files, docker-compose files, and CI config that often contain real credentials disguised as examples."
+        },
+        {
+          "title": "Container Image Security Analysis",
+          "description": "Audit container images for vulnerable base images, unnecessary packages that expand the attack surface, files running as root, missing health checks, and configuration issues that weaken runtime security. Check whether images are pinned to digests or floating tags, whether multi-stage builds are used to minimize the final image, and whether distroless or minimal base images are an option.",
+          "tools": [
+            "trivy",
+            "dockle",
+            "grype",
+            "syft"
+          ],
+          "tips": "Dockle specifically audits Dockerfiles and images against CIS Docker Benchmark best practices - it catches issues like missing USER directives, ADD instead of COPY, and latest tags. Trivy scans the image filesystem for OS and application vulnerabilities simultaneously. Check if the image contains build tools, package managers, or shells that shouldn't be present in production images."
+        },
+        {
+          "title": "Infrastructure-as-Code Review",
+          "description": "Scan Terraform, CloudFormation, Kubernetes manifests, Helm charts, and other IaC definitions for security misconfigurations before they reach production. Check for overly permissive IAM policies, unencrypted storage, public network exposure, missing logging, and hardcoded secrets in templates. IaC review is cheaper than fixing misconfigurations after deployment.",
+          "tools": [
+            "checkov",
+            "kics",
+            "semgrep"
+          ],
+          "tips": "Checkov covers Terraform, CloudFormation, Kubernetes, Helm, and Dockerfile with 1000+ built-in policies. KICS (Keeping Infrastructure as Code Secure) provides additional coverage for Ansible, Docker Compose, and Pulumi. Semgrep with its supply-chain rules catches patterns like dependency confusion risks and unsafe package installation. Run all three - overlap is minimal and each catches unique issues."
+        },
+        {
+          "title": "Static Application Security Testing",
+          "description": "Run SAST tools against the application source code to catch insecure coding patterns, injection vulnerabilities, authentication flaws, and unsafe deserialization. Focus on custom code that glues dependencies together - this is where supply chain risk meets application risk. A vulnerable dependency is only exploitable if the application passes attacker-controlled input to the vulnerable function.",
+          "tools": [
+            "semgrep",
+            "bandit",
+            "bearer"
+          ],
+          "tips": "Semgrep with community rulesets covers most languages and catches injection, auth, and crypto issues with low false positive rates. Bandit is Python-specific and catches issues like subprocess shell=True and hardcoded passwords. Bearer focuses on data flow and sensitive data exposure. Write custom Semgrep rules for your organization's specific anti-patterns - generic rules miss domain-specific issues."
+        },
+        {
+          "title": "Report and Remediation Priority Matrix",
+          "description": "Compile all findings into a prioritized remediation plan. Group by severity and effort-to-fix. A critical vulnerability in a transitive dependency with no available fix requires a different response than one with a simple version bump. Include specific fix commands (npm audit fix, pip install --upgrade, docker pull with pinned digest) and flag any findings that require architectural changes versus simple updates.",
+          "tools": [],
+          "tips": "Prioritize by actual exploitability, not just CVSS score. A critical CVE with no public exploit in a dependency you don't directly invoke is lower priority than a high-severity issue with a Metasploit module in code you call on every request. Include a dependency update policy recommendation - automated PRs for patch versions, manual review for minor/major. Flag any dependencies with recent maintainer transfers or suspicious activity."
+        }
+      ]
+    },
+    {
+      "slug": "threat-hunting-honeypots",
+      "title": "Threat Hunting with Honeypots",
+      "description": "Deploying deceptive infrastructure to attract and observe attackers, then using captured behavior to build detection rules and correlate with threat intelligence. Covers honeypot selection and deployment, traffic analysis, attacker profiling, and converting observations into production detections.",
+      "icon": "🍯",
+      "difficulty": "Intermediate",
+      "estimatedTime": "6-12 hours",
+      "tags": [
+        "threat-hunting",
+        "honeypot",
+        "deception",
+        "detection-engineering",
+        "threat-intel"
+      ],
+      "steps": [
+        {
+          "title": "Honeypot Selection and Deployment Planning",
+          "description": "Choose honeypot types based on what threats you want to detect. SSH honeypots catch credential stuffing and automated exploitation. Web honeypots attract vulnerability scanners and manual attackers. SMB/RDP honeypots detect lateral movement inside your network. Deploy internal honeypots on unused IP addresses in production subnets - any traffic to these addresses is suspicious by definition since nothing legitimate should contact them.",
+          "tools": [
+            "cowrie"
+          ],
+          "tips": "Cowrie is the gold standard SSH/Telnet honeypot - it logs credentials, commands, and downloaded files while presenting a convincing fake filesystem. For internal deployment, place honeypots on IPs that look like real servers (use naming conventions that match your environment). A single hit on an internal honeypot is a high-fidelity alert because legitimate traffic should never reach it."
+        },
+        {
+          "title": "Network Deception Layer Configuration",
+          "description": "Configure your honeypots to blend into the environment convincingly. Match OS fingerprints to what's actually deployed in the network. Add fake service banners that mirror your real infrastructure versions. For internal honeypots, register them in DNS with plausible hostnames and add fake entries in Active Directory or asset inventories. The more realistic the deception, the longer attackers interact and the more intelligence you gather.",
+          "tools": [
+            "cowrie",
+            "snort3",
+            "suricata"
+          ],
+          "tips": "Configure Cowrie's fake filesystem to contain realistic-looking files - attackers who land in an empty system disconnect immediately. Deploy Suricata or Snort3 inline with your honeypot network to capture full packet data for every session. Set up alerting for any connection attempt, not just successful ones - port scans hitting your honeypot IPs indicate reconnaissance in progress."
+        },
+        {
+          "title": "Traffic Capture and Session Recording",
+          "description": "Capture everything that touches the honeypots - full PCAP, session logs, uploaded files, and command histories. Configure session replay capability so you can watch attacker sessions in real time or review them later. Store all artifacts with cryptographic timestamps for potential use as evidence. The data you collect here feeds every subsequent step.",
+          "tools": [
+            "suricata",
+            "cowrie",
+            "falco"
+          ],
+          "tips": "Cowrie records all SSH sessions as replayable TTY logs and stores any files attackers download or upload. Suricata in full packet capture mode gives you complete network forensics for every session. Use Falco to monitor the honeypot host itself for any signs of escape attempts. Set up real-time alerting to Slack or your SIEM so you can watch active sessions as they happen."
+        },
+        {
+          "title": "Attacker Behavior Analysis",
+          "description": "Analyze captured sessions to understand attacker techniques, tools, and objectives. Categorize behavior: automated scanning vs manual interaction, credential stuffing vs targeted access, reconnaissance vs exploitation. Extract the specific commands run, tools downloaded, and infrastructure contacted. Build attacker profiles based on TTPs and map them to MITRE ATT&CK techniques.",
+          "tools": [
+            "chainsaw",
+            "sigma",
+            "hayabusa",
+            "yara"
+          ],
+          "tips": "Run YARA rules against any files attackers upload or download to identify known malware families. Use Sigma rules against honeypot logs to categorize techniques. Chainsaw and Hayabusa help identify patterns across multiple sessions. Look for attacker infrastructure - C2 servers, staging hosts, and exfil destinations that you can cross-reference with threat intel feeds."
+        },
+        {
+          "title": "Threat Intelligence Correlation",
+          "description": "Correlate honeypot findings with external threat intelligence. Check attacker source IPs against threat feeds, match downloaded tools to known campaigns, and compare TTPs with documented threat actors. This turns raw honeypot data into actionable intelligence - you go from 'someone connected from this IP' to 'this matches APT-X's known toolset and infrastructure.'",
+          "tools": [
+            "intelmq",
+            "osquery",
+            "wazuh"
+          ],
+          "tips": "IntelMQ automates threat intel processing and correlation across multiple feeds. Cross-reference source IPs with Shodan to understand the attacker's infrastructure. Check if credentials used against your honeypot appear in breach databases - this distinguishes credential stuffing bots from targeted attacks. Feed confirmed malicious IPs into your production firewalls immediately."
+        },
+        {
+          "title": "Detection Rule Development",
+          "description": "Convert observed attacker behavior into production detection rules. Write Sigma rules for the SIEM, Suricata rules for network detection, and YARA rules for endpoint scanning. Every technique you observe on the honeypot is a technique that could be used against real infrastructure. Test rules against honeypot data first to validate detection, then deploy to production with appropriate tuning.",
+          "tools": [
+            "sigma",
+            "suricata",
+            "yara",
+            "wazuh"
+          ],
+          "tips": "Write Sigma rules at the behavior level, not the IOC level - detect the technique (e.g., 'process spawned from SSH session executing whoami within 5 seconds of login') rather than specific IPs or hashes that rotate daily. Deploy new rules in detection-only mode initially and monitor false positive rates before enabling blocking. Wazuh can consume Sigma rules and operationalize them across your endpoint fleet."
+        },
+        {
+          "title": "Reporting and Continuous Improvement",
+          "description": "Produce regular threat reports from honeypot findings covering attack trends, new techniques observed, infrastructure attribution, and detection coverage gaps. Feed findings back into your security program - are your production systems protected against the attacks you're seeing on honeypots? Use the data to justify security investments and measure whether your detection engineering is keeping pace with attacker evolution.",
+          "tools": [],
+          "tips": "Track metrics over time: sessions per day, unique source IPs, new techniques observed, and mean time from honeypot detection to production rule deployment. Share sanitized findings with ISACs and industry peers. Rotate honeypot configurations periodically - sophisticated attackers maintain lists of known honeypot fingerprints and will avoid systems they recognize as deceptive."
+        }
+      ]
+    },
+    {
+      "slug": "active-directory-password-audit",
+      "title": "Active Directory Password Audit",
+      "description": "Extracting and auditing password hashes from Active Directory to identify weak, reused, and policy-violating passwords before attackers do. Covers hash extraction, offline cracking with optimized rulesets, password spray detection, and policy gap analysis with remediation recommendations.",
+      "icon": "🔑",
+      "difficulty": "Advanced",
+      "estimatedTime": "4-8 hours",
+      "tags": [
+        "active-directory",
+        "passwords",
+        "audit",
+        "credential-security",
+        "compliance"
+      ],
+      "steps": [
+        {
+          "title": "Hash Extraction from Active Directory",
+          "description": "Extract NTLM password hashes from the Active Directory database. The cleanest method is DCSync using a domain admin account, which replicates hashes from a domain controller without touching disk. Alternatively, extract NTDS.dit via Volume Shadow Copy and parse offline. This gives you every user's password hash in the domain without disrupting services or triggering most security tools.",
+          "tools": [
+            "impacket",
+            "mimikatz",
+            "crackmapexec",
+            "netexec"
+          ],
+          "tips": "Impacket's secretsdump.py with DCSync is the cleanest extraction method - run 'secretsdump.py domain/admin@dc-ip -just-dc-ntlm' to get NTLM hashes only. CrackMapExec and NetExec can also DCSync across multiple DCs. If you need the full NTDS.dit for additional analysis, use 'ntdsutil' or Volume Shadow Copy on the DC. Always hash-verify your extract against a known test account to confirm accuracy."
+        },
+        {
+          "title": "Password Policy Assessment",
+          "description": "Before cracking, document the current password policies - both the default domain policy and any fine-grained password policies (FGPPs) applied to specific groups. Record minimum length, complexity requirements, history count, lockout thresholds, and maximum age. This context is essential for interpreting cracking results: if policy requires 8 characters with complexity, and you crack 40% in under an hour, the policy is clearly insufficient.",
+          "tools": [
+            "crackmapexec",
+            "netexec",
+            "pingcastle"
+          ],
+          "tips": "CrackMapExec's --pass-pol flag dumps the domain password policy. PingCastle provides a comprehensive AD security assessment including password policy scoring against best practices. Check for fine-grained password policies that might apply weaker rules to specific groups - 'Get-ADFineGrainedPasswordPolicy -Filter *' in PowerShell reveals these. Document which accounts are excluded from lockout policies."
+        },
+        {
+          "title": "Wordlist Preparation and Rule Optimization",
+          "description": "Build targeted wordlists before running generic attacks. Include the company name, location, products, sports teams, seasons, years, and common patterns specific to the organization. Combine with standard breach wordlists (rockyou, Have I Been Pwned NTLM list). Craft Hashcat rules that model how users transform base words into 'complex' passwords - capitalizing first letter, appending numbers and symbols, leetspeak substitutions.",
+          "tools": [
+            "hate-crack",
+            "hashcat"
+          ],
+          "tips": "HATE_CRACK automates the optimized attack workflow from basic wordlists through progressively complex rule combinations. Start with the NTLM hashes from Have I Been Pwned - these crack instantly via lookup and typically get 10-20% of a domain on their own. Build an organization-specific wordlist from the company website, LinkedIn, and internal documentation. The pattern 'Season+Year+!' (Summer2024!) is still the most common password format in corporate environments."
+        },
+        {
+          "title": "Offline Hash Cracking Campaign",
+          "description": "Run a structured cracking campaign, starting with the fastest attacks and progressing to slower, more thorough ones. Begin with straight wordlist attacks against known-breached passwords, then company-specific wordlists with rules, then combination attacks, and finally brute-force for short passwords. Track your crack rate at each stage - this data drives your policy recommendations.",
+          "tools": [
+            "hashcat",
+            "john"
+          ],
+          "tips": "Hashcat mode 1000 is NTLM. Run attacks in this order for maximum efficiency: (1) known-hash lookup against HIBP NTLM database, (2) company wordlist + best64.rule, (3) rockyou + dive.rule, (4) combination attacks with company words, (5) brute-force up to 7 characters. Track timing - if you crack 60% in under an hour, that's your headline finding. Save cracked passwords for pattern analysis in the next step."
+        },
+        {
+          "title": "Password Pattern Analysis and Reuse Detection",
+          "description": "Analyze cracked passwords for patterns, reuse, and policy gaming. Identify the most common base words, the most common transformations, passwords shared between multiple accounts, and accounts using variations of the same password across the domain. Check whether admin accounts have stronger passwords than standard users, and whether service accounts use guessable passwords.",
+          "tools": [
+            "hashcat"
+          ],
+          "tips": "Group cracked passwords by pattern: 'SeasonYear!' variants, 'CompanyName+digits', keyboard walks, etc. Check for identical NTLM hashes across accounts - same hash means same password, revealing reuse without needing to crack. Pay special attention to admin accounts, service accounts, and accounts with sensitive access. Calculate crack rates by OU or department to identify groups needing targeted training."
+        },
+        {
+          "title": "Password Spray Resilience Testing",
+          "description": "Test the domain's resilience to online password spraying attacks. Using the most common passwords you discovered during cracking, simulate a slow password spray that stays under lockout thresholds. This validates whether the passwords that exist in your domain would survive a real attacker's spray attempt. Also verify that spray detection and lockout policies actually trigger correctly.",
+          "tools": [
+            "domainpasswordspray",
+            "kerbrute",
+            "crackmapexec",
+            "netexec"
+          ],
+          "tips": "DomainPasswordSpray is purpose-built for this - it enumerates valid accounts and sprays while respecting lockout policies. Kerbrute sprays via Kerberos pre-auth which is faster and doesn't generate traditional logon failure events. Spray only the top 3-5 most common passwords found during cracking. Coordinate with the SOC team to verify their spray detection fires correctly - if it doesn't, that's a finding too."
+        },
+        {
+          "title": "Report and Policy Recommendations",
+          "description": "Compile findings into an executive report with clear metrics: percentage cracked within 1 hour, 4 hours, 24 hours. Show the most common patterns, reuse statistics, and accounts with the weakest passwords (redact the actual passwords). Provide specific policy recommendations: minimum length increase, banned word lists, mandatory MFA for specific account types, and detection improvements for spray attacks.",
+          "tools": [
+            "pingcastle"
+          ],
+          "tips": "Lead with the headline number - 'X% of domain passwords cracked in under 1 hour' gets executive attention. Include PingCastle's overall domain security score for broader context. Recommend a minimum 14-character length with a banned password list over complexity requirements - research shows length beats complexity. Recommend Azure AD Password Protection or similar tools that block common patterns. Include a timeline for remediation that accounts for password expiry cycles."
         }
       ]
     }

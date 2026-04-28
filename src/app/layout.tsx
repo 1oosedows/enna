@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import CustomAnalytics from "@/components/Analytics";
 import Providers from "@/components/Providers";
+import CommandPalette from "@/components/CommandPalette";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -103,6 +104,7 @@ export default function RootLayout({
         <CustomAnalytics />
         <div className="noise-overlay" />
         <Providers>
+          <CommandPalette />
           {children}
         </Providers>
         <Analytics />

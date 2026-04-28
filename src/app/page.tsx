@@ -53,6 +53,7 @@ export default async function Home() {
           toolCount={tools.length}
           categoryCount={categories.length}
           languageCount={new Set(tools.map((t) => t.language)).size}
+          toolSlugs={tools.map((t) => t.slug)}
         />
         <AdSlot provider="custom" placement="hero" />
         {recentTools.length > 0 && <RecentlyUpdated tools={recentTools} />}

@@ -6,12 +6,14 @@ interface HeroSectionProps {
   toolCount?: number;
   categoryCount?: number;
   languageCount?: number;
+  toolSlugs?: string[];
 }
 
 export default function HeroSection({
   toolCount = 300,
   categoryCount = 19,
   languageCount = 12,
+  toolSlugs = [],
 }: HeroSectionProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -160,6 +162,16 @@ export default function HeroSection({
           >
             Browse Tools →
           </a>
+          <button
+            onClick={() => {
+              if (toolSlugs.length === 0) return;
+              const slug = toolSlugs[Math.floor(Math.random() * toolSlugs.length)];
+              window.location.href = `/tool/${slug}`;
+            }}
+            className="px-8 py-3 rounded-lg glass glass-hover text-text-secondary font-mono text-sm"
+          >
+            Surprise Me
+          </button>
           <a
             href="#categories"
             className="px-8 py-3 rounded-lg glass glass-hover text-text-secondary font-mono text-sm"
