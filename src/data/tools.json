@@ -368,7 +368,9 @@
       "smuggler",
       "wpscan",
       "afrog",
-      "wapiti"
+      "wapiti",
+      "shannon",
+      "lonkero"
     ],
     "stars": 28103,
     "forks": 3372,
@@ -565,7 +567,8 @@
       "social-analyzer",
       "nexfil",
       "snoop",
-      "telegram-nearby-map"
+      "telegram-nearby-map",
+      "user-scanner"
     ],
     "stars": 82544,
     "forks": 9627,
@@ -650,7 +653,8 @@
       "sherlock",
       "nexfil",
       "snoop",
-      "telegram-nearby-map"
+      "telegram-nearby-map",
+      "user-scanner"
     ]
   },
   {
@@ -838,7 +842,8 @@
       "twitter"
     ],
     "alternatives": [
-      "ignorant"
+      "ignorant",
+      "user-scanner"
     ]
   },
   {
@@ -1257,7 +1262,8 @@
       "arkime",
       "suricata",
       "tcpdump",
-      "zeek"
+      "zeek",
+      "sniffnet"
     ],
     "stars": 9262,
     "forks": 2126,
@@ -5430,7 +5436,9 @@
       "Compliance and security auditing"
     ],
     "alternatives": [
-      "gitleaks"
+      "gitleaks",
+      "titus",
+      "infisical"
     ],
     "stars": 25944,
     "forks": 2349,
@@ -5508,7 +5516,9 @@
     ],
     "homepageUrl": "https://gitleaks.io",
     "alternatives": [
-      "trufflehog"
+      "trufflehog",
+      "titus",
+      "infisical"
     ],
     "documentation": "https://github.com/gitleaks/gitleaks#readme",
     "dockerImage": "zricethezav/gitleaks"
@@ -6862,7 +6872,8 @@
     "githubDescription": "Generates x86, x64, or AMD64+x86 position-independent shellcode that loads .NET Assemblies, PE files, and other Windows payloads from memory and runs them with parameters",
     "alternatives": [
       "scarecrow",
-      "amber"
+      "amber",
+      "dllshimmer"
     ]
   },
   {
@@ -6893,7 +6904,8 @@
     ],
     "alternatives": [
       "donut",
-      "amber"
+      "amber",
+      "dllshimmer"
     ],
     "featured": true,
     "stars": 2881,
@@ -7977,6 +7989,9 @@
       "socmint",
       "username",
       "users"
+    ],
+    "alternatives": [
+      "user-scanner"
     ]
   },
   {
@@ -9124,7 +9139,8 @@
     "alternatives": [
       "bearer",
       "bandit",
-      "cwe-checker"
+      "cwe-checker",
+      "deepaudit"
     ]
   },
   {
@@ -12842,7 +12858,8 @@
       "arkime",
       "nmap",
       "suricata",
-      "wireshark"
+      "wireshark",
+      "sniffnet"
     ],
     "documentation": "https://docs.zeek.org",
     "stars": 7602,
@@ -12898,7 +12915,8 @@
       "nmap",
       "suricata",
       "wireshark",
-      "zeek"
+      "zeek",
+      "sniffnet"
     ],
     "documentation": "https://arkime.com/learn",
     "stars": 7359,
@@ -12961,7 +12979,8 @@
       "wireshark",
       "zeek",
       "crowdsec",
-      "snort3"
+      "snort3",
+      "sniffnet"
     ],
     "documentation": "https://docs.suricata.io",
     "stars": 6193,
@@ -13540,7 +13559,11 @@
     ],
     "homepageUrl": "https://web-check.xyz",
     "dockerImage": "lissy93/web-check",
-    "longDescription": "web-check is an all-in-one OSINT dashboard for analyzing any website's infrastructure, security posture, and technology stack from a single URL. It pulls DNS records, WHOIS data, SSL certificate details, HTTP headers, server location, open ports, linked pages, social tags, and performance metrics into a clean visual interface. Security-specific checks include HTTP security headers, cookie flags, content security policy analysis, and technology fingerprinting via Wappalyzer signatures. With over 32,000 GitHub stars, it is one of the most popular web reconnaissance tools on GitHub. Deployable as a Docker container for private use or accessible through the hosted instance. Built with TypeScript and designed to give you a complete picture of a target website in seconds rather than running five separate tools."
+    "longDescription": "web-check is an all-in-one OSINT dashboard for analyzing any website's infrastructure, security posture, and technology stack from a single URL. It pulls DNS records, WHOIS data, SSL certificate details, HTTP headers, server location, open ports, linked pages, social tags, and performance metrics into a clean visual interface. Security-specific checks include HTTP security headers, cookie flags, content security policy analysis, and technology fingerprinting via Wappalyzer signatures. With over 32,000 GitHub stars, it is one of the most popular web reconnaissance tools on GitHub. Deployable as a Docker container for private use or accessible through the hosted instance. Built with TypeScript and designed to give you a complete picture of a target website in seconds rather than running five separate tools.",
+    "alternatives": [
+      "worldmonitor",
+      "crucix"
+    ]
   },
   {
     "slug": "pwndbg",
@@ -13823,7 +13846,10 @@
     "homepageUrl": "https://caldera.mitre.org",
     "longDescription": "CALDERA is MITRE's open-source adversary emulation platform that automates attack simulations based on the ATT&CK framework. It enables red teams and purple teams to run realistic, repeatable attack chains against their infrastructure without manually executing each technique. CALDERA uses an agent-based architecture where lightweight agents (called Sandcat) are deployed on target systems and execute adversary profiles \u2014 curated sequences of ATT&CK techniques that mimic real-world threat actors. The platform includes dozens of pre-built abilities covering reconnaissance, credential access, lateral movement, persistence, and exfiltration. Blue teams can use CALDERA to validate detection coverage by running known attack sequences and checking whether their SIEM, EDR, and monitoring tools triggered appropriate alerts. The web-based UI provides real-time visibility into operation progress and a reporting engine for gap analysis.",
     "alternatives": [
-      "infection-monkey"
+      "infection-monkey",
+      "hexstrike-ai",
+      "redamon",
+      "decepticon"
     ]
   },
   {
@@ -13979,7 +14005,11 @@
     ],
     "homepageUrl": "https://yogeshojha.github.io/rengine/",
     "dockerImage": "yogeshojha/rengine",
-    "longDescription": "reNgine is an automated web application reconnaissance framework that combines multiple scanning engines into a single, correlated workflow with a web-based dashboard. It orchestrates subdomain enumeration (Subfinder, Amass), port scanning (Naabu), HTTP probing (httpx), screenshot capture (Aquatone), directory brute-forcing (ffuf), vulnerability scanning (Nuclei), and JavaScript analysis into configurable scan pipelines. What sets reNgine apart from simple tool wrappers is its correlation engine \u2014 it cross-references findings across all scan stages, deduplicates results, and presents a unified view of the target's attack surface. The platform supports scheduled scans for continuous monitoring, custom scan engine configurations, and Slack/Discord notifications for new findings. With over 8,500 GitHub stars, reNgine has become a popular choice for bug bounty hunters and security teams who want automated recon without building their own pipeline infrastructure."
+    "longDescription": "reNgine is an automated web application reconnaissance framework that combines multiple scanning engines into a single, correlated workflow with a web-based dashboard. It orchestrates subdomain enumeration (Subfinder, Amass), port scanning (Naabu), HTTP probing (httpx), screenshot capture (Aquatone), directory brute-forcing (ffuf), vulnerability scanning (Nuclei), and JavaScript analysis into configurable scan pipelines. What sets reNgine apart from simple tool wrappers is its correlation engine \u2014 it cross-references findings across all scan stages, deduplicates results, and presents a unified view of the target's attack surface. The platform supports scheduled scans for continuous monitoring, custom scan engine configurations, and Slack/Discord notifications for new findings. With over 8,500 GitHub stars, reNgine has become a popular choice for bug bounty hunters and security teams who want automated recon without building their own pipeline infrastructure.",
+    "alternatives": [
+      "hexstrike-ai",
+      "shannon"
+    ]
   },
   {
     "slug": "reconftw",
@@ -14032,7 +14062,10 @@
       "vulnerabilities"
     ],
     "homepageUrl": "https://docs.reconftw.com/",
-    "longDescription": "reconftw is an automated reconnaissance pipeline that chains together best-of-breed security tools into a comprehensive, single-command recon workflow. Running reconftw against a target domain triggers a full pipeline: subdomain enumeration, DNS resolution, port scanning, web probing, screenshot capture, technology fingerprinting, URL collection, parameter extraction, JavaScript analysis, vulnerability scanning, and nuclei template execution. The tool installs and manages all its dependencies automatically, making it one of the easiest ways to get a professional recon pipeline running. Configuration is done through a single profile file where you can enable/disable specific modules and set scope boundaries. reconftw outputs organized results in a structured directory format with separate files for each recon stage. With over 7,000 GitHub stars, it is one of the most popular recon automation frameworks in the bug bounty community."
+    "longDescription": "reconftw is an automated reconnaissance pipeline that chains together best-of-breed security tools into a comprehensive, single-command recon workflow. Running reconftw against a target domain triggers a full pipeline: subdomain enumeration, DNS resolution, port scanning, web probing, screenshot capture, technology fingerprinting, URL collection, parameter extraction, JavaScript analysis, vulnerability scanning, and nuclei template execution. The tool installs and manages all its dependencies automatically, making it one of the easiest ways to get a professional recon pipeline running. Configuration is done through a single profile file where you can enable/disable specific modules and set scope boundaries. reconftw outputs organized results in a structured directory format with separate files for each recon stage. With over 7,000 GitHub stars, it is one of the most popular recon automation frameworks in the bug bounty community.",
+    "alternatives": [
+      "hexstrike-ai"
+    ]
   },
   {
     "slug": "lynis",
@@ -14142,7 +14175,8 @@
     "homepageUrl": "https://stratus-red-team.cloud",
     "longDescription": "Stratus Red Team is Datadog's open-source adversary emulation tool specifically designed for cloud environments. While tools like CALDERA focus on endpoint and network attacks, Stratus Red Team provides granular, atomic attack techniques for AWS, Azure, GCP, and Kubernetes \u2014 mapped directly to the MITRE ATT&CK Cloud Matrix. Each technique is self-contained: Stratus handles all prerequisite infrastructure setup (creating test IAM roles, S3 buckets, EC2 instances), executes the attack technique, and then cleans up. This makes it ideal for purple team exercises where you need to validate that your cloud detection rules actually fire when specific attack patterns occur. Techniques cover initial access (stolen credentials, malicious Lambda layers), persistence (backdoor IAM users, modified trust policies), privilege escalation (IAM policy manipulation), and impact (S3 ransomware simulation). The CLI-based interface supports warm-up, detonate, and revert phases for repeatable testing.",
     "alternatives": [
-      "infection-monkey"
+      "infection-monkey",
+      "decepticon"
     ]
   },
   {
@@ -14653,7 +14687,8 @@
     "longDescription": "Telegram Nearby Map is an OSINT tool that exploits Telegram's People Nearby feature to discover and geolocate Telegram users in a given area. It uses trilateration techniques combined with the distance information provided by Telegram's API to plot user locations on an interactive OpenStreetMap-based interface. Security researchers and OSINT analysts use this tool to demonstrate the privacy risks inherent in Telegram's proximity features and to map user activity in specific geographic regions. The tool highlights a significant operational security concern for Telegram users who have the People Nearby feature enabled, as it can reveal approximate real-world locations without any direct interaction.",
     "alternatives": [
       "sherlock",
-      "maigret"
+      "maigret",
+      "device-activity-tracker"
     ]
   },
   {
@@ -15026,7 +15061,9 @@
     "longDescription": "Wapiti is a black-box web application vulnerability scanner that crawls target websites and injects payloads to detect security flaws without requiring access to the application's source code. It tests for a comprehensive range of vulnerabilities including SQL injection, cross-site scripting (XSS), file inclusion, command injection, XXE, SSRF, and open redirects through its modular fuzzer architecture. Penetration testers and security assessors use Wapiti as an automated first pass during web application assessments to identify low-hanging vulnerabilities and map the application's attack surface. Written in Python with support for authenticated scanning and multiple output formats, it serves as a free and open-source alternative to commercial web scanners like Acunetix and Burp Suite Pro.",
     "alternatives": [
       "nikto",
-      "nuclei"
+      "nuclei",
+      "shannon",
+      "lonkero"
     ]
   },
   {
@@ -15247,7 +15284,8 @@
     "longDescription": "Amber is a reflective PE packer written in Go that converts standard Windows PE (Portable Executable) files into position-independent shellcode payloads. It uses a reflective loading technique to execute PE files entirely in memory without writing them to disk, bypassing many traditional antivirus and endpoint detection mechanisms that rely on file-based scanning. Red team operators and exploit developers use Amber to prepare payloads for advanced adversary simulations, converting compiled executables into shellcode that can be injected into running processes or delivered through custom loaders. The tool supports both 32-bit and 64-bit PE files and can add custom stubs for additional evasion, making it a key component in payload development pipelines for authorized offensive engagements.",
     "alternatives": [
       "scarecrow",
-      "donut"
+      "donut",
+      "dllshimmer"
     ]
   },
   {
@@ -15435,7 +15473,8 @@
     ],
     "longDescription": "OpenSnitch is an interactive application-level firewall for GNU/Linux systems inspired by macOS's Little Snitch, providing real-time visibility and control over outbound network connections made by every application. It intercepts connection attempts at the process level and presents the user with a popup dialog to allow, deny, or create persistent rules for each application's network activity. Security-conscious users, malware analysts, and privacy advocates use OpenSnitch to detect unauthorized network communication, identify data exfiltration attempts, and enforce strict application-level network policies. The tool features a Qt-based GUI with connection logging, traffic statistics, and rule management, making it invaluable for monitoring suspicious software behavior and ensuring that only authorized applications communicate over the network.",
     "alternatives": [
-      "crowdsec"
+      "crowdsec",
+      "tirith"
     ]
   },
   {
@@ -15644,7 +15683,8 @@
     "longDescription": "Bearer is an open-source static application security testing (SAST) tool that scans source code to discover security risks, sensitive data flows, and vulnerabilities in web applications. It analyzes codebases to detect issues like hardcoded secrets, insecure data handling patterns, OWASP Top 10 vulnerabilities, and privacy risks related to personal data processing. Development teams and application security engineers integrate Bearer into CI/CD pipelines to catch security issues early in the development lifecycle before they reach production. The tool provides detailed findings with remediation guidance, supports multiple programming languages and frameworks, and includes compliance-focused rules for data protection regulations like GDPR and CCPA.",
     "alternatives": [
       "semgrep",
-      "bandit"
+      "bandit",
+      "deepaudit"
     ]
   },
   {
@@ -16315,7 +16355,8 @@
     "alternatives": [
       "semgrep",
       "bearer",
-      "cwe-checker"
+      "cwe-checker",
+      "deepaudit"
     ]
   },
   {
@@ -16495,7 +16536,9 @@
       "burpsuite",
       "caido",
       "nikto",
-      "wapiti"
+      "wapiti",
+      "shannon",
+      "lonkero"
     ],
     "stars": 15051,
     "forks": 2543,
@@ -16634,7 +16677,8 @@
     "alternatives": [
       "semgrep",
       "bandit",
-      "bearer"
+      "bearer",
+      "deepaudit"
     ],
     "stars": 7223,
     "forks": 766,
@@ -17109,7 +17153,8 @@
       "mythic",
       "havoc",
       "covenant",
-      "starkiller"
+      "starkiller",
+      "decepticon"
     ],
     "stars": 5129,
     "forks": 678,
@@ -18504,7 +18549,8 @@
     "alternatives": [
       "waybackpy",
       "waybackurls",
-      "katana"
+      "katana",
+      "worldmonitor"
     ],
     "stars": 31266,
     "forks": 1766,
@@ -18815,7 +18861,8 @@
       "reconftw",
       "rengine",
       "bbot",
-      "nuclei"
+      "nuclei",
+      "hexstrike-ai"
     ],
     "stars": 6214,
     "forks": 979,
@@ -19000,5 +19047,649 @@
       "threat"
     ],
     "homepageUrl": "https://docs.intelmq.org/latest/"
+  },
+  {
+    "slug": "shannon",
+    "name": "Shannon",
+    "description": "Autonomous AI pentester for web apps and APIs. Analyzes source code, identifies attack vectors, and executes real exploits to prove vulnerabilities.",
+    "longDescription": "Shannon Lite is an autonomous, white-box AI pentester that takes a fundamentally different approach to security testing. Instead of running predefined checks, it reads your source code, understands the application logic, identifies attack vectors, and then executes real exploits to prove vulnerabilities before they reach production. It achieves a 96% score on the XBOW benchmark, outperforming traditional scanners on complex vulnerability chains that require multi-step reasoning. Shannon works with any web application or API, supports multiple frameworks, and produces proof-of-exploitation reports rather than theoretical findings.",
+    "category": "web-scanning",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "npm install -g @keygraph/shannon",
+    "github": "KeygraphHQ/shannon",
+    "tags": [
+      "ai-pentesting",
+      "autonomous",
+      "white-box",
+      "exploit-proof",
+      "source-analysis"
+    ],
+    "featured": true,
+    "useCases": [
+      "Automated penetration testing of web applications",
+      "Source code-aware vulnerability discovery",
+      "Proof-of-exploitation for CI/CD security gates",
+      "Finding complex multi-step vulnerability chains"
+    ],
+    "alternatives": [
+      "nuclei",
+      "zaproxy",
+      "wapiti",
+      "rengine",
+      "lonkero"
+    ],
+    "stars": 41380,
+    "forks": 2100,
+    "openIssues": 145,
+    "lastCommit": "2026-05-06T14:30:00Z",
+    "license": "AGPL-3.0",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/KeygraphHQ?v=4",
+    "githubDescription": "Shannon Lite is an autonomous, white-box AI pentester for web applications and APIs."
+  },
+  {
+    "slug": "hexstrike-ai",
+    "name": "HexStrike AI",
+    "description": "MCP server giving AI agents access to 150+ cybersecurity tools for automated pentesting, vulnerability discovery, and bug bounty automation.",
+    "longDescription": "HexStrike AI is an advanced MCP (Model Context Protocol) server that connects AI assistants like Claude, GPT, and Copilot to over 150 cybersecurity tools. It enables AI agents to autonomously run reconnaissance, vulnerability scanning, exploitation, and reporting workflows. The tool handles tool orchestration, output parsing, and context management so AI agents can chain complex security operations without human intervention. Supports integration with Nmap, Nuclei, SQLMap, Metasploit, and dozens more through a unified MCP interface.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install hexstrike-ai",
+    "github": "0x4m4/hexstrike-ai",
+    "tags": [
+      "mcp",
+      "ai-agents",
+      "automation",
+      "pentesting",
+      "orchestration"
+    ],
+    "featured": true,
+    "useCases": [
+      "Connecting AI coding assistants to security tooling",
+      "Automated bug bounty reconnaissance pipelines",
+      "AI-driven vulnerability discovery workflows",
+      "Building autonomous security testing agents"
+    ],
+    "alternatives": [
+      "caldera",
+      "osmedeus",
+      "rengine",
+      "reconftw",
+      "redamon"
+    ],
+    "stars": 8578,
+    "forks": 890,
+    "openIssues": 67,
+    "lastCommit": "2026-04-27T10:15:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/0x4m4?v=4",
+    "githubDescription": "HexStrike AI MCP Agents - advanced MCP server for autonomous cybersecurity tool execution."
+  },
+  {
+    "slug": "worldmonitor",
+    "name": "WorldMonitor",
+    "description": "Real-time global intelligence dashboard with AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking across 500+ feeds.",
+    "longDescription": "WorldMonitor is a real-time situational awareness platform that aggregates intelligence from over 500 feeds including news sources, satellite data, market exchanges (92 global markets), flight trackers, maritime AIS, and infrastructure monitors. It presents everything on an interactive 3D globe with AI-powered categorization and summarization via local Ollama models. Designed for OSINT analysts, journalists, and security researchers who need to monitor global events as they unfold. Runs entirely locally with zero cloud dependencies.",
+    "category": "osint-general",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "git clone https://github.com/koala73/worldmonitor && cd worldmonitor && npm install && npm run dev",
+    "github": "koala73/worldmonitor",
+    "tags": [
+      "geoint",
+      "situational-awareness",
+      "real-time",
+      "intelligence",
+      "dashboard"
+    ],
+    "featured": true,
+    "useCases": [
+      "Real-time monitoring of geopolitical events",
+      "OSINT situational awareness dashboards",
+      "Tracking infrastructure changes and outages globally",
+      "Correlating news events with market and flight data"
+    ],
+    "alternatives": [
+      "web-check",
+      "changedetection",
+      "shadowbroker",
+      "crucix"
+    ],
+    "stars": 53643,
+    "forks": 3200,
+    "openIssues": 89,
+    "lastCommit": "2026-05-06T12:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/koala73?v=4",
+    "githubDescription": "Real-time global intelligence dashboard with AI-powered news aggregation and situational awareness."
+  },
+  {
+    "slug": "sniffnet",
+    "name": "Sniffnet",
+    "description": "Cross-platform network traffic monitor with real-time analysis, 6000+ protocol identification, PCAP export, and IP geolocation.",
+    "longDescription": "Sniffnet is a cross-platform application to comfortably monitor your internet traffic. Written in Rust for performance, it identifies 6000+ upper-layer protocols, provides real-time bandwidth charts, supports PCAP capture and export, does IP geolocation and ASN lookup, and sends custom notifications based on traffic thresholds. The GUI is clean and accessible to both security professionals doing traffic analysis and regular users who want visibility into what their machine is communicating with. Supports filtering by protocol, country, and application.",
+    "category": "network-recon",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "cargo install sniffnet",
+    "github": "GyulyVGC/sniffnet",
+    "tags": [
+      "traffic-monitor",
+      "packet-capture",
+      "protocol-analysis",
+      "gui",
+      "real-time"
+    ],
+    "featured": true,
+    "useCases": [
+      "Real-time network traffic monitoring and analysis",
+      "Identifying suspicious outbound connections",
+      "Protocol-level traffic inspection",
+      "Network forensics with PCAP export"
+    ],
+    "alternatives": [
+      "wireshark",
+      "arkime",
+      "zeek",
+      "suricata"
+    ],
+    "stars": 37274,
+    "forks": 1150,
+    "openIssues": 34,
+    "lastCommit": "2026-05-06T08:00:00Z",
+    "license": "Apache-2.0",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/GyulyVGC?v=4",
+    "githubDescription": "Comfortably monitor your Internet traffic"
+  },
+  {
+    "slug": "infisical",
+    "name": "Infisical",
+    "description": "Open-source secrets management platform with certificate lifecycle, privileged access management, and multi-environment sync.",
+    "longDescription": "Infisical is an open-source platform for managing secrets, certificates, and privileged access at scale. It provides a centralized dashboard for teams to store, version, and rotate secrets across development, staging, and production environments. Features include automatic secret rotation, PKI certificate management, dynamic secrets for databases, RBAC with audit logging, and native integrations with Kubernetes, Docker, Terraform, and CI/CD platforms. Replaces HashiCorp Vault for teams that want a simpler, open-source alternative with a modern UI.",
+    "category": "dual-use",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "docker compose up -d",
+    "website": "https://infisical.com",
+    "github": "Infisical/infisical",
+    "tags": [
+      "secrets-management",
+      "certificates",
+      "pam",
+      "vault",
+      "devops"
+    ],
+    "featured": false,
+    "useCases": [
+      "Centralized secrets management across environments",
+      "Automated certificate lifecycle management",
+      "Privileged access control with audit trails",
+      "Replacing .env files with secure secret injection"
+    ],
+    "alternatives": [
+      "gitleaks",
+      "trufflehog"
+    ],
+    "stars": 26657,
+    "forks": 1420,
+    "openIssues": 312,
+    "lastCommit": "2026-05-06T16:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/Infisical?v=4",
+    "githubDescription": "The open-source platform for secrets, certificates, and privileged access management."
+  },
+  {
+    "slug": "decepticon",
+    "name": "Decepticon",
+    "description": "Autonomous red team agent executing full kill chains from recon through C2 with MITRE ATT&CK mapping and Neo4j knowledge graph.",
+    "longDescription": "Decepticon is an AI-powered autonomous red team framework that executes complete attack chains from initial reconnaissance through command and control establishment. It uses a Neo4j knowledge graph to track discovered assets, vulnerabilities, and successful exploitation paths. Every action maps to MITRE ATT&CK technique IDs, making it useful for both offensive testing and detection engineering. Includes configurable rules of engagement to prevent out-of-scope actions, automated reporting, and integration with common C2 frameworks.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "installCommand": "pip install decepticon-rt",
+    "github": "PurpleAILAB/Decepticon",
+    "tags": [
+      "autonomous",
+      "red-team",
+      "ai-agent",
+      "kill-chain",
+      "attack-graph"
+    ],
+    "featured": false,
+    "useCases": [
+      "Automated adversary emulation with full kill chains",
+      "Detection engineering validation",
+      "Purple team exercises with ATT&CK mapping",
+      "Continuous security validation"
+    ],
+    "alternatives": [
+      "caldera",
+      "empire",
+      "stratus-red-team",
+      "redamon"
+    ],
+    "stars": 3500,
+    "forks": 410,
+    "openIssues": 23,
+    "lastCommit": "2026-04-30T09:00:00Z",
+    "license": "GPL-3.0",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/PurpleAILAB?v=4",
+    "githubDescription": "Autonomous red team agent with MITRE ATT&CK mapping and Neo4j knowledge graph."
+  },
+  {
+    "slug": "deepaudit",
+    "name": "DeepAudit",
+    "description": "Multi-agent AI code auditing system with automated sandbox PoC verification. Has discovered 49 CVEs across 17 open-source projects.",
+    "longDescription": "DeepAudit is a multi-agent AI system designed for deep code security auditing. Unlike traditional SAST tools that match patterns, DeepAudit uses multiple specialized AI agents that reason about code semantics, data flows, and trust boundaries. When it finds a potential vulnerability, it automatically generates and executes a proof-of-concept in a sandboxed environment to verify exploitability. The system has discovered 49 confirmed CVEs across 17 major open-source projects, demonstrating its ability to find vulnerabilities that human auditors and traditional tools miss.",
+    "category": "vulnerability",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "pip install deepaudit",
+    "github": "lintsinghua/DeepAudit",
+    "tags": [
+      "ai-audit",
+      "code-review",
+      "cve-discovery",
+      "multi-agent",
+      "proof-of-concept"
+    ],
+    "featured": false,
+    "useCases": [
+      "Automated security code review with PoC generation",
+      "Finding vulnerabilities missed by traditional SAST",
+      "CVE discovery in open-source dependencies",
+      "Verifying exploitability of potential vulnerabilities"
+    ],
+    "alternatives": [
+      "semgrep",
+      "bandit",
+      "bearer",
+      "brakeman"
+    ],
+    "stars": 5900,
+    "forks": 520,
+    "openIssues": 41,
+    "lastCommit": "2026-05-01T11:00:00Z",
+    "license": "Apache-2.0",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/lintsinghua?v=4",
+    "githubDescription": "Multi-agent AI code auditing with automated sandbox PoC verification."
+  },
+  {
+    "slug": "crucix",
+    "name": "Crucix",
+    "description": "Personal intelligence agent aggregating 27 real-time feeds including satellite, flight, radiation, and conflict data on a local-first dashboard.",
+    "longDescription": "Crucix is a zero-cloud personal intelligence agent that aggregates 27 real-time data feeds onto a single local dashboard. It pulls satellite imagery, flight tracking (ADS-B), ship tracking (AIS), radiation monitoring, conflict event data, weather alerts, seismic activity, and news feeds into an integrated situational awareness view. LLM integration (local via Ollama or API) provides natural language querying across all data sources. Everything runs locally with no cloud dependency, making it suitable for air-gapped or privacy-sensitive environments.",
+    "category": "osint-general",
+    "language": "JavaScript",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "git clone https://github.com/calesthio/Crucix && cd Crucix && npm install && npm start",
+    "github": "calesthio/Crucix",
+    "tags": [
+      "intelligence",
+      "geoint",
+      "real-time",
+      "local-first",
+      "multi-feed"
+    ],
+    "featured": false,
+    "useCases": [
+      "Personal situational awareness dashboard",
+      "Correlating multiple intelligence feeds locally",
+      "Monitoring regional conflict and infrastructure events",
+      "Air-gapped intelligence aggregation"
+    ],
+    "alternatives": [
+      "worldmonitor",
+      "web-check",
+      "shadowbroker"
+    ],
+    "stars": 9500,
+    "forks": 780,
+    "openIssues": 55,
+    "lastCommit": "2026-05-03T10:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/calesthio?v=4",
+    "githubDescription": "Personal intelligence agent with 27 real-time feeds on a zero-cloud local dashboard."
+  },
+  {
+    "slug": "shadowbroker",
+    "name": "ShadowBroker",
+    "description": "GEOINT dashboard tracking aircraft, ships, satellites, and 11,000+ CCTV cameras with SAR anomaly detection and AI agent integration.",
+    "longDescription": "ShadowBroker is a geospatial intelligence platform that integrates aircraft tracking (ADS-B), ship monitoring (AIS), satellite pass prediction, and access to 11,000+ public CCTV streams into a unified dashboard. It includes synthetic aperture radar (SAR) anomaly detection for identifying changes in infrastructure or terrain, and supports AI agent integration across 60+ data feeds for automated analysis. Designed for OSINT researchers and security analysts who need comprehensive geospatial awareness.",
+    "category": "osint-general",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "git clone https://github.com/BigBodyCobain/Shadowbroker && cd Shadowbroker && pip install -r requirements.txt",
+    "github": "BigBodyCobain/Shadowbroker",
+    "tags": [
+      "geoint",
+      "geospatial",
+      "adsb",
+      "ais",
+      "cctv",
+      "satellite"
+    ],
+    "featured": false,
+    "useCases": [
+      "Geospatial intelligence gathering and correlation",
+      "Aircraft and maritime vessel tracking",
+      "Infrastructure monitoring via satellite and CCTV",
+      "SAR change detection for security monitoring"
+    ],
+    "alternatives": [
+      "worldmonitor",
+      "crucix"
+    ],
+    "stars": 6000,
+    "forks": 650,
+    "openIssues": 38,
+    "lastCommit": "2026-04-28T15:00:00Z",
+    "license": "GPL-3.0",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/BigBodyCobain?v=4",
+    "githubDescription": "GEOINT dashboard with aircraft, ship, satellite, and CCTV tracking plus SAR anomaly detection."
+  },
+  {
+    "slug": "redamon",
+    "name": "RedAmon",
+    "description": "AI-powered agentic red team framework automating recon through exploitation with LangGraph, Neo4j, and 70+ integrated tools.",
+    "longDescription": "RedAmon is an AI-powered red team automation framework that uses LangGraph for agent orchestration and Neo4j for attack path knowledge graphs. It integrates 70+ security tools and automates the full attack lifecycle from passive reconnaissance through active exploitation. Unique features include automatic fix PR generation for discovered vulnerabilities, configurable engagement scope, and detailed attack narratives that explain each step taken. Useful for continuous red team operations where human operators define scope and the AI executes.",
+    "category": "offensive-ops",
+    "language": "Python",
+    "platform": [
+      "linux"
+    ],
+    "installCommand": "pip install redamon",
+    "github": "samugit83/redamon",
+    "tags": [
+      "ai-red-team",
+      "automation",
+      "langgraph",
+      "attack-graph",
+      "autonomous"
+    ],
+    "featured": false,
+    "useCases": [
+      "Continuous automated red team operations",
+      "Attack surface discovery with AI reasoning",
+      "Generating fix PRs for discovered vulnerabilities",
+      "Building attack path knowledge graphs"
+    ],
+    "alternatives": [
+      "decepticon",
+      "caldera",
+      "hexstrike-ai"
+    ],
+    "stars": 1800,
+    "forks": 210,
+    "openIssues": 18,
+    "lastCommit": "2026-05-02T08:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/samugit83?v=4",
+    "githubDescription": "AI-powered agentic red team framework with LangGraph and Neo4j."
+  },
+  {
+    "slug": "user-scanner",
+    "name": "User-Scanner",
+    "description": "2-in-1 email and username OSINT suite scanning 195+ vectors with bulk scanning and infostealer log cross-referencing.",
+    "longDescription": "User-Scanner is a combined email and username OSINT tool that searches across 195+ vectors - 95 email platform checks and 100+ username site checks in a single run. It supports bulk scanning of multiple targets simultaneously, outputs in multiple formats (JSON, CSV, HTML report), and can cross-reference findings against known infostealer log databases to identify compromised accounts. Faster than running Holehe and Sherlock separately, with deduplication and unified reporting.",
+    "category": "osint-social",
+    "language": "Python",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "pip install user-scanner",
+    "github": "kaifcodec/user-scanner",
+    "tags": [
+      "username-search",
+      "email-osint",
+      "bulk-scan",
+      "account-discovery"
+    ],
+    "featured": false,
+    "useCases": [
+      "Bulk email and username reconnaissance",
+      "Identifying compromised accounts via log cross-referencing",
+      "Building digital footprint profiles",
+      "Pre-engagement OSINT for social engineering assessments"
+    ],
+    "alternatives": [
+      "sherlock",
+      "maigret",
+      "holehe",
+      "whatsmyname"
+    ],
+    "stars": 1500,
+    "forks": 190,
+    "openIssues": 12,
+    "lastCommit": "2026-04-25T14:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/kaifcodec?v=4",
+    "githubDescription": "2-in-1 email and username OSINT suite with 195+ scanning vectors."
+  },
+  {
+    "slug": "device-activity-tracker",
+    "name": "Device Activity Tracker",
+    "description": "PoC exploiting WhatsApp and Signal delivery receipt timing to detect device activity patterns and location changes.",
+    "longDescription": "Device Activity Tracker is a proof-of-concept tool that exploits the timing of message delivery receipts in WhatsApp and Signal to infer target device activity. By measuring round-trip time (RTT) variations in delivery confirmations, it can detect when a device becomes active, when it changes network (suggesting location change), and establish activity patterns over time. Based on academic research into metadata leakage in encrypted messaging platforms. Useful for understanding the privacy implications of delivery receipts.",
+    "category": "osint-social",
+    "language": "TypeScript",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "git clone https://github.com/gommzystudio/device-activity-tracker && cd device-activity-tracker && npm install",
+    "github": "gommzystudio/device-activity-tracker",
+    "tags": [
+      "messaging",
+      "metadata",
+      "timing-attack",
+      "privacy-research",
+      "poc"
+    ],
+    "featured": false,
+    "useCases": [
+      "Research into messaging platform metadata leakage",
+      "Understanding delivery receipt privacy implications",
+      "Demonstrating timing-based surveillance risks",
+      "Academic security and privacy research"
+    ],
+    "alternatives": [
+      "telegram-nearby-map"
+    ],
+    "stars": 4900,
+    "forks": 380,
+    "openIssues": 8,
+    "lastCommit": "2026-04-20T09:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/gommzystudio?v=4",
+    "githubDescription": "PoC exploiting delivery receipt RTT to detect device activity and location changes."
+  },
+  {
+    "slug": "lonkero",
+    "name": "Lonkero",
+    "description": "Professional web app scanner with 126+ checks, ML-powered false positive reduction, proof-based XSS detection, and blind SQLi engine.",
+    "longDescription": "Lonkero is a professional-grade web application security scanner designed to minimize false positives through machine learning classification. It runs 126+ security checks including proof-based XSS detection (generates working payloads that prove exploitability), the OOBZero blind SQL injection engine, SSRF detection, and authentication bypass testing. The ML layer reduces false positive rates to approximately 5%, making results actionable without extensive manual triage. Written in Rust for speed.",
+    "category": "web-scanning",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "cargo install lonkero",
+    "github": "bountyyfi/lonkero",
+    "tags": [
+      "web-scanner",
+      "ml-powered",
+      "low-false-positive",
+      "xss",
+      "sqli"
+    ],
+    "featured": false,
+    "useCases": [
+      "Low-false-positive web vulnerability scanning",
+      "Proof-based XSS and blind SQLi detection",
+      "CI/CD security scanning with actionable results",
+      "Professional web application assessments"
+    ],
+    "alternatives": [
+      "nuclei",
+      "zaproxy",
+      "wapiti",
+      "shannon"
+    ],
+    "stars": 790,
+    "forks": 85,
+    "openIssues": 14,
+    "lastCommit": "2026-05-04T11:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/bountyyfi?v=4",
+    "githubDescription": "Professional web app scanner with ML-powered false positive reduction."
+  },
+  {
+    "slug": "titus",
+    "name": "Titus",
+    "description": "High-performance secrets scanner by Praetorian with CLI, Go library, Burp extension, and Chrome extension. 487 detection rules.",
+    "longDescription": "Titus is a high-performance secrets detection tool built by Praetorian with Hyperscan acceleration for blazing-fast scanning. It ships as a CLI tool, Go library, Burp Suite extension, and Chrome browser extension, covering secrets detection across code repositories, HTTP traffic during pentests, and web pages during browsing. With 487 detection rules covering API keys, tokens, passwords, and credentials across hundreds of services, it catches secrets that other scanners miss. The Burp extension is particularly useful for finding leaked secrets in API responses during web app assessments.",
+    "category": "vulnerability",
+    "language": "Go",
+    "platform": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "installCommand": "go install github.com/praetorian-inc/titus@latest",
+    "github": "praetorian-inc/titus",
+    "tags": [
+      "secrets-detection",
+      "high-performance",
+      "burp-extension",
+      "api-keys"
+    ],
+    "featured": false,
+    "useCases": [
+      "High-speed secrets scanning in large codebases",
+      "Finding leaked credentials in HTTP traffic via Burp",
+      "Browser-based secrets detection during recon",
+      "CI/CD pipeline secrets scanning"
+    ],
+    "alternatives": [
+      "gitleaks",
+      "trufflehog"
+    ],
+    "stars": 539,
+    "forks": 45,
+    "openIssues": 7,
+    "lastCommit": "2026-04-22T10:00:00Z",
+    "license": "Apache-2.0",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/praetorian-inc?v=4",
+    "githubDescription": "High-performance secrets scanner with CLI, Go library, Burp extension, and Chrome extension."
+  },
+  {
+    "slug": "tirith",
+    "name": "Tirith",
+    "description": "Terminal security for developers and AI agents. Intercepts homograph URLs, pipe-to-shell attacks, ANSI injection, and obfuscated payloads.",
+    "longDescription": "Tirith is a terminal security layer that protects developers and AI coding agents from terminal-based attacks. It intercepts and blocks homograph URL attacks (lookalike characters in URLs), dangerous pipe-to-shell patterns (curl | bash), ANSI escape sequence injection, obfuscated payloads, and other terminal-level threats. Ships with 80+ detection rules updated daily from threat intelligence feeds. Particularly relevant as AI coding agents become common - Tirith prevents agents from being tricked into executing malicious commands via prompt injection or supply chain attacks in terminal output.",
+    "category": "dual-use",
+    "language": "Rust",
+    "platform": [
+      "linux",
+      "macos"
+    ],
+    "installCommand": "cargo install tirith",
+    "github": "sheeki03/tirith",
+    "tags": [
+      "terminal-security",
+      "ai-agent-safety",
+      "supply-chain",
+      "developer-tools"
+    ],
+    "featured": false,
+    "useCases": [
+      "Protecting AI coding agents from terminal attacks",
+      "Blocking homograph URL phishing in terminals",
+      "Detecting malicious pipe-to-shell patterns",
+      "Developer workstation security hardening"
+    ],
+    "alternatives": [
+      "opensnitch"
+    ],
+    "stars": 2300,
+    "forks": 180,
+    "openIssues": 11,
+    "lastCommit": "2026-05-04T16:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/sheeki03?v=4",
+    "githubDescription": "Terminal security for developers and AI agents."
+  },
+  {
+    "slug": "dllshimmer",
+    "name": "DllShimmer",
+    "description": "Weaponizes DLL hijacking by generating proxy DLLs with matching export address tables and C++ backdoor boilerplate.",
+    "longDescription": "DllShimmer automates the exploitation of DLL hijacking vulnerabilities by generating proxy DLLs that perfectly mimic the export address table of the target DLL. When a vulnerable application loads the generated DLL, it transparently forwards all legitimate function calls to the original DLL while executing attacker-controlled code. The tool generates C++ boilerplate for the backdoor payload, handles export matching, and produces ready-to-compile Visual Studio projects. Significantly reduces the manual effort in weaponizing DLL hijack opportunities found during engagements.",
+    "category": "exploitation",
+    "language": "Go",
+    "platform": [
+      "windows"
+    ],
+    "installCommand": "go install github.com/Print3M/DllShimmer@latest",
+    "github": "Print3M/DllShimmer",
+    "tags": [
+      "dll-hijacking",
+      "proxy-dll",
+      "persistence",
+      "evasion"
+    ],
+    "featured": false,
+    "useCases": [
+      "Weaponizing DLL hijacking vulnerabilities",
+      "Generating proxy DLLs for persistence",
+      "Red team payload delivery via DLL side-loading",
+      "Testing application DLL search order vulnerabilities"
+    ],
+    "alternatives": [
+      "donut",
+      "scarecrow",
+      "amber"
+    ],
+    "stars": 741,
+    "forks": 95,
+    "openIssues": 5,
+    "lastCommit": "2026-04-10T08:00:00Z",
+    "license": "MIT",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/Print3M?v=4",
+    "githubDescription": "Weaponize DLL hijacking by generating proxy DLLs with matching EATs."
   }
 ]
